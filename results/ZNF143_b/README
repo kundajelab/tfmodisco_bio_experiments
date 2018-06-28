@@ -2,3 +2,19 @@ Jun 27, 2018
 used stride=20 bin-size=200 sliding window through the union of positive peaks, then expanded core intervals from size 200 to 1000 for context 
 used stride=1000 bin-size=1000 to create intervals for the whole genome background
 total 3.7M intervals
+
+Task         count
+ENCSR000DZL  -1        202613
+              0       3190599
+              1        361360
+ENCSR000EBW  -1        311712
+              0       3123544
+              1        319316
+ENCSR000ECO   0       3679516
+              1         75056
+ENCSR000EGP  -1        326018
+              0       3148111
+              1        280443
+ENCSR936XTK  -1        240813
+              0       3101439
+              1        412320
