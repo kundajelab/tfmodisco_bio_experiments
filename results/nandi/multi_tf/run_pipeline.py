@@ -30,9 +30,9 @@ splits/test.txt.gz
 
 #os.system("bedtools getfasta -fi " + genomeDir + "hg19.fa -bed splits/subset.tsv -fo subset.fa")
 
-os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
+#os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
 
-os.system("cat subset.fa | grep -v '^>' > subset.txt")
-os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py ./rescale_conv_revealcancel_fc_multiref_10_task_ subset.txt 3 > logs/deeplift.log 2>&1")
+#os.system("cat subset.fa | grep -v '^>' > subset.txt")
+os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py ./rescale_conv_revealcancel_fc_multiref_10_task_ subset.txt 3 > logs/modisco.log 2>&1")
 
 
