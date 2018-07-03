@@ -1,0 +1,697 @@
+ERROR (theano.gpuarray): pygpu was configured but could not be imported or is too old (version 0.6 or higher required)
+Traceback (most recent call last):
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/theano/gpuarray/__init__.py", line 23, in <module>
+    import pygpu.version
+ImportError: No module named version
+start time 2018-07-02 08:10:24.447007
+method file prefix is  ./rescale_conv_revealcancel_fc_multiref_10_task_ , input seq file is  subset.txt , number of tasks is  3
+Theano version: 0.9.0
+2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+shape of onehot (291146, 1000, 4)
+shape of orig_score (291146, 1000)
+shape of score (291146, 1000, 4)
+[[0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]]
+orig_scores
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+scores
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+On task task0
+Computing windowed sums
+Computing threshold
+Computed thresholds -0.2585194425910052 and 0.31249342178563905
+Got 1299693 coords
+Limiting to top 20000
+On task task1
+Computing windowed sums
+Computing threshold
+Computed thresholds -0.21790021687972314 and 0.3701113089788755
+Got 1646795 coords
+Limiting to top 20000
+On task task2
+Computing windowed sums
+Computing threshold
+Computed thresholds -0.24016353610387456 and 0.2902088312170747
+Got 1624063 coords
+Limiting to top 20000
+After resolving overlaps, got 27232 seqlets
+6 activity patterns with support >= 200 out of 27 possible patterns
+Metacluster sizes:  [23731, 1468, 502, 476, 440, 431]
+Idx to activities:  {0: '1,1,1', 1: '0,1,1', 2: '-1,1,1', 3: '1,-1,1', 4: '-1,-1,-1', 5: '1,0,1'}
+On metacluster 5
+Metacluster size 431
+Relevant tasks:  ('task0', 'task2')
+Relevant signs:  (1, 1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 10.91 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 11.15 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 429 samples in 0.000s...
+[t-SNE] Computed neighbors for 429 samples in 0.007s...
+[t-SNE] Computed conditional probabilities for sample 429 / 429
+[t-SNE] Mean sigma: 0.249977
+Wrote graph to binary file in 0.0603408813477 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.3s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.9s finished
+Louvain completed 200 runs in 34.8737409115 seconds
+Wrote graph to binary file in 0.101275920868 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.769393
+After 2 runs, maximum modularity is Q = 0.779736
+After 4 runs, maximum modularity is Q = 0.780566
+After 25 runs, maximum modularity is Q = 0.782192
+Louvain completed 75 runs in 100.543377876 seconds
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 10.49 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 11.46 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 383 samples in 0.000s...
+[t-SNE] Computed neighbors for 383 samples in 0.004s...
+[t-SNE] Computed conditional probabilities for sample 383 / 383
+[t-SNE] Mean sigma: 0.249678
+Wrote graph to binary file in 0.0569331645966 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.4s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.9s finished
+Louvain completed 200 runs in 34.6712298393 seconds
+Wrote graph to binary file in 0.0442459583282 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.790409
+After 3 runs, maximum modularity is Q = 0.796629
+After 4 runs, maximum modularity is Q = 0.800706
+Louvain completed 54 runs in 69.854391098 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0236670970917 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0021227
+After 2 runs, maximum modularity is Q = 0.00269627
+After 5 runs, maximum modularity is Q = 0.00272962
+Louvain completed 25 runs in 34.5861849785 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00935912132263 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0075338
+Louvain completed 21 runs in 27.3704590797 seconds
+On metacluster 4
+Metacluster size 440
+Relevant tasks:  ('task0', 'task1', 'task2')
+Relevant signs:  (-1, -1, -1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 12.28 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 12.28 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 416 samples in 0.000s...
+[t-SNE] Computed neighbors for 416 samples in 0.003s...
+[t-SNE] Computed conditional probabilities for sample 416 / 416
+[t-SNE] Mean sigma: 0.303513
+Wrote graph to binary file in 0.043781042099 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.0s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.5s finished
+Louvain completed 200 runs in 34.4169061184 seconds
+Wrote graph to binary file in 0.0335130691528 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.856032
+After 19 runs, maximum modularity is Q = 0.858588
+Louvain completed 69 runs in 91.7967431545 seconds
+Skipped 1 seqlets
+Skipped 9 seqlets
+Skipped 1 seqlets
+Skipped 1 seqlets
+Skipped 1 seqlets
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 10.89 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 11.01 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 351 samples in 0.000s...
+[t-SNE] Computed neighbors for 351 samples in 0.003s...
+[t-SNE] Computed conditional probabilities for sample 351 / 351
+[t-SNE] Mean sigma: 0.301794
+Wrote graph to binary file in 0.0315289497375 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   18.8s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.1s finished
+Louvain completed 200 runs in 33.3831548691 seconds
+Wrote graph to binary file in 0.0230989456177 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.854273
+Louvain completed 51 runs in 63.168612957 seconds
+Discarded 35 seqlets
+Skipped 2 seqlets
+On metacluster 3
+Metacluster size 476
+Relevant tasks:  ('task0', 'task1', 'task2')
+Relevant signs:  (1, -1, 1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 13.65 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 13.24 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 474 samples in 0.000s...
+[t-SNE] Computed neighbors for 474 samples in 0.005s...
+[t-SNE] Computed conditional probabilities for sample 474 / 474
+[t-SNE] Mean sigma: 0.285862
+Wrote graph to binary file in 0.0507910251617 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.5s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.6s finished
+Louvain completed 200 runs in 34.2429070473 seconds
+Wrote graph to binary file in 0.0661749839783 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.755107
+Louvain completed 51 runs in 66.6555259228 seconds
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 12.01 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 14.05 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 428 samples in 0.000s...
+[t-SNE] Computed neighbors for 428 samples in 0.004s...
+[t-SNE] Computed conditional probabilities for sample 428 / 428
+[t-SNE] Mean sigma: 0.294251
+Wrote graph to binary file in 0.0378501415253 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.0s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.3s finished
+Louvain completed 200 runs in 34.0069758892 seconds
+Wrote graph to binary file in 0.0433790683746 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.832589
+Louvain completed 51 runs in 66.5185449123 seconds
+On metacluster 2
+Metacluster size 502
+Relevant tasks:  ('task0', 'task1', 'task2')
+Relevant signs:  (-1, 1, 1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 14.79 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 13.77 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 485 samples in 0.000s...
+[t-SNE] Computed neighbors for 485 samples in 0.004s...
+[t-SNE] Computed conditional probabilities for sample 485 / 485
+[t-SNE] Mean sigma: 0.310479
+Wrote graph to binary file in 0.039843082428 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.2s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.9s finished
+Louvain completed 200 runs in 34.7301039696 seconds
+Wrote graph to binary file in 0.0723350048065 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.864067
+After 2 runs, maximum modularity is Q = 0.873405
+After 11 runs, maximum modularity is Q = 0.875129
+Louvain completed 61 runs in 82.5820741653 seconds
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 12.14 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 12.3 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 434 samples in 0.000s...
+[t-SNE] Computed neighbors for 434 samples in 0.004s...
+[t-SNE] Computed conditional probabilities for sample 434 / 434
+[t-SNE] Mean sigma: 0.312255
+Wrote graph to binary file in 0.0449509620667 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   18.7s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.3s finished
+Louvain completed 200 runs in 34.9478139877 seconds
+Wrote graph to binary file in 0.028835773468 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.872119
+After 3 runs, maximum modularity is Q = 0.876965
+After 30 runs, maximum modularity is Q = 0.880343
+Louvain completed 80 runs in 106.923753977 seconds
+Discarded 18 seqlets
+On metacluster 1
+Metacluster size 1468
+Relevant tasks:  ('task1', 'task2')
+Relevant signs:  (1, 1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 14.6 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 14.52 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 1310 samples in 0.001s...
+[t-SNE] Computed neighbors for 1310 samples in 0.022s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 1310
+[t-SNE] Computed conditional probabilities for sample 1310 / 1310
+[t-SNE] Mean sigma: 0.272983
+Wrote graph to binary file in 0.182723999023 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   19.6s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   24.6s finished
+Louvain completed 200 runs in 36.3861670494 seconds
+Wrote graph to binary file in 0.510293960571 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.766686
+After 2 runs, maximum modularity is Q = 0.779023
+After 5 runs, maximum modularity is Q = 0.779082
+After 38 runs, maximum modularity is Q = 0.784755
+Louvain completed 88 runs in 120.621128082 seconds
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 15.33 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 13.87 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 1155 samples in 0.001s...
+[t-SNE] Computed neighbors for 1155 samples in 0.017s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 1155
+[t-SNE] Computed conditional probabilities for sample 1155 / 1155
+[t-SNE] Mean sigma: 0.267867
+Wrote graph to binary file in 0.102891921997 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   18.9s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   23.5s finished
+Louvain completed 200 runs in 35.2244269848 seconds
+Wrote graph to binary file in 0.441332101822 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.745004
+After 2 runs, maximum modularity is Q = 0.77377
+After 21 runs, maximum modularity is Q = 0.779104
+After 41 runs, maximum modularity is Q = 0.784448
+Louvain completed 91 runs in 122.845775127 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0388238430023 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00433054
+After 2 runs, maximum modularity is Q = 0.00436036
+After 4 runs, maximum modularity is Q = 0.00458601
+After 5 runs, maximum modularity is Q = 0.004607
+After 7 runs, maximum modularity is Q = 0.00481818
+After 12 runs, maximum modularity is Q = 0.00482745
+Louvain completed 32 runs in 46.728757143 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0381789207458 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00583019
+Louvain completed 21 runs in 28.6805999279 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0270409584045 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00531195
+After 3 runs, maximum modularity is Q = 0.00584919
+After 6 runs, maximum modularity is Q = 0.00589538
+After 8 runs, maximum modularity is Q = 0.00590436
+Louvain completed 28 runs in 40.7430579662 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0295610427856 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00495125
+After 3 runs, maximum modularity is Q = 0.00497824
+After 12 runs, maximum modularity is Q = 0.004983
+Louvain completed 32 runs in 43.8744111061 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0237510204315 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00588657
+Louvain completed 21 runs in 27.1294701099 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0171480178833 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00724335
+Louvain completed 21 runs in 29.3797159195 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0127840042114 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00337325
+After 2 runs, maximum modularity is Q = 0.00355255
+After 10 runs, maximum modularity is Q = 0.00365485
+Louvain completed 30 runs in 40.5593898296 seconds
+Discarded 9 seqlets
+On metacluster 0
+Metacluster size 23731
+Relevant tasks:  ('task0', 'task1', 'task2')
+Relevant signs:  (1, 1, 1)
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 216.84 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 230.64 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 22011 samples in 0.358s...
+[t-SNE] Computed neighbors for 22011 samples in 3.689s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 22011
+[t-SNE] Computed conditional probabilities for sample 2000 / 22011
+[t-SNE] Computed conditional probabilities for sample 3000 / 22011
+[t-SNE] Computed conditional probabilities for sample 4000 / 22011
+[t-SNE] Computed conditional probabilities for sample 5000 / 22011
+[t-SNE] Computed conditional probabilities for sample 6000 / 22011
+[t-SNE] Computed conditional probabilities for sample 7000 / 22011
+[t-SNE] Computed conditional probabilities for sample 8000 / 22011
+[t-SNE] Computed conditional probabilities for sample 9000 / 22011
+[t-SNE] Computed conditional probabilities for sample 10000 / 22011
+[t-SNE] Computed conditional probabilities for sample 11000 / 22011
+[t-SNE] Computed conditional probabilities for sample 12000 / 22011
+[t-SNE] Computed conditional probabilities for sample 13000 / 22011
+[t-SNE] Computed conditional probabilities for sample 14000 / 22011
+[t-SNE] Computed conditional probabilities for sample 15000 / 22011
+[t-SNE] Computed conditional probabilities for sample 16000 / 22011
+[t-SNE] Computed conditional probabilities for sample 17000 / 22011
+[t-SNE] Computed conditional probabilities for sample 18000 / 22011
+[t-SNE] Computed conditional probabilities for sample 19000 / 22011
+[t-SNE] Computed conditional probabilities for sample 20000 / 22011
+[t-SNE] Computed conditional probabilities for sample 21000 / 22011
+[t-SNE] Computed conditional probabilities for sample 22000 / 22011
+[t-SNE] Computed conditional probabilities for sample 22011 / 22011
+[t-SNE] Mean sigma: 0.260453
+Wrote graph to binary file in 1.75414204597 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    3.8s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   33.7s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   41.9s finished
+Louvain completed 200 runs in 265.91685605 seconds
+Wrote graph to binary file in 33.6955010891 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.89188
+After 8 runs, maximum modularity is Q = 0.892642
+After 9 runs, maximum modularity is Q = 0.899906
+After 28 runs, maximum modularity is Q = 0.899908
+Louvain completed 78 runs in 272.570251942 seconds
+Computing embeddings
+Launching nearest neighbors affmat calculation job
+Job completed in: 193.29 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 193.46 s
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 20937 samples in 0.342s...
+[t-SNE] Computed neighbors for 20937 samples in 3.455s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 20937
+[t-SNE] Computed conditional probabilities for sample 2000 / 20937
+[t-SNE] Computed conditional probabilities for sample 3000 / 20937
+[t-SNE] Computed conditional probabilities for sample 4000 / 20937
+[t-SNE] Computed conditional probabilities for sample 5000 / 20937
+[t-SNE] Computed conditional probabilities for sample 6000 / 20937
+[t-SNE] Computed conditional probabilities for sample 7000 / 20937
+[t-SNE] Computed conditional probabilities for sample 8000 / 20937
+[t-SNE] Computed conditional probabilities for sample 9000 / 20937
+[t-SNE] Computed conditional probabilities for sample 10000 / 20937
+[t-SNE] Computed conditional probabilities for sample 11000 / 20937
+[t-SNE] Computed conditional probabilities for sample 12000 / 20937
+[t-SNE] Computed conditional probabilities for sample 13000 / 20937
+[t-SNE] Computed conditional probabilities for sample 14000 / 20937
+[t-SNE] Computed conditional probabilities for sample 15000 / 20937
+[t-SNE] Computed conditional probabilities for sample 16000 / 20937
+[t-SNE] Computed conditional probabilities for sample 17000 / 20937
+[t-SNE] Computed conditional probabilities for sample 18000 / 20937
+[t-SNE] Computed conditional probabilities for sample 19000 / 20937
+[t-SNE] Computed conditional probabilities for sample 20000 / 20937
+[t-SNE] Computed conditional probabilities for sample 20937 / 20937
+[t-SNE] Mean sigma: 0.262216
+Wrote graph to binary file in 1.55289316177 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    5.1s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   40.6s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   50.0s finished
+Louvain completed 200 runs in 262.442939997 seconds
+Wrote graph to binary file in 32.3455858231 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.865642
+After 2 runs, maximum modularity is Q = 0.875009
+After 4 runs, maximum modularity is Q = 0.886226
+Louvain completed 54 runs in 198.220128059 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.97310900688 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00500731
+Louvain completed 21 runs in 50.2455480099 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 2.23980593681 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00482972
+After 3 runs, maximum modularity is Q = 0.00482974
+Louvain completed 23 runs in 56.372150898 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.99640893936 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00582879
+After 2 runs, maximum modularity is Q = 0.00582916
+Louvain completed 22 runs in 53.8217799664 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 2.02942299843 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00651642
+After 4 runs, maximum modularity is Q = 0.00651666
+Louvain completed 24 runs in 57.2424850464 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.66407608986 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00529997
+Louvain completed 21 runs in 46.5576310158 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.43765711784 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00479585
+After 5 runs, maximum modularity is Q = 0.00479612
+After 8 runs, maximum modularity is Q = 0.00479754
+Louvain completed 28 runs in 67.6143009663 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.34295392036 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00839804
+After 6 runs, maximum modularity is Q = 0.0084089
+Louvain completed 26 runs in 60.0397458076 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.26734304428 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0058277
+Louvain completed 21 runs in 47.8411650658 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.08718705177 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00760015
+Louvain completed 21 runs in 48.8879411221 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.14604401588 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00473671
+After 3 runs, maximum modularity is Q = 0.00480157
+After 4 runs, maximum modularity is Q = 0.00484236
+After 13 runs, maximum modularity is Q = 0.00484674
+After 21 runs, maximum modularity is Q = 0.00484756
+Louvain completed 41 runs in 100.249327898 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 1.03276109695 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00650191
+Louvain completed 21 runs in 49.722039938 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.71906208992 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00535206
+After 4 runs, maximum modularity is Q = 0.00535207
+Louvain completed 24 runs in 53.9916200638 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.738360881805 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00514119
+After 3 runs, maximum modularity is Q = 0.00515028
+After 10 runs, maximum modularity is Q = 0.00515695
+Louvain completed 30 runs in 70.5822088718 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.697127103806 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00592947
+After 2 runs, maximum modularity is Q = 0.00593082
+Louvain completed 22 runs in 53.5860841274 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.701751947403 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00576877
+After 2 runs, maximum modularity is Q = 0.0057696
+Louvain completed 22 runs in 49.6010389328 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.518128156662 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0046359
+Louvain completed 21 runs in 46.6921570301 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.573029994965 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00547419
+Louvain completed 21 runs in 46.7066500187 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.598648786545 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00960576
+After 2 runs, maximum modularity is Q = 0.00960592
+Louvain completed 22 runs in 49.5646519661 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.530782938004 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00561617
+Louvain completed 21 runs in 45.4903929234 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.468957901001 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00539809
+After 3 runs, maximum modularity is Q = 0.00555022
+After 20 runs, maximum modularity is Q = 0.00555149
+Louvain completed 40 runs in 91.5938341618 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.361214160919 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00689999
+After 12 runs, maximum modularity is Q = 0.0069
+Louvain completed 32 runs in 72.1658158302 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.357661008835 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0058262
+Louvain completed 21 runs in 46.9314618111 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.402638196945 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00551095
+After 4 runs, maximum modularity is Q = 0.00551816
+After 5 runs, maximum modularity is Q = 0.00551817
+Louvain completed 25 runs in 59.4541099072 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.287208795547 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00507729
+After 2 runs, maximum modularity is Q = 0.00535685
+After 17 runs, maximum modularity is Q = 0.00535686
+Louvain completed 37 runs in 83.8317930698 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.17924118042 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00565454
+Louvain completed 21 runs in 47.8989219666 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0870730876923 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00361128
+After 3 runs, maximum modularity is Q = 0.00382628
+After 4 runs, maximum modularity is Q = 0.00385391
+After 6 runs, maximum modularity is Q = 0.00399469
+Louvain completed 26 runs in 63.5368671417 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.101374149323 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0080183
+Louvain completed 21 runs in 47.6081829071 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0982890129089 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00641757
+After 3 runs, maximum modularity is Q = 0.00667786
+Louvain completed 23 runs in 52.5974640846 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0900771617889 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00486538
+After 3 runs, maximum modularity is Q = 0.00509672
+Louvain completed 23 runs in 54.6397409439 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0759310722351 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00721146
+Louvain completed 21 runs in 47.7104589939 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0773961544037 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0134913
+After 2 runs, maximum modularity is Q = 0.0134954
+Louvain completed 22 runs in 51.9936540127 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0537371635437 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00679115
+Louvain completed 21 runs in 47.3473169804 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0700900554657 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00617846
+Louvain completed 21 runs in 48.4003241062 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0447020530701 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00894457
+After 2 runs, maximum modularity is Q = 0.00898521
+Louvain completed 22 runs in 48.5221021175 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0247459411621 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0102419
+After 2 runs, maximum modularity is Q = 0.0103108
+After 9 runs, maximum modularity is Q = 0.010321
+After 11 runs, maximum modularity is Q = 0.0103265
+Louvain completed 31 runs in 73.1692399979 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0214190483093 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0141466
+Louvain completed 21 runs in 45.7907180786 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0180771350861 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0109544
+Louvain completed 21 runs in 45.6553580761 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0167779922485 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00885176
+After 2 runs, maximum modularity is Q = 0.00897978
+After 13 runs, maximum modularity is Q = 0.00901176
+After 15 runs, maximum modularity is Q = 0.00901177
+Louvain completed 35 runs in 80.736369133 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0104999542236 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00568647
+After 13 runs, maximum modularity is Q = 0.00575825
+Louvain completed 33 runs in 68.4904210567 seconds
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0156800746918 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0108076
+Louvain completed 21 runs in 45.1551949978 seconds
+rm: cannot remove 'results.hdf5': No such file or directory
+**************** workflow done *********************
+start time 2018-07-02 08:10:24.447007
+end time 2018-07-02 11:17:31.884082
+**************** result saved *********************

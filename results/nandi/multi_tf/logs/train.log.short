@@ -1,0 +1,336 @@
+Using TensorFlow backend.
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Conv1D` call to the Keras 2 API: `Conv1D(kernel_constraint=<keras.con..., input_shape=[1000, 4], padding="same", filters=50, kernel_size=15)`
+  return the_class(**parsed_kwargs)
+WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Conv1D` call to the Keras 2 API: `Conv1D(padding="same", kernel_size=15, filters=50)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Conv1D` call to the Keras 2 API: `Conv1D(kernel_size=13, filters=50)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `MaxPooling1D` call to the Keras 2 API: `MaxPooling1D(strides=40, pool_size=40)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Dense` call to the Keras 2 API: `Dense(units=50)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Dropout` call to the Keras 2 API: `Dropout(rate=0.2)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py:38: UserWarning: Update your `Dense` call to the Keras 2 API: `Dense(units=3)`
+  return the_class(**parsed_kwargs)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/model_trainers/keras_model_trainer.py:100: UserWarning: The semantics of the Keras 2 argument `steps_per_epoch` is not the same as the Keras 1 argument `samples_per_epoch`. `steps_per_epoch` is the number of batches to draw from the generator at each epoch. Basically steps_per_epoch = samples_per_epoch/batch_size. Similarly `nb_val_samples`->`validation_steps` and `val_samples`->`steps` arguments have changed. Update your method calls accordingly.
+  callbacks=[]+extra_callbacks)
+/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/model_trainers/keras_model_trainer.py:100: UserWarning: Update your `fit_generator` call to the Keras 2 API: `fit_generator(<generator..., steps_per_epoch=60, epochs=1, callbacks=[], class_weight=None)`
+  callbacks=[]+extra_callbacks)
+2018-06-30 21:02:42.457216: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-30 21:02:42.772330: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:04:00.0
+totalMemory: 11.93GiB freeMemory: 11.79GiB
+2018-06-30 21:02:42.772388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-06-30 21:02:43.112791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-30 21:02:43.112830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-06-30 21:02:43.112837: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-06-30 21:02:43.113192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11412 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:04:00.0, compute capability: 5.2)
+Loading momma_dragonn.data_loaders.hdf5_data_loader.MultimodalAtOnceDataLoader
+Input modes [u'sequence']
+Output modes [u'output']
+Loading momma_dragonn.model_evaluators.SequentialAccuracyStats
+Loading momma_dragonn.epoch_callbacks.SaveBestValidModel
+Loading momma_dragonn.epoch_callbacks.PrintPerfAfterEpoch
+Loading momma_dragonn.end_of_training_callbacks.WriteToDbCallback
+Loading momma_dragonn.end_of_training_callbacks.EmailCallback
+Loading momma_dragonn.data_loaders.hdf5_data_loader.MultimodalBatchDataLoader
+Input modes [u'sequence']
+Output modes [u'output']
+Loading momma_dragonn.model_creators.flexible_keras.FlexibleKerasSequential
+Loading momma_dragonn.model_trainers.keras_model_trainer.KerasFitGeneratorModelTrainer
+Setting seed 1234
+Importing keras...
+Getting model...
+Randomly generated id 5bmkG
+Preparing uncompiled model
+Loading keras.layers.convolutional.Convolution1D
+Loading keras.constraints.maxnorm
+Loading keras.layers.core.Activation
+Loading keras.layers.convolutional.Convolution1D
+Loading keras.layers.core.Activation
+Loading keras.layers.convolutional.Convolution1D
+Loading keras.layers.core.Activation
+Loading keras.layers.convolutional.MaxPooling1D
+Loading keras.layers.core.Flatten
+Loading keras.layers.core.Dense
+Loading keras.layers.core.Activation
+Loading keras.layers.normalization.BatchNormalization
+Loading keras.layers.core.Dropout
+Loading keras.layers.core.Dense
+Loading keras.layers.core.Activation
+Compiling model
+Loading keras.optimizers.Adam
+Done compiling model
+Got model
+Loading momma_dragonn.stopping_criteria.EarlyStopping
+Loading validation data into memory
+Loaded
+
+...
+
+Epoch 1/1
+ 1/60 [..............................] - ETA: 23s - loss: 0.0365
+ 2/60 [>.............................] - ETA: 23s - loss: 0.0447
+ 3/60 [>.............................] - ETA: 22s - loss: 0.0425
+ 4/60 [=>............................] - ETA: 21s - loss: 0.0502
+ 5/60 [=>............................] - ETA: 21s - loss: 0.0507
+ 6/60 [==>...........................] - ETA: 21s - loss: 0.0512
+ 7/60 [==>...........................] - ETA: 21s - loss: 0.0532
+ 8/60 [===>..........................] - ETA: 21s - loss: 0.0556
+ 9/60 [===>..........................] - ETA: 21s - loss: 0.0574
+10/60 [====>.........................] - ETA: 20s - loss: 0.0563
+11/60 [====>.........................] - ETA: 20s - loss: 0.0558
+12/60 [=====>........................] - ETA: 20s - loss: 0.0564
+13/60 [=====>........................] - ETA: 20s - loss: 0.0546
+14/60 [======>.......................] - ETA: 19s - loss: 0.0559
+15/60 [======>.......................] - ETA: 19s - loss: 0.0561
+16/60 [=======>......................] - ETA: 18s - loss: 0.0561
+17/60 [=======>......................] - ETA: 18s - loss: 0.0548
+18/60 [========>.....................] - ETA: 17s - loss: 0.0555
+19/60 [========>.....................] - ETA: 17s - loss: 0.0553
+20/60 [=========>....................] - ETA: 16s - loss: 0.0548
+21/60 [=========>....................] - ETA: 16s - loss: 0.0545
+22/60 [==========>...................] - ETA: 16s - loss: 0.0537
+23/60 [==========>...................] - ETA: 15s - loss: 0.0535
+24/60 [===========>..................] - ETA: 15s - loss: 0.0536
+25/60 [===========>..................] - ETA: 14s - loss: 0.0535
+26/60 [============>.................] - ETA: 14s - loss: 0.0540
+27/60 [============>.................] - ETA: 13s - loss: 0.0543
+28/60 [=============>................] - ETA: 13s - loss: 0.0541
+29/60 [=============>................] - ETA: 13s - loss: 0.0541
+30/60 [==============>...............] - ETA: 12s - loss: 0.0546
+31/60 [==============>...............] - ETA: 12s - loss: 0.0543
+32/60 [===============>..............] - ETA: 11s - loss: 0.0544
+33/60 [===============>..............] - ETA: 11s - loss: 0.0546
+34/60 [================>.............] - ETA: 10s - loss: 0.0547
+35/60 [================>.............] - ETA: 10s - loss: 0.0552
+36/60 [=================>............] - ETA: 10s - loss: 0.0552
+37/60 [=================>............] - ETA: 9s - loss: 0.0550 
+38/60 [==================>...........] - ETA: 9s - loss: 0.0551
+39/60 [==================>...........] - ETA: 9s - loss: 0.0551
+40/60 [===================>..........] - ETA: 8s - loss: 0.0557
+41/60 [===================>..........] - ETA: 8s - loss: 0.0556
+42/60 [====================>.........] - ETA: 7s - loss: 0.0561
+43/60 [====================>.........] - ETA: 7s - loss: 0.0561
+44/60 [=====================>........] - ETA: 6s - loss: 0.0557
+45/60 [=====================>........] - ETA: 6s - loss: 0.0557
+46/60 [======================>.......] - ETA: 6s - loss: 0.0553
+47/60 [======================>.......] - ETA: 5s - loss: 0.0551
+48/60 [=======================>......] - ETA: 5s - loss: 0.0554
+49/60 [=======================>......] - ETA: 4s - loss: 0.0552
+50/60 [========================>.....] - ETA: 4s - loss: 0.0558
+51/60 [========================>.....] - ETA: 3s - loss: 0.0555
+52/60 [=========================>....] - ETA: 3s - loss: 0.0551
+53/60 [=========================>....] - ETA: 3s - loss: 0.0549
+54/60 [==========================>...] - ETA: 2s - loss: 0.0553
+55/60 [==========================>...] - ETA: 2s - loss: 0.0554
+56/60 [===========================>..] - ETA: 1s - loss: 0.0549
+57/60 [===========================>..] - ETA: 1s - loss: 0.0550
+58/60 [============================>.] - ETA: 0s - loss: 0.0556
+59/60 [============================>.] - ETA: 0s - loss: 0.0556
+60/60 [==============================] - 26s 435ms/step - loss: 0.0555
+Finished epoch:	161
+Best valid perf epoch:	141
+Valid key metric:	0.9788103049725443
+Train key metric:	0.9882106756423242
+Best valid perf info:
+epoch	train	valid
+1	0.8313462398309971	0.7937991532711836
+2	0.865937716985545	0.8460130864833997
+3	0.9124853097162188	0.8960948483142661
+4	0.9289885149324757	0.9202321647356234
+5	0.9240188649892734	0.9066782759096638
+6	0.9421607862706832	0.9297861934346406
+7	0.9508496577251604	0.9391072206182919
+8	0.9562988115557575	0.944845040739701
+9	0.960313894256123	0.9477628304658582
+10	0.9622688543006138	0.9469031394120614
+11	0.9586936235966529	0.9349483560084465
+12	0.9581045960717031	0.9501475901696185
+13	0.957160919982715	0.9415829278599089
+14	0.9542941280515933	0.9438705105929571
+15	0.9634264466890395	0.9513946695962122
+16	0.9647352709685845	0.9507091304212034
+17	0.9655459393649676	0.9521796901929238
+18	0.9704723785881081	0.9539730084125085
+19	0.9718988770883322	0.9444381935095043
+20	0.970055250569477	0.9523550983249938
+21	0.9659362427832944	0.9508998765613046
+22	0.9639971824458309	0.953249586223247
+23	0.9649573571654876	0.9536831028111368
+24	0.9715753229206429	0.958319428838955
+25	0.9720372036827388	0.9585849422334863
+26	0.9748540045970747	0.9604853562494196
+27	0.9746806883623297	0.9623447977308547
+28	0.9722103381618791	0.9635655044828656
+29	0.9788648589606154	0.9609328490360184
+30	0.979000483405598	0.9649706039866595
+31	0.979190858313344	0.9670981661723319
+32	0.978050803071658	0.9639026623666211
+33	0.978766580707663	0.9677830185640811
+34	0.9738829047361004	0.9657423003225433
+35	0.9747533593839885	0.9679672513998959
+36	0.974709857913628	0.9515274739114782
+37	0.9825225393643057	0.9720039575292866
+38	0.9799889808695608	0.9717261366433144
+39	0.9786862878330438	0.971718156176688
+40	0.9824062629587343	0.9730205338541774
+41	0.980783731894007	0.9659270553566713
+42	0.984316718631955	0.9715195979806573
+43	0.9820781079694593	0.9692921572785466
+44	0.9832736480419334	0.9720899844905042
+45	0.9809928699393581	0.9728630055565191
+46	0.9802220844850028	0.9714136039544083
+47	0.9818646554388555	0.9718000350992968
+48	0.9823739676632736	0.9721518929598693
+49	0.9835862010181368	0.9741155863225391
+50	0.9832659287539718	0.9713845424137428
+51	0.9840394476818614	0.9735312170009388
+52	0.981711191568417	0.9719766419037866
+53	0.9797689659693821	0.9733321406862497
+54	0.982427067389596	0.9707376854675237
+55	0.9836283571819289	0.9732606515719849
+56	0.9806987069263841	0.9739069373267698
+57	0.9812271319451235	0.9727588073881014
+58	0.9827100424606602	0.9745659449475762
+59	0.983164621285057	0.9740938126801977
+60	0.9840622083169975	0.9732749777644921
+61	0.9836520807232239	0.9738735113746047
+62	0.9819489124477042	0.9744620732525514
+63	0.9816726523929087	0.9754949125518033
+64	0.9855857601309238	0.9744640074114711
+65	0.9868927413211432	0.9750266909096488
+66	0.9847580818622182	0.9721845752144705
+67	0.9861604251010805	0.97104302237399
+68	0.9851873031899133	0.9726552150954119
+69	0.9829400176547547	0.9725922672306825
+70	0.9842098537572398	0.9728040746089279
+71	0.9844757052651222	0.9731999344943999
+72	0.9836865417621578	0.974576532282542
+73	0.9844168411657087	0.97453110223461
+74	0.9835740058277193	0.9753302397261959
+75	0.9826248261847611	0.9740576701712387
+76	0.9866705156317153	0.9750544062276472
+77	0.9867726823629406	0.9763591606712764
+78	0.9870404754307428	0.975019252143506
+79	0.9840772936850738	0.9750338146785205
+80	0.9852829110426714	0.9745192345741683
+81	0.9867678241521552	0.9760692638963414
+82	0.9865644973337243	0.9755195540265905
+83	0.9863247644029899	0.9745372317442466
+84	0.9845044598576688	0.9758535749757452
+85	0.9842101941853435	0.9761443862575447
+86	0.9862236348608185	0.974265601942681
+87	0.9861908223577213	0.9767758481331512
+88	0.9856738552978713	0.976898686047324
+89	0.9834039009165451	0.9760262869161956
+90	0.9835564832923686	0.9696814452783918
+91	0.9867725997948926	0.9766138217152788
+92	0.9869549621977275	0.9762360662835475
+93	0.9846740503404038	0.9757660667584332
+94	0.983381818370507	0.9769408330616848
+95	0.9825390457032875	0.9761968654281975
+96	0.983549541540904	0.9774077281133474
+97	0.9875867583016111	0.9768962920173362
+98	0.9865203182459631	0.9682827090963319
+99	0.9876467297358994	0.975227842595582
+100	0.986231355409457	0.9761095410743597
+101	0.9859824443835158	0.9745209767088174
+102	0.985763541619043	0.9760352802340524
+103	0.9859159289388986	0.9770856930515923
+104	0.9853546239117832	0.9763142438560678
+105	0.9869930567113004	0.9760792648973834
+106	0.9869185751636609	0.9766526611071099
+107	0.9871927094127123	0.9747985684027191
+108	0.9861025445745236	0.9748682386642992
+109	0.9861998894925366	0.9770616759339065
+110	0.9853527891691063	0.9759899539044272
+111	0.9850100767299339	0.9770474528098045
+112	0.9857920336038992	0.977902020088584
+113	0.9863936701145283	0.9772110574606309
+114	0.9883108351723443	0.9771851614076704
+115	0.9869971660241127	0.9735156944272138
+116	0.9889037580885609	0.9774239995762571
+117	0.9876703060877924	0.9768888116163835
+118	0.9869793270439112	0.9775460301096182
+119	0.9865094724411971	0.9759103914834605
+120	0.9895945849042103	0.9761660819159211
+121	0.9864693155403473	0.9754086278267269
+122	0.9862892871279971	0.9780286529526566
+123	0.9881236788356107	0.9775764796438646
+124	0.9868427266118505	0.9775441324214863
+125	0.9850681696583822	0.9766378729603741
+126	0.9867777465900027	0.9769212037331885
+127	0.9889401915888665	0.9780309174633781
+128	0.9875707220830603	0.9764498908913003
+129	0.9869998002329736	0.9730192889996151
+130	0.9878668239284328	0.9774915716370933
+131	0.9878950474298693	0.9758045188972556
+132	0.9888987652782899	0.9788680727635791
+133	0.9863196133463922	0.9764480897992415
+134	0.9873674782630751	0.9773683831586294
+135	0.9848208645210681	0.9779538461350962
+136	0.9845322144379053	0.978918979562843
+137	0.9871831090714518	0.9787172305695062
+138	0.9882605431820092	0.9782174434852178
+139	0.9886049783819676	0.9788441156879935
+140	0.988376755161922	0.978090999382394
+141	0.9898398604864355	0.9794715054255078
+142	0.9862335636019575	0.9780288505057309
+143	0.9859732515530731	0.9786016253634487
+144	0.9891103103781456	0.9785400324404842
+145	0.9895755148465244	0.9772443412439834
+146	0.990343039904297	0.9778823505018015
+147	0.9906100462124717	0.9771443379539527
+148	0.9905108847447464	0.9779942468000344
+149	0.9891624510232315	0.9777525091072388
+150	0.9890182419516899	0.9762406040091959
+151	0.9899196608460848	0.9779070806904387
+152	0.9900881055051448	0.9783828307493622
+153	0.9891702485706455	0.9777370690413357
+154	0.9874125407155722	0.9770524356219866
+155	0.9886857396156145	0.9782105866895621
+156	0.9882854067678476	0.97730588524491
+157	0.9876105135276707	0.9783959883999382
+158	0.9878101633012291	0.9794122168627085
+159	0.9876596534964602	0.9789747201640074
+160	0.9876529917404847	0.979178787531871
+161	0.9882106756423242	0.9788103049725443
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+Tried and failed acquiring/srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC 5times
+Forcibly taking
+Trying for /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC
+/srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/multi_tf//lockdir_runs_perf-metric-auROC released
+2018-07-02 17:30:02 nandi{} [_tmp_aK5uAi]$ wc -l *
+    40790 GM12878-CTCF-human-ENCSR000AKB-optimal_idr.narrowPeak
+     5350 GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak
+    39079 GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak
+   513988 _tmp_aint__tmp_GM12878-CTCF-human-ENCSR000AKB-merged.narrowPeak
+   258733 _tmp_aint__tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak
+   458330 _tmp_aint__tmp_GM12878-ZNF143-human-ENCSR000DZL-merged.narrowPeak
+  3536011 _tmp_bkg_regions.tsv
+   440586 _tmp_core_regions.tsv
+  3095425 _tmp_expanded_bkg_regions.tsv
+  3535075 _tmp_expanded_regions.tsv
+   395696 _tmp_GM12878-CTCF-human-ENCSR000AKB-merged.narrowPeak
+   572560 _tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak
+   306038 _tmp_GM12878-ZNF143-human-ENCSR000DZL-merged.narrowPeak
+  3535075 _tmp_labels_0.tsv
+  3535075 _tmp_labels_1.tsv
+  3535075 _tmp_labels_2.tsv
+   358070 _tmp_pint_GM12878-CTCF-human-ENCSR000AKB-optimal_idr.narrowPeak
+    28870 _tmp_pint_GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak
+   297051 _tmp_pint_GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak
+    54606 _tmp_pos_regions.tsv
+  3535075 _tmp_regions.tsv
+ 28076558 total
+

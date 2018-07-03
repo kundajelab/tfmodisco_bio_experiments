@@ -1,0 +1,375 @@
+2018-07-02 03:16:20 nandi{} [logs]$ tail -f deeplift.log 
+2590000 reference seqs generated
+2600000 reference seqs generated
+2610000 reference seqs generated
+2620000 reference seqs generated
+2630000 reference seqs generated
+2640000 reference seqs generated
+2650000 reference seqs generated
+2660000 reference seqs generated
+2670000 reference seqs generated
+2680000 reference seqs generated
+2690000 reference seqs generated
+2700000 reference seqs generated
+2710000 reference seqs generated
+2720000 reference seqs generated
+2730000 reference seqs generated
+2740000 reference seqs generated
+2750000 reference seqs generated
+2760000 reference seqs generated
+2770000 reference seqs generated
+2780000 reference seqs generated
+2790000 reference seqs generated
+2800000 reference seqs generated
+2810000 reference seqs generated
+2820000 reference seqs generated
+2830000 reference seqs generated
+2840000 reference seqs generated
+2850000 reference seqs generated
+2860000 reference seqs generated
+2870000 reference seqs generated
+2880000 reference seqs generated
+2890000 reference seqs generated
+2900000 reference seqs generated
+2910000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+Done 100000
+Done 110000
+Done 120000
+Done 130000
+Done 140000
+Done 150000
+Done 160000
+Done 170000
+Done 180000
+Done 190000
+Done 200000
+Done 210000
+Done 220000
+Done 230000
+Done 240000
+Done 250000
+Done 260000
+Done 270000
+Done 280000
+Done 290000
+Done 300000
+Done 310000
+Done 320000
+Done 330000
+Done 340000
+Done 350000
+Done 360000
+Done 370000
+Done 380000
+Done 390000
+Done 400000
+Done 410000
+Done 420000
+Done 430000
+Done 440000
+Done 450000
+Done 460000
+Done 470000
+Done 480000
+Done 490000
+Done 500000
+Done 510000
+Done 520000
+Done 530000
+Done 540000
+Done 550000
+Done 560000
+Done 570000
+Done 580000
+Done 590000
+Done 600000
+Done 610000
+Done 620000
+Done 630000
+Done 640000
+Done 650000
+Done 660000
+Done 670000
+Done 680000
+Done 690000
+Done 700000
+Done 710000
+Done 720000
+Done 730000
+Done 740000
+Done 750000
+Done 760000
+Done 770000
+Done 780000
+Done 790000
+Done 800000
+Done 810000
+Done 820000
+Done 830000
+Done 840000
+Done 850000
+Done 860000
+Done 870000
+Done 880000
+Done 890000
+Done 900000
+Done 910000
+Done 920000
+Done 930000
+Done 940000
+Done 950000
+Done 960000
+Done 970000
+Done 980000
+Done 990000
+Done 1000000
+Done 1010000
+Done 1020000
+Done 1030000
+Done 1040000
+Done 1050000
+Done 1060000
+Done 1070000
+Done 1080000
+Done 1090000
+Done 1100000
+Done 1110000
+Done 1120000
+Done 1130000
+Done 1140000
+Done 1150000
+Done 1160000
+Done 1170000
+Done 1180000
+Done 1190000
+Done 1200000
+Done 1210000
+Done 1220000
+Done 1230000
+Done 1240000
+Done 1250000
+Done 1260000
+Done 1270000
+Done 1280000
+Done 1290000
+Done 1300000
+Done 1310000
+Done 1320000
+Done 1330000
+Done 1340000
+Done 1350000
+Done 1360000
+Done 1370000
+Done 1380000
+Done 1390000
+Done 1400000
+Done 1410000
+Done 1420000
+Done 1430000
+Done 1440000
+Done 1450000
+Done 1460000
+Done 1470000
+Done 1480000
+Done 1490000
+Done 1500000
+Done 1510000
+Done 1520000
+Done 1530000
+Done 1540000
+Done 1550000
+Done 1560000
+Done 1570000
+Done 1580000
+Done 1590000
+Done 1600000
+Done 1610000
+Done 1620000
+Done 1630000
+Done 1640000
+Done 1650000
+Done 1660000
+Done 1670000
+Done 1680000
+Done 1690000
+Done 1700000
+Done 1710000
+Done 1720000
+Done 1730000
+Done 1740000
+Done 1750000
+Done 1760000
+Done 1770000
+Done 1780000
+Done 1790000
+Done 1800000
+Done 1810000
+Done 1820000
+Done 1830000
+Done 1840000
+Done 1850000
+Done 1860000
+Done 1870000
+Done 1880000
+Done 1890000
+Done 1900000
+Done 1910000
+Done 1920000
+Done 1930000
+Done 1940000
+Done 1950000
+Done 1960000
+Done 1970000
+Done 1980000
+Done 1990000
+Done 2000000
+Done 2010000
+Done 2020000
+Done 2030000
+Done 2040000
+Done 2050000
+Done 2060000
+Done 2070000
+Done 2080000
+Done 2090000
+Done 2100000
+Done 2110000
+Done 2120000
+Done 2130000
+Done 2140000
+Done 2150000
+Done 2160000
+Done 2170000
+Done 2180000
+Done 2190000
+Done 2200000
+Done 2210000
+Done 2220000
+Done 2230000
+Done 2240000
+Done 2250000
+Done 2260000
+Done 2270000
+Done 2280000
+Done 2290000
+Done 2300000
+Done 2310000
+Done 2320000
+Done 2330000
+Done 2340000
+Done 2350000
+Done 2360000
+Done 2370000
+Done 2380000
+Done 2390000
+Done 2400000
+Done 2410000
+Done 2420000
+Done 2430000
+Done 2440000
+Done 2450000
+Done 2460000
+Done 2470000
+Done 2480000
+Done 2490000
+Done 2500000
+Done 2510000
+Done 2520000
+Done 2530000
+Done 2540000
+Done 2550000
+Done 2560000
+Done 2570000
+Done 2580000
+Done 2590000
+Done 2600000
+Done 2610000
+Done 2620000
+Done 2630000
+Done 2640000
+Done 2650000
+Done 2660000
+Done 2670000
+Done 2680000
+Done 2690000
+Done 2700000
+Done 2710000
+Done 2720000
+Done 2730000
+Done 2740000
+Done 2750000
+Done 2760000
+Done 2770000
+Done 2780000
+Done 2790000
+Done 2800000
+Done 2810000
+Done 2820000
+Done 2830000
+Done 2840000
+Done 2850000
+Done 2860000
+Done 2870000
+Done 2880000
+Done 2890000
+Done 2900000
+Done 2910000
+saving to rescale_conv_revealcancel_fc_multiref_10_task_2.npy
+start time 2018-07-01 23:34:57.139459
+end time 2018-07-02 03:47:12.218294
+
+
+
+tail: deeplift.log: file truncated
+Using cuDNN version 7001 on context None
+Mapped name None to device cuda0: GeForce GTX TITAN X (0000:08:00.0)
+start time 2018-07-02 03:47:30.032748
+method file prefix is  ./rescale_conv_revealcancel_fc_multiref_10_task_ , input seq file is  subset.txt , number of tasks is  3
+Theano version: 1.0.2
+2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+shape of onehot (291146, 1000, 4)
+shape of orig_score (291146, 1000)
+shape of score (291146, 1000, 4)
+[[0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]]
+orig_scores
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+scores
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+Traceback (most recent call last):
+  File "/home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py", line 175, in <module>
+    one_hot=onehot_data)
+  File "/srv/scratch/ktian/kundajelab/tfmodisco/modisco/tfmodisco_workflow/workflow.py", line 129, in __call__
+    has_pos_axis=True) for key in task_names] 
+KeyError: 'task3'
+packet_write_wait: Connection to 171.65.76.244 port 22: Broken pipe
