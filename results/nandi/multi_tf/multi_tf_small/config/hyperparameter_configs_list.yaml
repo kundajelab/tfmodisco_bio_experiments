@@ -1,6 +1,6 @@
 [
 {
-    "message": "example model and training config",
+    "message": "multi_tf_small model and training config",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",

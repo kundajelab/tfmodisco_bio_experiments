@@ -37,7 +37,7 @@ logging.basicConfig(
 #for tf in ['ZNF143']:
 
 def process_tf(task_list):
-    header = "id"
+    header = '\t'.join(['id', 'ENCSR000AKB', 'ENCSR000BJE', 'ENCSR000DZL'])
     '''
     tmp_empty_file = tmpDir + "_tmp_empty_file"
     tmp_file_list.append(tmp_empty_file)
@@ -87,18 +87,20 @@ def process_tf(task_list):
           " --genome hg19 --prefix label " + " --stride 20" + background_str
     logging.debug(cmd)
     os.system(cmd)
-    '''
 
-    labels_multitask_gz = "label.intervals_file.tsv.gz"
     labels_multitask    = labels_multitask_gz[:-3]
-
     os.system("pigz -d -c " + labels_multitask_gz +  " > " + labels_multitask)
-    
+
     labels_multitask_small = labels_multitask + ".small"
 
     # sample to create small data set
     os.system("cat " + labels_multitask + " | perl -lane 'if ($.%500==1 ) {print}' > " + labels_multitask_small)
+    '''
 
+    labels_multitask_gz = "label.intervals_file.tsv.small.gz"
+    labels_multitask    = labels_multitask_gz[:-3]
+
+    os.system("pigz -d -c " + labels_multitask_gz +  " > " + labels_multitask)
     tmp_labels_wo_title = tmpDir + "_tmp_labels_without_title.txt"
 
     # use sed to change each line from
@@ -106,13 +108,14 @@ def process_tf(task_list):
     # to 
     # chr:start-end<\t>label1<\t>label2 ...
 
-    labels_multitask = labels_multitask_small
 
     os.system("cat " + labels_multitask + " | sed 's/\t/:/; s/\t/-/' > " + tmp_labels_wo_title)
     os.system("bedtools getfasta -fi " + genomeDir + "hg19.fa -bed " + labels_multitask + " -fo inputs.fa")
 
     #make the final inputs labels files from the shuffled lines (tfdragonn shuffles already)
-    os.system("echo " + header + " > labels.txt")
+    fh = open("labels.txt","w")
+    fh.write(header + "\n")
+    fh.close()
     os.system("cat " + tmp_labels_wo_title + " >> labels.txt")
 
     logging.info("split and make hdf5")
