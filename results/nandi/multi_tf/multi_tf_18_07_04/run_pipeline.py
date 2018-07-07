@@ -57,6 +57,7 @@ subset.fa      # fasta file for the sequences. either 10% of inputs.fa, or test 
 #os.system("cat labels.txt | tail -n +2 | perl -lane 'if ($.%10==1) {print $F[0]}' | sed 's/:/\t/; s/-/\t/' > splits/subset.tsv")
 
 # use the test set as the subset for deeplift
+#os.system("gunzip -c splits/test.txt.gz | perl -lane 'if ($.%2==1) {print}' | sed 's/:/\t/; s/-/\t/' | sort -k1,1 -k2,2n > splits/subset.tsv") # select half of testset
 os.system("gunzip -c splits/test.txt.gz | sed 's/:/\t/; s/-/\t/' | sort -k1,1 -k2,2n > splits/subset.tsv")
 os.system("bedtools getfasta -fi " + genomeDir + "hg19.fa -bed splits/subset.tsv -fo subset.fa")
 """
@@ -66,8 +67,7 @@ Step 3: run_deeplift.py
 -----------------------------------------------------------------------
 '''
 # run deeplift
-#os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
-os.system("python run_deeplift_new.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
+os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
 
 os.system("cat subset.fa | grep -v '^>' > subset.txt")
 
