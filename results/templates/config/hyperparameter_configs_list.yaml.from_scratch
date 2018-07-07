@@ -3,12 +3,12 @@
     "message": "example model and training config",
     "other_data_loaders":{
         "train": {
-            #"class": "hdf5_data_loader.MultimodalBatchDataLoader",
-            "class": "hdf5_data_loader.MultimodalAtOnceDataLoader",
+            "class": "hdf5_data_loader.MultimodalBatchDataLoader",
+            #"class": "hdf5_data_loader.MultimodalAtOnceDataLoader",
             "kwargs": {
                 "batch_size": 200,
                 "path_to_hdf5": "train_data.hdf5",
-                "num_to_load_for_eval": 3000, #if my training data is large
+                "num_to_load_for_eval": 30000, #if my training data is large
                 #and I only want to load a subset when I'm calculating the
                 #performance stats on the training data, specify this number,
                 #and only that many datapoints of the training data will be used
@@ -22,13 +22,15 @@
         "class": "flexible_keras.FlexibleKerasSequential",
         "kwargs": {
             "layers_config": [
-                {
+                {   
+                    # --- conv layer 1
+                    "name": "conv1",
                     "class": "keras.layers.convolutional.Convolution1D", 
                     "kwargs": {
                         #"input_shape": [1,4,200],
                         "input_shape": [1000,4],
-                        "nb_filter": 51,
-                        "filter_length": 11,
+                        "nb_filter": 50,
+                        "filter_length": 15,
                         #"nb_col":11,
                         #"nb_row":4,
                         "border_mode": "same",
@@ -44,10 +46,11 @@
                     "kwargs": {"activation": "relu"}
                 },
                 {
+                    # --- conv layer 2
                     "class": "keras.layers.convolutional.Convolution1D", 
                     "kwargs": {
-                        "nb_filter": 49,
-                        "filter_length": 10,
+                        "nb_filter": 50,
+                        "filter_length": 15,
                         #"nb_row": 1,
                         #"nb_col": 10,
                         "border_mode": "same"
@@ -58,8 +61,9 @@
                     "kwargs": {"activation": "relu"}
                 },
                 {
+                    # --- conv layer 3
                     "class": "keras.layers.convolutional.Convolution1D", 
-                    "kwargs": {"nb_filter": 10, "filter_length": 10}
+                    "kwargs": { "nb_filter": 50, "filter_length": 13}
                     #"kwargs": {"nb_filter": 10, "nb_row": 1, "nb_col": 10}
                 },
                 {
@@ -76,6 +80,30 @@
                     "kwargs": {}
                 },
                 {
+                    # --- FC dense layer 1
+                    "class": "keras.layers.core.Dense", 
+                    "kwargs": {"output_dim": 50}
+                },
+                {
+                    "class": "keras.layers.core.Activation", 
+                    "kwargs": {"activation": "relu"}
+                },
+                {   
+                    "name": "fc1_batchnorm",
+                    "class": "keras.layers.normalization.BatchNormalization",
+                    "kwargs": {
+                         "axis": -1
+                    }
+                }, 
+                {
+                    "name": "fc1_dropout",
+                    "class": "keras.layers.core.Dropout",
+                    "kwargs": {
+                         "p": 0.2
+                     }
+                },
+                {
+                    # --- FC dense layer 2
                     "class": "keras.layers.core.Dense", 
                     "kwargs": {"output_dim": 5}
                 },
@@ -88,7 +116,10 @@
                 "class": "keras.optimizers.Adam",
                 "kwargs": {"lr": 0.001}
             },
-            "loss": "binary_crossentropy" 
+            "loss": {
+                "modules_to_load": ["keras_genomics"],
+                "func": "keras_genomics.losses.ambig_binary_crossentropy"        
+            } 
         } 
     },
     "model_trainer":{
@@ -99,7 +130,7 @@
             "stopping_criterion_config": {
                 "class": "EarlyStopping" ,
                 "kwargs": {
-                   "max_epochs": 300, 
+                   "max_epochs": 1000, 
                    "epochs_to_wait": 20
                 } 
             },
