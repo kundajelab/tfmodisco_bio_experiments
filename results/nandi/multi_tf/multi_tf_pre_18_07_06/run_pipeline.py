@@ -12,26 +12,25 @@ num_task = 3
 
 import sys
 if len(sys.argv) > 2:
-    print("Syntax: ", sys.argv[0] , " [step]")
+    print("Syntax: ", sys.argv[0] , " [start]")
     quit()
 
 if len(sys.argv) == 2:
-    step = int(sys.argv[1])
+    start = int(sys.argv[1])
 else:
-    step = 1 # start with normal training
+    start = 1 # start with normal training
 
 os.system("mkdir -p logs")
 
+if start <= -1:
 #0 prepare_data with union of positives (no background) and train a model
-if step == 0:
-    """
     os.system("cp -r " + templateDir + "/config .")
     os.system("ln -s " + templateDir + "/make_hdf5_yaml .")
-
-    os.system("python prepare_data.py --no-bg > logs/pre_prepare.log 2>&1")
     os.system("cp -f config/hyperparameter_configs_list.yaml.from_scratch config/hyperparameter_configs_list.yaml")
+
+if start <= 0:
+    os.system("python prepare_data.py --no-bg > logs/pre_prepare.log 2>&1")
     os.system("momma_dragonn_train > logs/pre_train.log 2>&1")
-    """
 
     os.chdir("model_files")
     os.system("ln -s record_1_*Json.json  record_1_Json.json")
@@ -48,12 +47,12 @@ if step == 0:
     print("step 0 pre_train done")
 
 #1 prepare_data with background for the main training
-if step >= 1:
+if start <= 1:
     os.system("python prepare_data.py > logs/prepare.log 2>&1")
     print("step 1 prepare_data done")
 
 #2 train to continue from pre-trained data
-if step >= 2:
+if start <= 2:
     os.system("momma_dragonn_train > logs/train.log 2>&1")
     os.chdir("model_files")
     os.system("ln -s record_1_*Json.json  record_1_Json.json")
@@ -62,7 +61,7 @@ if step >= 2:
     print("step 2 training done")
 
 #3 deeplift
-if step >= 3:
+if start <= 3:
     # use 1 mod 10 as subset on which to run deeplift
     # os.system("cat labels.txt | tail -n +2 | perl -lane 'if ($.%10==1) {print $F[0]}' | sed 's/:/\t/; s/-/\t/' > splits/subset.tsv")
 
@@ -75,7 +74,7 @@ if step >= 3:
     print("step 3 deeplift done")
 
 #4 modisco
-if step >= 4:
+if start <= 4:
     os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.txt 3 > logs/modisco.log 2>&1")
 
 """
