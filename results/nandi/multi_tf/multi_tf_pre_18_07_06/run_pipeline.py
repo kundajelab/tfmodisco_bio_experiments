@@ -75,7 +75,8 @@ if start <= 3:
 
 #4 modisco
 if start <= 4:
-    os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.txt 3 > logs/modisco.log 2>&1")
+    os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.fa subset_nobg.tsv 3 > logs/modisco.log 2>&1")
+    #os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.txt 3 > logs/modisco.log 2>&1")
 
 """
 '''
