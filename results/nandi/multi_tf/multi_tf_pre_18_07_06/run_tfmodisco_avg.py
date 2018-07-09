@@ -17,7 +17,7 @@ import modisco
 import theano
 import sys
 
-logging.debug("Theano version:",theano.__version__)
+logging.debug("Theano version:" + str(theano.__version__))
 logging.debug(sys.version)
 
 
@@ -334,8 +334,8 @@ for t in range(num_tasks):
     task_to_hyp_scores[task] = avg_hyp_scores_list
     task_to_scores[task]     = avg_target_scores_list
 
-    logging.debug("shape of hyp_score", task_to_hyp_scores['task0'][0].shape)
-    logging.debug("shape of score",     task_to_scores['task0'][0].shape)
+    logging.debug("shape of hyp_score " + str(task_to_hyp_scores['task0'][0].shape))
+    logging.debug("shape of score " + str(task_to_scores['task0'][0].shape))
 
 """
 for i in range(num_tasks):
