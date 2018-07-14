@@ -1,0 +1,244 @@
+2018-07-13 13:00:40 INFO  run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.fa subset_nobg.tsv 5
+2018-07-13 13:00:40 DEBUG $HOME=/root
+2018-07-13 13:00:40 DEBUG matplotlib data path /root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data
+2018-07-13 13:00:40 DEBUG loaded rc file /root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-07-13 13:00:40 DEBUG matplotlib version 2.2.2
+2018-07-13 13:00:40 DEBUG interactive is False
+2018-07-13 13:00:40 DEBUG platform is linux2
+2018-07-13 13:00:40 DEBUG loaded modules: ['numpy.testing.nose_tools.nosetester', 'heapq', 'numpy.core.info', 'distutils', 'functools', 'random', 'unittest.types', 'datetime', 'sysconfig', 'json.encoder', 'select', 'gc', 'numpy.lib.numpy', 'distutils.sysconfig', 'ctypes._endian', 'encodings.encodings', 'unittest.pprint', 'matplotlib.colors', 'numpy.core.numerictypes', 'numpy._distributor_init', 'numpy.random.mtrand', 'logging.weakref', 'numpy.matrixlib.defmatrix', 'numpy.random.info', 'tempfile', 'pprint', 'numpy.linalg', 'imp', 'numpy.testing', 'collections', 'logging.thread', 'unittest.sys', 'numpy.core.umath', 'unittest.main', 'distutils.types', 'numpy.lib._version', 'zipimport', 'string', 'json.struct', 'numpy.linalg.info', 'numpy.polynomial._polybase', 'unittest.functools', 'numpy.lib.arraysetops', 'matplotlib.compat', 'textwrap', 'unittest.util', 'numpy.version', 'distutils.re', 'ctypes.os', 'numpy.core.machar', 'numpy.lib.type_check', 'httplib', 'unittest.StringIO', 'bisect', 'numpy.core._internal', 'signal', 'numpy.random.operator', 'numpy.lib._datasource', 'unittest.re', 'threading', 'token', 'numpy.fft.fftpack_lite', 'matplotlib.cbook', 'numpy.core.multiarray', 'cycler', 'numpy.lib', 'numpy.linalg._umath_linalg', 'decimal', 'json.json', 'dis', 'distutils.version', 'cStringIO', 'google', 'logging.threading', 'pkgutil', 'unittest.time', 'locale', 'numpy.add_newdocs', 'logging.os', 'unittest.difflib', 'numpy.core.getlimits', 'base64', 'atexit', 'pyparsing', 'matplotlib.compat.subprocess', 'encodings', 'matplotlib.cbook.warnings', 'matplotlib._color_data', 'matplotlib.cbook.deprecation', 'logging.traceback', 'matplotlib.cbook.textwrap', 'abc', 'numpy.matrixlib', 'numpy.ma.extras', 'numpy.testing.decorators', 'numpy._globals', 'rfc822', 'numpy.lib.npyio', 'numpy.core.shape_base', 'matplotlib.sys', 'numpy.random.threading', 're', 'numpy.lib.mixins', '_posixsubprocess32', 'numpy.polynomial.legendre', 'json.scanner', 'glob', 'math', 'numpy.fft.helper', 'fcntl', 'unittest.case', 'matplotlib.fontconfig_pattern', 'mpl_toolkits', 'dateutil', 'ast', 'UserDict', 'unittest.suite', 'inspect', 'distutils.os', 'matplotlib', 'fnmatch', '_hashlib', 'backports', 'ctypes', '_ctypes', 'ctypes.struct', 'codecs', 'backports.functools_lru_cache', 'logging.sys', '_json', 'numpy.os', 'unittest.loader', 'struct', '_functools', '_locale', 'logging', 'socket', 'thread', 'StringIO', 'numpy.core.memmap', 'pickle', 'traceback', 'cython_runtime', 'numpy.lib.info', 'weakref', 'itertools', 'numpy.fft.fftpack', 'opcode', 'numpy.linalg.lapack_lite', 'numpy.ma', 'distutils.sys', 'os', 'marshal', 'mimetools', '__future__', 'six.moves', '_collections', 'urllib', '_sre', 'unittest', 'numpy.random', '__builtin__', 'numpy.lib.twodim_base', 'numpy.polynomial', 'unittest.runner', 'operator', 'array', 'numpy.core.arrayprint', 'distutils.string', 'numpy.compat.py3k', 'ctypes._ctypes', '_heapq', 'ctypes.sys', 'six.moves.urllib', 'unittest.collections', 'posixpath', 'numpy.lib.financial', 'numpy.polynomial.laguerre', 'errno', '_socket', 'binascii', 'json', 'sre_constants', 'matplotlib.cbook.functools', 'logging.codecs', 'numpy.core._methods', 'os.path', 'numpy.core.function_base', 'tokenize', 'numpy.lib.stride_tricks', 'matplotlib.json', 'numpy', '_warnings', 'numpy.polynomial.chebyshev', 'numpy.testing.nose_tools.utils', 'json.re', 'cPickle', 'encodings.__builtin__', 'numpy.polynomial.hermite_e', '_codecs', 'subprocess32', 'unittest.fnmatch', 'numpy.polynomial.polynomial', 'numpy.__config__', 'pwd', 'numpy.ma.core', 'numpy.testing.utils', 'logging.atexit', 'matplotlib.cbook._backports', 'numpy.lib.ufunclike', 'copy', '_sysconfigdata', '_struct', 'numpy.core.fromnumeric', 'hashlib', 'numpy.ctypeslib', 'matplotlib._version', '_ast', 'keyword', 'numpy.lib.scimath', 'numpy.fft', 'zlib', 'numpy.lib.nanfunctions', 'numpy.random.numpy', 'unittest.weakref', 'logging.time', '_bisect', 'posix', 'encodings.aliases', 'numpy.lib.function_base', 'exceptions', 'sre_parse', 'backports.pkgutil', 'json._json', 'logging.warnings', 'numpy.random.warnings', 'distutils.distutils', 'unittest.signal', 'copy_reg', 'sre_compile', 'json.sys', 'logging.cStringIO', '_random', 'site', 'numpy.lib.polynomial', 'numpy.compat', 'numpy._import_tools', 'logging.collections', 'numpy.polynomial.hermite', 'contextlib', 'numbers', 'io', '__main__', 'numpy.fft.info', 'numpy.core.records', 'shutil', 'numpy.sys', 'numpy.polynomial.polyutils', 'urlparse', 'dateutil._version', 'unittest.result', 'strop', 'grp', 'linecache', 'numpy.core.numeric', 'six', 'encodings.codecs', 'six.moves.urllib.request', '_abcoll', 'matplotlib.testing', 'numpy.core', 'matplotlib.rcsetup', 'genericpath', 'stat', '_ssl', 'numpy.lib._iotools', 'numpy.lib.index_tricks', 'warnings', 'numpy.lib.utils', 'numpy.core.defchararray', 'encodings.ascii', 'numpy.lib.shape_base', 'urllib2', 'unittest.signals', 'sys', 'unittest.traceback', 'numpy.compat._inspect', 'numpy.core.einsumfunc', 'ctypes.ctypes', 'numpy.lib.format', 'numpy.lib.arrayterator', 'numpy.testing.nosetester', 'types', 'bz2', 'future_builtins', 'ssl', 'numpy.testing.nose_tools', 'numpy.lib.arraypad', '_weakref', 'numpy.testing.nose_tools.decorators', 'difflib', 'distutils.errors', '_io', '_weakrefset', 'json.decoder', 'unittest.warnings', 'time', 'gzip', 'numpy.linalg.linalg', 'unittest.os']
+2018-07-13 13:00:41 DEBUG Theano version:0.9.0
+2018-07-13 13:00:41 DEBUG 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+2018-07-13 13:00:41 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is subset_nobg.fa, input tsv is subset_nobg.tsv, number of tasks is 5
+2018-07-13 13:00:41 DEBUG lenth of sequences = 9476
+2018-07-13 13:00:41 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:00:41 DEBUG AverageScores: append to seq_list
+2018-07-13 13:00:41 DEBUG shape of hyp_score (460, 4)
+2018-07-13 13:00:41 DEBUG shape of score (460, 4)
+2018-07-13 13:00:42 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:00:42 DEBUG AverageScores: -
+2018-07-13 13:00:42 DEBUG shape of hyp_score (460, 4)
+2018-07-13 13:00:42 DEBUG shape of score (460, 4)
+2018-07-13 13:00:42 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:00:42 DEBUG AverageScores: -
+2018-07-13 13:00:43 DEBUG shape of hyp_score (460, 4)
+2018-07-13 13:00:43 DEBUG shape of score (460, 4)
+2018-07-13 13:00:43 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:00:43 DEBUG AverageScores: -
+2018-07-13 13:00:43 DEBUG shape of hyp_score (460, 4)
+2018-07-13 13:00:43 DEBUG shape of score (460, 4)
+2018-07-13 13:00:44 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:00:44 DEBUG AverageScores: -
+2018-07-13 13:00:44 DEBUG shape of hyp_score (460, 4)
+2018-07-13 13:00:44 DEBUG shape of score (460, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-07-13 13:00:45 DEBUG CACHEDIR=/root/.cache/matplotlib
+2018-07-13 13:00:45 DEBUG Using fontManager instance from /root/.cache/matplotlib/fontList.json
+2018-07-13 13:00:46 DEBUG backend agg version v2.2
+Thresholds: -0.693037169240415 and 1.9821021758785198
+CDFs: 0.9979217304108463 and 0.9998838528180062
+Est. FDRs: 1.0 and 0.009970891717377606
+Got 203 coords
+On task task1
+Computing windowed sums
+Computing threshold
+Thresholds: -1.0139244963531386 and 3.020168616316128
+CDFs: 0.9990554888902327 and 0.9998955508063252
+Est. FDRs: 1.0 and 0.00999695760339672
+Got 204 coords
+On task task2
+Computing windowed sums
+Computing threshold
+Thresholds: -0.7184445079124998 and 2.8359191618588127
+CDFs: 0.9975389391189959 and 0.9999056970040923
+Est. FDRs: 1.0 and 0.009980922062066322
+Got 192 coords
+On task task3
+Computing windowed sums
+Computing threshold
+Thresholds: -0.7619495006724417 and 2.3510209630980783
+CDFs: 0.9964772799622421 and 0.9998877794815959
+Est. FDRs: 1.0 and 0.009999067692040365
+Got 206 coords
+On task task4
+Computing windowed sums
+Computing threshold
+Thresholds: -0.8308327827668098 and 2.2263790440571025
+CDFs: 0.9978599781593178 and 0.9998656179275842
+Est. FDRs: 1.0 and 0.009988704112589912
+Got 233 coords
+After resolving overlaps, got 237 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9964772799622421
+237 identified in total
+1 activity patterns with support >= 100 out of 243 possible patterns
+Metacluster sizes:  [235]
+Idx to activities:  {0: '1,1,1,1,1'}
+On metacluster 0
+Metacluster size 235
+Relevant tasks:  ('task0', 'task1', 'task2', 'task3', 'task4')
+Relevant signs:  (1, 1, 1, 1, 1)
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+2018-07-13 13:00:53 WARNING install mkl with `conda install mkl-service`: No module named mkl
+(Round 1) num seqlets: 235
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 13.92 s
+Starting affinity matrix computations
+Normalization computed in 0.1 s
+Cosine similarity mat computed in 0.44 s
+Normalization computed in 0.1 s
+Cosine similarity mat computed in 0.45 s
+Finished affinity matrix computations in 0.9 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.0 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 9.54 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 7.65 s
+(Round 1) Computed affinity matrix on nearest neighbors in 17.98 s
+Filtered down to 235 of 235
+(Round 1) Retained 235 rows out of 235 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 235 samples in 0.000s...
+[t-SNE] Computed neighbors for 235 samples in 0.002s...
+[t-SNE] Computed conditional probabilities for sample 235 / 235
+[t-SNE] Mean sigma: 0.214425
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.0114178657532 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    0.2s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:    1.7s finished
+Louvain completed 200 runs in 2.23028588295 seconds
+Wrote graph to binary file in 0.0155417919159 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.685386
+Louvain completed 51 runs in 3.26971507072 seconds
+Preproc + Louvain took 5.56565213203 s
+Got 7 clusters after round 1
+Counts:
+{0: 63, 1: 59, 2: 49, 3: 21, 4: 20, 5: 15, 6: 8}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 63 seqlets
+Trimmed 22 out of 63
+Aggregating for cluster 1 with 59 seqlets
+Trimmed 16 out of 59
+Aggregating for cluster 2 with 49 seqlets
+Trimmed 13 out of 49
+Aggregating for cluster 3 with 21 seqlets
+Trimmed 3 out of 21
+Aggregating for cluster 4 with 20 seqlets
+Trimmed 0 out of 20
+Aggregating for cluster 5 with 15 seqlets
+Trimmed 2 out of 15
+Aggregating for cluster 6 with 8 seqlets
+Trimmed 0 out of 8
+(Round 2) num seqlets: 179
+(Round 2) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 12.05 s
+Starting affinity matrix computations
+Normalization computed in 0.09 s
+Cosine similarity mat computed in 0.32 s
+Normalization computed in 0.09 s
+Cosine similarity mat computed in 0.32 s
+Finished affinity matrix computations in 0.64 s
+(Round 2) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.0 s
+(Round 2) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 6.12 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 8.58 s
+(Round 2) Computed affinity matrix on nearest neighbors in 15.32 s
+Not applying filtering for rounds above first round
+(Round 2) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 179 samples in 0.000s...
+[t-SNE] Computed neighbors for 179 samples in 0.002s...
+[t-SNE] Computed conditional probabilities for sample 179 / 179
+[t-SNE] Mean sigma: 0.225941
+(Round 2) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.00817608833313 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    0.2s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:    1.6s finished
+Louvain completed 200 runs in 2.05349302292 seconds
+Wrote graph to binary file in 0.00859713554382 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.68145
+Louvain completed 51 runs in 3.71405887604 seconds
+Preproc + Louvain took 5.81897187233 s
+Got 6 clusters after round 2
+Counts:
+{0: 56, 1: 40, 2: 37, 3: 20, 4: 18, 5: 8}
+(Round 2) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 56 seqlets
+Trimmed 0 out of 56
+Aggregating for cluster 1 with 40 seqlets
+Trimmed 0 out of 40
+Aggregating for cluster 2 with 37 seqlets
+Trimmed 0 out of 37
+Aggregating for cluster 3 with 20 seqlets
+Trimmed 0 out of 20
+Aggregating for cluster 4 with 18 seqlets
+Trimmed 0 out of 18
+Aggregating for cluster 5 with 8 seqlets
+Trimmed 0 out of 8
+Got 6 clusters
+Splitting into subclusters...
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00303411483765 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00376756
+Louvain completed 21 runs in 1.14136815071 seconds
+Similarity is 0.9461886433075162; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00165700912476 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.000775544
+After 2 runs, maximum modularity is Q = 0.00077555
+After 7 runs, maximum modularity is Q = 0.000775551
+After 13 runs, maximum modularity is Q = 0.000798886
+After 18 runs, maximum modularity is Q = 0.00079889
+Louvain completed 38 runs in 2.62087488174 seconds
+Similarity is 0.9643052038078863; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00122308731079 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.000848912
+After 2 runs, maximum modularity is Q = 0.000859072
+After 10 runs, maximum modularity is Q = 0.000859075
+Louvain completed 30 runs in 1.9269452095 seconds
+Similarity is 0.9718001187951061; is_dissimilar is False
+Merging on 6 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Collapsing 1 & 2 with prob 0.0009548462692838697 and sim 4.755635823637712
+Collapsing 2 & 4 with prob 5.200834313175929e-05 and sim 4.754809624879651
+Collapsing 0 & 1 with prob 3.1805837430132344e-05 and sim 4.749909127428551
+Collapsing 0 & 4 with prob 0.00022118615961342044 and sim 4.728048743817215
+Collapsing 0 & 2 with prob 0.00023436289619865056 and sim 4.674482643424446
+Trimmed 0 out of 77
+Trimmed 0 out of 95
+Trimmed 0 out of 151
+On merging iteration 2
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 3 patterns after merging
+Performing seqlet reassignment
+Cross contin jaccard time taken: 0.43 s
+Cross contin jaccard time taken: 0.45 s
+Discarded 26 seqlets
+Got 1 patterns after reassignment
+Total time taken is 87.78s
+2018-07-13 13:02:21 DEBUG **************** workflow done *********************
+2018-07-13 13:02:21 DEBUG **************** result saved *********************

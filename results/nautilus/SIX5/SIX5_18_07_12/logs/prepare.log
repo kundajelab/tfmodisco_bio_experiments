@@ -1,0 +1,45 @@
+2018-07-12 18:52:40 INFO  prepare_data.py
+2018-07-12 18:52:53 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_rE34P1/_tmp_A549-SIX5-human-ENCSR000BRL-merged.narrowPeak.gz,./_tmp_rE34P1/_tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak.gz,./_tmp_rE34P1/_tmp_H1-hESC-SIX5-human-ENCSR000BIQ-merged.narrowPeak.gz,./_tmp_rE34P1/_tmp_empty_file,./_tmp_rE34P1/_tmp_K562-SIX5-human-ENCSR000BNW-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 20 --background /root/kundajelab/tfnet/genome/hg19.tsv 
+2018-07-12 18:52:53 DEBUG bin-size=200, stride=20
+2018-07-12 18:53:21 INFO  LABEL_REGIONS sort merge done
+2018-07-12 18:53:57 INFO  LABEL_REGIONS intersect done
+Traceback (most recent call last):
+  File "/root/kundajelab/tfnet/scripts/label_regions", line 371, in <module>
+    run_label_regions_from_args()
+  File "/root/kundajelab/tfnet/scripts/label_regions", line 348, in run_label_regions_from_args
+    stride=args.stride, genome=args.genome, n_jobs=args.n_jobs)
+  File "/root/kundajelab/tfnet/scripts/label_regions", line 292, in label_regions_multitask
+    label_regions_fast(tmp_regions, pos_intersects[i], a_intersect, tmp_labels)
+  File "/root/kundajelab/tfnet/scripts/label_regions", line 129, in label_regions_fast
+    r_line = reg.readline()
+KeyboardInterrupt
+2018-07-12 18:54:06 INFO  split and make hdf5
+Traceback (most recent call last):
+  File "/root/anaconda2/envs/modisco_dev/bin/make_hdf5", line 4, in <module>
+    __import__('pkg_resources').require('avutils==0.2.2')
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 3074, in <module>
+    @_call_aside
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 3058, in _call_aside
+    f(*args, **kwargs)
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 3087, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 655, in _build_master
+    ws = cls()
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 648, in __init__
+    self.add_entry(entry)
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 704, in add_entry
+    for dist in find_distributions(entry, True):
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2045, in find_on_path
+    path_item_entries = _by_version_descending(entries)
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2018, in _by_version_descending
+    return sorted(names, key=_by_version, reverse=True)
+  File "/root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pkg_resources/__init__.py", line 2010, in _by_version
+    def _by_version(name):
+KeyboardInterrupt
+2018-07-12 18:54:06 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz
+5

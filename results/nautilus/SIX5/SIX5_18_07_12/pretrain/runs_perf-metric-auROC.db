@@ -1,0 +1,334 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.854083839973433,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_6eZ0z_modelWeights.h5",
+            "json_file": "model_files/record_1_model_6eZ0z_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_6eZ0z"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "example model and training config",
+            "best_valid_key_metric": 0.854083839973433,
+            "best_valid_perf_info": {
+                "epoch": 9,
+                "valid_key_metric": 0.854083839973433,
+                "train_key_metric": 0.9104641812911496,
+                "valid_all_stats": {
+                    "per_output_auROC": [
+                        0.6779097373739659,
+                        0.894072405807486,
+                        0.880264940589901,
+                        0.9011487476575867,
+                        0.9170233684382258
+                    ],
+                    "mean_auROC": 0.854083839973433,
+                    "per_output_auPRC": [
+                        0.979245648900766,
+                        0.8154496934263444,
+                        0.7631549094794547,
+                        0.7294191575178972,
+                        0.780467633317187
+                    ],
+                    "mean_auPRC": 0.8135474085283299,
+                    "per_output_balanced_accuracy": [
+                        0.5,
+                        0.6435898515034904,
+                        0.6937255280521345,
+                        0.7683317581968139,
+                        0.7561192226314736
+                    ],
+                    "mean_balanced_accuracy": 0.6723532720767825,
+                    "per_output_unbalanced_accuracy": [
+                        0.9651433900676148,
+                        0.5214544441348565,
+                        0.5490809542432538,
+                        0.6522266313932981,
+                        0.6318650683022023
+                    ],
+                    "mean_unbalanced_accuracy": 0.6639540976282451
+                }
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.6930547071150068,
+                    0.6923346769474001
+                ],
+                [
+                    0.7843768168621903,
+                    0.7656743564736939
+                ],
+                [
+                    0.8466565461348982,
+                    0.8344914825634809
+                ],
+                [
+                    0.8716007961882319,
+                    0.8499116714806133
+                ],
+                [
+                    0.8838376887587988,
+                    0.8515163701517817
+                ],
+                [
+                    0.8925003863167007,
+                    0.84522722615419
+                ],
+                [
+                    0.8970611185501921,
+                    0.8527476277797928
+                ],
+                [
+                    0.9039798634429659,
+                    0.8469158574656197
+                ],
+                [
+                    0.9104641812911496,
+                    0.854083839973433
+                ],
+                [
+                    0.9160010218064981,
+                    0.8466031099313975
+                ],
+                [
+                    0.9205149459562424,
+                    0.851024483028177
+                ],
+                [
+                    0.9204611470677593,
+                    0.8395473657770914
+                ],
+                [
+                    0.9259779294368784,
+                    0.8428431332612245
+                ],
+                [
+                    0.9279789454256806,
+                    0.8470635670457469
+                ],
+                [
+                    0.9307943704811666,
+                    0.8459523687082287
+                ],
+                [
+                    0.934572594618122,
+                    0.8461436332056778
+                ],
+                [
+                    0.9373707572101952,
+                    0.8434039254820707
+                ],
+                [
+                    0.9419700603098375,
+                    0.8396907463454525
+                ],
+                [
+                    0.9415743167988945,
+                    0.8469738406804975
+                ],
+                [
+                    0.9419905745980133,
+                    0.8344930258747812
+                ],
+                [
+                    0.9443341489715771,
+                    0.835996286931913
+                ],
+                [
+                    0.9455814056408517,
+                    0.8348118029170749
+                ],
+                [
+                    0.948405646232143,
+                    0.8373577417542855
+                ],
+                [
+                    0.9500274678457885,
+                    0.8332802599444923
+                ],
+                [
+                    0.9530880181207888,
+                    0.8316819625069612
+                ],
+                [
+                    0.9518074834121814,
+                    0.8313694104487543
+                ],
+                [
+                    0.9548362363265422,
+                    0.8229073995336611
+                ],
+                [
+                    0.9540869810858549,
+                    0.8335746854307459
+                ],
+                [
+                    0.9556203532314715,
+                    0.82080335946098
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_6eZ0z_modelWeights.h5",
+                "json_file": "model_files/record_1_model_6eZ0z_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_6eZ0z"
+            },
+            "model_creator_info": {
+                "layers_config": [
+                    {
+                        "name": "conv1",
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "name": "fc1_batchnorm",
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "name": "fc1_dropout",
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 5
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": false,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 29
+            }
+        }
+    ]
+}

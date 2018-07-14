@@ -1,0 +1,84 @@
+2018-07-13 13:02:52 INFO  run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.fa subset_nobg.tsv 5
+2018-07-13 13:02:52 DEBUG $HOME=/root
+2018-07-13 13:02:52 DEBUG matplotlib data path /root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data
+2018-07-13 13:02:52 DEBUG loaded rc file /root/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-07-13 13:02:52 DEBUG matplotlib version 2.2.2
+2018-07-13 13:02:52 DEBUG interactive is False
+2018-07-13 13:02:52 DEBUG platform is linux2
+2018-07-13 13:02:52 DEBUG loaded modules: ['numpy.testing.nose_tools.nosetester', 'heapq', 'numpy.core.info', 'distutils', 'functools', 'random', 'unittest.types', 'datetime', 'sysconfig', 'json.encoder', 'select', 'gc', 'numpy.lib.numpy', 'distutils.sysconfig', 'ctypes._endian', 'encodings.encodings', 'unittest.pprint', 'matplotlib.colors', 'numpy.core.numerictypes', 'numpy._distributor_init', 'numpy.random.mtrand', 'logging.weakref', 'numpy.matrixlib.defmatrix', 'numpy.random.info', 'tempfile', 'pprint', 'numpy.linalg', 'imp', 'numpy.testing', 'collections', 'logging.thread', 'unittest.sys', 'numpy.core.umath', 'unittest.main', 'distutils.types', 'numpy.lib._version', 'zipimport', 'string', 'json.struct', 'numpy.linalg.info', 'numpy.polynomial._polybase', 'unittest.functools', 'numpy.lib.arraysetops', 'matplotlib.compat', 'textwrap', 'unittest.util', 'numpy.version', 'distutils.re', 'ctypes.os', 'numpy.core.machar', 'numpy.lib.type_check', 'httplib', 'unittest.StringIO', 'bisect', 'numpy.core._internal', 'signal', 'numpy.random.operator', 'numpy.lib._datasource', 'unittest.re', 'threading', 'token', 'numpy.fft.fftpack_lite', 'matplotlib.cbook', 'numpy.core.multiarray', 'cycler', 'numpy.lib', 'numpy.linalg._umath_linalg', 'decimal', 'json.json', 'dis', 'distutils.version', 'cStringIO', 'google', 'logging.threading', 'pkgutil', 'unittest.time', 'locale', 'numpy.add_newdocs', 'logging.os', 'unittest.difflib', 'numpy.core.getlimits', 'base64', 'atexit', 'pyparsing', 'matplotlib.compat.subprocess', 'encodings', 'matplotlib.cbook.warnings', 'matplotlib._color_data', 'matplotlib.cbook.deprecation', 'logging.traceback', 'matplotlib.cbook.textwrap', 'abc', 'numpy.matrixlib', 'numpy.ma.extras', 'numpy.testing.decorators', 'numpy._globals', 'rfc822', 'numpy.lib.npyio', 'numpy.core.shape_base', 'matplotlib.sys', 'numpy.random.threading', 're', 'numpy.lib.mixins', '_posixsubprocess32', 'numpy.polynomial.legendre', 'json.scanner', 'glob', 'math', 'numpy.fft.helper', 'fcntl', 'unittest.case', 'matplotlib.fontconfig_pattern', 'mpl_toolkits', 'dateutil', 'ast', 'UserDict', 'unittest.suite', 'inspect', 'distutils.os', 'matplotlib', 'fnmatch', '_hashlib', 'backports', 'ctypes', '_ctypes', 'ctypes.struct', 'codecs', 'backports.functools_lru_cache', 'logging.sys', '_json', 'numpy.os', 'unittest.loader', 'struct', '_functools', '_locale', 'logging', 'socket', 'thread', 'StringIO', 'numpy.core.memmap', 'pickle', 'traceback', 'cython_runtime', 'numpy.lib.info', 'weakref', 'itertools', 'numpy.fft.fftpack', 'opcode', 'numpy.linalg.lapack_lite', 'numpy.ma', 'distutils.sys', 'os', 'marshal', 'mimetools', '__future__', 'six.moves', '_collections', 'urllib', '_sre', 'unittest', 'numpy.random', '__builtin__', 'numpy.lib.twodim_base', 'numpy.polynomial', 'unittest.runner', 'operator', 'array', 'numpy.core.arrayprint', 'distutils.string', 'numpy.compat.py3k', 'ctypes._ctypes', '_heapq', 'ctypes.sys', 'six.moves.urllib', 'unittest.collections', 'posixpath', 'numpy.lib.financial', 'numpy.polynomial.laguerre', 'errno', '_socket', 'binascii', 'json', 'sre_constants', 'matplotlib.cbook.functools', 'logging.codecs', 'numpy.core._methods', 'os.path', 'numpy.core.function_base', 'tokenize', 'numpy.lib.stride_tricks', 'matplotlib.json', 'numpy', '_warnings', 'numpy.polynomial.chebyshev', 'numpy.testing.nose_tools.utils', 'json.re', 'cPickle', 'encodings.__builtin__', 'numpy.polynomial.hermite_e', '_codecs', 'subprocess32', 'unittest.fnmatch', 'numpy.polynomial.polynomial', 'numpy.__config__', 'pwd', 'numpy.ma.core', 'numpy.testing.utils', 'logging.atexit', 'matplotlib.cbook._backports', 'numpy.lib.ufunclike', 'copy', '_sysconfigdata', '_struct', 'numpy.core.fromnumeric', 'hashlib', 'numpy.ctypeslib', 'matplotlib._version', '_ast', 'keyword', 'numpy.lib.scimath', 'numpy.fft', 'zlib', 'numpy.lib.nanfunctions', 'numpy.random.numpy', 'unittest.weakref', 'logging.time', '_bisect', 'posix', 'encodings.aliases', 'numpy.lib.function_base', 'exceptions', 'sre_parse', 'backports.pkgutil', 'json._json', 'logging.warnings', 'numpy.random.warnings', 'distutils.distutils', 'unittest.signal', 'copy_reg', 'sre_compile', 'json.sys', 'logging.cStringIO', '_random', 'site', 'numpy.lib.polynomial', 'numpy.compat', 'numpy._import_tools', 'logging.collections', 'numpy.polynomial.hermite', 'contextlib', 'numbers', 'io', '__main__', 'numpy.fft.info', 'numpy.core.records', 'shutil', 'numpy.sys', 'numpy.polynomial.polyutils', 'urlparse', 'dateutil._version', 'unittest.result', 'strop', 'grp', 'linecache', 'numpy.core.numeric', 'six', 'encodings.codecs', 'six.moves.urllib.request', '_abcoll', 'matplotlib.testing', 'numpy.core', 'matplotlib.rcsetup', 'genericpath', 'stat', '_ssl', 'numpy.lib._iotools', 'numpy.lib.index_tricks', 'warnings', 'numpy.lib.utils', 'numpy.core.defchararray', 'encodings.ascii', 'numpy.lib.shape_base', 'urllib2', 'unittest.signals', 'sys', 'unittest.traceback', 'numpy.compat._inspect', 'numpy.core.einsumfunc', 'ctypes.ctypes', 'numpy.lib.format', 'numpy.lib.arrayterator', 'numpy.testing.nosetester', 'types', 'bz2', 'future_builtins', 'ssl', 'numpy.testing.nose_tools', 'numpy.lib.arraypad', '_weakref', 'numpy.testing.nose_tools.decorators', 'difflib', 'distutils.errors', '_io', '_weakrefset', 'json.decoder', 'unittest.warnings', 'time', 'gzip', 'numpy.linalg.linalg', 'unittest.os']
+2018-07-13 13:02:52 DEBUG Theano version:0.9.0
+2018-07-13 13:02:52 DEBUG 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+2018-07-13 13:02:52 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is subset_nobg.fa, input tsv is subset_nobg.tsv, number of tasks is 5
+2018-07-13 13:02:53 DEBUG lenth of sequences = 131024
+2018-07-13 13:02:55 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:02:55 DEBUG AverageScores: append to seq_list
+2018-07-13 13:03:01 DEBUG shape of hyp_score (800, 4)
+2018-07-13 13:03:01 DEBUG shape of score (800, 4)
+2018-07-13 13:03:03 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:03:03 DEBUG AverageScores: -
+2018-07-13 13:03:09 DEBUG shape of hyp_score (800, 4)
+2018-07-13 13:03:09 DEBUG shape of score (800, 4)
+2018-07-13 13:03:11 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:03:11 DEBUG AverageScores: -
+2018-07-13 13:03:17 DEBUG shape of hyp_score (800, 4)
+2018-07-13 13:03:17 DEBUG shape of score (800, 4)
+2018-07-13 13:03:19 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:03:19 DEBUG AverageScores: -
+2018-07-13 13:03:25 DEBUG shape of hyp_score (800, 4)
+2018-07-13 13:03:25 DEBUG shape of score (800, 4)
+2018-07-13 13:03:27 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 13:03:27 DEBUG AverageScores: -
+2018-07-13 13:03:34 DEBUG shape of hyp_score (800, 4)
+2018-07-13 13:03:34 DEBUG shape of score (800, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-07-13 13:03:45 DEBUG CACHEDIR=/root/.cache/matplotlib
+2018-07-13 13:03:45 DEBUG Using fontManager instance from /root/.cache/matplotlib/fontList.json
+2018-07-13 13:03:45 DEBUG backend agg version v2.2
+Thresholds: -0.952514264569618 and 1.7834194544927982
+CDFs: 0.9999997922761767 and 0.9481207439584557
+Est. FDRs: 0.06267090065746765 and 1.0
+Got 1 coords
+On task task1
+Computing windowed sums
+Computing threshold
+Thresholds: -0.6252898659324272 and 1.9356340932471754
+CDFs: 0.9999313137554864 and 0.9972361156287374
+Est. FDRs: 1.0 and 1.0
+Got 1 coords
+On task task2
+Computing windowed sums
+Computing threshold
+Thresholds: -0.9115833706222478 and 2.648067568342198
+CDFs: 0.9999679886374832 and 0.9957355812596898
+Est. FDRs: 1.0 and 1.0
+Got 1 coords
+On task task3
+Computing windowed sums
+Computing threshold
+Thresholds: -0.7532248423900456 and 2.3488435134662384
+CDFs: 0.9998322899134859 and 0.9793245999685026
+Est. FDRs: 1.0 and 1.0
+Got 1 coords
+On task task4
+Computing windowed sums
+Computing threshold
+Thresholds: -0.5761787816300055 and 1.660895040927101
+CDFs: 0.9999235419400837 and 0.997325984694048
+Est. FDRs: 1.0 and 1.0
+Got 1 coords
+After resolving overlaps, got 5 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9481207439584557
+5 identified in total
+WARNING: you found relatively few seqlets. Consider dropping target_seqlet_fdr
+Reducing weak_threshold_for_counting_sign to match laplace_threshold_cdf, from 0.99 to 0.9481207439584557
+Traceback (most recent call last):
+  File "run_tfmodisco.py", line 473, in <module>
+    one_hot=avg_scores_onehot_list)
+  File "/kat-volume/kundajelab/tfmodisco/modisco/tfmodisco_workflow/workflow.py", line 203, in __call__
+    metaclustering_results = metaclusterer(attribute_vectors)
+  File "/kat-volume/kundajelab/tfmodisco/modisco/metaclusterers.py", line 124, in __call__
+    key=lambda x: np.sum(x*np.array(vector) )))
+ValueError: max() arg is an empty sequence
