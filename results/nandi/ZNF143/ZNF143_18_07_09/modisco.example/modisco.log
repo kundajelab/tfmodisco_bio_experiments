@@ -1,0 +1,121 @@
+2018-07-13 10:03:09 INFO  /home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.fa subset_nobg.tsv 5
+2018-07-13 10:03:10 DEBUG $HOME=/home/ktian
+2018-07-13 10:03:10 DEBUG matplotlib data path /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data
+2018-07-13 10:03:10 DEBUG loaded rc file /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-07-13 10:03:10 DEBUG matplotlib version 2.2.2
+2018-07-13 10:03:10 DEBUG interactive is False
+2018-07-13 10:03:10 DEBUG platform is linux2
+2018-07-13 10:03:10 DEBUG loaded modules: ['numpy.testing.nose_tools.nosetester', 'heapq', 'numpy.core.info', 'distutils', 'functools', 'random', 'unittest.types', 'datetime', 'sysconfig', 'json.encoder', 'select', 'gc', 'numpy.lib.numpy', 'distutils.sysconfig', 'ctypes._endian', 'encodings.encodings', 'unittest.pprint', 'matplotlib.colors', 'numpy.core.numerictypes', 'numpy._distributor_init', 'numpy.random.mtrand', 'logging.weakref', 'numpy.matrixlib.defmatrix', 'numpy.random.info', 'tempfile', 'pprint', 'numpy.linalg', 'mkl_fft', 'imp', 'numpy.testing', 'collections', 'logging.thread', 'unittest.sys', 'numpy.core.umath', 'unittest.main', 'distutils.types', 'numpy.lib._version', 'zipimport', 'string', 'json.struct', 'numpy.linalg.info', 'numpy.polynomial._polybase', 'unittest.functools', 'numpy.lib.arraysetops', 'matplotlib.compat', 'encodings.utf_8', 'unittest.util', 'numpy.version', 'distutils.re', 'ctypes.os', 'numpy.core.machar', 'numpy.lib.type_check', 'httplib', 'unittest.StringIO', 'bisect', 'numpy.core._internal', 'signal', 'numpy.random.operator', 'numpy.lib._datasource', 'unittest.re', 'threading', 'token', 'numpy.fft.fftpack_lite', 'json.scanner', 'matplotlib.cbook', '_cython_0_27_3', 'textwrap', 'numpy.core.multiarray', 'cycler', 'numpy.lib', 'numpy.linalg._umath_linalg', 'decimal', 'json.json', 'dis', 'distutils.version', 'cStringIO', 'google', 'logging.threading', 'unittest.time', 'locale', 'numpy.add_newdocs', 'logging.os', 'unittest.difflib', 'numpy.core.getlimits', 'base64', 'atexit', 'pyparsing', 'matplotlib.compat.subprocess', 'encodings', 'matplotlib.cbook.warnings', 'matplotlib._color_data', 'matplotlib.cbook.deprecation', 'logging.traceback', 'matplotlib.cbook.textwrap', 'abc', 'numpy.matrixlib', 'numpy.ma.extras', 'numpy.testing.decorators', 'numpy._globals', 'rfc822', 'numpy.lib.npyio', 'backports', 'matplotlib.sys', 'numpy.random.threading', 're', 'numpy.lib.mixins', '_posixsubprocess32', 'numpy.polynomial.legendre', 'mkl_fft._pydfti', 'numpy.core.shape_base', 'math', 'numpy.fft.helper', 'fcntl', 'unittest.case', 'matplotlib.fontconfig_pattern', 'mpl_toolkits', 'dateutil', 'ast', 'UserDict', 'unittest.suite', 'inspect', 'distutils.os', 'matplotlib', 'fnmatch', '_hashlib', 'ctypes', '_ctypes', 'ctypes.struct', 'codecs', 'backports.functools_lru_cache', 'logging.sys', '_json', 'numpy.os', 'unittest.loader', 'struct', '_functools', '_locale', 'logging', 'socket', 'thread', 'StringIO', 'numpy.core.memmap', 'pickle', 'traceback', 'cython_runtime', 'numpy.lib.info', 'weakref', 'itertools', 'numpy.ctypes', 'opcode', 'numpy.linalg.lapack_lite', 'numpy.ma', 'distutils.sys', 'os', 'marshal', 'mimetools', '__future__', 'six.moves', '_collections', 'urllib', '_sre', 'unittest', 'numpy.random', '__builtin__', 'numpy._mklinit', 'numpy.lib.twodim_base', 'numpy.polynomial', 'unittest.runner', 'operator', 'array', 'numpy.core.arrayprint', 'distutils.string', 'numpy.compat.py3k', 'ctypes._ctypes', '_heapq', 'ctypes.sys', 'six.moves.urllib', 'unittest.collections', 'posixpath', 'numpy.lib.financial', 'numpy.fft.fftpack', 'errno', 'mkl_fft._numpy_fft', '_socket', 'binascii', 'json', 'sre_constants', 'matplotlib.cbook.functools', 'logging.codecs', 'numpy.core._methods', 'os.path', 'numpy.core.function_base', 'tokenize', 'numpy.lib.stride_tricks', 'matplotlib.json', 'numpy', '_warnings', 'numpy.polynomial.chebyshev', 'numpy.testing.nose_tools.utils', 'json.re', 'cPickle', 'encodings.__builtin__', 'numpy.polynomial.hermite_e', '_codecs', 'subprocess32', 'unittest.fnmatch', 'numpy.polynomial.polynomial', 'numpy.__config__', 'encodings.ascii', 'pwd', 'mkl_fft.numpy', 'numpy.ma.core', 'numpy.testing.utils', 'logging.atexit', 'matplotlib.cbook._backports', 'numpy.lib.ufunclike', 'copy', '_sysconfigdata', '_struct', 'numpy.core.fromnumeric', 'hashlib', 'numpy.ctypeslib', 'matplotlib._version', '_ast', 'keyword', 'numpy.lib.scimath', 'numpy.fft', 'zlib', 'numpy.lib.nanfunctions', 'numpy.random.numpy', 'unittest.weakref', 'logging.time', 'numpy.core.multiarray_tests', '_bisect', 'numpy.polynomial.hermite', 'posix', 'encodings.aliases', 'numpy.lib.function_base', 'exceptions', 'sre_parse', 'json._json', 'logging.warnings', 'numpy.random.warnings', 'distutils.distutils', 'unittest.signal', 'copy_reg', 'sre_compile', 'json.sys', 'logging.cStringIO', '_random', 'site', 'numpy.lib.polynomial', 'numpy.compat', 'numpy._import_tools', 'logging.collections', 'backports_abc', 'contextlib', 'numbers', 'io', '__main__', 'numpy.fft.info', 'numpy.core.records', 'shutil', 'numpy.sys', 'numpy.polynomial.polyutils', 'urlparse', 'dateutil._version', 'unittest.result', 'strop', 'grp', 'linecache', 'numpy.core.numeric', 'six', 'encodings.codecs', 'six.moves.urllib.request', '_abcoll', 'matplotlib.testing', 'numpy.core', 'matplotlib.rcsetup', 'genericpath', 'stat', '_ssl', 'numpy.lib._iotools', 'numpy.lib.index_tricks', 'warnings', 'numpy.lib.utils', 'numpy.core.defchararray', 'glob', 'numpy.lib.shape_base', 'urllib2', 'unittest.signals', 'sys', 'unittest.traceback', 'numpy.polynomial.laguerre', 'numpy.compat._inspect', 'numpy.core.einsumfunc', 'ctypes.ctypes', 'numpy.lib.format', 'numpy.lib.arrayterator', 'numpy.testing.nosetester', 'types', 'bz2', 'future_builtins', 'ssl', 'numpy.testing.nose_tools', 'numpy.lib.arraypad', '_weakref', 'numpy.testing.nose_tools.decorators', 'difflib', 'distutils.errors', '_io', '_weakrefset', 'json.decoder', 'unittest.warnings', 'time', 'gzip', 'numpy.linalg.linalg', 'unittest.os']
+ERROR (theano.gpuarray): pygpu was configured but could not be imported or is too old (version 0.6 or higher required)
+Traceback (most recent call last):
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/theano/gpuarray/__init__.py", line 23, in <module>
+    import pygpu.version
+ImportError: No module named version
+2018-07-13 10:03:15 ERROR pygpu was configured but could not be imported or is too old (version 0.6 or higher required)
+Traceback (most recent call last):
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/theano/gpuarray/__init__.py", line 23, in <module>
+    import pygpu.version
+ImportError: No module named version
+2018-07-13 10:03:16 DEBUG Theano version:0.9.0
+2018-07-13 10:03:16 DEBUG 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+2018-07-13 10:03:16 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is subset_nobg.fa, input tsv is subset_nobg.tsv, number of tasks is 5
+2018-07-13 10:03:18 DEBUG lenth of sequences = 317144
+2018-07-13 10:03:39 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 10:03:39 DEBUG AverageScores: append to seq_list
+2018-07-13 10:04:20 DEBUG shape of hyp_score (400, 4)
+2018-07-13 10:04:20 DEBUG shape of score (400, 4)
+2018-07-13 10:04:43 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 10:04:43 DEBUG AverageScores: -
+2018-07-13 10:05:22 DEBUG shape of hyp_score (400, 4)
+2018-07-13 10:05:22 DEBUG shape of score (400, 4)
+2018-07-13 10:05:43 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 10:05:43 DEBUG AverageScores: -
+2018-07-13 10:06:22 DEBUG shape of hyp_score (400, 4)
+2018-07-13 10:06:22 DEBUG shape of score (400, 4)
+2018-07-13 10:06:46 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 10:06:46 DEBUG AverageScores: -
+2018-07-13 10:07:25 DEBUG shape of hyp_score (400, 4)
+2018-07-13 10:07:25 DEBUG shape of score (400, 4)
+2018-07-13 10:07:47 DEBUG in_tsv = subset_nobg.tsv
+2018-07-13 10:07:47 DEBUG AverageScores: -
+2018-07-13 10:08:25 DEBUG shape of hyp_score (400, 4)
+2018-07-13 10:08:25 DEBUG shape of score (400, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-07-13 10:13:24 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-07-13 10:13:24 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-07-13 10:13:24 DEBUG backend agg version v2.2
+Thresholds: -3.514174987165427 and 3.469446951953614e-18
+CDFs: 0.9999999992046096 and 1.0
+Est. FDRs: 0.006919652036804378 and 0.0
+Got 2663527 coords
+On task task1
+Computing windowed sums
+Computing threshold
+Thresholds: -2.107075494481251 and 5.551115123125783e-17
+CDFs: 0.9999608268847484 and 1.0
+Est. FDRs: 1.0 and 0.0
+Got 3329462 coords
+On task task2
+Computing windowed sums
+Computing threshold
+Thresholds: -2.3930849550051443 and 9.020562075079397e-17
+CDFs: 0.9999999974967665 and 1.0
+Est. FDRs: 0.005641040440205393 and 0.0
+Got 3579704 coords
+On task task3
+Computing windowed sums
+Computing threshold
+Thresholds: -2.888461091624743 and 5.4643789493269423e-17
+CDFs: 0.9999999745431875 and 1.0
+Est. FDRs: 0.009363357565910347 and 0.0
+Got 2947210 coords
+On task task4
+Computing windowed sums
+Computing threshold
+Thresholds: -3.291968422731556 and 2.0816681711721685e-17
+CDFs: 0.9999999997286184 and 1.0
+Est. FDRs: 0.0028251508491876887 and 0.0
+Got 3284317 coords
+After resolving overlaps, got 3825342 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9999608268847484
+3825342 identified in total
+34 activity patterns with support >= 100 out of 243 possible patterns
+Metacluster sizes:  [2178975, 308927, 207523, 179407, 130030, 126624, 103729, 78128, 67359, 67228, 64013, 46860, 37954, 33606, 32333, 32156, 28425, 26619, 21713, 14740, 12804, 8060, 6816, 2158, 1997, 1934, 1924, 1257, 637, 440, 426, 201, 137, 129]
+Idx to activities:  {0: '1,1,1,1,1', 1: '0,1,1,1,1', 2: '0,1,0,0,0', 3: '0,1,1,0,1', 4: '0,0,1,0,0', 5: '0,0,1,0,1', 6: '1,0,1,1,1', 7: '1,1,1,0,1', 8: '0,1,1,1,0', 9: '1,0,1,0,1', 10: '0,1,0,0,1', 11: '0,1,0,1,0', 12: '0,1,1,0,0', 13: '1,0,1,0,0', 14: '0,0,1,1,0', 15: '0,0,1,1,1', 16: '1,1,1,1,0', 17: '0,0,0,0,1', 18: '1,0,1,1,0', 19: '0,1,0,1,1', 20: '0,0,0,1,0', 21: '1,1,1,0,0', 22: '1,0,0,0,0', 23: '1,1,0,0,1', 24: '1,1,0,1,0', 25: '1,1,0,1,1', 26: '1,1,0,0,0', 27: '1,0,0,1,0', 28: '1,0,0,0,1', 29: '-1,0,-1,0,0', 30: '0,0,0,1,1', 31: '-1,0,-1,0,-1', 32: '1,0,0,1,1', 33: '-1,-1,-1,-1,-1'}
+On metacluster 33
+Metacluster size 129
+Relevant tasks:  ('task0', 'task1', 'task2', 'task3', 'task4')
+Relevant signs:  (-1, -1, -1, -1, -1)
+(Round 1) num seqlets: 129
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 0.28 s
+Starting affinity matrix computations
+Normalization computed in 0.08 s
+Cosine similarity mat computed in 0.08 s
+Normalization computed in 0.07 s
+Cosine similarity mat computed in 0.07 s
+Finished affinity matrix computations in 0.15 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Traceback (most recent call last):
+  File "/home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py", line 473, in <module>
+    one_hot=avg_scores_onehot_list)
+  File "/srv/scratch/ktian/kundajelab/modisco_dev/modisco/tfmodisco_workflow/workflow.py", line 255, in __call__
+    seqlets_to_patterns_result = seqlets_to_patterns(metacluster_seqlets)
+  File "/srv/scratch/ktian/kundajelab/modisco_dev/modisco/tfmodisco_workflow/seqlets_to_patterns.py", line 505, in __call__
+    seqlet_neighbors = self.nearest_neighbors_computer(coarse_affmat)
+  File "/srv/scratch/ktian/kundajelab/modisco_dev/modisco/nearest_neighbors.py", line 21, in __call__
+    return self.nn_object.fit(-affinity_mat).kneighbors(
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/sklearn/neighbors/base.py", line 803, in fit
+    return self._fit(X)
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/sklearn/neighbors/base.py", line 204, in _fit
+    X = check_array(X, accept_sparse='csr')
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
