@@ -67,9 +67,7 @@ Step 3: run_deeplift.py
 -----------------------------------------------------------------------
 '''
 # run deeplift
-os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset.fa 3 > logs/deeplift.log 2>&1")
-
-os.system("cat subset.fa | grep -v '^>' > subset.txt")
+os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset_nobg.fa 3 > logs/deeplift.log 2>&1")
 
 '''
 Output from deeplift
@@ -82,12 +80,12 @@ where N= number of tasks
 
 Additional input for modisco:
 ------
-subset.txt    # sequences corresponding to subset.fa, excluding the fasta header lines with '>'
+subset.txt    # sequences corresponding to subset_nobg.fa, excluding the fasta header lines with '>'
 
 Step 4: run_tfmodisco.py
 -----------------------------------------------------------------------
 '''
 # run tf modisco
-#os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py ./rescale_conv_revealcancel_fc_multiref_10_task_ subset.txt 3 > logs/modisco.log 2>&1")
+#os.system("python $TFNET_ROOT/scripts/run_tfmodisco.py ./rescale_conv_revealcancel_fc_multiref_10_task_ subset_nobg.fa 3 > logs/modisco.log 2>&1")
 
 
