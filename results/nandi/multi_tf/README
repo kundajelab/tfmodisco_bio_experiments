@@ -1,13 +1,13 @@
-multi_tf_18_07_01,      initial run 
-multi_tf_18_07_04,      average scores among overlapping intervals
-multi_tf_small,         a trimed down dataset for testing purpuses
+multi_tf_18_07_01      initial run, genome-wide
+multi_tf_18_07_04      used DeepLIFT scores averaged at each position (merged overlaps)
+multi_tf_small         a small dataset (mod 500) for testing purpuses
 
 multi_tf_pre_18_07_06   results include many improvements: 
-                        1 pre-training on union of positives only
-                        2 fine-tune to create genome wide model by adding backgrounds
-                        3 added the merging overlaps and averaging scores before modisco
-                        4 ran deeplift and modisco on chr1 from union of postives only
+                        1 pre-trained on union of positives
+                        2 fine-tuned on genome-wide data by adding in background
+                        3 used averaged DeepLIFT scores
+                        4 ran DeepLIFT and MoDISco on test set from union of postives only
                         - did not run modisco with default parameters (used 5mer 1gap)
 
-multi_tf_nb_18_07_09    notebooks investigating the co-binding anomaly, the underlying data 
-                        are from multi_tf_pre_18_07_06
+multi_tf_nb_18_07_09    ipython notebooks to investigate coenrichment of CTCF with SIX5 in the presence of ZNF143
+                        based on data from multi_tf_pre_18_07_06

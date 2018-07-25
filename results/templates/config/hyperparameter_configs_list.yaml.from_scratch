@@ -4,7 +4,6 @@
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
-            #"class": "hdf5_data_loader.MultimodalAtOnceDataLoader",
             "kwargs": {
                 "batch_size": 200,
                 "path_to_hdf5": "train_data.hdf5",
@@ -27,12 +26,9 @@
                     "name": "conv1",
                     "class": "keras.layers.convolutional.Convolution1D", 
                     "kwargs": {
-                        #"input_shape": [1,4,200],
                         "input_shape": [1000,4],
                         "nb_filter": 50,
                         "filter_length": 15,
-                        #"nb_col":11,
-                        #"nb_row":4,
                         "border_mode": "same",
                         "W_constraint": {
                             "autoload": true, #turn the dictionary into a class
@@ -51,8 +47,6 @@
                     "kwargs": {
                         "nb_filter": 50,
                         "filter_length": 15,
-                        #"nb_row": 1,
-                        #"nb_col": 10,
                         "border_mode": "same"
                     }
                 },
@@ -63,8 +57,11 @@
                 {
                     # --- conv layer 3
                     "class": "keras.layers.convolutional.Convolution1D", 
-                    "kwargs": { "nb_filter": 50, "filter_length": 13}
-                    #"kwargs": {"nb_filter": 10, "nb_row": 1, "nb_col": 10}
+                    "kwargs": { 
+                        "nb_filter": 50,
+                        "filter_length": 13,
+                        "border_mode": "same"
+                    }
                 },
                 {
                     "class": "keras.layers.core.Activation", 
@@ -73,7 +70,6 @@
                 {
                     "class": "keras.layers.convolutional.MaxPooling1D", 
                     "kwargs": {"pool_length": 40, "stride": 40}
-                    #"kwargs": {"pool_size": [1,40], "strides": [1,40]}
                 },
                 {
                     "class": "keras.layers.core.Flatten", 
