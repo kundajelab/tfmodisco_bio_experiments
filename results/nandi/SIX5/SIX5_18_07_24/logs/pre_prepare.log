@@ -1,0 +1,39 @@
+2018-07-25 02:09:17 INFO  prepare_data.py --no-bg
+2018-07-25 02:09:34 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_aJ7RjG/_tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak.gz,./_tmp_aJ7RjG/_tmp_K562-SIX5-human-ENCSR000BNW-merged.narrowPeak.gz,./_tmp_aJ7RjG/_tmp_A549-SIX5-human-ENCSR000BRL-merged.narrowPeak.gz,./_tmp_aJ7RjG/_tmp_empty_file,./_tmp_aJ7RjG/_tmp_H1-hESC-SIX5-human-ENCSR000BIQ-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 20
+2018-07-25 02:09:34 DEBUG bin-size=200, stride=20
+2018-07-25 02:09:45 INFO  LABEL_REGIONS sort merge done
+2018-07-25 02:09:47 INFO  LABEL_REGIONS intersect done
+2018-07-25 02:09:48 INFO  LABEL_REGIONS labels done
+2018-07-25 02:09:48 INFO  LABEL_REGIONS ALL DONE *****
+2018-07-25 02:09:49 INFO  split and make hdf5
+Reading in labels
+on file inputs.fa
+Processed 5000 lines
+Processed 10000 lines
+Processed 15000 lines
+Processed 20000 lines
+Processed 25000 lines
+Processed 30000 lines
+Processed 35000 lines
+Processed 40000 lines
+Processed 45000 lines
+Processed 50000 lines
+Processed 55000 lines
+Processed 60000 lines
+Processed 65000 lines
+Processed 70000 lines
+Processed 75000 lines
+Processed 80000 lines
+Processed 85000 lines
+Processed 90000 lines
+Processed 95000 lines
+Processed 100000 lines
+Processed 105000 lines
+Processed 110000 lines
+2018-07-25 02:10:49 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz
+5
