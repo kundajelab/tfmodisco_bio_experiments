@@ -2,11 +2,12 @@ multi_tf_18_07_01,      initial run
 multi_tf_18_07_04,      average scores among overlapping intervals
 multi_tf_small,         a trimed down dataset for testing purpuses
 
-multi_tf_pre_18_07_06   results will all improvements: 
+multi_tf_pre_18_07_06   results include many improvements: 
                         1 pre-training on union of positives only
                         2 fine-tune to create genome wide model by adding backgrounds
                         3 added the merging overlaps and averaging scores before modisco
                         4 ran deeplift and modisco on chr1 from union of postives only
+                        - did not run modisco with default parameters (used 5mer 1gap)
 
 multi_tf_nb_18_07_09    notebooks investigating the co-binding anomaly, the underlying data 
                         are from multi_tf_pre_18_07_06
