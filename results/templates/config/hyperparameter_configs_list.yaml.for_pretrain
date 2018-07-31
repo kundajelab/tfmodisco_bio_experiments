@@ -1,6 +1,6 @@
 [
 {
-    "message": "example model and training config v 0.1",
+    "message": "model & config for <TF>, <n> tasks, pretraining, 18_07_30",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",

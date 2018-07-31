@@ -1,6 +1,6 @@
 [
 {
-    "message": "example model and training config for fine-tune from pre-train v 0.1",
+    "message": "model & config for ZNF143, 5 tasks, fine-tune, 18_07_30",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
