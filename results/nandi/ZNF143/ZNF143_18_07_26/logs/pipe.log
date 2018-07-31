@@ -1,0 +1,8 @@
+2018-07-26 15:16:43 INFO  run_pipeline.py 0
+mv: cannot move 'model_files' to 'pretrain/model_files': Directory not empty
+mv: cannot move 'splits' to 'pretrain/splits': Directory not empty
+mv: cannot stat '_tmp_*': No such file or directory
+step 0 pre_train done
+step 1 prepare_data done
+step 2 training done
+step 3 deeplift done

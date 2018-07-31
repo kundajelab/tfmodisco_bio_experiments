@@ -1,0 +1,481 @@
+2018-07-26 23:58:06 INFO  /home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py scores/hyp_scores_task_ subset_nobg.fa subset_nobg.tsv 5
+2018-07-26 23:58:06 DEBUG $HOME=/home/ktian
+2018-07-26 23:58:06 DEBUG matplotlib data path /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data
+2018-07-26 23:58:06 DEBUG loaded rc file /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-07-26 23:58:06 DEBUG matplotlib version 2.2.2
+2018-07-26 23:58:06 DEBUG interactive is False
+2018-07-26 23:58:06 DEBUG platform is linux2
+2018-07-26 23:58:06 DEBUG loaded modules: ['numpy.testing.nose_tools.nosetester', 'heapq', 'numpy.core.info', 'distutils', 'functools', 'random', 'unittest.types', 'datetime', 'sysconfig', 'json.encoder', 'select', 'gc', 'numpy.lib.numpy', 'distutils.sysconfig', 'ctypes._endian', 'encodings.encodings', 'unittest.pprint', 'matplotlib.colors', 'numpy.core.numerictypes', 'numpy._distributor_init', 'numpy.random.mtrand', 'logging.weakref', 'numpy.matrixlib.defmatrix', 'numpy.random.info', 'tempfile', 'pprint', 'numpy.linalg', 'mkl_fft', 'imp', 'numpy.testing', 'collections', 'logging.thread', 'unittest.sys', 'numpy.core.umath', 'unittest.main', 'distutils.types', 'numpy.lib._version', 'zipimport', 'string', 'json.struct', 'numpy.linalg.info', 'numpy.polynomial._polybase', 'unittest.functools', 'numpy.lib.arraysetops', 'matplotlib.compat', 'encodings.utf_8', 'unittest.util', 'numpy.version', 'distutils.re', 'ctypes.os', 'numpy.core.machar', 'numpy.lib.type_check', 'httplib', 'unittest.StringIO', 'bisect', 'numpy.core._internal', 'signal', 'numpy.random.operator', 'numpy.lib._datasource', 'unittest.re', 'threading', 'token', 'numpy.fft.fftpack_lite', 'json.scanner', 'matplotlib.cbook', '_cython_0_27_3', 'textwrap', 'numpy.core.multiarray', 'cycler', 'numpy.lib', 'numpy.linalg._umath_linalg', 'decimal', 'json.json', 'dis', 'distutils.version', 'cStringIO', 'google', 'logging.threading', 'unittest.time', 'locale', 'numpy.add_newdocs', 'logging.os', 'unittest.difflib', 'numpy.core.getlimits', 'base64', 'atexit', 'pyparsing', 'matplotlib.compat.subprocess', 'encodings', 'matplotlib.cbook.warnings', 'matplotlib._color_data', 'matplotlib.cbook.deprecation', 'logging.traceback', 'matplotlib.cbook.textwrap', 'abc', 'numpy.matrixlib', 'numpy.ma.extras', 'numpy.testing.decorators', 'numpy._globals', 'rfc822', 'numpy.lib.npyio', 'backports', 'matplotlib.sys', 'numpy.random.threading', 're', 'numpy.lib.mixins', '_posixsubprocess32', 'numpy.polynomial.legendre', 'mkl_fft._pydfti', 'numpy.core.shape_base', 'math', 'numpy.fft.helper', 'fcntl', 'unittest.case', 'matplotlib.fontconfig_pattern', 'mpl_toolkits', 'dateutil', 'ast', 'UserDict', 'unittest.suite', 'inspect', 'distutils.os', 'matplotlib', 'fnmatch', '_hashlib', 'ctypes', '_ctypes', 'ctypes.struct', 'codecs', 'backports.functools_lru_cache', 'logging.sys', '_json', 'numpy.os', 'unittest.loader', 'struct', '_functools', '_locale', 'logging', 'socket', 'thread', 'StringIO', 'numpy.core.memmap', 'pickle', 'traceback', 'cython_runtime', 'numpy.lib.info', 'weakref', 'itertools', 'numpy.ctypes', 'opcode', 'numpy.linalg.lapack_lite', 'numpy.ma', 'distutils.sys', 'os', 'marshal', 'mimetools', '__future__', 'six.moves', '_collections', 'urllib', '_sre', 'unittest', 'numpy.random', '__builtin__', 'numpy._mklinit', 'numpy.lib.twodim_base', 'numpy.polynomial', 'unittest.runner', 'operator', 'array', 'numpy.core.arrayprint', 'distutils.string', 'numpy.compat.py3k', 'ctypes._ctypes', '_heapq', 'ctypes.sys', 'six.moves.urllib', 'unittest.collections', 'posixpath', 'numpy.lib.financial', 'numpy.fft.fftpack', 'errno', 'mkl_fft._numpy_fft', '_socket', 'binascii', 'json', 'sre_constants', 'matplotlib.cbook.functools', 'logging.codecs', 'numpy.core._methods', 'os.path', 'numpy.core.function_base', 'tokenize', 'numpy.lib.stride_tricks', 'matplotlib.json', 'numpy', '_warnings', 'numpy.polynomial.chebyshev', 'numpy.testing.nose_tools.utils', 'json.re', 'cPickle', 'encodings.__builtin__', 'numpy.polynomial.hermite_e', '_codecs', 'subprocess32', 'unittest.fnmatch', 'numpy.polynomial.polynomial', 'numpy.__config__', 'encodings.ascii', 'pwd', 'mkl_fft.numpy', 'numpy.ma.core', 'numpy.testing.utils', 'logging.atexit', 'matplotlib.cbook._backports', 'numpy.lib.ufunclike', 'copy', '_sysconfigdata', '_struct', 'numpy.core.fromnumeric', 'hashlib', 'numpy.ctypeslib', 'matplotlib._version', '_ast', 'keyword', 'numpy.lib.scimath', 'numpy.fft', 'zlib', 'numpy.lib.nanfunctions', 'numpy.random.numpy', 'unittest.weakref', 'logging.time', 'numpy.core.multiarray_tests', '_bisect', 'numpy.polynomial.hermite', 'posix', 'encodings.aliases', 'numpy.lib.function_base', 'exceptions', 'sre_parse', 'json._json', 'logging.warnings', 'numpy.random.warnings', 'distutils.distutils', 'unittest.signal', 'copy_reg', 'sre_compile', 'json.sys', 'logging.cStringIO', '_random', 'site', 'numpy.lib.polynomial', 'numpy.compat', 'numpy._import_tools', 'logging.collections', 'backports_abc', 'contextlib', 'numbers', 'io', '__main__', 'numpy.fft.info', 'numpy.core.records', 'shutil', 'numpy.sys', 'numpy.polynomial.polyutils', 'urlparse', 'dateutil._version', 'unittest.result', 'strop', 'grp', 'linecache', 'numpy.core.numeric', 'six', 'encodings.codecs', 'six.moves.urllib.request', '_abcoll', 'matplotlib.testing', 'numpy.core', 'matplotlib.rcsetup', 'genericpath', 'stat', '_ssl', 'numpy.lib._iotools', 'numpy.lib.index_tricks', 'warnings', 'numpy.lib.utils', 'numpy.core.defchararray', 'glob', 'numpy.lib.shape_base', 'urllib2', 'unittest.signals', 'sys', 'unittest.traceback', 'numpy.polynomial.laguerre', 'numpy.compat._inspect', 'numpy.core.einsumfunc', 'ctypes.ctypes', 'numpy.lib.format', 'numpy.lib.arrayterator', 'numpy.testing.nosetester', 'types', 'bz2', 'future_builtins', 'ssl', 'numpy.testing.nose_tools', 'numpy.lib.arraypad', '_weakref', 'numpy.testing.nose_tools.decorators', 'difflib', 'distutils.errors', '_io', '_weakrefset', 'json.decoder', 'unittest.warnings', 'time', 'gzip', 'numpy.linalg.linalg', 'unittest.os']
+Using cuDNN version 7001 on context None
+Mapped name None to device cuda0: GeForce GTX TITAN X (0000:08:00.0)
+2018-07-26 23:58:10 DEBUG Theano version:1.0.2
+2018-07-26 23:58:10 DEBUG 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+2018-07-26 23:58:10 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is subset_nobg.fa, input tsv is subset_nobg.tsv, number of tasks is 5
+2018-07-26 23:58:11 DEBUG lenth of sequences = 249240
+2018-07-26 23:58:24 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 249240 seqs merged into 249239 seqs, max len 400
+2018-07-26 23:58:56 DEBUG shape of hyp_score (400, 4)
+2018-07-26 23:58:56 DEBUG shape of score (400, 4)
+2018-07-26 23:59:08 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 249240 seqs merged into 249239 seqs, max len 400
+2018-07-26 23:59:39 DEBUG shape of hyp_score (400, 4)
+2018-07-26 23:59:39 DEBUG shape of score (400, 4)
+2018-07-26 23:59:51 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 249240 seqs merged into 249239 seqs, max len 400
+2018-07-27 00:00:22 DEBUG shape of hyp_score (400, 4)
+2018-07-27 00:00:22 DEBUG shape of score (400, 4)
+2018-07-27 00:00:34 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 249240 seqs merged into 249239 seqs, max len 400
+2018-07-27 00:01:04 DEBUG shape of hyp_score (400, 4)
+2018-07-27 00:01:04 DEBUG shape of score (400, 4)
+2018-07-27 00:01:17 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 249240 seqs merged into 249239 seqs, max len 400
+2018-07-27 00:01:47 DEBUG shape of hyp_score (400, 4)
+2018-07-27 00:01:47 DEBUG shape of score (400, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-07-27 00:06:22 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-07-27 00:06:22 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-07-27 00:06:22 DEBUG backend agg version v2.2
+2018-07-27 00:06:23 DEBUG findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/ktian/anaconda3/envs/tfenv/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+Lablace_b: 0.20738099236002397 and 0.16997244313382606
+Thresholds: -2.677797345584259 and 1.7532991309650243
+#fdrs pass: 0 and 127360
+CDFs: 0.9999975328653418 and 0.9999668741424274
+Est. FDRs: 1.0 and 0.00999980947298588
+saving plot to figures/laplace_0.png
+Got 7672 coords
+On task task1
+Computing windowed sums
+Computing threshold
+Lablace_b: 0.27411565930101417 and 0.2669449085431093
+Thresholds: -2.591560035012663 and 3.2696278710383924
+#fdrs pass: 0 and 20294
+CDFs: 0.9999216447454455 and 0.9999952068585594
+Est. FDRs: 1.0 and 0.009996330297686163
+saving plot to figures/laplace_1.png
+Got 1354 coords
+On task task2
+Computing windowed sums
+Computing threshold
+Lablace_b: 0.158538607690755 and 0.2301634969098695
+Thresholds: -2.2099582187831404 and 2.621738843596541
+#fdrs pass: 0 and 57749
+CDFs: 0.9999991166626337 and 0.9999887006724243
+Est. FDRs: 1.0 and 0.00999858457235929
+saving plot to figures/laplace_2.png
+Got 3674 coords
+On task task3
+Computing windowed sums
+Computing threshold
+Lablace_b: 0.20828403995416198 and 0.16301965787219236
+Thresholds: -3.942174764955416 and 1.8653409136401022
+#fdrs pass: 0 and 40279
+CDFs: 0.9999999939724014 and 0.9999892695957157
+Est. FDRs: 0.28979790267767536 and 0.009998215564878107
+saving plot to figures/laplace_3.png
+Got 2771 coords
+On task task4
+Computing windowed sums
+Computing threshold
+Lablace_b: 0.1827613718618295 and 0.1846981274386342
+Thresholds: -2.0567403630353516 and 1.9631031757220632
+#fdrs pass: 0 and 104446
+CDFs: 0.9999870406491285 and 0.9999757892025741
+Est. FDRs: 1.0 and 0.009998355122220762
+saving plot to figures/laplace_4.png
+Got 6177 coords
+After resolving overlaps, got 7698 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9999216447454455
+7698 identified in total
+2 activity patterns with support >= 100 out of 243 possible patterns
+Metacluster sizes:  [6734, 944]
+Idx to activities:  {0: '1,1,1,1,1', 1: '1,0,1,1,1'}
+On metacluster 1
+Metacluster size 944
+Relevant tasks:  ('task0', 'task2', 'task3', 'task4')
+Relevant signs:  (1, 1, 1, 1)
+(Round 1) num seqlets: 944
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 0.92 s
+Starting affinity matrix computations
+Normalization computed in 0.2 s
+Cosine similarity mat computed in 0.31 s
+Normalization computed in 0.21 s
+Cosine similarity mat computed in 0.31 s
+Finished affinity matrix computations in 0.64 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.05 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 128.74 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 124.2 s
+(Round 1) Computed affinity matrix on nearest neighbors in 258.51 s
+Filtered down to 840 of 944
+(Round 1) Retained 840 rows out of 944 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 840 samples in 0.000s...
+[t-SNE] Computed neighbors for 840 samples in 0.009s...
+[t-SNE] Computed conditional probabilities for sample 840 / 840
+[t-SNE] Mean sigma: 0.221296
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.0798389911652 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    2.8s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   24.7s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   29.8s finished
+Louvain completed 200 runs in 42.7800250053 seconds
+Wrote graph to binary file in 0.479916095734 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.705826
+Louvain completed 51 runs in 72.2346508503 seconds
+Preproc + Louvain took 115.720025063 s
+Got 9 clusters after round 1
+Counts:
+{0: 223, 1: 164, 2: 152, 3: 79, 4: 78, 5: 59, 6: 44, 7: 22, 8: 19}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 223 seqlets
+Trimmed 29 out of 223
+Aggregating for cluster 1 with 164 seqlets
+Trimmed 12 out of 164
+Aggregating for cluster 2 with 152 seqlets
+Trimmed 11 out of 152
+Aggregating for cluster 3 with 79 seqlets
+Trimmed 19 out of 79
+Aggregating for cluster 4 with 78 seqlets
+Trimmed 34 out of 78
+Aggregating for cluster 5 with 59 seqlets
+Trimmed 1 out of 59
+Aggregating for cluster 6 with 44 seqlets
+Trimmed 3 out of 44
+Aggregating for cluster 7 with 22 seqlets
+Trimmed 4 out of 22
+Aggregating for cluster 8 with 19 seqlets
+Trimmed 4 out of 19
+Got 9 clusters
+Splitting into subclusters...
+Inspecting for spurious merging
+Wrote graph to binary file in 0.113617897034 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00592772
+Louvain completed 21 runs in 31.276419878 seconds
+Similarity is 0.8678896442591316; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0892148017883 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00474571
+After 2 runs, maximum modularity is Q = 0.004762
+After 3 runs, maximum modularity is Q = 0.004881
+After 4 runs, maximum modularity is Q = 0.00488101
+After 5 runs, maximum modularity is Q = 0.00488107
+After 17 runs, maximum modularity is Q = 0.00488477
+Louvain completed 37 runs in 58.4167518616 seconds
+Similarity is 0.8807238890504365; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0750589370728 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00468732
+After 2 runs, maximum modularity is Q = 0.00470966
+Louvain completed 22 runs in 33.0103168488 seconds
+Similarity is 0.8928296844873006; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0138990879059 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0030798
+After 2 runs, maximum modularity is Q = 0.00309529
+After 10 runs, maximum modularity is Q = 0.0030953
+Louvain completed 30 runs in 44.817553997 seconds
+Similarity is 0.9334399003018978; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00965905189514 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.000862797
+After 3 runs, maximum modularity is Q = 0.00133489
+Louvain completed 23 runs in 35.5496180058 seconds
+Similarity is 0.8764984455046327; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0134608745575 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00851361
+After 2 runs, maximum modularity is Q = 0.00887091
+Louvain completed 22 runs in 33.8004820347 seconds
+Similarity is 0.7746541854896035; is_dissimilar is True
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00918698310852 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0150539
+Louvain completed 21 runs in 30.8590819836 seconds
+Similarity is 0.5997072792187992; is_dissimilar is True
+Got 3 subclusters
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0188729763031 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0119769
+Louvain completed 21 runs in 30.330753088 seconds
+Similarity is 0.6175389627767596; is_dissimilar is True
+Got 2 subclusters
+Merging on 12 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Collapsing 0 & 1 with prob 0.0006272433787513878 and sim 3.4608435169752028
+Trimmed 2 out of 346
+On merging iteration 2
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 11 patterns after merging
+Performing seqlet reassignment
+Cross contin jaccard time taken: 11.13 s
+Cross contin jaccard time taken: 11.09 s
+Discarded 87 seqlets
+Got 4 patterns after reassignment
+Total time taken is 798.75s
+On metacluster 0
+Metacluster size 6734
+Relevant tasks:  ('task0', 'task1', 'task2', 'task3', 'task4')
+Relevant signs:  (1, 1, 1, 1, 1)
+(Round 1) num seqlets: 6734
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 6.41 s
+Starting affinity matrix computations
+Normalization computed in 1.76 s
+Cosine similarity mat computed in 4.56 s
+Normalization computed in 1.6 s
+Cosine similarity mat computed in 4.19 s
+Finished affinity matrix computations in 8.95 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 1.16 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 1275.75 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 1307.79 s
+(Round 1) Computed affinity matrix on nearest neighbors in 2635.42 s
+Filtered down to 6082 of 6734
+(Round 1) Retained 6082 rows out of 6734 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 6082 samples in 0.038s...
+[t-SNE] Computed neighbors for 6082 samples in 0.329s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 6082
+[t-SNE] Computed conditional probabilities for sample 2000 / 6082
+[t-SNE] Computed conditional probabilities for sample 3000 / 6082
+[t-SNE] Computed conditional probabilities for sample 4000 / 6082
+[t-SNE] Computed conditional probabilities for sample 5000 / 6082
+[t-SNE] Computed conditional probabilities for sample 6000 / 6082
+[t-SNE] Computed conditional probabilities for sample 6082 / 6082
+[t-SNE] Mean sigma: 0.194932
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.545526027679 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=20)]: Done  10 tasks      | elapsed:    4.8s
+[Parallel(n_jobs=20)]: Done 160 tasks      | elapsed:   28.9s
+[Parallel(n_jobs=20)]: Done 200 out of 200 | elapsed:   34.7s finished
+Louvain completed 200 runs in 76.1172070503 seconds
+Wrote graph to binary file in 9.14336514473 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.69631
+After 41 runs, maximum modularity is Q = 0.70508
+Louvain completed 91 runs in 174.20727396 seconds
+Preproc + Louvain took 261.983716965 s
+Got 15 clusters after round 1
+Counts:
+{0: 1154, 1: 1141, 2: 1066, 3: 746, 4: 285, 5: 281, 6: 262, 7: 228, 8: 192, 9: 171, 10: 163, 11: 134, 12: 117, 13: 90, 14: 52}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 1154 seqlets
+Trimmed 64 out of 1154
+Skipped 14 seqlets
+Aggregating for cluster 1 with 1141 seqlets
+Trimmed 67 out of 1141
+Skipped 16 seqlets
+Aggregating for cluster 2 with 1066 seqlets
+Trimmed 27 out of 1066
+Skipped 13 seqlets
+Aggregating for cluster 3 with 746 seqlets
+Trimmed 86 out of 746
+Skipped 2 seqlets
+Aggregating for cluster 4 with 285 seqlets
+Trimmed 20 out of 285
+Aggregating for cluster 5 with 281 seqlets
+Trimmed 136 out of 281
+Aggregating for cluster 6 with 262 seqlets
+Trimmed 19 out of 262
+Skipped 1 seqlets
+Aggregating for cluster 7 with 228 seqlets
+Trimmed 23 out of 228
+Skipped 2 seqlets
+Aggregating for cluster 8 with 192 seqlets
+Trimmed 38 out of 192
+Skipped 6 seqlets
+Aggregating for cluster 9 with 171 seqlets
+Trimmed 23 out of 171
+Skipped 2 seqlets
+Aggregating for cluster 10 with 163 seqlets
+Trimmed 37 out of 163
+Aggregating for cluster 11 with 134 seqlets
+Trimmed 7 out of 134
+Aggregating for cluster 12 with 117 seqlets
+Trimmed 14 out of 117
+Aggregating for cluster 13 with 90 seqlets
+Trimmed 6 out of 90
+Aggregating for cluster 14 with 52 seqlets
+Trimmed 10 out of 52
+Got 15 clusters
+Splitting into subclusters...
+Inspecting for spurious merging
+Wrote graph to binary file in 1.73593711853 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0063546
+Louvain completed 21 runs in 34.8941221237 seconds
+Similarity is 0.891463257363929; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 1.80240416527 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00713117
+Louvain completed 21 runs in 35.3497738838 seconds
+Similarity is 0.886144068384733; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 1.65169906616 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00403277
+After 3 runs, maximum modularity is Q = 0.00404242
+After 17 runs, maximum modularity is Q = 0.00404243
+Louvain completed 37 runs in 62.5101869106 seconds
+Similarity is 0.944514974011209; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.830983877182 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.010891
+Louvain completed 21 runs in 33.6858448982 seconds
+Similarity is 0.8345656172074796; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.121339082718 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00660509
+Louvain completed 21 runs in 33.1820790768 seconds
+Similarity is 0.9374782182821322; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0450170040131 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0128321
+Louvain completed 21 runs in 32.9123888016 seconds
+Similarity is 0.8724671426539954; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0933408737183 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00657817
+Louvain completed 21 runs in 32.8322141171 seconds
+Similarity is 0.8896422400683063; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.119565963745 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0200083
+Louvain completed 21 runs in 33.2636160851 seconds
+Similarity is 0.512728106745613; is_dissimilar is True
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0706779956818 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00592877
+Louvain completed 21 runs in 32.9594099522 seconds
+Similarity is 0.8722970167804783; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.025897026062 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00990693
+Louvain completed 21 runs in 32.9506599903 seconds
+Similarity is 0.728037096837211; is_dissimilar is True
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0108380317688 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00506631
+After 3 runs, maximum modularity is Q = 0.00619635
+Louvain completed 23 runs in 37.8108329773 seconds
+Similarity is 0.8501195875439742; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00312399864197 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00952905
+Louvain completed 21 runs in 33.241476059 seconds
+Similarity is 0.4886532498667364; is_dissimilar is True
+Got 4 subclusters
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0690438747406 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00461173
+After 3 runs, maximum modularity is Q = 0.00462413
+After 8 runs, maximum modularity is Q = 0.00462535
+Louvain completed 28 runs in 46.279337883 seconds
+Similarity is 0.9050602855883402; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0581588745117 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00328198
+Louvain completed 21 runs in 33.1277468204 seconds
+Similarity is 0.9478789344852188; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0481200218201 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00349418
+After 3 runs, maximum modularity is Q = 0.00350155
+After 4 runs, maximum modularity is Q = 0.00350288
+Louvain completed 24 runs in 39.5208280087 seconds
+Similarity is 0.94299427312947; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0442850589752 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00464054
+After 4 runs, maximum modularity is Q = 0.00464055
+Louvain completed 24 runs in 38.4509379864 seconds
+Similarity is 0.9227217899201348; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0295209884644 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00630206
+After 3 runs, maximum modularity is Q = 0.00630207
+Louvain completed 23 runs in 37.4811241627 seconds
+Similarity is 0.8876260779947016; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.020956993103 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00340462
+After 3 runs, maximum modularity is Q = 0.00340463
+Louvain completed 23 runs in 37.306319952 seconds
+Similarity is 0.9436997735437663; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00617098808289 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00241038
+After 2 runs, maximum modularity is Q = 0.00247842
+After 4 runs, maximum modularity is Q = 0.00248064
+Louvain completed 24 runs in 40.9282500744 seconds
+Similarity is 0.9032882525075661; is_dissimilar is False
+Merging on 18 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Collapsing 0 & 2 with prob 0.019122116898962926 and sim 4.559980265783063
+Collapsing 7 & 11 with prob 0.0015928419599280242 and sim 4.547229126869449
+Collapsing 1 & 2 with prob 0.02386940319945729 and sim 4.5330228342616845
+Collapsing 0 & 1 with prob 0.009743237008730482 and sim 4.5172910959802905
+Trimmed 5 out of 2102
+Trimmed 0 out of 272
+Trimmed 3 out of 3155
+Skipped 1 seqlets
+On merging iteration 2
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 15 patterns after merging
+Performing seqlet reassignment
+Cross contin jaccard time taken: 12.11 s
+Cross contin jaccard time taken: 12.48 s
+Skipped 14 seqlets
+Skipped 1 seqlets
+Got 13 patterns after reassignment
+Total time taken is 3898.39s
+2018-07-27 01:43:05 DEBUG **************** workflow done *********************
+2018-07-27 01:43:08 DEBUG **************** result saved *********************

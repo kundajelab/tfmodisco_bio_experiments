@@ -1,0 +1,137 @@
+2018-07-26 10:20:58 INFO  prepare_data.py --no-bg
+2018-07-26 10:21:07 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-ZNF143-human-ENCSR000EBW-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/K562-ZNF143-human-ENCSR000EGP-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/HeLa-S3-ZNF143-human-ENCSR000ECO-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_gnZxqn/_tmp_H1-hESC-ZNF143-human-ENCSR000EBW-merged.narrowPeak.gz,/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-rep2.narrowPeak.gz,./_tmp_gnZxqn/_tmp_K562-ZNF143-human-ENCSR000EGP-merged.narrowPeak.gz,./_tmp_gnZxqn/_tmp_empty_file,./_tmp_gnZxqn/_tmp_GM12878-ZNF143-human-ENCSR000DZL-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 20
+2018-07-26 10:21:07 DEBUG bin-size=200, stride=20
+2018-07-26 10:21:17 DEBUG in: skip_test=0 bin-size=200, stride=20
+2018-07-26 10:21:17 INFO  LABEL_REGIONS sort merge done
+2018-07-26 10:21:23 INFO  LABEL_REGIONS intersect done
+2018-07-26 10:21:27 INFO  LABEL_REGIONS labels done
+2018-07-26 10:21:27 INFO  LABEL_REGIONS ALL DONE *****
+2018-07-26 10:21:34 INFO  split and make hdf5
+Reading in labels
+on file inputs.fa
+Processed 5000 lines
+Processed 10000 lines
+Processed 15000 lines
+Processed 20000 lines
+Processed 25000 lines
+Processed 30000 lines
+Processed 35000 lines
+Processed 40000 lines
+Processed 45000 lines
+Processed 50000 lines
+Processed 55000 lines
+Processed 60000 lines
+Processed 65000 lines
+Processed 70000 lines
+Processed 75000 lines
+Processed 80000 lines
+Processed 85000 lines
+Processed 90000 lines
+Processed 95000 lines
+Processed 100000 lines
+Processed 105000 lines
+Processed 110000 lines
+Processed 115000 lines
+Processed 120000 lines
+Processed 125000 lines
+Processed 130000 lines
+Processed 135000 lines
+Processed 140000 lines
+Processed 145000 lines
+Processed 150000 lines
+Processed 155000 lines
+Processed 160000 lines
+Processed 165000 lines
+Processed 170000 lines
+Processed 175000 lines
+Processed 180000 lines
+Processed 185000 lines
+Processed 190000 lines
+Processed 195000 lines
+Processed 200000 lines
+Processed 205000 lines
+Processed 210000 lines
+Processed 215000 lines
+Processed 220000 lines
+Processed 225000 lines
+Processed 230000 lines
+Processed 235000 lines
+Processed 240000 lines
+Processed 245000 lines
+Processed 250000 lines
+Processed 255000 lines
+Processed 260000 lines
+Processed 265000 lines
+Processed 270000 lines
+Processed 275000 lines
+Processed 280000 lines
+Processed 285000 lines
+Processed 290000 lines
+Processed 295000 lines
+Processed 300000 lines
+Processed 305000 lines
+Processed 310000 lines
+Processed 315000 lines
+Processed 320000 lines
+Processed 325000 lines
+Processed 330000 lines
+Processed 335000 lines
+Processed 340000 lines
+Processed 345000 lines
+Processed 350000 lines
+Processed 355000 lines
+Processed 360000 lines
+Processed 365000 lines
+Processed 370000 lines
+Processed 375000 lines
+Processed 380000 lines
+Processed 385000 lines
+Processed 390000 lines
+Processed 395000 lines
+Processed 400000 lines
+Processed 405000 lines
+Processed 410000 lines
+Processed 415000 lines
+Processed 420000 lines
+Processed 425000 lines
+Processed 430000 lines
+Processed 435000 lines
+Processed 440000 lines
+Processed 445000 lines
+Processed 450000 lines
+Processed 455000 lines
+Processed 460000 lines
+Processed 465000 lines
+Processed 470000 lines
+Processed 475000 lines
+Processed 480000 lines
+Processed 485000 lines
+Processed 490000 lines
+Processed 495000 lines
+Processed 500000 lines
+Processed 505000 lines
+Processed 510000 lines
+Processed 515000 lines
+Processed 520000 lines
+Processed 525000 lines
+Processed 530000 lines
+Processed 535000 lines
+Processed 540000 lines
+Processed 545000 lines
+Processed 550000 lines
+Processed 555000 lines
+Processed 560000 lines
+Processed 565000 lines
+Processed 570000 lines
+Processed 575000 lines
+Processed 580000 lines
+Processed 585000 lines
+Processed 590000 lines
+Processed 595000 lines
+2018-07-26 10:26:45 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-ZNF143-human-ENCSR000EBW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/K562-ZNF143-human-ENCSR000EGP-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/HeLa-S3-ZNF143-human-ENCSR000ECO-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz
+5
