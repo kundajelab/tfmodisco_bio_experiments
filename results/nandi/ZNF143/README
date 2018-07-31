@@ -1,0 +1,4 @@
+ZNF143_18_07_24 : rerun with model architecture update, including pre-train/fine-tune
+ZNF143_18_07_26 : rerun with no upsample for testing/validation, results committed, but accidentally re-run pipeline over it on 07_30, content contaminated.
+ZNF143_18_07_30a: rerun only modisco, linked deeplift results from 18_07_26. Used to test incremental workflow.
+ZNF143_18_07_30 : re-train with rc, class_weight
