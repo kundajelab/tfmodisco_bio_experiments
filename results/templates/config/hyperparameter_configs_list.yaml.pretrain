@@ -1,6 +1,6 @@
 [
 {
-    "message": "example model and training config",
+    "message": "example model and training config for fine-tune from pre-train v 0.1",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
@@ -14,7 +14,9 @@
                 #and only that many datapoints of the training data will be used
                 #for performance stat calculation
                 "bundle_x_and_y_in_generator": False,
-                "strip_enclosing_dictionary": True
+                "strip_enclosing_dictionary": True,
+                "rc_augment": True
+
             }
         }
     },
