@@ -1,0 +1,479 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.8529764460308117,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_xzpRn_modelWeights.h5",
+            "json_file": "model_files/record_1_model_xzpRn_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_xzpRn"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "example model and training config v 0.1",
+            "best_valid_key_metric": 0.8529764460308117,
+            "best_valid_perf_info": {
+                "epoch": 45,
+                "valid_key_metric": 0.8529764460308117,
+                "train_key_metric": 0.8853268873312267,
+                "valid_all_stats": {
+                    "per_output_auROC": [
+                        0.8872262245729319,
+                        0.8153743910282758,
+                        0.8771033654530248,
+                        0.8444894800978147,
+                        0.8406887690020117
+                    ],
+                    "mean_auROC": 0.8529764460308117,
+                    "per_output_auPRC": [
+                        0.9337977891776569,
+                        0.9310463602413678,
+                        0.8955411505450781,
+                        0.488291565033871,
+                        0.9070647927290825
+                    ],
+                    "mean_auPRC": 0.8311483315454111,
+                    "per_output_balanced_accuracy": [
+                        0.7241613478010414,
+                        0.6468646432520482,
+                        0.7470698176983877,
+                        0.6811069125760426,
+                        0.6744044459035676
+                    ],
+                    "mean_balanced_accuracy": 0.6947214334462174,
+                    "per_output_unbalanced_accuracy": [
+                        0.7855841878035618,
+                        0.8023985583794196,
+                        0.7612756264236902,
+                        0.9235329431187153,
+                        0.7542598748240649
+                    ],
+                    "mean_unbalanced_accuracy": 0.8054102381098904
+                }
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.6188281737138505,
+                    0.6225923067383046
+                ],
+                [
+                    0.6666514269485042,
+                    0.664316966204014
+                ],
+                [
+                    0.7066795714476375,
+                    0.7055061489572003
+                ],
+                [
+                    0.7282238542000024,
+                    0.7306623919820728
+                ],
+                [
+                    0.7677036572371846,
+                    0.7677421239131085
+                ],
+                [
+                    0.7885628929100077,
+                    0.7897175919198143
+                ],
+                [
+                    0.7986142020212761,
+                    0.7965670812932928
+                ],
+                [
+                    0.8055044434904325,
+                    0.8019051030972888
+                ],
+                [
+                    0.8148964038558969,
+                    0.8127250313976917
+                ],
+                [
+                    0.8226997077486817,
+                    0.8165665853983191
+                ],
+                [
+                    0.8236394006913699,
+                    0.8164429891447881
+                ],
+                [
+                    0.8269024593730508,
+                    0.8202833037853638
+                ],
+                [
+                    0.831600660668354,
+                    0.8262389221944344
+                ],
+                [
+                    0.834397353138038,
+                    0.8251748472124216
+                ],
+                [
+                    0.837826373511745,
+                    0.8279726110523894
+                ],
+                [
+                    0.8393728892161271,
+                    0.8290067446163144
+                ],
+                [
+                    0.8476157809627356,
+                    0.8343739075597897
+                ],
+                [
+                    0.8484368790942473,
+                    0.8341756697881998
+                ],
+                [
+                    0.8483047255388037,
+                    0.8351862672499744
+                ],
+                [
+                    0.8447839756423987,
+                    0.8312309902380326
+                ],
+                [
+                    0.8507630744829529,
+                    0.8375723385434893
+                ],
+                [
+                    0.8505292118218121,
+                    0.8383152273092053
+                ],
+                [
+                    0.8544011830022329,
+                    0.8421391132020883
+                ],
+                [
+                    0.8581359103849296,
+                    0.842306100145479
+                ],
+                [
+                    0.858769109291851,
+                    0.8426784039664827
+                ],
+                [
+                    0.857054917537927,
+                    0.8403840922865775
+                ],
+                [
+                    0.8579300962275399,
+                    0.8429889307507992
+                ],
+                [
+                    0.8654545661791163,
+                    0.8444660562248739
+                ],
+                [
+                    0.8665843558283297,
+                    0.8448356937876655
+                ],
+                [
+                    0.867133034401748,
+                    0.844333389636154
+                ],
+                [
+                    0.8675031598118752,
+                    0.845215792716342
+                ],
+                [
+                    0.868160926169157,
+                    0.8449661875401384
+                ],
+                [
+                    0.8677127888859371,
+                    0.8444114757832267
+                ],
+                [
+                    0.8708545839103845,
+                    0.8458955982390485
+                ],
+                [
+                    0.8754346513868372,
+                    0.8485920216031657
+                ],
+                [
+                    0.875567733992276,
+                    0.8474886772312848
+                ],
+                [
+                    0.8735633986822628,
+                    0.8468953121497055
+                ],
+                [
+                    0.8776491395135924,
+                    0.8496893070707969
+                ],
+                [
+                    0.8735229830522732,
+                    0.8484010965701939
+                ],
+                [
+                    0.8711855937032131,
+                    0.844463374399216
+                ],
+                [
+                    0.8757544287003315,
+                    0.846144325804022
+                ],
+                [
+                    0.8756394844374988,
+                    0.8489642290834484
+                ],
+                [
+                    0.8787016158218114,
+                    0.8464343613325781
+                ],
+                [
+                    0.8806459131072352,
+                    0.8491605142272102
+                ],
+                [
+                    0.8853268873312267,
+                    0.8529764460308117
+                ],
+                [
+                    0.8849557287991509,
+                    0.8497080491560809
+                ],
+                [
+                    0.8858888183082442,
+                    0.8489633911426196
+                ],
+                [
+                    0.8851780047381494,
+                    0.848041486519793
+                ],
+                [
+                    0.8867204768296169,
+                    0.8524493947715197
+                ],
+                [
+                    0.8839469480544043,
+                    0.8495125243900528
+                ],
+                [
+                    0.8858790026442733,
+                    0.850843962176557
+                ],
+                [
+                    0.8868146667653238,
+                    0.8488933604901483
+                ],
+                [
+                    0.88736555521554,
+                    0.8491942493253056
+                ],
+                [
+                    0.8880441226468093,
+                    0.8506640939493758
+                ],
+                [
+                    0.8915093195480847,
+                    0.8516551928481148
+                ],
+                [
+                    0.8923802150120574,
+                    0.8520660999760811
+                ],
+                [
+                    0.893565076641277,
+                    0.8496671107033684
+                ],
+                [
+                    0.8913608809291611,
+                    0.8491996135422714
+                ],
+                [
+                    0.8924793469049931,
+                    0.8512298158594225
+                ],
+                [
+                    0.8919647009608316,
+                    0.8504881705618376
+                ],
+                [
+                    0.8903244478727327,
+                    0.8485506224657493
+                ],
+                [
+                    0.8826301190011945,
+                    0.8412994700959363
+                ],
+                [
+                    0.8931339178287164,
+                    0.8491153062167097
+                ],
+                [
+                    0.8951656421745386,
+                    0.8512529580156846
+                ],
+                [
+                    0.8957957872507295,
+                    0.8452651091233383
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_xzpRn_modelWeights.h5",
+                "json_file": "model_files/record_1_model_xzpRn_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_xzpRn"
+            },
+            "model_creator_info": {
+                "layers_config": [
+                    {
+                        "name": "conv1",
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "name": "fc1_batchnorm",
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "name": "fc1_dropout",
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 5
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 65
+            }
+        }
+    ]
+}

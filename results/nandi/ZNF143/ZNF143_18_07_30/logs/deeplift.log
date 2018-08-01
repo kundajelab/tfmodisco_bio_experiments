@@ -1,0 +1,1100 @@
+2018-07-31 05:13:36 INFO  /home/ktian/kundajelab/tfnet/scripts/run_deeplift.py model_files/record_1_ subset_nobg.fa 5
+2018-07-31 05:13:36 DEBUG memory check location 1
+2018-07-31 05:13:36 DEBUG svmem(total=270370021376, available=229889724416, percent=15.0, used=34735251456, free=55132299264, active=149783781376, inactive=57714507776, buffers=3397255168, cached=177105215488, shared=4836904960, slab=5669130240)
+2018-07-31 05:13:36 DEBUG memory use: vms=0.300495 G, rss=0.036667 G
+2018-07-31 05:13:36 INFO  loading models from model_files/record_1_Json.json model_files/record_1_Weights.h5
+2018-07-31 05:13:36 INFO  input sequence file is subset_nobg.fa, range of tasks are 0:5
+2018-07-31 05:13:36 DEBUG len of input sequences = 61338
+2018-07-31 05:13:36 DEBUG memory check location 2
+2018-07-31 05:13:36 DEBUG svmem(total=270370021376, available=229823287296, percent=15.0, used=34801684480, free=55065853952, active=149849997312, inactive=57714507776, buffers=3397255168, cached=177105227776, shared=4836904960, slab=5669130240)
+2018-07-31 05:13:36 DEBUG memory use: vms=0.362675 G, rss=0.098812 G
+Using TensorFlow backend.
+2018-07-31 05:13:37 DEBUG $HOME=/home/ktian
+2018-07-31 05:13:37 DEBUG matplotlib data path /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data
+2018-07-31 05:13:37 DEBUG loaded rc file /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+2018-07-31 05:13:37 DEBUG matplotlib version 2.2.2
+2018-07-31 05:13:37 DEBUG interactive is False
+2018-07-31 05:13:37 DEBUG platform is linux2
+2018-07-31 05:13:37 DEBUG loaded modules: ['numpy.core.info', 'pandas._libs.numpy', 'pandas.errors.pandas', 'tensorflow.python.eager.execute', 'distutils.sysconfig', 'tensorflow.python.ops.nn_grad', 'pandas.plotting.contextlib', 'matplotlib.cbook._backports', 'tensorflow.python.training.momentum', 'logging.weakref', 'dateutil.tz.os', 'pprint', 'unittest.sys', 'tensorflow.core.protobuf.config_pb2', 'multiprocessing.pool', 'tensorflow.python.training.proximal_adagrad', 'pkg_resources._vendor.pprint', 'psutil.warnings', 'tensorflow.python.ops.gen_spectral_ops', 'tensorflow.python.saved_model', 'tensorflow.python.data', 'matplotlib.cbook.warnings', 'pkg_resources.extern.appdirs', 'tensorflow.python.training', 'tensorflow.python.estimator.canned.dnn_linear_combined', 'tarfile', 'tensorflow.core.example.example_pb2', 'pandas.io.formats.format', 'pandas.core.types', 'tensorflow.python.keras', 'codecs', 'scipy.linalg.decomp_cholesky', 'scipy.interpolate._cubic', 'tensorflow.python.ops.nn_impl', 'numpy.core._internal', 'pandas.io', 'distutils.sys', 'tensorflow.python.data.ops.iterator_ops', 'tensorflow.python.framework.op_def_library', 'pkg_resources._vendor.datetime', 'distutils.errors', 'ctypes._ctypes', '_heapq', 'tensorflow.python.keras.applications.mobilenet', 'pandas._libs.tslibs.timedeltas', 'email.sys', 'tensorflow.python.platform.gfile', 'dateutil.tz._common', 'pandas.compat.StringIO', 'cPickle', 'h5py._errors', 'google.protobuf.internal.datetime', 'pandas.core.accessor', 'pandas.core.dtypes.pandas', 'h5py.functools', 'tensorflow.python.keras._impl.keras.engine.sequential', 'numpy.ctypeslib', 'tensorflow.python.ops.gradients', 'scipy._lib._util', 'pkg_resources._vendor.copy', 'exceptions', 'pandas.io.formats.locale', 'scipy._lib.operator', 'logging.cStringIO', 'tensorflow.core.protobuf.saver_pb2', 'numpy.compat', 'dateutil.parser.__future__', 'pandas._libs.tslib', 'tensorflow.python.ops.string_ops', 'tensorflow.python.estimator.inputs.numpy_io', 'pandas.tseries.datetime', 'numpy.core.records', 'email.message', 'strop', 'tensorflow.core.framework.versions_pb2', 'google.protobuf', 'pandas.core.arrays.pandas', 'pandas._libs.hashing', 'tensorflow.python.keras._impl.keras.layers.convolutional_recurrent', 'pandas.compat.unicodedata', 'psutil.sys', 'pandas.plotting.collections', 'os.path', 'scipy.ndimage._ni_docstrings', 'scipy._lib._testutils', 'tensorflow.python.ops.math_grad', 'email.base64mime', 'scipy.spatial._procrustes', 'google.protobuf.descriptor_database', 'pympler.inspect', 'google.protobuf.pyext.cpp_message', 'h5py._hl.selections2', 'tensorflow.python.keras.activations', 'functools', 'pkg_resources._vendor.weakref', 'google.protobuf.message', 'pandas.core.groupby.copy', 'tensorflow.python.util.tf_inspect', 'tensorflow.python.estimator.export.export_lib', 'pandas.plotting.warnings', 'uuid', 'numpy.matrixlib.defmatrix', 'tensorflow.python.ctypes', 'pandas.core.operator', 'imp', 'multiprocessing.os', 'enum.sys', 'pandas.util.pandas', 'unittest.time', 'scipy._lib._ccallback', 'tensorflow.python.framework.numpy', 'pkg_resources.errno', 'google.protobuf.internal.struct', 'absl.flags._defines', 'pandas._libs.properties', 'pandas.io.common', 'tensorflow.python.layers.core', 'h5py', 'tensorflow.python.estimator.run_config', 'dateutil.tz.struct', 'pandas.io.functools', 'numpy.add_newdocs', 'pandas.core.sparse.array', 'pytz.pytz', 'tensorflow.python.summary', 'numpy.random.threading', 're', 'email.quopri', 'tensorflow.python.framework.function', 'tensorflow.python.layers.normalization', 'tensorflow.python.training.training', 'matplotlib.json', '_locale', 'logging', 'multiprocessing.dummy.itertools', 'traceback', 'tensorflow.core.framework.google', 'pandas.core.pandas', 'ctypes.re', 'google.protobuf.operator', 'numpy._mklinit', 'dateutil.six', 'scipy.special.lambertw', 'keras.utils.np_utils', 'pandas._libs.tslibs.nattype', 'pkg_resources._vendor.packaging._compat', 'numpy.core.arrayprint', 'tensorflow.python.lib.io.file_io', 'pandas.tseries.pandas', 'pandas.io.codecs', 'pandas._libs.hashtable', 'pandas.core.tools.datetimes', 'keyword', 'tensorflow.python.keras.backend', 'tensorflow.python.ops.tensor_array_ops', 'pandas._libs.tslibs.strptime', 'pandas.io.zipfile', 'pandas.core.nanops', 'scipy._lib.__future__', 'pandas.util._validators', 'psutil._common', '__main__', 'numpy.sys', 'scipy.interpolate._pade', 'tensorflow.core.util', 'tensorflow.python.ops.gen_set_ops', 'scipy.sparse.csgraph._laplacian', '_codecs', 'unittest.difflib', 'scipy.ndimage.measurements', 'pandas._libs.tslibs.re', 'glob', 'scipy.linalg._decomp_qz', 'tensorflow.python.keras._impl.keras.datasets.cifar100', 'tensorflow.python.lib', 'tensorflow.python.keras._impl.keras.applications.xception', 'scipy.ndimage._ni_label', 'email.feedparser', 'tensorflow.python.keras._impl.keras.utils.data_utils', 'tensorflow.python.ops.summary_op_util', 'scipy.linalg.linalg_version', 'scipy.sparse.csgraph._min_spanning_tree', 'pandas.io.formats.terminal', 'tensorflow.python.keras._impl.keras.datasets.imdb', 'numpy.lib._iotools', 'numpy.lib.npyio', 'random', 'tensorflow.python.keras._impl.keras.utils.multi_gpu_utils', 'yaml.reader', 'pandas._libs.pandas', 'tensorflow.python.ops.tensorflow', 'tensorflow.python.client.timeline', 'email.time', 'tensorflow.core.framework.function_pb2', 'pkg_resources._vendor.warnings', 'h5py._hl', 'google.protobuf.internal.numbers', 'tensorflow.python.framework.fast_tensor_util', 'numpy.lib._version', 'psutil.stat', 'pytz.tzinfo', 'tensorflow.python.platform.flags', 'scipy.spatial.itertools', 'pytz.UserDict', 'numpy.lib.type_check', 'pandas.core.indexes.interval', 'tensorflow.core.framework', 'tensorflow.core.protobuf.debug_pb2', 'pkg_resources._vendor.six.moves', 'h5py._hl.six', 'tensorflow.python.saved_model.signature_def_utils', 'tensorflow.python.training.slot_creator', 'pandas.compat.chainmap', 'tensorflow.python.keras._impl.keras.callbacks', 'pandas.core.indexes.__future__', 'dateutil.parser.io', 'pandas.core.groupby.contextlib', 'tensorflow.core.protobuf.rewriter_config_pb2', 'h5py.defs', 'tensorflow.python.sys', 'email.mime', 'pandas._libs.indexing', 'urllib', 'pandas.plotting.operator', 'tensorflow.python.keras._impl.keras.utils', 'pkg_resources.sys', 'tensorflow.python.ops.image_ops_impl', 'keras.utils.conv_utils', 'Queue', 'numpy.lib.info', 'ctypes', 'scipy._lib.StringIO', 'tensorflow.python.ops.lookup_ops', 'pandas._libs.tslibs', 'yaml.loader', 'tensorflow.python.eager', 'numpy.ctypes', 'tensorflow.core.lib.core.error_codes_pb2', 'six.moves', 'tensorflow.core.lib', 'tensorflow.python.keras._impl.keras.estimator', 'email.uu', 'keras.utils.generic_utils', 'tensorflow.python.ops.sets', 'email.calendar', 'encodings.unicode_escape', 'pandas._libs.distutils', 'tensorflow.python.ops.rnn_cell', 'pkgutil', 'dateutil.parser.string', 'collections', 'numpy', 'tensorflow.python.training.gradient_descent', 'subprocess32', 'pytz', 'pandas.core.contextlib', 'pandas._libs.internals', 'pandas._libs.pytz', 'zlib', 'scipy.ndimage.interpolation', 'email.random', 'tensorflow.python.keras._impl.keras.wrappers', 'pympler.array', 'json.decoder', 'tensorflow.python.util', 'tensorflow.core.protobuf', 'pkg_resources._vendor.appdirs', 'tensorflow.python.ops.linalg_ops', 'tensorflow.python.keras._impl.keras.applications.nasnet', 'h5py._hl.compat', 'dateutil.tz', 'io', 'pandas.core.arrays.types', 'tensorflow.python.framework.tensor_shape', 'numpy.core', 'multiprocessing.dummy', 'tensorflow.python.keras.applications', 'psutil._psutil_posix', 'tensorflow.python.training.server_lib', 'rfc822', 'tensorflow.python.saved_model.utils_impl', 'scipy.sparse._sparsetools', 'google.protobuf.any_pb2', 'tensorflow.python.platform.build_info', 'xml.dom.xmlbuilder', 'tensorflow.python.keras._impl.keras.preprocessing.image', 'pkg_resources._vendor.packaging', '_weakref', 'pkg_resources.extern.pyparsing', 'urlparse', 'tensorflow.python.ops.gen_linalg_ops', 'gzip', '_bisect', 'tensorflow.python.framework.sparse_tensor', 'tensorflow.python.estimator.export.export', 'tensorflow.python.keras._impl.keras.regularizers', 'matplotlib.colors', 'absl.flags._exceptions', 'psutil.time', 'numpy.random.info', 'tensorflow.python.util.compat', 'mkl_fft', 'tensorflow.python.pywrap_tensorflow', 'tensorflow.python.framework.versions', 'unittest.main', 'keras.utils.data_utils', 'scipy.linalg.blas', 'tensorflow.python.estimator.export.export_output', 'tensorflow.python.ops.linalg_grad', 'pkg_resources._vendor.packaging._structures', 'psutil.functools', 'pandas._libs.tslibs.calendar', 'tensorflow.python.training.queue_runner', 'textwrap', 'yaml.serializer', 'pandas.tseries.frequencies', 'tensorflow.python.estimator.inputs', 'pandas.compat.cPickle', 'pkg_resources.py31compat', 'scipy.special._logsumexp', 'pandas.core.groupby.types', 'scipy.sparse._csparsetools', 'numpy.core.getlimits', 'pandas.core.indexes.numeric', 'tensorflow.core.framework.summary_pb2', 'pandas.datetime', 'tensorflow.core.protobuf.google', 'logging.traceback', 'tensorflow.python.framework.tensorflow', 'pandas.plotting._converter', 'numpy.lib.mixins', '_posixsubprocess32', 'scipy._lib.contextlib', 'pandas.core.config_init', 'tensorflow.python.keras.layers', 'scipy.ndimage.filters', 'pandas.core.sparse', 'yaml.constructor', 'h5py.h5py_warnings', 'tensorflow.python.feature_column', 'scipy.ndimage.morphology', 'numpy.linalg.lapack_lite', 'tensorflow.python.keras._impl.keras.layers', 'marshal', 'matplotlib.compat', 'psutil.re', 'pandas.core.api', 'tensorflow.python.framework.google', 'tensorflow.python.ops.sdca_ops', 'pandas.tseries', 'pandas.core.indexes', '_socket', 'email.Utils', 'google.protobuf.io', 'tensorflow.python.training.input', 'tensorflow.python.ops.sparse_ops', 'tokenize', 'pandas.io.formats.console', 'pandas.compat.cStringIO', 'tensorflow.python.training.sys', 'tensorflow.python.ops.embedding_ops', 'dateutil.tz.bisect', 'tensorflow.python.data.util.sparse', 'numpy.random.numpy', 'pandas._libs.tslibs.thread', 'tensorflow.python.os', 'pandas.util.textwrap', 'mimetools', 'google.protobuf.json_format', 'tensorflow.python.framework.meta_graph', 'tensorflow.core.framework.graph_pb2', 'pandas.core.indexes.sys', 'scipy.linalg.decomp_schur', 'tensorflow.python.summary.writer.event_file_writer', 'pandas._libs.datetime', 'numpy.polynomial.polynomial', 'tensorflow.python.framework.random_seed', 'scipy.special', 'importlib.sys', 'tensorflow.python.framework.graph_util_impl', 'tensorflow.python.training.checkpointable', 'genericpath', 'tensorflow.python.ops.losses.util', 'urllib2', 'tensorflow.python.training.learning_rate_decay', 'ctypes.ctypes', 'scipy.sparse.extract', 'tensorflow.core', 'absl.flags._argument_parser', 'time', 'pandas.core.sparse.__future__', 'pandas.core.indexes.pandas', 'h5py._hl.selections', 'pandas.core.indexes.frozen', 'pkg_resources._vendor.traceback', 'tensorflow.python.estimator.util', 'h5py.version', 'yaml.parser', 'pandas.core.tokenize', 'string', 'h5py._hl.sys', 'pandas.util.warnings', 'email.quoprimime', 'scipy.sparse.construct', 'tensorflow.python.keras._impl.keras.models', 'datetime', 'numpy.core.machar', 'tensorflow.python.keras._impl.keras.constraints', 'pandas.core.dtypes.numbers', 'numpy.ma.extras', 'google.protobuf.internal', 'tensorflow.python.ops.linalg', 'psutil.traceback', 'multiprocessing', 'dis', 'tensorflow.python.ops.state_grad', 'tensorflow.python.estimator.inputs.queues', 'pandas._libs.tslibs.textwrap', 'pandas.core.dtypes.datetime', 'pyparsing', 'mpl_toolkits', 'tensorflow.python.estimator.canned', 'yaml.resolver', 'numpy.fft.helper', 'scipy.linalg._expm_frechet', 'google.protobuf.six', '_ctypes', 'fnmatch', '_testcapi', 'tensorflow.python.framework.c_api_util', 'pandas._libs.join', 'email.socket', 'tensorflow.python.layers.base', 'weakref', 'numpy.lib.arraypad', 'pandas.core.groupby', 'tensorflow.core.util.google', '_json', 'tensorflow.python.lib.io.tf_record', 'tensorflow.python.keras._impl.keras.layers.wrappers', 'pandas.core.functools', 'email.FeedParser', 'tensorflow.core.lib.core.sys', 'pympler.asizeof', 'pandas.core.util.numpy', 'six.moves.urllib', 'email.MIMEMessage', 'email._parseaddr', 'pandas.plotting.dateutil', 'pandas.core.tools.pandas', 'logging.thread', 'scipy.misc.doccer', 'pandas.io.contextlib', 'tensorflow.python.keras._impl.keras.preprocessing.sequence', 'mkl_fft.numpy', 'pandas.core.tools.timedeltas', 'tensorflow.python.keras._impl.keras.preprocessing.text', 'numpy.core.fromnumeric', '_ast', 'tensorflow.python.ops.image_ops', 'pandas.io.formats.sys', 'scipy.special.specfun', 'pandas.tseries.functools', 'scipy.special._comb', 'pickle', 'pandas.core.indexes.textwrap', 'pandas.core.ops', 'pandas.io.mmap', 'numpy.lib.polynomial', 'pkg_resources._vendor.os', 'tensorflow.python.keras.datasets.cifar10', 'pandas._libs.tslibs.pandas', 'matplotlib.testing', 'tensorflow.python.ops.variable_scope', 'tensorflow.python.ops.array_grad', 'yaml.codecs', 'numpy.lib.utils', 'zipfile', 'dateutil.relativedelta', 'scipy.interpolate.fitpack', 'numpy.lib.arrayterator', 'email.parser', 'tensorflow.python.framework.errors_impl', 'pandas.core.collections', 'scipy.misc', 'scipy.interpolate', '_weakrefset', 'yaml.types', 'unittest.traceback', 'tensorflow.python.framework.importer', 'scipy.linalg._fblas', 'unittest.os', 'scipy.__config__', 'h5py.h5', 'tensorflow.python.keras._impl.keras.applications.vgg19', 'pandas._libs.tslibs.period', 'tensorflow.python.keras._impl.keras.applications.vgg16', 'pandas.core.base', 'email.MIMEImage', 'tensorflow.python.training.session_run_hook', 'pandas.core.groupby.pandas', 'numpy.polynomial.legendre', 'tensorflow.python.keras._impl.keras.layers.recurrent', 'yaml', 'multiprocessing.dummy.weakref', 'tensorflow.python.keras._impl.keras.engine.training_utils', 'scipy.sparse.dia', 'tensorflow.python.keras._impl.keras.engine.training', 'unittest.functools', 'google.protobuf.message_factory', 'unittest.util', 'pandas.core.dtypes.numpy', 'scipy._lib.types', 'scipy.spatial._plotutils', 'pytz.collections', '_cython_0_27_3', 'scipy.linalg.lapack', 'email.encoders', 'tensorflow.python.keras._impl.keras.datasets.cifar', 'tensorflow.python.ops.data_flow_grad', 'tensorflow.python.training.moving_averages', 'dateutil.warnings', 'pandas.core.dtypes.collections', 'scipy.interpolate.fitpack2', 'pandas.core.dtypes.concat', 'scipy.ndimage._nd_image', 'scipy.interpolate.rbf', 'yaml.events', 'tensorflow.python.estimator.export', 'pkg_resources._vendor.packaging.__about__', 'psutil.struct', 'scipy.spatial._voronoi', 'tensorflow.python.training.coordinator', 'scipy.linalg._decomp_ldl', 'tensorflow.python.training.queue_runner_impl', 'pandas._libs.tslibs.resolution', 'tensorflow.python.keras._impl.keras.engine.base_layer', 'pandas.compat.numpy.distutils', 'scipy.interpolate._fitpack_impl', 'pandas.core.indexes.multi', 'pandas.core.sys', 'pkg_resources._vendor.packaging.markers', 'pkg_resources._vendor.packaging.version', 'tensorflow.python.training.six', 'pandas.compat.numpy.pandas', 'numpy.random', 'tensorflow.core.protobuf.saved_model_pb2', 'tensorflow.python.framework.cpp_shape_inference_pb2', 'tensorflow.python.traceback', 'array', 'tensorflow.python.data.ops.readers', 'pytz.exceptions', 'types', 'numpy.testing.nose_tools.utils', 'scipy.spatial.distance', 'tensorflow.core.framework.attr_value_pb2', 'pandas.compat.types', 'tensorflow.python.ops.candidate_sampling_ops', 'copy', 'pympler.struct', 'pkg_resources._vendor.pyparsing', 'tensorflow.python.keras.losses', 'tensorflow.python.ops.gen_image_ops', 'psutil._pslinux', 'unittest.weakref', 'encodings.unicode_internal', 'posix', 'pandas.core.groupby.groupby', 'tensorflow.core.protobuf.sys', 'tensorflow.python.ops.resources', 'pandas.tseries.offsets', 'numpy.lib.shape_base', 'numpy._import_tools', 'backports_abc', 'psutil.base64', 'numpy.fft.info', 'tensorflow.python.training.evaluation', 'unittest.result', 'scipy.ndimage.io', 'tensorflow.core.protobuf.cluster_pb2', 'google.protobuf.os', 'scipy._lib._version', 'psutil.signal', 'absl.flags._flagvalues', 'dateutil.parser.six', 'pandas.core.indexes.datetimelike', 'tensorflow.python.importlib', 'pandas.compat.struct', 'pandas.core.dtypes.dtypes', 'tensorflow.python.keras._impl.keras.datasets.mnist', 'google.protobuf.descriptor_pool', 'future_builtins', 'tensorflow.python.eager.context', 'pandas.core.dtypes.common', 'linecache', 'tensorflow.python.ops.state_ops', 'h5py.collections', 'google.protobuf.internal.decoder', 'tensorflow.python.ops.numerics', 'tensorflow.python.estimator.gc', 'tensorflow.python.keras.models', 'tensorflow.python.ops.gen_sdca_ops', 'subprocess', 'pandas.core.sparse.pandas', 'pytz.datetime', 'scipy.special.basic', 'tensorflow.python.keras.wrappers', 'xml', '_cython_0_28_3', '_cython_0_28_2', 'dateutil.tz.tz', 'tensorflow.python.keras.datasets.mnist', 'tensorflow.python.platform.self_check', 'h5py.h5ds', 'keras.utils', 'pandas.core.arrays.numpy', 'scipy.special._ufuncs_cxx', 'tensorflow.python.saved_model.builder_impl', 'pandas.util', 'scipy.interpolate._ppoly', 'scipy.interpolate.interpnd', 'tensorflow.core.lib.core.google', 'ssl', 'numpy.version', 'tensorflow.python.keras._impl.keras.layers.noise', 'unittest.re', 'threading', 'numpy.fft', 'email.Message', 'scipy.special.spfun_stats', 'pkg_resources._vendor.re', 'scipy.linalg._solvers', 'calendar', 'tensorflow.python.ops.gen_random_ops', 'plistlib', 'pandas.tseries.numpy', 'scipy.spatial.scipy', 'tensorflow.python.data.ops', 'pkg_resources.extern.packaging.version', 'scipy.linalg._flapack', 'google.protobuf.sys', 'fcntl', 'unittest.case', 'mkl_fft._pydfti', 'swig_runtime_data4', 'distutils.os', 'google.protobuf.descriptor', 'tensorflow.python.ops.losses.losses_impl', 'scipy.interpolate._bspl', 'pandas.util._decorators', 'json.re', 'tensorflow.python.estimator.warm_starting_util', 'pandas.core.missing', 'tensorflow.python.client.session', 'google.protobuf.internal.collections', 'tensorflow.core.example.sys', 'pandas.io.urlparse', 'tensorflow.python.keras._impl.keras.engine.training_eager', 'scipy.sparse.csc', 'tensorflow.python.estimator.canned.prediction_keys', 'unittest', 'multiprocessing.signal', 'tensorflow.python.framework.op_def_registry', 'scipy.sparse.csr', 'tensorflow.core.protobuf.tensorflow', 'tensorflow.core.framework.tensor_shape_pb2', 'tensorflow.python.training.google', 'tensorflow.python.ops.template', 'numpy.polynomial.laguerre', 'tensorflow.python.estimator.canned.metric_keys', 'sre_constants', 'numpy.core.function_base', 'numpy.compat.py3k', 'tensorflow.python.keras._impl.keras.layers.convolutional', 'xml.dom.NodeFilter', 'tensorflow.python.training.gen_training_ops', 'scipy.ndimage._ni_support', 'scipy.linalg._decomp_update', 'dateutil.parser.time', 'pandas.plotting._tools', 'logging.atexit', 'pandas.core.indexes.datetimes', 'email.MIMENonMultipart', 'tensorflow.python.summary.summary', 'yaml.tokens', 'tensorflow.python.keras._impl.keras.engine.saving', 'pandas.core.dtypes.generic', 'pkg_resources._vendor.packaging.specifiers', 'h5py._hl.os', 'pandas.plotting.pandas', 'pandas.util.inspect', 'shutil', 'pandas._libs.tslibs.warnings', 'absl.flags', 'tensorflow.python.keras._impl.keras.utils.vis_utils', 'pandas.io.formats', 'tensorflow.python.framework.graph_io', 'pandas.tseries.re', 'tensorflow.python.ops.data_flow_ops', 'tensorflow.python.keras._impl.keras.applications.mobilenet', 'tensorflow.python.keras.preprocessing.image', 'pkg_resources.extern', 'pandas.core.tools.numpy', 'pympler.re', 'scipy.spatial._spherical_voronoi', 'multiprocessing.subprocess', 'tensorflow.python.keras.regularizers', 'matplotlib.fontconfig_pattern', 'tensorflow.python.ops.gen_sparse_ops', 'pandas._libs.decimal', 'tensorflow.python.keras.applications.densenet', 'pandas.core.dtypes.re', 'heapq', 'opcode', 'google.protobuf.google', 'pandas._libs.tslibs.sys', 'google.protobuf.binascii', 'struct', 'pandas.core.dtypes.cast', 'scipy.spatial.ckdtree', 'scipy.linalg.decomp_lu', 'email.Parser', 'distutils.types', 'tensorflow.python.keras._impl', 'pkg_resources.extern.packaging.markers', 'pandas._libs.tslibs.fields', 'pandas.core.dtypes.warnings', 'scipy.sparse.coo', 'tensorflow.core.framework.step_stats_pb2', 'absl.flags._flag', 'tensorflow.python.keras.optimizers', 'tensorflow.python.keras.datasets.reuters', 'tensorflow.python.ops.gen_parsing_ops', 'tensorflow.python.ops.gen_string_ops', 'pympler.warnings', 'scipy.linalg.decomp_svd', '_pywrap_tensorflow_internal', 'google.protobuf.internal.well_known_types', 'email.Generator', 'pandas.core.sparse.numpy', 'google.protobuf.collections', 'tensorflow.python.framework', 'email.MIMEAudio', 'pandas.core.tools', 'pympler._testcapi', 'tensorflow.python.ops.gen_array_ops', 'tensorflow.python.keras.constraints', 'pandas.compat.sys', 'scipy.special._ufuncs', 'inspect', 'scipy.linalg._solve_toeplitz', 'scipy.interpolate.dfitpack', 'tensorflow.python.keras._impl.keras.applications', 'scipy.sparse.csgraph._reordering', 'email.Iterators', 'scipy.sparse.base', 'email.base64MIME', 'cython_runtime', 'pandas.compat.re', 'tensorflow.python.training.training_ops', 'tensorflow.python.keras._impl.keras.wrappers.scikit_learn', 'tensorflow.python.framework.graph_to_function_def', 'dateutil.math', 'email.Charset', 'os', 'numpy.core.shape_base', 'tensorflow.core.framework.resource_handle_pb2', 'pandas._libs.tslibs.offsets', 'operator', 'pandas._libs.missing', 'pandas.core.indexes.api', 'tensorflow.python.feature_column.feature_column', 'tensorflow.python.estimator.canned.linear', 'pandas.core.generic', 'scipy.linalg._matfuncs_sqrtm', '_warnings', 'pandas._libs.algos', 'tensorflow.python.layers.pooling', 'tensorflow.python.estimator.estimator_lib', 'numpy._distributor_init', 'pandas.core.groupby.collections', 'multiprocessing.dummy.sys', 'dateutil.parser.dateutil', 'tensorflow.python.ops.resource_variable_ops', 'pandas.core.arrays', 'scipy.linalg._decomp_polar', 'dateutil.datetime', 'tensorflow.python.keras._impl.keras.applications.inception_resnet_v2', 'tensorflow.python.data.util', 'tensorflow.python.ops.gen_checkpoint_ops', 'tensorflow.python.keras._impl.keras.layers.serialization', 'google.protobuf.internal.google', 'numpy.core.defchararray', 'pandas.core.arrays.warnings', '_abcoll', 'tensorflow.python.framework.registry', 'tensorflow.python.keras._impl.keras.activations', 'unittest.signals', 'termios', 'numpy.testing.nosetester', 'google.protobuf.reflection', 'tensorflow.python.util.is_in_graph_mode', 'tensorflow.python.keras._impl.keras.layers.normalization', 'tensorflow.python.keras._impl.keras.applications.imagenet_utils', 'pandas.core.groupby.textwrap', 'scipy.sparse._matrix_io', 'tensorflow.core.protobuf.control_flow_pb2', 'tensorflow.python.training.adadelta', 'scipy.spatial.kdtree', 'tensorflow.python.ops.spectral_ops', 'pandas.core.arrays.categorical', 'google.protobuf.text_format', 'pandas.core.indexes.numpy', 'yaml.representer', 'pandas._libs.tslibs.parsing', 'numpy.core.umath', 'pympler.os', 'tensorflow.python.keras._impl.keras.layers.merge', 'encodings.utf_8', 'json.encoder', 'pandas.plotting.re', 'tensorflow.core.framework.variable_pb2', 'unittest.StringIO', 'absl.flags._helpers', 'pandas.io.formats.__future__', 'numpy.fft.fftpack_lite', 'matplotlib.cbook', 'scipy.ndimage', 'scipy.linalg.cython_lapack', 'tensorflow.python.training.checkpoint_ops', 'tensorflow.python.ops.gen_manip_ops', 'pympler.math', 'abc', 'psutil.socket', 'h5py.h5fd', 'tensorflow.python.training.session_manager', 'tensorflow.python.framework.framework_lib', 'tensorflow.python.platform.tf_logging', 'tensorflow.python.ops.summary_ops', 'yaml.scanner', 'mkl_fft._numpy_fft', 'psutil.pwd', 'google.protobuf.text_encoding', 'multiprocessing.multiprocessing', 'StringIO', 'tensorflow.core.lib.core', 'pandas.core.codecs', 'yaml.datetime', 'tensorflow.python.estimator.inputs.queues.feeding_queue_runner', 'h5py.sys', 'scipy.linalg._sketches', 'pandas.compat.numpy.numpy', 'tensorflow.core.protobuf.meta_graph_pb2', 'select', 'tensorflow.python.estimator.canned.optimizers', 'pandas._libs.interval', 'tensorflow.python.keras._impl.keras.backend', 'numpy.lib.financial', 'scipy.linalg.decomp_qr', 'tensorflow.python.platform', 'tensorflow.python.framework.ops', 'pkg_resources._vendor.six.moves.urllib', 'six.moves.urllib.error', 'numpy.polynomial.hermite_e', 'h5py._hl.datatype', 'pandas.compat.collections', 'pandas._libs.tslibs.timezones', 'pandas.core.distutils', 'pandas.core.indexes.operator', 'pandas._libs.operator', 'yaml.nodes', 'tensorflow.core.framework.op_def_pb2', 'h5py.h5py', 'tensorflow.python.util.tf_export', 'unicodedata', 'pkg_resources.os', 'encodings.aliases', 'tensorflow.python.ops.collections', 'pandas.core.common', 'tensorflow.python.framework.smart_cond', 'numpy.random.warnings', 'pandas._libs.tslibs.ccalendar', 'scipy.interpolate.polyint', 'tensorflow.python.ops.special_math_ops', 'pandas.io.formats.functools', 'tensorflow.python.ops.tensor_array_grad', 'numbers', 'pandas.core.keyword', 'scipy.spatial.qhull', 'numpy.core.numeric', 'pandas._libs.tslibs.timestamps', 'scipy.spatial', 'csv', 'psutil._psposix', 'tensorflow.python.keras.datasets.boston_housing', 'scipy.linalg.misc', 'tensorflow.python.training.tensorflow', 'yaml.dumper', 'tensorflow.python.keras._impl.keras.utils.io_utils', 'tensorflow.python.ops.gen_io_ops', 'pandas.plotting.numpy', 'scipy.sparse.csgraph._tools', 'pandas.errors', 'tensorflow.python.ops.gen_lookup_ops', 'tensorflow.python.saved_model.signature_def_utils_impl', 'tensorflow.python.client', 'tensorflow.core.framework.tensor_pb2', 'scipy.sparse.lil', 'pytz.lazy', 'scipy.sparse.csgraph', 'tensorflow.python.training.basic_loops', 'scipy.linalg._flinalg', 'xml.dom.copy', 'numpy.linalg.info', 'pkg_resources._vendor.six', 'matplotlib.rcsetup', 'scipy', 'pandas._libs.tslibs.time', 'scipy.special._ellip_harm', 'email.urllib', 'pandas.core.indexes.accessors', 'tensorflow.python.training.checkpoint_state_pb2', 'httplib', 'scipy.special._spherical_bessel', 'h5py.operator', 'decimal', 'tensorflow.python.keras.utils', 'token', 'multiprocessing.dummy.multiprocessing', 'multiprocessing.process', 'tensorflow.python.tensorflow', 'tensorflow.python.training.optimizer', 'tensorflow.python.keras._impl.keras.utils.np_utils', 'tensorflow.python.data.util.convert', 'keras.backend.tensorflow_backend', 'tensorflow.python.util.tf_decorator', 'ast', 'dateutil.tz.six', 'tensorflow.python.training.monitored_session', 'scipy.interpolate._bsplines', 'ctypes.struct', 'tensorflow.core.framework.types_pb2', 'yaml.copy_reg', 'pandas.core.strings', 'tensorflow.python.estimator', 'thread', 'pandas.compat.functools', 'multiprocessing.util', 'tensorflow.python.training.sync_replicas_optimizer', 'tensorflow.python.keras.preprocessing', '_collections', 'tensorflow.python.keras._impl.keras.engine.training_arrays', 'pandas.compat.httplib', 'pandas.core.tools.collections', 'email.Errors', 'ctypes.sys', 'pandas.tseries.dateutil', 'posixpath', 'pandas.compat.pandas', 'tensorflow.core.example.feature_pb2', 'json._json', 'tensorflow.python.framework.tensor_util', 'json.sys', 'tensorflow.core.framework.node_def_pb2', 'tensorflow.python.ops.metrics', 'hashlib', 'tensorflow.python.keras.metrics', 'tensorflow.python.training.ftrl', 'pandas.compat.distutils', 'numpy.lib.nanfunctions', 'h5py.h5ac', 'pandas.core.arrays.textwrap', 'scipy.linalg.basic', 'sre_compile', 'pkg_resources._vendor.threading', 'dateutil.tz._factories', 'scipy._lib.tempfile', 'logging.collections', 'email.base64', 'pympler.weakref', 'multiprocessing.atexit', 'google.protobuf.internal._api_implementation', 'dateutil._version', 'bz2', 'tensorflow.python.ops.gen_data_flow_ops', 'xml.dom.minicompat', 'pandas.plotting._misc', 'tensorflow.python.framework.constant_op', 'pandas.core.series', 'tensorflow.python.keras._impl.keras.engine.training_generator', 'warnings', 'encodings.ascii', 'tensorflow.core.example.google', 'pandas._libs.tslibs.pytz', 'tensorflow.python.keras.applications.xception', 'pandas.core.algorithms', 'multiprocessing._multiprocessing', 'h5py._hl.filters', 'dateutil.parser.calendar', 'tensorflow.python.keras._impl.keras.datasets.cifar10', 'pkg_resources.extern.six.moves', 'numpy.linalg.linalg', 'tensorflow.python.pywrap_tensorflow_internal', 'scipy._lib.messagestream', 'logging.os', 'ctypes._endian', 'encodings.encodings', 'unittest.pprint', 'matplotlib.sys', 'pandas.core.util.itertools', 'tensorflow.python.ops.gen_dataset_ops', 'six.moves.urllib.request', 'numpy.linalg', 'tensorflow.python.framework.device', 'yaml.sys', 'pandas.core.re', 'keras', 'tensorflow.python.keras._impl.keras.metrics', 'tensorflow.python.keras._impl.keras.utils.conv_utils', 'scipy.linalg.special_matrices', 'tensorflow.python.estimator.canned.dnn', 'tensorflow.python.ops.manip_ops', 'tensorflow.python.data.util.nest', 'dateutil.tz.functools', 'tensorflow.python.ops.linalg.linalg_impl', 'pandas.io.formats.os', 'pytz.tzfile', 'tensorflow.python.framework.load_library', 'locale', 'tensorflow.python.training.supervisor', 'tensorflow.python.ops.check_ops', 'tensorflow.core.framework.sys', 'atexit', 'email.quopriMIME', 'matplotlib._color_data', 'pandas.core.arrays.base', 'matplotlib.cbook.deprecation', 'dateutil', 'h5py.h5z', 'h5py.h5t', 'h5py.h5p', 'h5py.h5s', 'h5py.h5r', 'h5py.h5l', 'h5py.h5o', 'h5py.h5i', 'pkg_resources._vendor.string', 'h5py.h5d', 'h5py.h5g', 'h5py.h5f', 'ctypes.subprocess', 'tensorflow.core.example', 'multiprocessing.time', 'psutil.contextlib', '_random', 'pandas.compat.chainmap_impl', 'tensorflow.python.estimator.canned.head', 'pandas.compat', 'tensorflow.python.ops.control_flow_grad', 'numpy.fft.fftpack', 'tensorflow.python.summary.summary_iterator', 'mmap', 'tensorflow.python.client.client_lib', 'tensorflow.python.keras._impl.keras.engine.network', 'pandas.compat.inspect', 'dateutil.parser.re', 'scipy.interpolate.ndgriddata', 'yaml.composer', 'unittest.collections', 'tensorflow.python.training.collections', 'tensorflow.python.util.compat_internal', 'pkg_resources._vendor.sre_constants', 'tensorflow', 'tensorflow.python.keras._impl.keras.losses', 'tensorflow.python.estimator.exporter', 'pandas.compat.numpy', 'tensorflow.python.framework.sys', 'scipy.sparse.csgraph._traversal', 'numpy.core.multiarray_tests', 'pandas.core.util.hashing', 'pandas.io.formats.pandas', 'tensorflow.python.ops.losses', 'pytz.bisect', 'psutil.errno', 'copy_reg', 'google.protobuf.internal.os', 'tensorflow.python.ops.clip_ops', 'email.MIMEBase', 'dateutil.parser.datetime', 'tensorflow.python.framework.graph_util', 'tensorflow.python.keras._impl.keras.optimizers', 'pandas.plotting', 'tensorflow.python.training.checkpoint_utils', 'scipy._lib.decorator', 'json.json', 'email.re', 'sys', 'pandas.core.indexes.timedeltas', 'xml.dom.xml', 'pandas.core.indexes.base', 'h5py._hl.codecs', 'multiprocessing.dummy.Queue', 'tensorflow.python.ops.gen_logging_ops', 'distutils', 'scipy._lib.scipy', 'h5py.warnings', 'tensorflow.python.training.basic_session_run_hooks', 'tensorflow.python.keras._impl.keras.datasets', 'tensorflow.python.ops.array_ops', 'pandas.core.gc', 'pandas.core.datetime', 'pandas.core.groupby.warnings', 'pandas.core.weakref', 'pkg_resources._vendor.sys', 'h5py._hl.files', 'psutil.datetime', 'zipimport', 'scipy._distributor_init', 'pandas.plotting._compat', 'tensorflow.python.lib.io', 'scipy.misc.common', 'signal', 'quopri', 'distutils.version', 'google', 'tensorflow.python.keras.applications.inception_resnet_v2', 'tensorflow.python.keras._impl.keras.layers.embeddings', 'absl.flags._validators', 'dateutil.tz.sys', 'tensorflow.python.saved_model.utils', 'tensorflow.python.ops.gen_resource_variable_ops', 'numpy.lib.index_tricks', 'numpy.testing.nose_tools.decorators', 'yaml.emitter', 'pandas.core.warnings', 'scipy.linalg._procrustes', 'tensorflow.python.estimator.model_fn', 'tensorflow.python.ops.histogram_ops', 'pandas._libs', 'google.protobuf.re', 'UserDict', 'tensorflow.python.ops', 'scipy.special.orthogonal', 'tensorflow.python.eager.function', 'dateutil.calendar', 'unittest.loader', 'tensorflow.python.util.deprecation', 'scipy.sparse.csgraph._validation', 'tensorflow.core.framework.tensorflow', 'scipy._lib.__builtin__', 'tensorflow.python.estimator.inputs.queues.feeding_functions', 'tensorflow.python.keras._impl.keras.applications.densenet', 'tensorflow.python.layers.utils', '__future__', 'pandas.core.groupby.functools', 'pkg_resources.extern.packaging.requirements', 'pandas.core.internals', 'distutils.string', 'tensorflow.python.ops.metrics_impl', 'tensorflow.python.saved_model.tag_constants', 'pandas.plotting.datetime', 'errno', 'pkg_resources._vendor.packaging.requirements', 'google.protobuf.warnings', 'pandas.compat.dateutil', 'tensorflow.python.estimator.canned.parsing_utils', 'scipy.interpolate.interpolate', 'encodings.__builtin__', 'scipy.sparse', 'email.os', 'pwd', 'h5py.utils', 'pympler', '_sysconfigdata', '_struct', 'uu', 'xml.dom.minidom', 'tensorflow.python.keras._impl.keras.utils.layer_utils', 'tensorflow.python.keras._impl.keras.applications.resnet50', 'scipy.spatial._distance_wrap', 'pympler.abc', 'pandas.compat.itertools', 'logging.codecs', 'tensorflow.python.keras._impl.keras', 'numpy.polynomial._polybase', 'google.protobuf.symbol_database', 'pandas.core.sorting', 'tensorflow.python.ops.partitioned_variables', 'pandas.core.groupby.datetime', 'grp', 'dateutil.parser.decimal', 'tensorflow.python.ops.control_flow_ops', 'email.warnings', 'tensorflow.python.keras._impl.keras.datasets.reuters', 'tensorflow.python.ops.math_ops', 'tensorflow.python.ops.weights_broadcast_ops', 'pandas', 'dateutil.parser.functools', 'pandas.core.config', 'backports.functools_lru_cache', 'numpy.lib.format', 'tensorflow.python.keras.estimator', 'tensorflow.python.training.saver', 'pandas.core.indexes.pytz', 'tensorflow.python.ops.six', 'tensorflow.python.estimator.canned.baseline', 'ctypes.os', 'gc', 'pandas._libs.tslibs.locale', 'tensorflow.python.training.device_setter', 'tensorflow.python.keras._impl.keras.datasets.boston_housing', 'pandas.plotting.math', 'base64', 'tensorflow.python.framework.errors', 'google.protobuf.internal.wire_format', 'google.protobuf.pyext', 'tensorflow.python.ops.init_ops', 'multiprocessing.collections', 'email.Header', 'dateutil.parser._parser', 'numpy.lib.arraysetops', 'h5py._conv', 'tensorflow.python.keras._impl.keras.layers.pooling', 'email.errors', 'scipy.ndimage.fourier', 'email.codecs', 'pandas.core.inspect', 'tensorflow.python.keras._impl.keras.layers.core', 'logging.threading', 'tensorflow.python.training.summary_io', 'pandas.io.csv', 'matplotlib.cbook.textwrap', 'pkg_resources._vendor.collections', 'dateutil.parser.warnings', 'numpy._globals', 'tensorflow.python.ops.random_ops', 'scipy._lib', 'tensorflow.python.ops.gen_nn_ops', 'pandas._libs.tslibs.dateutil', 'tensorflow.python.training.proximal_gradient_descent', 'psutil.subprocess', 'ctypes.tempfile', 'unittest.suite', 'keras.utils.io_utils', 'matplotlib', 'json.scanner', 'scipy.linalg.decomp', 'pandas.compat.platform', 'numpy.os', 'tensorflow.python.ops.gen_ctc_ops', 'multiprocessing.dummy.array', 'tensorflow.python.util.tf_should_use', 'pandas.core.textwrap', 'pkg_resources', 'tensorflow.python.saved_model.builder', 'pandas._libs.tslibs.StringIO', 'psutil.collections', '_sre', 'tensorflow.python.keras.datasets.cifar100', 'pandas.core.numpy', 'numpy.dual', 'logging.sys', 'binascii', 'pandas.core.index', 'tensorflow.python.eager.core', 'tensorflow.python.numpy', 'unittest.fnmatch', 'google.protobuf.pyext.google', 'numpy.polynomial.chebyshev', 'pkg_resources.extern.six.moves.urllib', 'tensorflow.python.keras._impl.keras.applications.inception_v3', 'tensorflow.python.summary.writer.writer_cache', 'tensorflow.python.data.util.random_seed', 'numpy.testing.utils', 'tensorflow.python.keras.datasets.imdb', 'keras.backend', 'h5py.numpy', 'tensorflow.python.ops.gradients_impl', 'matplotlib._version', 'tensorflow.python.lib.io.python_io', 'tensorflow.python.keras.applications.resnet50', 'scipy._lib.six', 'tensorflow.python.training.rmsprop', 'pandas.pandas', 'numpy.core.memmap', 'sre_parse', 'pandas._libs.sparse', 'multiprocessing.dummy.threading', 'google.protobuf.pyext._message', 'pkg_resources.extern.six', 'tensorflow.core.framework.tensor_description_pb2', 'tensorflow.python.ops.script_ops', 'psutil._exceptions', 'six', 'pandas._libs.tslibs.datetime', 'tensorflow.python.ops.rnn', 'pandas.core.copy', 'tensorflow.python.saved_model.constants', 'ctypes.util', 'dateutil._common', 'scipy.sparse.compressed', 'multiprocessing.sys', 'tensorflow.python.keras._impl.keras.utils.generic_utils', 'pkg_resources._vendor.__builtin__', 'google.protobuf.threading', 'tensorflow.python.estimator.estimator', 'pkg_resources.extern.packaging.specifiers', 'tensorflow.python.keras.datasets', 'scipy._lib.ctypes', 'email.string', 'tensorflow.python.ops.gen_script_ops', 'pandas.core.util', 'sysconfig', 'yaml.binascii', 'numpy.core.numerictypes', 'tensorflow.python.ops.gen_candidate_sampling_ops', 'dateutil.tz.time', 'tensorflow.python.keras._impl.keras.layers.local', 'tempfile', 'pandas._libs.index', 'pkg_resources._vendor', 'multiprocessing.itertools', 'pandas.io.formats.printing', 'pandas.core.sparse.warnings', 'google.protobuf.internal.sys', 'pandas._libs.lib', 'tensorflow.python.ops.functional_ops', 'scipy._lib._ccallback_c', 'numpy.lib._datasource', 'psutil', 'tensorflow.python.keras._impl.keras.engine.input_layer', 'tensorflow.python.ops.io_ops', 'dateutil.operator', 'tensorflow.core.util.event_pb2', 'numpy.linalg._umath_linalg', 'cStringIO', 'numpy.polynomial', 'scipy._lib.itertools', 'encodings', 'tensorflow.python.data.ops.dataset_ops', 'google.protobuf.base64', 'tensorflow.python.summary.writer.writer', 'numpy.lib.numpy', 'tensorflow.python.util.tf_contextlib', 'pandas.core.dtypes.missing', 'pandas._libs.tslibs.conversion', 'math', 'dateutil.easter', 'numpy.lib.ufunclike', 'dateutil.parser.isoparser', 'pandas.plotting._style', 'tensorflow.python.platform.app', 'psutil._psutil_linux', 'yaml.re', 'pandas.util.functools', 'numpy.lib.twodim_base', 'pandas._libs.numbers', 'google.protobuf.json', 'tensorflow.python.keras.preprocessing.text', 'tensorflow.python.training.adagrad', 'psutil.shutil', 'pandas.io.urllib', 'numpy.lib.stride_tricks', 'tensorflow.python.summary.writer', 'numpy.lib.scimath', 'matplotlib.cbook.functools', 'tensorflow.python.ops.spectral_grad', 'yaml.error', 'tensorflow.python.ops.custom_gradient', 'enum.collections', 'numpy.__config__', 'scipy.linalg.cython_blas', 'h5py._proxy', 'scipy.sparse.sputils', 'pandas.tseries.pytz', 'pandas.compat.__builtin__', 'numpy.matlib', 'pandas.core.groupby.numpy', '_csv', 'scipy.sparse.data', 'tensorflow.core.framework.allocation_description_pb2', 'scipy.special._ellip_harm_2', 'pandas.core.indexes.range', '_hashlib', 'pandas.core.indexes.period', 'pytz.struct', 'google.protobuf.descriptor_pb2', 'scipy.sparse.bsr', 'dateutil.parser', 'h5py._hl.dataset', 'pandas._libs.tslibs.np_datetime', 'encodings.codecs', 'pandas.core.util.pandas', 'tensorflow.python.framework.dtypes', 'tensorflow.python.keras._impl.keras.preprocessing', '_ssl', 'google.protobuf.math', 'google.protobuf.internal.type_checkers', 'tensorflow.python.keras._impl.keras.datasets.fashion_mnist', 'numpy.testing.nose_tools', 'pandas.core.indexes.datetime', 'tensorflow.python.ops.rnn_cell_impl', 'deeplift', '_io', 'tensorflow.python.ops.sparse_grad', 'pandas.plotting.__future__', 'email.charset', 'email.iterators', 'tensorflow.python.eager.backprop', 'pandas.core.frame', 'unittest.types', 'tensorflow.python.util.decorator_utils', 'tensorflow.python.ops.ctc_ops', 'tensorflow.python.keras.applications.inception_v3', 'tensorflow.core.framework.cost_graph_pb2', 'numpy.random.mtrand', 'importlib', 'pandas.compat.numpy.re', 'tensorflow.python.keras.applications.vgg16', 'tensorflow.python.ops.confusion_matrix', 'tensorflow.python.keras.applications.vgg19', 'tensorflow.python.keras._impl.keras.initializers', 'psutil.os', 'psutil.threading', 'distutils.re', 'pandas.io.os', 'scipy.linalg.matfuncs', 'bisect', 'h5py.h5a', 'pandas._libs.tslibs.frequencies', 'tensorflow.python.ops.variables', 'cycler', 'tensorflow.python.training.training_util', 'pandas.core.dtypes.base', 'tensorflow.python.keras.initializers', 'pandas.io.httplib', 'numpy.testing.decorators', 'psutil.__future__', 'email.MIMEText', 'keras.backend.common', 'tensorflow.python.eager.tape', 'email', 'multiprocessing.dummy.connection', 'scipy.sparse.dok', 'h5py.weakref', 'tensorflow.python.layers.convolutional', 'tensorflow.python.ops.gen_control_flow_ops', 'xml.dom.domreg', 'tensorflow.python.training.adam', 'multiprocessing.Queue', 'pandas.core.indexing', 'itertools', 'tensorflow.python.ops.gen_math_ops', 'pandas.compat.numpy.function', 'pympler.types', 'google.protobuf.internal.containers', 'pandas.core.tools.datetime', 'platform', 'pandas.tseries.operator', 'json', 'scipy._lib.sys', 'pandas.core', 'email.utils', 'numpy.ma', 'scipy.special.warnings', 'pandas.core.dtypes', 'tensorflow.python.keras.wrappers.scikit_learn', 'email.email', 'h5py._objects', 'numpy.lib', 'multiprocessing.weakref', 'contextlib', 'pandas.core.indexes.category', 'tensorflow.python.util.nest', 'distutils.distutils', 'unittest.signal', 'pandas.util.types', 'site', 'h5py._hl.attrs', 'h5py.gc', 'h5py.platform', 'email.binascii', 'pandas.io.pandas', 'tensorflow.python.ops.logging_ops', 'scipy._lib.re', 'numpy.polynomial.polyutils', 'numpy.compat._inspect', 'tensorflow.python.imp', 'pandas.core.indexes.warnings', 'email.cStringIO', 'tensorflow.python.keras.callbacks', 'pandas.core.itertools', 'pandas.core.__future__', 'difflib', 'email.MIMEMultipart', 'pandas.compat.thread', 'unittest.warnings', 'pandas.plotting.distutils', 'tensorflow.python.ops.parsing_ops', 'tensorflow.core.protobuf.queue_runner_pb2', 'pytz.threading', 'numpy.core.einsumfunc', 'pkg_resources.extern.packaging', 'tensorflow.python.util.all_util', 'tensorflow.python.ops.gen_state_ops', 'numpy.testing.nose_tools.nosetester', 'scipy.linalg.flinalg', 'numpy.testing', 'google.protobuf.internal.six', 'scipy.sparse.csgraph._shortest_path', 'pytz.os', 'tensorflow.python.ops.standard_ops', 'tensorflow.python.framework.common_shapes', 'tensorflow.python.ops.control_flow_util', 'h5py._hl.group', 'pkg_resources.extern.sys', 'tensorflow.python.summary.text_summary', 'pympler.gc', 'tensorflow.python.ops.nn', 'h5py._hl.base', 'pympler.sys', 'numpy.random.operator', 'absl', 'numpy.core.multiarray', 'numpy.ma.core', 'tensorflow.core.util.tensorflow', 'tensorflow.python.eager.graph_only_ops', 'scipy.interpolate._fitpack', 'pandas._libs.tslibs.collections', 'matplotlib.compat.subprocess', 'scipy.version', 'psutil.glob', 'scipy.spatial._hausdorff', 'pandas.io.formats.shutil', 'pandas.io.formats.numpy', 'numpy.matrixlib', 'dateutil.tz.datetime', 'tensorflow.python.ops.manip_grad', '_multiprocessing', 'pandas.core.dtypes.inference', 'backports', 'google.protobuf.internal.warnings', 'google.protobuf.internal.enum_type_wrapper', 'tensorflow.python.summary.plugin_asset', 'tensorflow.python.ops.nn_ops', 'tensorflow.python.layers', 'enum', 'tensorflow.python.keras.datasets.fashion_mnist', 'unittest.runner', 'tensorflow.python', '_functools', 'socket', 'tensorflow.python.ops.gen_functional_ops', 'tensorflow.python.training.adagrad_da', 'scipy._lib.os', 'tensorflow.core.protobuf.tensorflow_server_pb2', 'scipy.linalg', 'scipy.special.sf_error', '__builtin__', 'ctypes.errno', 'json.struct', 'pandas.core.json', 'multiprocessing.threading', 'numpy.core._methods', 'pytz.sys', 'tensorflow.python.keras._impl.keras.layers.advanced_activations', 'psutil._compat', 'google.protobuf.internal.api_implementation', 'tensorflow.python.ops.sets_impl', 'tensorflow.python.ops.image_grad', 'pandas.io.urllib2', 'pandas.plotting._core', 'tensorflow.core.example.tensorflow', 'scipy._lib._numpy_compat', 'pandas._libs.sys', 'logging.time', 'numpy.lib.function_base', 'logging.warnings', 'tensorflow.python.ops.losses.losses', 'pandas._libs.ops', 'tensorflow.python.saved_model.signature_constants', 'numpy.polynomial.hermite', 'tensorflow.python.keras.preprocessing.sequence', 'tensorflow.core.util.sys', 'tensorflow.python.ops.initializers_ns', 'google.protobuf.internal.encoder', 'scipy.spatial.numpy', 'getopt', 'tensorflow.python.eager.imperative_grad', 'stat', 'tensorflow.python.estimator.inputs.inputs', 'email.Encoders', 'scipy._lib.collections', 'xml.dom', 'scipy._lib.inspect', 'tensorflow.python.keras.applications.nasnet', 'tensorflow.python.ops.session_ops', 'pandas._libs.tslibs.numpy', 'pkg_resources._vendor.types', 'tensorflow.python.keras._impl.keras.engine']
+2018-07-31 05:13:37 WARNING From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-07-31 05:13:37.637426: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-07-31 05:13:37.912494: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:05:00.0
+totalMemory: 11.93GiB freeMemory: 11.79GiB
+2018-07-31 05:13:37.912553: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-07-31 05:13:38.315780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-31 05:13:38.315819: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-07-31 05:13:38.315825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-07-31 05:13:38.316147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11420 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:05:00.0, compute capability: 5.2)
+start time 2018-07-31 05:13:36.185696
+nonlinear_mxts_mode is set to: DeepLIFT_GenomicsDefault
+2018-07-31 05:13:40 DEBUG memory check location 3
+2018-07-31 05:13:40 DEBUG svmem(total=270370021376, available=228963131392, percent=15.3, used=35658797056, free=54204391424, active=150627225600, inactive=57717362688, buffers=3397255168, cached=177109577728, shared=4840198144, slab=5672906752)
+2018-07-31 05:13:40 DEBUG memory use: vms=283.454269 G, rss=1.116047 G
+2018-07-31 05:13:40 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:13:41 DEBUG size of deeplift_model  = 0.078942 (0.000000) G
+2018-07-31 05:13:41 DEBUG size of keras_model     = 0.079062 (0.000000) G
+2018-07-31 05:13:41 DEBUG On task 0
+2018-07-31 05:17:17 DEBUG task 0 block 0 hyp_total shape= (0, 1000, 4)
+2018-07-31 05:17:17 DEBUG memory check location 4
+2018-07-31 05:17:17 DEBUG svmem(total=270370021376, available=223307657216, percent=17.4, used=39164698624, free=48548835328, active=154111741952, inactive=59865186304, buffers=3397304320, cached=179259183104, shared=6989778944, slab=5688971264)
+2018-07-31 05:17:17 DEBUG memory use: vms=286.705467 G, rss=4.920048 G
+2018-07-31 05:17:17 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:17:18 DEBUG size of deeplift_model  = 1.010424 (0.000000) G
+2018-07-31 05:17:19 DEBUG size of keras_model     = 1.010544 (0.000000) G
+2018-07-31 05:17:19 DEBUG size of hyp_scores_all = 0.298023 G
+2018-07-31 05:17:19 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:17:19 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:20:52 DEBUG task 0 block 1 hyp_total shape= (10000, 1000, 4)
+2018-07-31 05:20:53 DEBUG memory check location 4
+2018-07-31 05:20:53 DEBUG svmem(total=270370021376, available=221874614272, percent=17.9, used=40597741568, free=47115759616, active=155542224896, inactive=59858051072, buffers=3397320704, cached=179259199488, shared=6989778944, slab=5688840192)
+2018-07-31 05:20:53 DEBUG memory use: vms=287.260998 G, rss=5.475792 G
+2018-07-31 05:20:53 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:20:54 DEBUG size of deeplift_model  = 1.308530 (0.000000) G
+2018-07-31 05:20:54 DEBUG size of keras_model     = 1.308650 (0.000000) G
+2018-07-31 05:20:54 DEBUG size of hyp_scores_all = 0.596047 G
+2018-07-31 05:20:54 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:20:54 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:24:28 DEBUG task 0 block 2 hyp_total shape= (20000, 1000, 4)
+2018-07-31 05:24:29 DEBUG memory check location 4
+2018-07-31 05:24:29 DEBUG svmem(total=270370021376, available=220191092736, percent=18.6, used=42281263104, free=45432209408, active=157223391232, inactive=59858046976, buffers=3397337088, cached=179259211776, shared=6989778944, slab=5688643584)
+2018-07-31 05:24:29 DEBUG memory use: vms=287.282719 G, rss=5.496780 G
+2018-07-31 05:24:29 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:24:30 DEBUG size of deeplift_model  = 1.606636 (0.000000) G
+2018-07-31 05:24:30 DEBUG size of keras_model     = 1.606756 (0.000000) G
+2018-07-31 05:24:30 DEBUG size of hyp_scores_all = 0.894070 G
+2018-07-31 05:24:30 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:24:30 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:28:09 DEBUG task 0 block 3 hyp_total shape= (30000, 1000, 4)
+2018-07-31 05:28:09 DEBUG memory check location 4
+2018-07-31 05:28:09 DEBUG svmem(total=270370021376, available=217868996608, percent=19.4, used=44603359232, free=43110060032, active=159542288384, inactive=59848212480, buffers=3397378048, cached=179259224064, shared=6989778944, slab=5689638912)
+2018-07-31 05:28:09 DEBUG memory use: vms=287.894279 G, rss=6.110291 G
+2018-07-31 05:28:09 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:28:10 DEBUG size of deeplift_model  = 1.904743 (0.000000) G
+2018-07-31 05:28:11 DEBUG size of keras_model     = 1.904862 (0.000000) G
+2018-07-31 05:28:11 DEBUG size of hyp_scores_all = 1.192093 G
+2018-07-31 05:28:11 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:28:11 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:31:46 DEBUG task 0 block 4 hyp_total shape= (40000, 1000, 4)
+2018-07-31 05:31:47 DEBUG memory check location 4
+2018-07-31 05:31:47 DEBUG svmem(total=270370021376, available=216266829824, percent=20.0, used=46205526016, free=41507856384, active=161153662976, inactive=59845464064, buffers=3397402624, cached=179259236352, shared=6989778944, slab=5688557568)
+2018-07-31 05:31:47 DEBUG memory use: vms=287.857265 G, rss=6.072727 G
+2018-07-31 05:31:47 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:31:48 DEBUG size of deeplift_model  = 2.202849 (0.000000) G
+2018-07-31 05:31:48 DEBUG size of keras_model     = 2.202969 (0.000000) G
+2018-07-31 05:31:48 DEBUG size of hyp_scores_all = 1.490116 G
+2018-07-31 05:31:48 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:31:48 DEBUG size of contrib_scores = 0.298023 G
+0.001
+At the time of writing (April 8th 2017), the batch norm implementation of version 5 (this version) of deeplift has not been thoroughly unit-tested; adding in these unit tests is a top priority, but if you see this message, do ping me so that I can prioritise it accordingly
+For layer 1 the preceding linear layer is 0 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 3 the preceding linear layer is 2 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 5 the preceding linear layer is 4 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+Heads-up: current implementation assumes maxpool layer is followed by a linear transformation (conv/dense layer)
+For layer 9 the preceding linear layer is 8 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+Heads-up: I assume sigmoid is the output layer, not an intermediate one; if it's an intermediate layer then please bug me and I will implement the grad func
+For layer 13 the preceding linear layer is 12 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot2018-07-31 05:35:22 DEBUG task 0 block 5 hyp_total shape= (50000, 1000, 4)
+2018-07-31 05:35:23 DEBUG memory check location 4
+2018-07-31 05:35:23 DEBUG svmem(total=270370021376, available=213931327488, percent=20.9, used=48541028352, free=39172288512, active=163491557376, inactive=59837419520, buffers=3397447680, cached=179259256832, shared=6989778944, slab=5688332288)
+2018-07-31 05:35:23 DEBUG memory use: vms=288.490814 G, rss=6.706421 G
+2018-07-31 05:35:23 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:35:24 DEBUG size of deeplift_model  = 2.500955 (0.000000) G
+2018-07-31 05:35:24 DEBUG size of keras_model     = 2.501075 (0.000000) G
+2018-07-31 05:35:24 DEBUG size of hyp_scores_all = 1.788139 G
+2018-07-31 05:35:24 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:35:24 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:35:53 DEBUG task 0 block 6 hyp_total shape= (60000, 1000, 4)
+2018-07-31 05:35:54 DEBUG memory check location 4
+2018-07-31 05:35:54 DEBUG svmem(total=270370021376, available=214564753408, percent=20.6, used=47907602432, free=39805702144, active=162857750528, inactive=59837415424, buffers=3397455872, cached=179259260928, shared=6989778944, slab=5688610816)
+2018-07-31 05:35:54 DEBUG memory use: vms=287.897137 G, rss=6.112953 G
+2018-07-31 05:35:54 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:35:55 DEBUG size of deeplift_model  = 1.992285 (0.000000) G
+2018-07-31 05:35:55 DEBUG size of keras_model     = 1.992405 (0.000000) G
+2018-07-31 05:35:55 DEBUG size of hyp_scores_all = 1.828015 G
+2018-07-31 05:35:55 DEBUG size of hyp_scores     = 0.039876 G
+2018-07-31 05:35:55 DEBUG size of contrib_scores = 0.039876 G
+2018-07-31 05:35:56 INFO  saving hyp_scores_all to scores/hyp_scores_task_0.npy, shape = (61338, 1000, 4)
+2018-07-31 05:35:57 DEBUG On task 1
+2018-07-31 05:39:30 DEBUG task 1 block 0 hyp_total shape= (0, 1000, 4)
+2018-07-31 05:39:30 DEBUG memory check location 4
+2018-07-31 05:39:30 DEBUG svmem(total=270370021376, available=213916053504, percent=20.9, used=48556298240, free=38154571776, active=163503734784, inactive=60815704064, buffers=3397541888, cached=180261609472, shared=6989778944, slab=5708976128)
+2018-07-31 05:39:30 DEBUG memory use: vms=286.963932 G, rss=5.179607 G
+2018-07-31 05:39:30 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:39:31 DEBUG size of deeplift_model  = 1.011005 (0.000000) G
+2018-07-31 05:39:32 DEBUG size of keras_model     = 1.011125 (0.000000) G
+2018-07-31 05:39:32 DEBUG size of hyp_scores_all = 0.298023 G
+2018-07-31 05:39:32 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:39:32 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:43:05 DEBUG task 1 block 1 hyp_total shape= (10000, 1000, 4)
+2018-07-31 05:43:05 DEBUG memory check location 4
+2018-07-31 05:43:05 DEBUG svmem(total=270370021376, available=212261511168, percent=21.5, used=50210844672, free=36499984384, active=165167017984, inactive=60807200768, buffers=3397570560, cached=180261621760, shared=6989778944, slab=5709017088)
+2018-07-31 05:43:05 DEBUG memory use: vms=286.964172 G, rss=5.178780 G
+2018-07-31 05:43:05 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:43:06 DEBUG size of deeplift_model  = 1.309112 (0.000000) G
+2018-07-31 05:43:07 DEBUG size of keras_model     = 1.309232 (0.000000) G
+2018-07-31 05:43:07 DEBUG size of hyp_scores_all = 0.596047 G
+2018-07-31 05:43:07 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:43:07 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:46:42 DEBUG task 1 block 2 hyp_total shape= (20000, 1000, 4)
+2018-07-31 05:46:43 DEBUG memory check location 4
+2018-07-31 05:46:43 DEBUG svmem(total=270370021376, available=243613310976, percent=9.9, used=18859044864, free=67851718656, active=133876248576, inactive=60803637248, buffers=3397619712, cached=180261638144, shared=6989778944, slab=5708988416)
+2018-07-31 05:46:43 DEBUG memory use: vms=287.597721 G, rss=5.812634 G
+2018-07-31 05:46:43 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:46:44 DEBUG size of deeplift_model  = 1.607218 (0.000000) G
+2018-07-31 05:46:44 DEBUG size of keras_model     = 1.607338 (0.000000) G
+2018-07-31 05:46:44 DEBUG size of hyp_scores_all = 0.894070 G
+2018-07-31 05:46:44 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:46:44 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:50:16 DEBUG task 1 block 3 hyp_total shape= (30000, 1000, 4)
+2018-07-31 05:50:17 DEBUG memory check location 4
+2018-07-31 05:50:17 DEBUG svmem(total=270370021376, available=242057879552, percent=10.5, used=20414476288, free=66296184832, active=135449608192, inactive=60790702080, buffers=3397701632, cached=180261658624, shared=6989778944, slab=5709017088)
+2018-07-31 05:50:17 DEBUG memory use: vms=287.560707 G, rss=5.776585 G
+2018-07-31 05:50:17 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:50:18 DEBUG size of deeplift_model  = 1.905324 (0.000000) G
+2018-07-31 05:50:18 DEBUG size of keras_model     = 1.905444 (0.000000) G
+2018-07-31 05:50:18 DEBUG size of hyp_scores_all = 1.192093 G
+2018-07-31 05:50:18 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:50:18 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:53:52 DEBUG task 1 block 4 hyp_total shape= (40000, 1000, 4)
+2018-07-31 05:53:53 DEBUG memory check location 4
+2018-07-31 05:53:53 DEBUG svmem(total=270370021376, available=238966419456, percent=11.6, used=23505936384, free=63204659200, active=138537070592, inactive=60781162496, buffers=3397746688, cached=180261679104, shared=6989778944, slab=5709402112)
+2018-07-31 05:53:53 DEBUG memory use: vms=288.194256 G, rss=6.408760 G
+2018-07-31 05:53:53 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:53:54 DEBUG size of deeplift_model  = 2.203431 (0.000000) G
+2018-07-31 05:53:54 DEBUG size of keras_model     = 2.203550 (0.000000) G
+2018-07-31 05:53:54 DEBUG size of hyp_scores_all = 1.490116 G
+2018-07-31 05:53:54 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:53:54 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:57:27 DEBUG task 1 block 5 hyp_total shape= (50000, 1000, 4)
+2018-07-31 05:57:28 DEBUG memory check location 4
+2018-07-31 05:57:28 DEBUG svmem(total=270370021376, available=237400539136, percent=12.2, used=25071816704, free=61638725632, active=140104048640, inactive=60776693760, buffers=3397783552, cached=180261695488, shared=6989778944, slab=5710479360)
+2018-07-31 05:57:28 DEBUG memory use: vms=288.157242 G, rss=6.372265 G
+2018-07-31 05:57:28 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:57:29 DEBUG size of deeplift_model  = 2.501537 (0.000000) G
+2018-07-31 05:57:30 DEBUG size of keras_model     = 2.501657 (0.000000) G
+2018-07-31 05:57:30 DEBUG size of hyp_scores_all = 1.788139 G
+2018-07-31 05:57:30 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 05:57:30 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 05:57:58 DEBUG task 1 block 6 hyp_total shape= (60000, 1000, 4)
+2018-07-31 05:57:59 DEBUG memory check location 4
+2018-07-31 05:57:59 DEBUG svmem(total=270370021376, available=237593673728, percent=12.1, used=24878682112, free=61831860224, active=139914690560, inactive=60776693760, buffers=3397783552, cached=180261695488, shared=6989778944, slab=5709348864)
+2018-07-31 05:57:59 DEBUG memory use: vms=287.978603 G, rss=6.194008 G
+2018-07-31 05:57:59 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 05:58:00 DEBUG size of deeplift_model  = 1.992867 (0.000000) G
+2018-07-31 05:58:01 DEBUG size of keras_model     = 1.992987 (0.000000) G
+2018-07-31 05:58:01 DEBUG size of hyp_scores_all = 1.828015 G
+2018-07-31 05:58:01 DEBUG size of hyp_scores     = 0.039876 G
+2018-07-31 05:58:01 DEBUG size of contrib_scores = 0.039876 G
+2018-07-31 05:58:01 INFO  saving hyp_scores_all to scores/hyp_scores_task_1.npy, shape = (61338, 1000, 4)
+2018-07-31 05:58:02 DEBUG On task 2
+2018-07-31 06:01:37 DEBUG task 2 block 0 hyp_total shape= (0, 1000, 4)
+2018-07-31 06:01:37 DEBUG memory check location 4
+2018-07-31 06:01:37 DEBUG svmem(total=270370021376, available=255250808832, percent=5.6, used=7228837888, free=78023184384, active=122724827136, inactive=61843406848, buffers=3397894144, cached=181720104960, shared=6982438912, slab=5739962368)
+2018-07-31 06:01:37 DEBUG memory use: vms=286.667370 G, rss=4.883110 G
+2018-07-31 06:01:37 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:01:38 DEBUG size of deeplift_model  = 1.011587 (0.000000) G
+2018-07-31 06:01:39 DEBUG size of keras_model     = 1.011707 (0.000000) G
+2018-07-31 06:01:39 DEBUG size of hyp_scores_all = 0.298023 G
+2018-07-31 06:01:39 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:01:39 DEBUG size of contrib_scores = 0.298023 G
+ encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Do2018-07-31 06:05:15 DEBUG task 2 block 1 hyp_total shape= (10000, 1000, 4)
+2018-07-31 06:05:15 DEBUG memory check location 4
+2018-07-31 06:05:15 DEBUG svmem(total=270370021376, available=254622851072, percent=5.8, used=7856840704, free=77135613952, active=123399794688, inactive=62053842944, buffers=3397926912, cached=181979639808, shared=6982438912, slab=5745696768)
+2018-07-31 06:05:15 DEBUG memory use: vms=287.300919 G, rss=5.516293 G
+2018-07-31 06:05:15 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:05:16 DEBUG size of deeplift_model  = 1.309693 (0.000000) G
+2018-07-31 06:05:17 DEBUG size of keras_model     = 1.309813 (0.000000) G
+2018-07-31 06:05:17 DEBUG size of hyp_scores_all = 0.596047 G
+2018-07-31 06:05:17 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:05:17 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:08:52 DEBUG task 2 block 2 hyp_total shape= (20000, 1000, 4)
+2018-07-31 06:08:52 DEBUG memory check location 4
+2018-07-31 06:08:52 DEBUG svmem(total=270370021376, available=254656475136, percent=5.8, used=7823220736, free=75741487104, active=123654012928, inactive=63162654720, buffers=3398049792, cached=183407263744, shared=6982438912, slab=5780877312)
+2018-07-31 06:08:52 DEBUG memory use: vms=287.263905 G, rss=5.479301 G
+2018-07-31 06:08:53 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:08:53 DEBUG size of deeplift_model  = 1.607800 (0.000000) G
+2018-07-31 06:08:54 DEBUG size of keras_model     = 1.607920 (0.000000) G
+2018-07-31 06:08:54 DEBUG size of hyp_scores_all = 0.894070 G
+2018-07-31 06:08:54 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:08:54 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:12:28 DEBUG task 2 block 3 hyp_total shape= (30000, 1000, 4)
+2018-07-31 06:12:29 DEBUG memory check location 4
+2018-07-31 06:12:29 DEBUG svmem(total=270370021376, available=254083100672, percent=6.0, used=8396603392, free=73970499584, active=125164785664, inactive=63393562624, buffers=3398209536, cached=184604708864, shared=6982438912, slab=5810855936)
+2018-07-31 06:12:29 DEBUG memory use: vms=287.897453 G, rss=6.113209 G
+2018-07-31 06:12:29 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:12:30 DEBUG size of deeplift_model  = 1.905906 (0.000000) G
+2018-07-31 06:12:30 DEBUG size of keras_model     = 1.906026 (0.000000) G
+2018-07-31 06:12:30 DEBUG size of hyp_scores_all = 1.192093 G
+2018-07-31 06:12:30 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:12:30 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:16:02 DEBUG task 2 block 4 hyp_total shape= (40000, 1000, 4)
+2018-07-31 06:16:02 DEBUG memory check location 4
+2018-07-31 06:16:02 DEBUG svmem(total=270370021376, available=254107619328, percent=6.0, used=8372076544, free=73230471168, active=125140430848, inactive=64135184384, buffers=3398361088, cached=185369112576, shared=6982438912, slab=5830082560)
+2018-07-31 06:16:02 DEBUG memory use: vms=287.860439 G, rss=6.076057 G
+2018-07-31 06:16:03 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:16:03 DEBUG size of deeplift_model  = 2.204012 (0.000000) G
+2018-07-31 06:16:04 DEBUG size of keras_model     = 2.204132 (0.000000) G
+2018-07-31 06:16:04 DEBUG size of hyp_scores_all = 1.490116 G
+2018-07-31 06:16:04 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:16:04 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:19:36 DEBUG task 2 block 5 hyp_total shape= (50000, 1000, 4)
+2018-07-31 06:19:36 DEBUG memory check location 4
+2018-07-31 06:19:36 DEBUG svmem(total=270370021376, available=253416845312, percent=6.3, used=9062526976, free=71579467776, active=125876572160, inactive=65016954880, buffers=3398467584, cached=186329559040, shared=6982492160, slab=5854011392)
+2018-07-31 06:19:36 DEBUG memory use: vms=288.493988 G, rss=6.709480 G
+2018-07-31 06:19:37 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:19:38 DEBUG size of deeplift_model  = 2.502118 (0.000000) G
+2018-07-31 06:19:38 DEBUG size of keras_model     = 2.502238 (0.000000) G
+2018-07-31 06:19:38 DEBUG size of hyp_scores_all = 1.788139 G
+2018-07-31 06:19:38 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:19:38 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:20:07 DEBUG task 2 block 6 hyp_total shape= (60000, 1000, 4)
+2018-07-31 06:20:07 DEBUG memory check location 4
+2018-07-31 06:20:07 DEBUG svmem(total=270370021376, available=254049710080, percent=6.0, used=8429932544, free=71991070720, active=125322436608, inactive=65154289664, buffers=3398488064, cached=186550530048, shared=6982492160, slab=5859512320)
+2018-07-31 06:20:07 DEBUG memory use: vms=287.900311 G, rss=6.117386 G
+2018-07-31 06:20:08 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:20:08 DEBUG size of deeplift_model  = 1.993449 (0.000000) G
+2018-07-31 06:20:09 DEBUG size of keras_model     = 1.993569 (0.000000) G
+2018-07-31 06:20:09 DEBUG size of hyp_scores_all = 1.828015 G
+2018-07-31 06:20:09 DEBUG size of hyp_scores     = 0.039876 G
+2018-07-31 06:20:09 DEBUG size of contrib_scores = 0.039876 G
+2018-07-31 06:20:09 INFO  saving hyp_scores_all to scores/hyp_scores_task_2.npy, shape = (61338, 1000, 4)
+2018-07-31 06:20:11 DEBUG On task 3
+2018-07-31 06:23:44 DEBUG task 3 block 0 hyp_total shape= (0, 1000, 4)
+2018-07-31 06:23:44 DEBUG memory check location 4
+2018-07-31 06:23:44 DEBUG svmem(total=270370021376, available=255043866624, percent=5.7, used=7435784192, free=70265876480, active=124822421504, inactive=67308064768, buffers=3398676480, cached=189269684224, shared=6982492160, slab=5931208704)
+2018-07-31 06:23:44 DEBUG memory use: vms=286.966862 G, rss=5.182468 G
+2018-07-31 06:23:44 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:23:45 DEBUG size of deeplift_model  = 1.012168 (0.000000) G
+2018-07-31 06:23:46 DEBUG size of keras_model     = 1.012288 (0.000000) G
+2018-07-31 06:23:46 DEBUG size of hyp_scores_all = 0.298023 G
+2018-07-31 06:23:46 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:23:46 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:27:21 DEBUG task 3 block 1 hyp_total shape= (10000, 1000, 4)
+2018-07-31 06:27:21 DEBUG memory check location 4
+2018-07-31 06:27:21 DEBUG svmem(total=270370021376, available=255049977856, percent=5.7, used=7429382144, free=68481527808, active=125301182464, inactive=68436811776, buffers=3398877184, cached=191060234240, shared=6982492160, slab=6105821184)
+2018-07-31 06:27:21 DEBUG memory use: vms=286.967102 G, rss=5.182468 G
+2018-07-31 06:27:21 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:27:22 DEBUG size of deeplift_model  = 1.310275 (0.000000) G
+2018-07-31 06:27:23 DEBUG size of keras_model     = 1.310395 (0.000000) G
+2018-07-31 06:27:23 DEBUG size of hyp_scores_all = 0.596047 G
+2018-07-31 06:27:23 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:27:23 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:30:52 DEBUG task 3 block 2 hyp_total shape= (20000, 1000, 4)
+2018-07-31 06:30:52 DEBUG memory check location 4
+2018-07-31 06:30:52 DEBUG svmem(total=270370021376, available=254364008448, percent=5.9, used=8114970624, free=66285371392, active=127738281984, inactive=68145377280, buffers=3399237632, cached=192570441728, shared=6982492160, slab=6148673536)
+2018-07-31 06:30:52 DEBUG memory use: vms=287.600651 G, rss=5.816200 G
+2018-07-31 06:30:52 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:30:53 DEBUG size of deeplift_model  = 1.608381 (0.000000) G
+2018-07-31 06:30:54 DEBUG size of keras_model     = 1.608501 (0.000000) G
+2018-07-31 06:30:54 DEBUG size of hyp_scores_all = 0.894070 G
+2018-07-31 06:30:54 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:30:54 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:34:33 DEBUG task 3 block 3 hyp_total shape= (30000, 1000, 4)
+2018-07-31 06:34:33 DEBUG memory check location 4
+2018-07-31 06:34:33 DEBUG svmem(total=270370021376, available=254389755904, percent=5.9, used=8089714688, free=65724321792, active=129181597696, inactive=67228610560, buffers=3400339456, cached=193155645440, shared=6982492160, slab=6164803584)
+2018-07-31 06:34:33 DEBUG memory use: vms=287.563637 G, rss=5.780109 G
+2018-07-31 06:34:33 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:34:34 DEBUG size of deeplift_model  = 1.906488 (0.000000) G
+2018-07-31 06:34:35 DEBUG size of keras_model     = 1.906607 (0.000000) G
+2018-07-31 06:34:35 DEBUG size of hyp_scores_all = 1.192093 G
+2018-07-31 06:34:35 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:34:35 DEBUG size of contrib_scores = 0.298023 G
+ne 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seq2018-07-31 06:38:14 DEBUG task 3 block 4 hyp_total shape= (40000, 1000, 4)
+2018-07-31 06:38:14 DEBUG memory check location 4
+2018-07-31 06:38:14 DEBUG svmem(total=270370021376, available=253691535360, percent=6.2, used=8787783680, free=64346939392, active=131243585536, inactive=66509193216, buffers=3401580544, cached=193833717760, shared=6982520832, slab=6182182912)
+2018-07-31 06:38:14 DEBUG memory use: vms=288.197186 G, rss=6.414318 G
+2018-07-31 06:38:15 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:38:16 DEBUG size of deeplift_model  = 2.204594 (0.000000) G
+2018-07-31 06:38:16 DEBUG size of keras_model     = 2.204714 (0.000000) G
+2018-07-31 06:38:16 DEBUG size of hyp_scores_all = 1.490116 G
+2018-07-31 06:38:16 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:38:16 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:41:53 DEBUG task 3 block 5 hyp_total shape= (50000, 1000, 4)
+2018-07-31 06:41:53 DEBUG memory check location 4
+2018-07-31 06:41:53 DEBUG svmem(total=270370021376, available=253720989696, percent=6.2, used=8758652928, free=62271045632, active=133736660992, inactive=66023075840, buffers=3403079680, cached=195937243136, shared=6982492160, slab=6240161792)
+2018-07-31 06:41:53 DEBUG memory use: vms=288.160172 G, rss=6.375572 G
+2018-07-31 06:41:54 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:41:55 DEBUG size of deeplift_model  = 2.502700 (0.000000) G
+2018-07-31 06:41:55 DEBUG size of keras_model     = 2.502820 (0.000000) G
+2018-07-31 06:41:55 DEBUG size of hyp_scores_all = 1.788139 G
+2018-07-31 06:41:55 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:41:55 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:42:24 DEBUG task 3 block 6 hyp_total shape= (60000, 1000, 4)
+2018-07-31 06:42:24 DEBUG memory check location 4
+2018-07-31 06:42:24 DEBUG svmem(total=270370021376, available=253908738048, percent=6.1, used=8570122240, free=63897047040, active=132312899584, inactive=65860038656, buffers=3403378688, cached=194499473408, shared=6982492160, slab=6201618432)
+2018-07-31 06:42:24 DEBUG memory use: vms=287.981533 G, rss=6.197559 G
+2018-07-31 06:42:25 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:42:25 DEBUG size of deeplift_model  = 1.994030 (0.000000) G
+2018-07-31 06:42:26 DEBUG size of keras_model     = 1.994150 (0.000000) G
+2018-07-31 06:42:26 DEBUG size of hyp_scores_all = 1.828015 G
+2018-07-31 06:42:26 DEBUG size of hyp_scores     = 0.039876 G
+2018-07-31 06:42:26 DEBUG size of contrib_scores = 0.039876 G
+2018-07-31 06:42:26 INFO  saving hyp_scores_all to scores/hyp_scores_task_3.npy, shape = (61338, 1000, 4)
+2018-07-31 06:42:28 DEBUG On task 4
+2018-07-31 06:46:00 DEBUG task 4 block 0 hyp_total shape= (0, 1000, 4)
+2018-07-31 06:46:00 DEBUG memory check location 4
+2018-07-31 06:46:00 DEBUG svmem(total=270370021376, available=255310098432, percent=5.6, used=7168946176, free=63778631680, active=131928866816, inactive=66307862528, buffers=3405160448, cached=196017283072, shared=6982520832, slab=6244286464)
+2018-07-31 06:46:00 DEBUG memory use: vms=286.670300 G, rss=4.886765 G
+2018-07-31 06:46:00 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:46:01 DEBUG size of deeplift_model  = 1.012750 (0.000000) G
+2018-07-31 06:46:02 DEBUG size of keras_model     = 1.012870 (0.000000) G
+2018-07-31 06:46:02 DEBUG size of hyp_scores_all = 0.298023 G
+2018-07-31 06:46:02 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:46:02 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:49:34 DEBUG task 4 block 1 hyp_total shape= (10000, 1000, 4)
+2018-07-31 06:49:34 DEBUG memory check location 4
+2018-07-31 06:49:34 DEBUG svmem(total=270370021376, available=254614056960, percent=5.8, used=7865376768, free=61688016896, active=134419275776, inactive=65856098304, buffers=3406802944, cached=197409824768, shared=6982520832, slab=6283313152)
+2018-07-31 06:49:34 DEBUG memory use: vms=287.303848 G, rss=5.519554 G
+2018-07-31 06:49:34 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:49:35 DEBUG size of deeplift_model  = 1.310857 (0.000000) G
+2018-07-31 06:49:36 DEBUG size of keras_model     = 1.310977 (0.000000) G
+2018-07-31 06:49:36 DEBUG size of hyp_scores_all = 0.596047 G
+2018-07-31 06:49:36 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:49:36 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:53:11 DEBUG task 4 block 2 hyp_total shape= (20000, 1000, 4)
+2018-07-31 06:53:12 DEBUG memory check location 4
+2018-07-31 06:53:12 DEBUG svmem(total=270370021376, available=254654394368, percent=5.8, used=7824994304, free=72633126912, active=123889463296, inactive=65730027520, buffers=3407908864, cached=186503991296, shared=6982524928, slab=5986082816)
+2018-07-31 06:53:12 DEBUG memory use: vms=287.266834 G, rss=5.482731 G
+2018-07-31 06:53:12 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:53:13 DEBUG size of deeplift_model  = 1.608963 (0.000000) G
+2018-07-31 06:53:13 DEBUG size of keras_model     = 1.609083 (0.000000) G
+2018-07-31 06:53:13 DEBUG size of hyp_scores_all = 0.894070 G
+2018-07-31 06:53:13 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:53:13 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 06:56:46 DEBUG task 4 block 3 hyp_total shape= (30000, 1000, 4)
+2018-07-31 06:56:47 DEBUG memory check location 4
+2018-07-31 06:56:47 DEBUG svmem(total=270370021376, available=252117901312, percent=6.8, used=10361638912, free=77568589824, active=122625667072, inactive=62246658048, buffers=3408171008, cached=179031621632, shared=6982529024, slab=5788012544)
+2018-07-31 06:56:47 DEBUG memory use: vms=287.900383 G, rss=6.116215 G
+2018-07-31 06:56:47 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 06:56:48 DEBUG size of deeplift_model  = 1.907069 (0.000000) G
+2018-07-31 06:56:49 DEBUG size of keras_model     = 1.907189 (0.000000) G
+2018-07-31 06:56:49 DEBUG size of hyp_scores_all = 1.192093 G
+2018-07-31 06:56:49 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 06:56:49 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 07:00:18 DEBUG task 4 block 4 hyp_total shape= (40000, 1000, 4)
+2018-07-31 07:00:19 DEBUG memory check location 4
+2018-07-31 07:00:19 DEBUG svmem(total=270370021376, available=252148510720, percent=6.7, used=10331074560, free=77489983488, active=122751315968, inactive=62191194112, buffers=3408277504, cached=179140685824, shared=6982529024, slab=5796085760)
+2018-07-31 07:00:19 DEBUG memory use: vms=287.863369 G, rss=6.079861 G
+2018-07-31 07:00:19 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 07:00:20 DEBUG size of deeplift_model  = 2.205176 (0.000000) G
+2018-07-31 07:00:21 DEBUG size of keras_model     = 2.205296 (0.000000) G
+2018-07-31 07:00:21 DEBUG size of hyp_scores_all = 1.490116 G
+2018-07-31 07:00:21 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 07:00:21 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 07:03:51 DEBUG task 4 block 5 hyp_total shape= (50000, 1000, 4)
+2018-07-31 07:03:51 DEBUG memory check location 4
+2018-07-31 07:03:51 DEBUG svmem(total=270370021376, available=251419439104, percent=7.0, used=11060150272, free=76654571520, active=123641970688, inactive=62137548800, buffers=3408433152, cached=179246866432, shared=6982500352, slab=5797556224)
+2018-07-31 07:03:51 DEBUG memory use: vms=288.496918 G, rss=6.713215 G
+2018-07-31 07:03:52 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 07:03:52 DEBUG size of deeplift_model  = 2.503282 (0.000000) G
+2018-07-31 07:03:53 DEBUG size of keras_model     = 2.503402 (0.000000) G
+2018-07-31 07:03:53 DEBUG size of hyp_scores_all = 1.788139 G
+2018-07-31 07:03:53 DEBUG size of hyp_scores     = 0.298023 G
+2018-07-31 07:03:53 DEBUG size of contrib_scores = 0.298023 G
+2018-07-31 07:04:22 DEBUG task 4 block 6 hyp_total shape= (60000, 1000, 4)
+2018-07-31 07:04:22 DEBUG memory check location 4
+2018-07-31 07:04:22 DEBUG svmem(total=270370021376, available=252037857280, percent=6.8, used=10441768960, free=77230018560, active=123050815488, inactive=62149394432, buffers=3408457728, cached=179289776128, shared=6982500352, slab=5798944768)
+2018-07-31 07:04:22 DEBUG memory use: vms=287.903240 G, rss=6.119617 G
+2018-07-31 07:04:22 DEBUG size of fasta_sequences = 0.059890 (0.000479) G
+2018-07-31 07:04:23 DEBUG size of deeplift_model  = 1.994613 (0.000000) G
+2018-07-31 07:04:24 DEBUG size of keras_model     = 1.994732 (0.000000) G
+2018-07-31 07:04:24 DEBUG size of hyp_scores_all = 1.828015 G
+2018-07-31 07:04:24 DEBUG size of hyp_scores     = 0.039876 G
+2018-07-31 07:04:24 DEBUG size of contrib_scores = 0.039876 G
+2018-07-31 07:04:24 INFO  saving hyp_scores_all to scores/hyp_scores_task_4.npy, shape = (61338, 1000, 4)
+2018-07-31 07:04:25 DEBUG start time 2018-07-31 05:13:36.185696
+2018-07-31 07:04:25 DEBUG end time 2018-07-31 07:04:25.676836
+s generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
