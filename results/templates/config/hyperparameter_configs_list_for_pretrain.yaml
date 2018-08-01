@@ -1,6 +1,6 @@
 [
 {
-    "message": "model & config for <TF>, <n> tasks, pretraining, 18_07_30",
+    "message": "model & config for <TF>, <n> tasks, pretraining, ver 18_07_31",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
@@ -22,10 +22,9 @@
         "class": "flexible_keras.FlexibleKerasSequential",
         "kwargs": {
             "layers_config": [
-                {   
+                {
                     # --- conv layer 1
-                    "name": "conv1",
-                    "class": "keras.layers.convolutional.Convolution1D", 
+                    "class": "keras.layers.convolutional.Convolution1D",
                     "kwargs": {
                         "input_shape": [1000,4],
                         "nb_filter": 50,
@@ -39,12 +38,16 @@
                     }
                 },
                 {
-                    "class": "keras.layers.core.Activation", 
+                    "class": "keras.layers.normalization.BatchNormalization",
+                    "kwargs": {"axis": -1}
+                },
+                {
+                    "class": "keras.layers.core.Activation",
                     "kwargs": {"activation": "relu"}
                 },
                 {
                     # --- conv layer 2
-                    "class": "keras.layers.convolutional.Convolution1D", 
+                    "class": "keras.layers.convolutional.Convolution1D",
                     "kwargs": {
                         "nb_filter": 50,
                         "filter_length": 15,
@@ -52,60 +55,63 @@
                     }
                 },
                 {
-                    "class": "keras.layers.core.Activation", 
+                    "class": "keras.layers.normalization.BatchNormalization",
+                    "kwargs": {"axis": -1}
+                },
+                {
+                    "class": "keras.layers.core.Activation",
                     "kwargs": {"activation": "relu"}
                 },
                 {
                     # --- conv layer 3
-                    "class": "keras.layers.convolutional.Convolution1D", 
-                    "kwargs": { 
+                    "class": "keras.layers.convolutional.Convolution1D",
+                    "kwargs": {
                         "nb_filter": 50,
                         "filter_length": 13,
                         "border_mode": "same"
                     }
                 },
                 {
-                    "class": "keras.layers.core.Activation", 
+                    "class": "keras.layers.normalization.BatchNormalization",
+                    "kwargs": {"axis": -1}
+                },
+                {
+                    "class": "keras.layers.core.Activation",
                     "kwargs": {"activation": "relu"}
                 },
                 {
-                    "class": "keras.layers.convolutional.MaxPooling1D", 
+                    "class": "keras.layers.convolutional.MaxPooling1D",
                     "kwargs": {"pool_length": 40, "stride": 40}
                 },
+  
                 {
-                    "class": "keras.layers.core.Flatten", 
+                    "class": "keras.layers.core.Flatten",
                     "kwargs": {}
                 },
                 {
                     # --- FC dense layer 1
-                    "class": "keras.layers.core.Dense", 
+                    "class": "keras.layers.core.Dense",
                     "kwargs": {"output_dim": 50}
                 },
                 {
-                    "class": "keras.layers.core.Activation", 
+                    "class": "keras.layers.normalization.BatchNormalization",
+                    "kwargs": {"axis": -1}
+                },
+                {
+                    "class": "keras.layers.core.Activation",
                     "kwargs": {"activation": "relu"}
                 },
-                {   
-                    "name": "fc1_batchnorm",
-                    "class": "keras.layers.normalization.BatchNormalization",
-                    "kwargs": {
-                         "axis": -1
-                    }
-                }, 
                 {
-                    "name": "fc1_dropout",
                     "class": "keras.layers.core.Dropout",
-                    "kwargs": {
-                         "p": 0.2
-                     }
+                    "kwargs": {"p": 0.2}
                 },
                 {
                     # --- FC dense layer 2
-                    "class": "keras.layers.core.Dense", 
+                    "class": "keras.layers.core.Dense",
                     "kwargs": {"output_dim": 5}
                 },
                 {
-                    "class": "keras.layers.core.Activation", 
+                    "class": "keras.layers.core.Activation",
                     "kwargs": {"activation": "sigmoid"}
                 }
             ],
@@ -115,9 +121,9 @@
             },
             "loss": {
                 "modules_to_load": ["keras_genomics"],
-                "func": "keras_genomics.losses.ambig_binary_crossentropy"        
-            } 
-        } 
+                "func": "keras_genomics.losses.ambig_binary_crossentropy"
+            }
+        }
     },
     "model_trainer":{
         "class": "keras_model_trainer.KerasFitGeneratorModelTrainer",
@@ -127,12 +133,13 @@
             "stopping_criterion_config": {
                 "class": "EarlyStopping" ,
                 "kwargs": {
-                   "max_epochs": 1000, 
+                   "max_epochs": 1000,
                    "epochs_to_wait": 20
-                } 
+                }
             },
             #"class_weight": {"0":1, "1":10}
         }
     },
 }
 ]
+
