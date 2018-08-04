@@ -1,0 +1,49 @@
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-08-02 03:46:19.847482: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-02 03:46:20.217062: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:05:00.0
+totalMemory: 11.93GiB freeMemory: 11.79GiB
+2018-08-02 03:46:20.217136: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-08-02 03:46:20.615338: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-02 03:46:20.615380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-08-02 03:46:20.615388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-08-02 03:46:20.615748: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11420 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:05:00.0, compute capability: 5.2)
+Loading momma_dragonn.data_loaders.hdf5_data_loader.MultimodalAtOnceDataLoader
+Input modes [u'sequence']
+Output modes [u'output']
+Loading momma_dragonn.model_evaluators.SequentialAccuracyStats
+Loading momma_dragonn.epoch_callbacks.SaveBestValidModel
+Loading momma_dragonn.epoch_callbacks.PrintPerfAfterEpoch
+Loading momma_dragonn.end_of_training_callbacks.WriteToTsvCallback
+Loading momma_dragonn.end_of_training_callbacks.WriteToDbCallback
+Loading momma_dragonn.end_of_training_callbacks.EmailCallback
+Loading momma_dragonn.data_loaders.hdf5_data_loader.MultimodalBatchDataLoader
+Input modes [u'sequence']
+Output modes [u'output']
+Loading momma_dragonn.model_creators.flexible_keras.KerasModelFromSavedFile
+Loading momma_dragonn.model_trainers.keras_model_trainer.KerasFitGeneratorModelTrainer
+Setting seed 1234
+Importing keras...
+Getting model...
+Randomly generated id orADW
+Preparing uncompiled model
+Compiling model
+Loading keras.optimizers.Adam
+Done compiling model
+Got model
+Loading validation data into memory
+Loaded
+Evaluate Results
+OrderedDict([('per_output_auROC', [0.9110883208724487, 0.9632482939357169, 0.9416767160124195, 0.9228395091025742, 0.6895489431033743, 0.8433444751174903, 0.9504499336904904, 0.9744780233362808, 0.8308301822704856, 0.8512457564455552, 0.9008973751103095, 0.9651607361860015, 0.8554848143484395, 0.938301621407177, 0.9568420507374936]), ('mean_auROC', 0.8996957834450839), ('per_output_auPRC', [0.11661191024166007, 0.4142789387530142, 0.12148276265465496, 0.0114834120737531, 0.0035310220804143353, 0.05469051059980779, 0.2019271962956445, 0.57118588869901, 0.03776068152931811, 0.057855340249054414, 0.023303007257631236, 0.206106537131521, 0.04617568114038402, 0.17930078598836915, 0.1199803349173001]), ('mean_auPRC', 0.1443782673074358), ('per_output_balanced_accuracy', [0.7144526808967147, 0.7737483475825244, 0.6546293350798403, 0.5189942517552129, 0.5575797853335048, 0.743804862293151, 0.6492288030061389, 0.8324796274565744, 0.7173741943342428, 0.7254925822917162, 0.5243461487514626, 0.6569475378758769, 0.6679288498548045, 0.6199675980352701, 0.696346447392348]), ('mean_balanced_accuracy', 0.6702214034626255), ('per_output_unbalanced_accuracy', [0.9739193825042881, 0.9935340789766068, 0.9944045283476468, 0.9992187146622585, 0.9478698975220208, 0.8738995775797807, 0.9976345822331814, 0.9927842703241588, 0.9095290330701865, 0.9279002624671916, 0.9984933499584372, 0.995855075681877, 0.9748270733280768, 0.9954915049075934, 0.9963432545034919]), ('mean_unbalanced_accuracy', 0.971446972404453)])
+Traceback (most recent call last):
+  File "/home/ktian/kundajelab/tfnet/../momma_dragonn/scripts/momma_dragonn_eval", line 76, in <module>
+    momma_dragonn_eval(options)
+  File "/home/ktian/kundajelab/tfnet/../momma_dragonn/scripts/momma_dragonn_eval", line 64, in momma_dragonn_eval
+    for (split_name, data_loader) in other_data_loaders.items()]))
+  File "/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/end_of_training_callbacks.py", line 210, in __call__
+    df_recall = pd.DataFrame(stats['per_output_recall_at_fdr'])
+KeyError: 'per_output_recall_at_fdr'
