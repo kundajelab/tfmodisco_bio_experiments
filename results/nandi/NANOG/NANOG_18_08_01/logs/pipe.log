@@ -1,0 +1,8 @@
+2018-08-01 09:56:58 INFO  run_pipeline.py NANOG 1 40
+2018-08-01 09:56:58 DEBUG tf=NANOG, num_tasks=1 start=40 end=100
+step 1 prepare_data done
+step 2 training done
+Traceback (most recent call last):
+  File "run_pipeline.py", line 101, in <module>
+    os.system("python $TFNET_ROOT/scripts/run_deeplift.py model_files/record_1_ subset_nobg.fa " + num_tasks + " > logs/deeplift.log 2>&1")
+TypeError: cannot concatenate 'str' and 'int' objects

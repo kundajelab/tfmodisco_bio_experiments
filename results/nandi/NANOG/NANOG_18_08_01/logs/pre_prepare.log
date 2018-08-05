@@ -1,0 +1,19 @@
+2018-08-01 09:50:09 INFO  prepare_data.py NANOG --no-bg
+2018-08-01 09:50:12 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-NANOG-human-ENCSR000BMT-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_KXyXQr/_tmp_H1-hESC-NANOG-human-ENCSR000BMT-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 20
+2018-08-01 09:50:12 DEBUG bin-size=200, stride=20
+2018-08-01 09:50:15 DEBUG in: skip_test=0 bin-size=200, stride=20
+2018-08-01 09:50:15 INFO  LABEL_REGIONS sort merge done
+2018-08-01 09:50:16 INFO  LABEL_REGIONS intersect done
+2018-08-01 09:50:16 INFO  LABEL_REGIONS labels done
+2018-08-01 09:50:16 INFO  LABEL_REGIONS ALL DONE *****
+2018-08-01 09:50:16 INFO  split and make hdf5
+Reading in labels
+on file inputs.fa
+Processed 5000 lines
+Processed 10000 lines
+Processed 15000 lines
+Processed 20000 lines
+2018-08-01 09:50:28 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM23338-NANOG-human-ENCSR061DGF-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/H1-hESC-NANOG-human-ENCSR000BMT-optimal_idr.narrowPeak.gz
+2
