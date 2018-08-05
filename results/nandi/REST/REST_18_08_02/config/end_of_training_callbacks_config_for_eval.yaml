@@ -1,0 +1,4 @@
+[
+    {"class":"WriteToTsvCallback",
+     "kwargs":{"tsv_path": "runs.tsv"}},
+]
