@@ -1,1 +1,2 @@
-modisco.run1: fdr-0.05, using whole optimal-idr, with min_seqlets_per_task check
+modisco.run1: fdr-0.05, using whole optimal-idr, with min_seqlets_per_task=500
+modisco.run2: fdr-0.05, using pre-train training+validation set (no testing set), with min_seqlets_per_task=500
