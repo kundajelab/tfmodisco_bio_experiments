@@ -2,5 +2,7 @@ NANOG_18_08_01 has only 173 positive intervals in validation set, so re-validate
     modisco.run1: nanog was missing
     modisco.run2: deeplift/modisco on all optimal-idr, sox2 missing
 NANOG_18_08_07 : implemented min_seqlets_per_task check
+    modisco.run1: deeplift/modisco on all optimal-idr, min_seqlet_per_task=500
+    modisco.run2: deeplift/modisco on pre-train train+validation sets (no test set), min_seqlet_per_task=500
 
 NANOG_18_08_02 : not finished! preparing for stride 50 background
