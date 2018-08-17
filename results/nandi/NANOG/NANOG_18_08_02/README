@@ -1,0 +1,20 @@
+results of new validation using stride 50 across the chromosome 2. results stored under model_files, including TSV, PRC, ROC, and 
+
+model_files/
+    # models were from 08_01 execution
+    record_1_model_HcVec_modelJson.json
+    record_1_model_HcVec_modelWeights.h5
+    record_1_Json.json
+    record_1_Weights.h5
+    # following are produced by momma_dragonn_eval script
+    record_1_PRC.png         : PRC curve
+    record_1_ROC.png         : ROC curve
+    record_1_predictions.npy : saved y label and prediction results 
+    record_1_Tsv.tsv         : new result TSV, capture statistics
+
+counts.tsv : new counts with data generated with stride 50
+
+from earlier 08_01 execution
+runs.tsv   : old result for comparison
+
+compare new record_1_Tsv.tsv with old runs.tsv, values quite similar, with new values slightly lower.
