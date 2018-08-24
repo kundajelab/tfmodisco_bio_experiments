@@ -1,0 +1,441 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9497862109565978,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_tbRpm_modelWeights.h5",
+            "json_file": "model_files/record_1_model_tbRpm_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_tbRpm"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for STAT1, 1 tasks, pretraining, ver 18_07_31",
+            "best_valid_key_metric": 0.9497862109565978,
+            "best_valid_perf_info": {
+                "epoch": 40,
+                "valid_key_metric": 0.9497862109565978,
+                "train_key_metric": 0.9798173693483444,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9259444361575333,
+                    0.9066090843288246
+                ],
+                [
+                    0.9420648963714493,
+                    0.9063608221639785
+                ],
+                [
+                    0.941540840535366,
+                    0.9057565441408371
+                ],
+                [
+                    0.9523583128419694,
+                    0.9087541009421652
+                ],
+                [
+                    0.9551662589291035,
+                    0.9207613558690113
+                ],
+                [
+                    0.9576333159147672,
+                    0.9226617375244599
+                ],
+                [
+                    0.9554953796716166,
+                    0.9263274240147774
+                ],
+                [
+                    0.9661799989379802,
+                    0.9275901408558039
+                ],
+                [
+                    0.9706491966570021,
+                    0.9360584508646088
+                ],
+                [
+                    0.9665826449658443,
+                    0.9312296858091353
+                ],
+                [
+                    0.9724465418243422,
+                    0.9253845791970962
+                ],
+                [
+                    0.971329712864335,
+                    0.9191198798493192
+                ],
+                [
+                    0.9706772291396892,
+                    0.9334311897590538
+                ],
+                [
+                    0.9674180526054554,
+                    0.9291737922353444
+                ],
+                [
+                    0.967010033453345,
+                    0.9307225454873735
+                ],
+                [
+                    0.9705151682768394,
+                    0.9356471750579475
+                ],
+                [
+                    0.9744350644081735,
+                    0.9354968291616301
+                ],
+                [
+                    0.9739756809358949,
+                    0.9370485043303722
+                ],
+                [
+                    0.9720251024178312,
+                    0.936203704015809
+                ],
+                [
+                    0.9524002652314617,
+                    0.9300373331191694
+                ],
+                [
+                    0.9706717530474437,
+                    0.9369401827408846
+                ],
+                [
+                    0.9728214658182593,
+                    0.9429022759368014
+                ],
+                [
+                    0.9745973532294815,
+                    0.9441311480058716
+                ],
+                [
+                    0.9482620665370741,
+                    0.9315640025430019
+                ],
+                [
+                    0.974986205188117,
+                    0.9402469497754209
+                ],
+                [
+                    0.9773443128634576,
+                    0.9406668630976318
+                ],
+                [
+                    0.9679606742065703,
+                    0.9363676152997494
+                ],
+                [
+                    0.9749783932806273,
+                    0.9399891066548329
+                ],
+                [
+                    0.9747416948763298,
+                    0.9402934256544215
+                ],
+                [
+                    0.9763496934263157,
+                    0.9446750366970756
+                ],
+                [
+                    0.9757722613291276,
+                    0.9419741231392061
+                ],
+                [
+                    0.9798922542556796,
+                    0.9428932720367111
+                ],
+                [
+                    0.9815095327179078,
+                    0.9407134122535403
+                ],
+                [
+                    0.9775603581873188,
+                    0.9425471119225634
+                ],
+                [
+                    0.9772031383048722,
+                    0.9375639707408236
+                ],
+                [
+                    0.9764695568715307,
+                    0.94325830095471
+                ],
+                [
+                    0.9745811936811923,
+                    0.943413235817401
+                ],
+                [
+                    0.9781594457602598,
+                    0.9464195950073218
+                ],
+                [
+                    0.9769042709747662,
+                    0.9403263544650259
+                ],
+                [
+                    0.9798173693483444,
+                    0.9497862109565978
+                ],
+                [
+                    0.9808715483336262,
+                    0.9464258052252884
+                ],
+                [
+                    0.9787990217477154,
+                    0.9473926665496191
+                ],
+                [
+                    0.9787258574636708,
+                    0.9453689690173508
+                ],
+                [
+                    0.9816432207864522,
+                    0.9392031568571357
+                ],
+                [
+                    0.9810978382321266,
+                    0.9419173610142227
+                ],
+                [
+                    0.9822475043334232,
+                    0.9423699466778596
+                ],
+                [
+                    0.9786330011337014,
+                    0.9375195008171842
+                ],
+                [
+                    0.9839572762023265,
+                    0.9435127550182958
+                ],
+                [
+                    0.9840270338916878,
+                    0.9423919389099209
+                ],
+                [
+                    0.9780529625526597,
+                    0.9422939402048706
+                ],
+                [
+                    0.9801868064146657,
+                    0.9440297877226591
+                ],
+                [
+                    0.9833374224668937,
+                    0.9456415133176383
+                ],
+                [
+                    0.9798958754127773,
+                    0.9456725186094036
+                ],
+                [
+                    0.9803388759866023,
+                    0.9455286027617773
+                ],
+                [
+                    0.9822744113186342,
+                    0.9477412997594173
+                ],
+                [
+                    0.9820404791010048,
+                    0.9452618381776208
+                ],
+                [
+                    0.979653563915047,
+                    0.9474010292767627
+                ],
+                [
+                    0.9834010257938833,
+                    0.9473503766139972
+                ],
+                [
+                    0.980325365604608,
+                    0.9469076008964404
+                ],
+                [
+                    0.9800737862964101,
+                    0.9440958926534331
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_tbRpm_modelWeights.h5",
+                "json_file": "model_files/record_1_model_tbRpm_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_tbRpm"
+            },
+            "model_creator_info": {
+                "layers_config": [
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 60
+            }
+        }
+    ]
+}
