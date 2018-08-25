@@ -1,6 +1,4 @@
 [
-    {"class":"WriteToTsvCallback",
-     "kwargs":{"tsv_path": "runs.tsv"}},
     {"class":"WriteToDbCallback",
      "kwargs":{"db_path": "runs.db"}},
     {"class":"EmailCallback",
