@@ -1,0 +1,37 @@
+Using cuDNN version 7001 on context None
+Mapped name None to device cuda0: GeForce GTX TITAN X (0000:05:00.0)
+2018-08-26 00:54:40 INFO  /home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py --scores scores/hyp_scores_task_ --fasta subset_nobg.fa --tsv subset_nobg.tsv --end-task 1 --fdr 0.25
+2018-08-26 00:54:40 DEBUG Theano version:1.0.2
+2018-08-26 00:54:40 DEBUG 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+2018-08-26 00:54:40 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is subset_nobg.fa, input tsv is subset_nobg.tsv, start_task is 0 end_task is 1, fdr is 0.250000
+2018-08-26 00:54:41 DEBUG lenth of sequences = 274212
+2018-08-26 00:54:49 DEBUG merged overlaps based on in_tsv subset_nobg.tsv, 274212 seqs merged into 13931 seqs, max len 1691
+2018-08-26 00:54:51 DEBUG shape of hyp_score (580, 4)
+2018-08-26 00:54:51 DEBUG shape of score (580, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-08-26 00:55:24 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-08-26 00:55:24 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-08-26 00:55:24 DEBUG backend agg version v2.2
+2018-08-26 00:55:24 DEBUG findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/ktian/anaconda3/envs/tfenv/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+peak(mu)= 0.8184606318135442
+Manually adjusting thresholds to get desired num seqlets
+Mu: 8.184606e-01 +/- 8.695444e-06
+Lablace_b: 0.504124605604187 and 1.3200910551498282
+Thresholds: -11.696234509141144 and 13.333155772768231
+#fdrs pass: 0 and 0
+CDFs: 0.9999999999834496 and 0.9999236494787024
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_0.png
+Got 93 coords
+After resolving overlaps, got 93 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9999236494787024
+93 identified in total
+WARNING: you found relatively few seqlets. Consider dropping target_seqlet_fdr
+0 activity patterns with support >= 100 out of 3 possible patterns
+Metacluster sizes:  []
+Idx to activities:  {}
+2018-08-26 00:55:27 DEBUG **************** workflow done *********************
+2018-08-26 00:55:27 DEBUG **************** result saved *********************

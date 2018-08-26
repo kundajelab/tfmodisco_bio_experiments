@@ -1,0 +1,5 @@
+For training, we used stride 10 across the union of positives and stride 1000 in the background. For the validation set where the results are reported on, we used uniform stride 50 across chr2.
+
+modisco.run1: min_seqlets=int(self.min_seqlets_per_task * self.sliding_window_size))
+modisco.run2: min_seqlets=int(self.min_seqlets_per_task * self.sliding_window_size * 0.5))
+
