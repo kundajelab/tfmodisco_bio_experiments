@@ -6,7 +6,7 @@
 
 [interpretation2](modisco.run2/tfmodisco-visualization-bQTL-GM12878.ipynb) deeplift+modisco on 1kb sequences centered at summit, excluding chr1 (in progress)
 
-## bQTL singl-task models
+## bQTL single-task models
 
 deeplift+modisco on train+valid set
 
