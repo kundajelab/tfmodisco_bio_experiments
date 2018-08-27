@@ -1,0 +1,36 @@
+JUND_18_07_31/       : newer! model/modisco published to github/Av, re-run modisco on 08/08, with new laplace, new validation 08/09
+JUND_18_08_03/       : snapshot on 08_03, modisco/laplace were older
+
+JUND_GM12878_18_08_24: stride 20, valid tsv wrong
+JUND_GM12878_18_08_25: stride 10 w interpretation
+JUND_pf_18_08_22     : trying pfasta
+
+
+--------------------
+2018-08-23 10:44:34 nandi{} [JUND]$ diff -rq JUND_18_07_31/ JUND_18_08_03/ 
+Only in JUND_18_07_31/config: valid_data_loader_config_gl.yaml
+Only in JUND_18_07_31/config: valid_data_loader_config_pf.yaml
+Only in JUND_18_07_31/: finetune
+Only in JUND_18_07_31/.ipynb_checkpoints: tfmodisco-visualization-JUND-HepG2-ENCSR000EEI-checkpoint.ipynb
+Only in JUND_18_07_31/model_files: ._JUND_record_1_PRC.png
+Only in JUND_18_07_31/model_files: JUND_record_1_PRC.png
+Only in JUND_18_07_31/model_files: JUND_record_1_ROC.png
+Only in JUND_18_07_31/model_files: ._JUND_record_1_Tsv.tsv
+Only in JUND_18_07_31/model_files: JUND_record_1_Tsv.tsv
+Only in JUND_18_07_31/model_files: record_1_Tsv.tsv
+Only in JUND_18_07_31/: ._results.hdf5
+Only in JUND_18_07_31/: run_jund.sh
+Only in JUND_18_07_31/splits: valid.tsv
+Only in JUND_18_07_31/: subset_nobg.fa.gz
+Only in JUND_18_07_31/: tfmodisco-visualization-JUND-HepG2-ENCSR000EEI.ipynb
+
+Files JUND_18_07_31/figures/._laplace_0.png and JUND_18_08_03/figures/._laplace_0.png differ
+Files JUND_18_07_31/figures/laplace_0.png and JUND_18_08_03/figures/laplace_0.png differ
+Files JUND_18_07_31/results.hdf5 and JUND_18_08_03/results.hdf5 differ
+Files JUND_18_07_31/logs/modisco.log and JUND_18_08_03/logs/modisco.log differ
+
+Only in JUND_18_08_03/: cluster labels.ipynb
+Only in JUND_18_08_03/.ipynb_checkpoints: cluster labels-checkpoint.ipynb
+Only in JUND_18_08_03/.ipynb_checkpoints: tfmodisco-visualization-JUND-HepG2-ENCSR000EEI-80-checkpoint.ipynb
+Only in JUND_18_08_03/: runs_perf-metric-auROC.db
+Only in JUND_18_08_03/: tfmodisco-visualization-JUND-HepG2-ENCSR000EEI-80.ipynb
