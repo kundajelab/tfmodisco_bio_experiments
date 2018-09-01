@@ -1,0 +1,1 @@
+cmd = pos.fa human homer_out -fasta neg.fa -p 4
