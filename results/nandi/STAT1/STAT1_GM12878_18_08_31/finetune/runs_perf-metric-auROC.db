@@ -1,0 +1,309 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9545643691473733,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_nMhup_modelWeights.h5",
+            "json_file": "model_files/record_1_model_nMhup_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_nMhup"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for STAT1, 1 tasks, pretraining, ver 18_07_31",
+            "best_valid_key_metric": 0.9545643691473733,
+            "best_valid_perf_info": {
+                "epoch": 7,
+                "valid_key_metric": 0.9545643691473733,
+                "train_key_metric": 0.979319197955208,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9544168244273724,
+                    0.9320246761453768
+                ],
+                [
+                    0.9627792261345438,
+                    0.943531568864466
+                ],
+                [
+                    0.9675022097581587,
+                    0.9452921381791449
+                ],
+                [
+                    0.9696143362488372,
+                    0.9475136375653775
+                ],
+                [
+                    0.9738130610780699,
+                    0.9485426926655091
+                ],
+                [
+                    0.9757582582205131,
+                    0.9519099497877315
+                ],
+                [
+                    0.979319197955208,
+                    0.9545643691473733
+                ],
+                [
+                    0.9793392384018453,
+                    0.952057850067239
+                ],
+                [
+                    0.9811067178539299,
+                    0.9539177187520884
+                ],
+                [
+                    0.9806024573586183,
+                    0.9446500859098472
+                ],
+                [
+                    0.9839301050803663,
+                    0.9514442292383072
+                ],
+                [
+                    0.9833833530406461,
+                    0.9527444638563114
+                ],
+                [
+                    0.9839818325204454,
+                    0.9513072197392749
+                ],
+                [
+                    0.9854420904292105,
+                    0.9481498276820227
+                ],
+                [
+                    0.9870756437698497,
+                    0.9522581433360807
+                ],
+                [
+                    0.9890699574111699,
+                    0.9421408189456568
+                ],
+                [
+                    0.9869366818394694,
+                    0.9460629562953071
+                ],
+                [
+                    0.9881321987994862,
+                    0.9481108626861088
+                ],
+                [
+                    0.9897201056881465,
+                    0.9379913766268939
+                ],
+                [
+                    0.9891688197483639,
+                    0.9458098212160685
+                ],
+                [
+                    0.9906624963542725,
+                    0.9501024740922164
+                ],
+                [
+                    0.9920944851024767,
+                    0.9479245653067254
+                ],
+                [
+                    0.9888169639422019,
+                    0.9448486205328932
+                ],
+                [
+                    0.9923832343488765,
+                    0.9507923212248617
+                ],
+                [
+                    0.9932868941197933,
+                    0.9409558580638013
+                ],
+                [
+                    0.9913974069541794,
+                    0.9389550504057196
+                ],
+                [
+                    0.9935764628804465,
+                    0.9431373848966327
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_nMhup_modelWeights.h5",
+                "json_file": "model_files/record_1_model_nMhup_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_nMhup"
+            },
+            "model_creator_info": {
+                "layers_config": [
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 27
+            }
+        }
+    ]
+}
