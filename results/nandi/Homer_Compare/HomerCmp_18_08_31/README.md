@@ -1,8 +1,8 @@
-# Compare Modisco with Homer
+# Modisco vs. Homer Comparison
 
 ## Homer Results 
 
-positives are created using 1k-surround the summits, negatives are subselected from 500k randomly chosen 1k regions on the genome with dinuc frequencies matching the positives using Anna's gen_dinucleotide_freqs.py. Target neg:pos ratio set to 1.5, but after removing the duplicates, this ratio is lower.
+positives are created using 1k-surround the summits, negatives are subselected from 500k randomly chosen 1k regions on the genome with dinuc frequencies matching the positives, using Anna's gen_dinucleotide_freqs.py. Target neg:pos ratio set to 1.5, but after removing the duplicates, this ratio turns out to be lower.
 
 [JUND_Homer](https://github.com/kundajelab/tfmodisco_bio_experiments/blob/master/results/nandi/JUND/JUND_GM12878_HOMER_18_08_31/homer/homer_out/homerResults.html)
 
@@ -35,7 +35,7 @@ Hmm, using stride=1 did not deliver major improvements compare to stride=10.
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-STAT1-GM12878.ipynb)
 
 
-## Modisco Results after finetune on data fed to Homer (in progress)
+## Modisco Results when fine-tuning on same data that was fed to Homer (in progress)
 
 
 ## Older results with stride 10
