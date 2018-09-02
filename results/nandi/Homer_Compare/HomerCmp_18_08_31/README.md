@@ -1,6 +1,9 @@
 # Compare Modisco with Homer
 
 ## Homer Results 
+
+positives are created using 1k-surround the summits, negatives are subselected from 500k randomly chosen 1k regions on the genome with dinuc frequencies match the positives. Target neg:pos ratio set to 1.5, but after removing the duplicates, this ratio is lower.
+
 [JUND_Homer](https://github.com/kundajelab/tfmodisco_bio_experiments/blob/master/results/nandi/JUND/JUND_GM12878_HOMER_18_08_31/homer/homer_out/homerResults.html)
 
 [RELA_Homer](https://github.com/kundajelab/tfmodisco_bio_experiments/blob/master/results/nandi/RELA/RELA_GM12878_HOMER_18_08_31/homer/homer_out/homerResults.html)
@@ -10,8 +13,9 @@
 [STAT1_Homer](https://github.com/kundajelab/tfmodisco_bio_experiments/blob/master/results/nandi/STAT1/STAT1_GM12878_HOMER_18_08_31/homer/homer_out/homerResults.html)
 
 ## Modisco Results with stride 1
+Standard pipeline with stride=1.
 
-Hmm, using stride=1 did not deliver improvements.
+Hmm, using stride=1 did not deliver major improvements compare to stride=10.
 
 [Summary single tasks training](single_tasks_18_08_31.tsv)
 
