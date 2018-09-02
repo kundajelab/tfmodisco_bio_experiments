@@ -53,9 +53,11 @@ Hmm, using stride=1 did not deliver major improvements compare to stride=10.
 
 [SPI1 model validation](../../SPI1/SPI1_GM12878_18_08_25/SPI1_GM12878_18_08_25.tsv),
 [SPI1 training details](../../SPI1/SPI1_GM12878_18_08_25/logs/analyze.txt),
-[SPI1 interpretation](../../SPI1/SPI1_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb)
+[SPI1 interpretation](../../SPI1/SPI1_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb),
+[SPI1 bQTL enrichment](../../SPI1/SPI1_GM12878_18_08_25/modisco.run1/SNP%20scoring.ipynb)
 
 [STAT1 model validation](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
 [STAT1 training details](../../STAT1/STAT1_GM12878_18_08_25/logs/analyze.txt),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
+
 
