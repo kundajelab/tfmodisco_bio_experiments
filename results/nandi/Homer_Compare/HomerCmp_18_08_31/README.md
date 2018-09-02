@@ -14,17 +14,20 @@
 [Summary single tasks training](single_tasks_18_08_31.tsv)
 
 
-[JUND model training](../../JUND/JUND_GM12878_18_08_31/JUND_GM12878_18_08_31.tsv), 
-[JUND interpretation](../../JUND/JUND_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks merged as one (in progress)
+[~~JUND model training~~](../../JUND/JUND_GM12878_18_08_31/JUND_GM12878_18_08_31.tsv), 
+[~~JUND interpretation~~](../../JUND/JUND_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks merged as one (in progress)
 
-[RELA model training](../../RELA/RELA_GM12878_18_08_31/RELA_GM12878_18_08_31.tsv),
-[RELA interpretation](../../RELA/RELA_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-RELA-GM12878.ipynb) (in progress)
+[~~RELA model training~~](../../RELA/RELA_GM12878_18_08_31/RELA_GM12878_18_08_31.tsv),
+[~~RELA interpretation~~](../../RELA/RELA_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-RELA-GM12878.ipynb) (in progress)
 
 [SPI1 model training](../../SPI1/SPI1_GM12878_18_08_31/SPI1_GM12878_18_08_31.tsv),
 [SPI1 interpretation](../../SPI1/SPI1_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb)
 
 [STAT1 model training](../../STAT1/STAT1_GM12878_18_08_31/STAT1_GM12878_18_08_31.tsv),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-STAT1-GM12878.ipynb)
+
+
+## Modisco Results after finetune on data fed to Homer (in progress)
 
 
 ## Older results with stride 10
