@@ -45,11 +45,13 @@ Hmm, using stride=1 did not deliver major improvements compare to stride=10.
 
 [JUND model validation](../../JUND/JUND_GM12878_18_08_25/JUND_GM12878_18_08_25.tsv), 
 [JUND training details](../../JUND/JUND_GM12878_18_08_25/logs/analyze.txt),
-[JUND interpretation](../../JUND/JUND_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks together
+[JUND interpretation](../../JUND/JUND_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks 
+[JUND bQTL enrichment](../../JUND/JUND_GM12878_18_08_25/modisco.run1/SNP_enrichment.ipynb)
 
 [RELA model validation](../../RELA/RELA_GM12878_18_08_25/RELA_GM12878_18_08_25.tsv), 
 [RELA training details](../../RELA/RELA_GM12878_18_08_25/logs/analyze.txt),
-[RELA interpretation](../../RELA/RELA_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-RELA-GM12878.ipynb)
+[RELA interpretation](../../RELA/RELA_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-RELA-GM12878.ipynb),
+[RELA bQTL enrichment](../../RELA/RELA_GM12878_18_08_25/modisco.run2/SNP_enrichment.ipynb)
 
 [SPI1 model validation](../../SPI1/SPI1_GM12878_18_08_25/SPI1_GM12878_18_08_25.tsv),
 [SPI1 training details](../../SPI1/SPI1_GM12878_18_08_25/logs/analyze.txt),
@@ -58,6 +60,7 @@ Hmm, using stride=1 did not deliver major improvements compare to stride=10.
 
 [STAT1 model validation](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
 [STAT1 training details](../../STAT1/STAT1_GM12878_18_08_25/logs/analyze.txt),
-[STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
+[STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb),
+[STAT1 bQTL enrichment](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/SNP_enrichment.ipynb)
 
 
