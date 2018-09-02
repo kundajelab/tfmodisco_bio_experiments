@@ -11,19 +11,23 @@
 
 ## Modisco Results with stride 1
 
+Hmm, using stride=1 did not deliver improvements.
+
 [Summary single tasks training](single_tasks_18_08_31.tsv)
 
 
-[~~JUND model training~~](../../JUND/JUND_GM12878_18_08_31/JUND_GM12878_18_08_31.tsv), 
+[~~JUND model validation~~](../../JUND/JUND_GM12878_18_08_31/JUND_GM12878_18_08_31.tsv), 
 [~~JUND interpretation~~](../../JUND/JUND_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks merged as one (in progress)
 
-[~~RELA model training~~](../../RELA/RELA_GM12878_18_08_31/RELA_GM12878_18_08_31.tsv),
+[~~RELA model validation~~](../../RELA/RELA_GM12878_18_08_31/RELA_GM12878_18_08_31.tsv),
 [~~RELA interpretation~~](../../RELA/RELA_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-RELA-GM12878.ipynb) (in progress)
 
-[SPI1 model training](../../SPI1/SPI1_GM12878_18_08_31/SPI1_GM12878_18_08_31.tsv),
+[SPI1 model validation](../../SPI1/SPI1_GM12878_18_08_31/SPI1_GM12878_18_08_31.tsv),
+[SPI1 training details](../../SPI1/SPI1_GM12878_18_08_31/logs/analyze.txt),
 [SPI1 interpretation](../../SPI1/SPI1_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb)
 
-[STAT1 model training](../../STAT1/STAT1_GM12878_18_08_31/STAT1_GM12878_18_08_31.tsv),
+[STAT1 model validation](../../STAT1/STAT1_GM12878_18_08_31/STAT1_GM12878_18_08_31.tsv),
+[STAT1 training details](../../STAT1/STAT1_GM12878_18_08_31/logs/analyze.txt),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_31/modisco.run1/tfmodisco-visualization-STAT1-GM12878.ipynb)
 
 
@@ -35,15 +39,19 @@
 [Summary single tasks training](../../bQTL/bQTL_18_08_24/single_tasks_18_08_25.tsv)
 
 
-[JUND model training](../../JUND/JUND_GM12878_18_08_25/JUND_GM12878_18_08_25.tsv), 
+[JUND model validation](../../JUND/JUND_GM12878_18_08_25/JUND_GM12878_18_08_25.tsv), 
+[JUND training details](../../JUND/JUND_GM12878_18_08_25/logs/analyze.txt),
 [JUND interpretation](../../JUND/JUND_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks together
 
-[RELA model training](../../RELA/RELA_GM12878_18_08_25/RELA_GM12878_18_08_25.tsv), 
+[RELA model validation](../../RELA/RELA_GM12878_18_08_25/RELA_GM12878_18_08_25.tsv), 
+[RELA training details](../../RELA/RELA_GM12878_18_08_25/logs/analyze.txt),
 [RELA interpretation](../../RELA/RELA_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-RELA-GM12878.ipynb)
 
-[SPI1 model training](../../SPI1/SPI1_GM12878_18_08_25/SPI1_GM12878_18_08_25.tsv),
+[SPI1 model validation](../../SPI1/SPI1_GM12878_18_08_25/SPI1_GM12878_18_08_25.tsv),
+[SPI1 training details](../../SPI1/SPI1_GM12878_18_08_25/logs/analyze.txt),
 [SPI1 interpretation](../../SPI1/SPI1_GM12878_18_08_25/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb)
 
-[STAT1 model training](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
+[STAT1 model validation](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
+[STAT1 training details](../../STAT1/STAT1_GM12878_18_08_25/logs/analyze.txt),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
 

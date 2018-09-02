@@ -1,0 +1,55 @@
+2018-09-01 06:43:06 INFO  /home/ktian/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs STAT1 --cells GM12878 --test-only True --bg-stride=50
+2018-09-01 06:43:10 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-STAT1-human-ENCSR332EYT-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_fm2rG6/_tmp_GM12878-STAT1-human-ENCSR332EYT-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --bg-stride 50  --background /home/ktian/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-09-01 06:43:10 DEBUG bin-size=200, stride=10
+2018-09-01 06:43:12 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-09-01 06:43:12 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-09-01 06:43:54 INFO  LABEL_REGIONS sort merge done
+2018-09-01 06:44:22 INFO  LABEL_REGIONS intersect done
+2018-09-01 06:44:31 INFO  LABEL_REGIONS labels done
+2018-09-01 06:44:34 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-01 06:44:49 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-STAT1-human-ENCSR332EYT-optimal_idr.narrowPeak.gz
+1
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-09-01 06:44:51.533306: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-01 06:44:51.811073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:87:00.0
+totalMemory: 11.93GiB freeMemory: 11.79GiB
+2018-09-01 06:44:51.811110: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-09-01 06:44:52.126034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-01 06:44:52.126069: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-09-01 06:44:52.126075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-09-01 06:44:52.126404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11420 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:87:00.0, compute capability: 5.2)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/valid.tsv.gz into memory
+Finished reading bed file into memory; got 4863768rows
+using pyfasta
+done prediction on batch  1000
+done prediction on batch  2000
+done prediction on batch  3000
+done prediction on batch  4000
+done prediction on batch  5000
+done prediction on batch  6000
+done prediction on batch  7000
+done prediction on batch  8000
+done prediction on batch  9000
+done prediction on batch  10000
+done prediction on batch  11000
+done prediction on batch  12000
+done prediction on batch  13000
+done prediction on batch  14000
+done prediction on batch  15000
+done prediction on batch  16000
+done prediction on batch  17000
+done prediction on batch  18000
+done prediction on batch  19000
+done prediction on batch  20000
+done prediction on batch  21000
+done prediction on batch  22000
+done prediction on batch  23000
+done prediction on batch  24000
+done prediction on batch  24318

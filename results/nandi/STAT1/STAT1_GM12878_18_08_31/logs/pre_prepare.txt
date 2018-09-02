@@ -1,0 +1,11 @@
+2018-09-01 04:56:37 INFO  /home/ktian/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs STAT1 --cells GM12878 --no-bg True --stride 1
+2018-09-01 04:56:40 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-STAT1-human-ENCSR332EYT-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_c5_vxI/_tmp_GM12878-STAT1-human-ENCSR332EYT-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 1
+2018-09-01 04:56:40 DEBUG bin-size=200, stride=1
+2018-09-01 04:56:42 DEBUG in: skip_test=0 bin-size=200, stride=1
+2018-09-01 04:56:44 INFO  LABEL_REGIONS sort merge done
+2018-09-01 04:56:50 INFO  LABEL_REGIONS intersect done
+2018-09-01 04:56:52 INFO  LABEL_REGIONS labels done
+2018-09-01 04:56:53 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-01 04:56:54 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-STAT1-human-ENCSR332EYT-optimal_idr.narrowPeak.gz
+1
