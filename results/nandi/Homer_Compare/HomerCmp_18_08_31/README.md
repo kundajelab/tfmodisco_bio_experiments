@@ -2,7 +2,7 @@
 
 ## Homer Results 
 
-positives are created using 1k-surround the summits, negatives are subselected from 500k randomly chosen 1k regions on the genome with dinuc frequencies match the positives. Target neg:pos ratio set to 1.5, but after removing the duplicates, this ratio is lower.
+positives are created using 1k-surround the summits, negatives are subselected from 500k randomly chosen 1k regions on the genome with dinuc frequencies matching the positives using Anna's gen_dinucleotide_freqs.py. Target neg:pos ratio set to 1.5, but after removing the duplicates, this ratio is lower.
 
 [JUND_Homer](https://github.com/kundajelab/tfmodisco_bio_experiments/blob/master/results/nandi/JUND/JUND_GM12878_HOMER_18_08_31/homer/homer_out/homerResults.html)
 
