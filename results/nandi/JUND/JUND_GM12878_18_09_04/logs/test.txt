@@ -1,0 +1,31 @@
+2018-09-04 23:13:54 INFO  /home/ktian/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs JUND --cells GM12878 --data-dir /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks/ --test-only True --bg-stride=50
+2018-09-04 23:13:54 INFO  dataDir=/home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//
+2018-09-04 23:13:54 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//GM12878-JUND-human-Merged-optimal_idr.narrowPeak.gz --ambiguous /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//GM12878-JUND-human-Merged-rep1.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --bg-stride 50  --background /home/ktian/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-09-04 23:13:54 DEBUG bin-size=200, stride=10
+2018-09-04 23:14:00 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-09-04 23:14:00 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-09-04 23:14:39 INFO  LABEL_REGIONS sort merge done
+2018-09-04 23:15:05 INFO  LABEL_REGIONS intersect done
+2018-09-04 23:15:13 INFO  LABEL_REGIONS labels done
+2018-09-04 23:15:15 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-04 23:15:31 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks/GM12878-JUND-human-Merged-optimal_idr.narrowPeak.gz
+1
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-09-04 23:15:34.072885: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-04 23:15:34.511571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:08:00.0
+totalMemory: 11.93GiB freeMemory: 11.33GiB
+2018-09-04 23:15:34.511616: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-09-04 23:15:34.904837: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-04 23:15:34.904874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-09-04 23:15:34.904881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-09-04 23:15:34.905240: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10971 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:08:00.0, compute capability: 5.2)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/valid.tsv.gz into memory
+Finished reading bed file into memory; got 4863768rows
+using pyfasta
