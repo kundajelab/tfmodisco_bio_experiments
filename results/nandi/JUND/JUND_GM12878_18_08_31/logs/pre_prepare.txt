@@ -1,0 +1,12 @@
+2018-09-01 17:19:08 INFO  /home/ktian/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs JUND --cells GM12878 --data-dir /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks/ --no-bg True --stride 1
+2018-09-01 17:19:08 INFO  dataDir=/home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//
+2018-09-01 17:19:08 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//GM12878-JUND-human-Merged-optimal_idr.narrowPeak.gz --ambiguous /home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks//GM12878-JUND-human-Merged-rep1.narrowPeak.gz --genome hg19 --prefix label  --stride 1
+2018-09-01 17:19:08 DEBUG bin-size=200, stride=1
+2018-09-01 17:19:15 DEBUG in: skip_test=0 bin-size=200, stride=1
+2018-09-01 17:19:15 INFO  LABEL_REGIONS sort merge done
+2018-09-01 17:19:18 INFO  LABEL_REGIONS intersect done
+2018-09-01 17:19:19 INFO  LABEL_REGIONS labels done
+2018-09-01 17:19:20 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-01 17:19:20 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/results/nandi/JUND/merged_peaks/GM12878-JUND-human-Merged-optimal_idr.narrowPeak.gz
+1
