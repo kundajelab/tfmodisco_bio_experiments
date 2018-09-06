@@ -24,3 +24,14 @@ deeplift+modisco on train+valid set
 [STAT1 model training](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
 
+## bQTL multi-task model, yet single task interpretation: run tfmodisco on only the deeplift scores for that task:
+[interpretation task1](modisco_task1/tfmodisco-visualization-bQTL-GM12878-JUND.ipynb) deeplift+modisco task1 (JUND)
+
+[interpretation task2](modisco_task2/tfmodisco-visualization-bQTL-GM12878i-RELA.ipynb) deeplift+modisco task2 (RELA)
+
+[interpretation task3](modisco_task3/tfmodisco-visualization-bQTL-GM12878.ipynb) deeplift+modisco task3 (SPI1)
+
+[interpretation task4](modisco_task4/tfmodisco-visualization-bQTL-GM12878.ipynb) deeplift+modisco task4 (STAT1)
+
+
+
