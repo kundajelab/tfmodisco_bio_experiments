@@ -1,0 +1,229 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9575056309640075,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_BOaA7_modelWeights.h5",
+            "json_file": "model_files/record_1_model_BOaA7_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_BOaA7"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for STAT1, 1 tasks, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9575056309640075,
+            "best_valid_perf_info": {
+                "epoch": 12,
+                "valid_key_metric": 0.9575056309640075,
+                "train_key_metric": 0.9918309944481347,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9617740456254262,
+                    0.9419008645502732
+                ],
+                [
+                    0.9779476163317203,
+                    0.9510548265887313
+                ],
+                [
+                    0.9824549700835626,
+                    0.9493249511389577
+                ],
+                [
+                    0.9850080862380981,
+                    0.9497690183620208
+                ],
+                [
+                    0.98788116277985,
+                    0.9485351451439685
+                ],
+                [
+                    0.9879567135576743,
+                    0.9489621388474304
+                ],
+                [
+                    0.9891242262133334,
+                    0.9505390212725796
+                ],
+                [
+                    0.9912816493072603,
+                    0.9555021853372321
+                ],
+                [
+                    0.9912578743924131,
+                    0.952655798797438
+                ],
+                [
+                    0.9912852953554321,
+                    0.9540687149809656
+                ],
+                [
+                    0.9915409361739329,
+                    0.9559636100279155
+                ],
+                [
+                    0.9918309944481347,
+                    0.9575056309640075
+                ],
+                [
+                    0.9925930807364395,
+                    0.9554107174366213
+                ],
+                [
+                    0.9931013375768241,
+                    0.9509571026720864
+                ],
+                [
+                    0.99418076245559,
+                    0.9488623906561977
+                ],
+                [
+                    0.9949925018481559,
+                    0.9478841714111021
+                ],
+                [
+                    0.9935037900503086,
+                    0.9457895601509622
+                ],
+                [
+                    0.9941462368268312,
+                    0.9486568397691953
+                ],
+                [
+                    0.9944584328200343,
+                    0.9511059463917865
+                ],
+                [
+                    0.9950461014807851,
+                    0.944068413812873
+                ],
+                [
+                    0.9952800283221613,
+                    0.9545459858030387
+                ],
+                [
+                    0.9958854330757143,
+                    0.9448742216526815
+                ],
+                [
+                    0.9948378212742667,
+                    0.9510332648585051
+                ],
+                [
+                    0.9955263332894577,
+                    0.9489341837069674
+                ],
+                [
+                    0.9959941080348469,
+                    0.9494435498148146
+                ],
+                [
+                    0.995521135480407,
+                    0.9489523472205775
+                ],
+                [
+                    0.9958312859286035,
+                    0.9536038371159852
+                ],
+                [
+                    0.9963265152387161,
+                    0.952731383928205
+                ],
+                [
+                    0.9965938665274896,
+                    0.9519052967040633
+                ],
+                [
+                    0.9965864453385493,
+                    0.9523184227526558
+                ],
+                [
+                    0.9966872828485503,
+                    0.9548919169268486
+                ],
+                [
+                    0.996312285723501,
+                    0.9502569326550042
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_BOaA7_modelWeights.h5",
+                "json_file": "model_files/record_1_model_BOaA7_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_BOaA7"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 32
+            }
+        }
+    ]
+}

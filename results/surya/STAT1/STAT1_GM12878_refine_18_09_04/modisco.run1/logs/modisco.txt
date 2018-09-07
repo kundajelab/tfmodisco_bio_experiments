@@ -1,0 +1,564 @@
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+2018-09-07 01:45:44 INFO  /home/ktian/kundajelab/tfnet//scripts/run_tfmodisco.py --scores scores/hyp_scores_task_ --fasta interpret.fa --tsv interpret.tsv --start-task 0 --end-task 1 --fdr 0.25
+2018-09-07 01:45:44 DEBUG Theano version:1.0.2
+2018-09-07 01:45:44 DEBUG 2.7.13 |Continuum Analytics, Inc.| (default, Dec 20 2016, 23:09:15) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+2018-09-07 01:45:44 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is interpret.fa, input tsv is interpret.tsv, start_task is 0 end_task is 1, fdr is 0.250000
+2018-09-07 01:45:44 DEBUG lenth of sequences = 9043
+2018-09-07 01:45:45 DEBUG merged overlaps based on in_tsv interpret.tsv, 9043 seqs merged into 7839 seqs, max len 1164
+2018-09-07 01:45:46 DEBUG shape of hyp_score (400, 4)
+2018-09-07 01:45:46 DEBUG shape of score (400, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-09-07 01:45:59 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-09-07 01:45:59 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-09-07 01:45:59 DEBUG backend agg version v2.2
+2018-09-07 01:46:00 DEBUG findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+peak(mu)= 0.7503761091499472
+Manually adjusting thresholds to get desired num seqlets
+Mu: 7.503761e-01 +/- 5.527278e-06
+Lablace_b: 0.6622635893057945 and 0.7773091504847629
+Thresholds: -3.3275188021367654 and 4.8282710204366595
+#fdrs pass: 0 and 0
+CDFs: 0.9978824814234745 and 0.9947323380564832
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_0.png
+Got 569 coords
+After resolving overlaps, got 569 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.9947323380564832
+569 identified in total
+1 activity patterns with support >= 100 out of 3 possible patterns
+Metacluster sizes:  [569]
+Idx to activities:  {0: '1'}
+On metacluster 0
+Metacluster size 569
+Relevant tasks:  ('task0',)
+Relevant signs:  (1,)
+TfModiscoSeqletsToPatternsFactory: seed=1234
+(Round 1) num seqlets: 569
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 24.3 s
+Starting affinity matrix computations
+Normalization computed in 0.4 s
+Cosine similarity mat computed in 0.77 s
+Normalization computed in 0.41 s
+Cosine similarity mat computed in 0.65 s
+Finished affinity matrix computations in 1.45 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.02 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+WARNING (theano.configdefaults): install mkl with `conda install mkl-service`: No module named mkl
+Job completed in: 19.33 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 16.32 s
+(Round 1) Computed affinity matrix on nearest neighbors in 36.57 s
+Filtered down to 569 of 569
+(Round 1) Retained 569 rows out of 569 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 569 samples in 0.000s...
+[t-SNE] Computed neighbors for 569 samples in 0.006s...
+[t-SNE] Computed conditional probabilities for sample 569 / 569
+[t-SNE] Mean sigma: 0.180561
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.0257470607758 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:    1.1s finished
+Louvain completed 200 runs in 1.34567308426 seconds
+Wrote graph to binary file in 0.0725998878479 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.695238
+After 2 runs, maximum modularity is Q = 0.695853
+After 17 runs, maximum modularity is Q = 0.701457
+Louvain completed 67 runs in 2.52113699913 seconds
+Preproc + Louvain took 3.99743008614 s
+Got 7 clusters after round 1
+Counts:
+{0: 134, 1: 120, 2: 113, 3: 105, 4: 58, 5: 20, 6: 19}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 134 seqlets
+Trimmed 10 out of 134
+Aggregating for cluster 1 with 120 seqlets
+Trimmed 5 out of 120
+Aggregating for cluster 2 with 113 seqlets
+Trimmed 8 out of 113
+Aggregating for cluster 3 with 105 seqlets
+Trimmed 5 out of 105
+Aggregating for cluster 4 with 58 seqlets
+Trimmed 3 out of 58
+Skipped 1 seqlets
+Aggregating for cluster 5 with 20 seqlets
+Trimmed 0 out of 20
+Aggregating for cluster 6 with 19 seqlets
+Trimmed 0 out of 19
+(Round 2) num seqlets: 537
+(Round 2) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 29.58 s
+Starting affinity matrix computations
+Normalization computed in 0.37 s
+Cosine similarity mat computed in 0.62 s
+Normalization computed in 0.36 s
+Cosine similarity mat computed in 0.57 s
+Finished affinity matrix computations in 1.23 s
+(Round 2) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.03 s
+(Round 2) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 22.82 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 22.88 s
+(Round 2) Computed affinity matrix on nearest neighbors in 46.66 s
+Not applying filtering for rounds above first round
+(Round 2) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 537 samples in 0.000s...
+[t-SNE] Computed neighbors for 537 samples in 0.005s...
+[t-SNE] Computed conditional probabilities for sample 537 / 537
+[t-SNE] Mean sigma: 0.176712
+(Round 2) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.0250577926636 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:    1.1s finished
+Louvain completed 200 runs in 1.38898491859 seconds
+Wrote graph to binary file in 0.0978920459747 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.668773
+Louvain completed 51 runs in 2.66856622696 seconds
+Preproc + Louvain took 4.20686793327 s
+Got 8 clusters after round 2
+Counts:
+{0: 97, 1: 90, 2: 88, 3: 70, 4: 69, 5: 59, 6: 42, 7: 22}
+(Round 2) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 97 seqlets
+Trimmed 10 out of 97
+Aggregating for cluster 1 with 90 seqlets
+Trimmed 0 out of 90
+Aggregating for cluster 2 with 88 seqlets
+Trimmed 10 out of 88
+Aggregating for cluster 3 with 70 seqlets
+Trimmed 0 out of 70
+Aggregating for cluster 4 with 69 seqlets
+Trimmed 1 out of 69
+Aggregating for cluster 5 with 59 seqlets
+Trimmed 1 out of 59
+Aggregating for cluster 6 with 42 seqlets
+Trimmed 0 out of 42
+Aggregating for cluster 7 with 22 seqlets
+Trimmed 1 out of 22
+Got 8 clusters
+Splitting into subclusters...
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00643801689148 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00199608
+Louvain completed 21 runs in 0.620468139648 seconds
+Similarity is 0.9609303711041217; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00858521461487 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00277137
+After 2 runs, maximum modularity is Q = 0.00343151
+Louvain completed 22 runs in 0.627988815308 seconds
+Similarity is 0.9390600909390969; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00550103187561 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.0028431
+Louvain completed 21 runs in 0.53414106369 seconds
+Similarity is 0.9342467155539393; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00490999221802 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00237528
+After 2 runs, maximum modularity is Q = 0.00341276
+After 5 runs, maximum modularity is Q = 0.00341277
+Louvain completed 25 runs in 0.611351013184 seconds
+Similarity is 0.9400958407129685; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00421500205994 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.000651002
+After 2 runs, maximum modularity is Q = 0.0012095
+After 3 runs, maximum modularity is Q = 0.00126837
+After 5 runs, maximum modularity is Q = 0.001355
+After 11 runs, maximum modularity is Q = 0.00144924
+After 22 runs, maximum modularity is Q = 0.00144925
+Louvain completed 42 runs in 1.10220003128 seconds
+Similarity is 0.9562504652187944; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00317692756653 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00247504
+After 5 runs, maximum modularity is Q = 0.002506
+Louvain completed 25 runs in 0.720142126083 seconds
+Similarity is 0.9505293276191957; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00211000442505 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00347435
+After 14 runs, maximum modularity is Q = 0.00347436
+Louvain completed 34 runs in 0.661562919617 seconds
+Similarity is 0.9211529928888942; is_dissimilar is False
+Merging on 8 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Collapsing 3 & 4 with prob 2.454902716190621e-05 and sim 0.9777879864719853
+Collapsing 0 & 6 with prob 5.625842390852571e-06 and sim 0.954598514012944
+Collapsing 3 & 6 with prob 2.9562599558478666e-05 and sim 0.9527665512868578
+Collapsing 3 & 5 with prob 4.314389956397984e-06 and sim 0.950789717006177
+Collapsing 2 & 5 with prob 6.518579513663586e-06 and sim 0.9483928908046587
+Collapsing 4 & 6 with prob 2.835996782778887e-06 and sim 0.9480307942425248
+Collapsing 1 & 2 with prob 1.4196155277773291e-05 and sim 0.9472421834727874
+Collapsing 0 & 4 with prob 3.2244294142481474e-06 and sim 0.9454034462783637
+Collapsing 1 & 5 with prob 2.5568495031183207e-06 and sim 0.9370372222362872
+Collapsing 0 & 2 with prob 2.1634271553315586e-06 and sim 0.9359148471542083
+Collapsing 4 & 5 with prob 6.1761849652010134e-06 and sim 0.9347928617149931
+Collapsing 0 & 3 with prob 4.631812290488826e-06 and sim 0.9183198398835266
+Trimmed 0 out of 138
+Trimmed 0 out of 129
+Trimmed 0 out of 267
+Trimmed 0 out of 325
+Trimmed 3 out of 403
+Trimmed 0 out of 490
+On merging iteration 2
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 2 patterns after merging
+Performing seqlet reassignment
+Cross contin jaccard time taken: 0.31 s
+Cross contin jaccard time taken: 0.31 s
+Got 1 patterns after reassignment
+Total time taken is 165.01s
+2018-09-07 01:48:52 DEBUG **************** workflow done *********************
+2018-09-07 01:48:52 DEBUG **************** result saved *********************
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90763264
+90812416
+90861568
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90849280
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90861568
+90865664
+91324416
+92717056
+92717056
+93421568
+93421568
+93425664
+93446144
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90722304
+90771456
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90808320
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90816512
+90820608
+91303936
+91303936
+92672000
+92672000
+93380608
+93380608
+93380608
+91369472
+90935296
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+90927104
+91316224
+91009024
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91037696
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91009024
+91295744
+91512832
+92876800
+92876800
+93392896
+93589504
+93650944
+93650944
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90750976
+90804224
+90836992
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90845184
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+90836992
+91119616
+91336704
+92667904
+92704768
+93388800
+93388800
+93433856
+93433856
