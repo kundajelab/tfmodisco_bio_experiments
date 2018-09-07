@@ -5,4 +5,4 @@ we take multi-cell-line model [RELA_18_09_03](../RELA_18_09_03), refine on the s
 - [validation result](RELA_GM12878_18_09_04.tsv)
 - [traning details](logs/analyze.txt)
 - [interpretation 1](modisco.run1/tfmodisco-visualization-RELA-GM12878.ipynb) fdr=0.01
-- [interpretation 2](modisco.run1/tfmodisco-visualization-RELA-GM12878.ipynb) fdr=0.25
+- [interpretation 2](modisco.run2/tfmodisco-visualization-RELA-GM12878.ipynb) fdr=0.25
