@@ -8,7 +8,7 @@
 
 ## bQTL single-task models
 
-deeplift+modisco on train+valid set
+deeplift+modisco on 1k surround summit
 
 [Summary single tasks training](single_tasks_18_08_25.tsv)
 
@@ -23,6 +23,30 @@ deeplift+modisco on train+valid set
 
 [STAT1 model training](../../STAT1/STAT1_GM12878_18_08_25/STAT1_GM12878_18_08_25.tsv),
 [STAT1 interpretation](../../STAT1/STAT1_GM12878_18_08_25/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
+
+
+## bQTL multi-task model refined on single-task data
+
+
+deeplift+modisco on 1k surround summit
+
+[Summary refine tasks training](refine_tasks_18_09_04.tsv)
+
+[JUND model training](../../JUND/JUND_GM12878_refine_18_09_04/JUND_GM12878_refine_18_09_04.tsv), 
+[JUND interpretation](../../JUND/JUND_GM12878_refine_18_09_04/modisco.run1/tfmodisco-visualization-JUND-GM12878.ipynb) two tasks together
+[JUND SNP enrichment](../../JUND/JUND_GM12878_refine_18_09_04/modisco.run1/SNP_enrichment.ipynb)
+
+[RELA model training](../../RELA/RELA_GM12878_refine_18_09_04/RELA_GM12878_refine_18_09_04.tsv), 
+[RELA interpretation](../../RELA/RELA_GM12878_refine_18_09_04/modisco.run2/tfmodisco-visualization-RELA-GM12878.ipynb)
+[RELA SNP enrichment](../../RELA/RELA_GM12878_refine_18_09_04/modisco.run1/SNP_enrichment.ipynb)
+
+[SPI1 model training](../../SPI1/SPI1_GM12878_refine_18_09_04/SPI1_GM12878_refine_18_09_04.tsv),
+[SPI1 interpretation](../../SPI1/SPI1_GM12878_refine_18_09_04/modisco.run1/tfmodisco-visualization-SPI1-GM12878.ipynb)
+[SPI1 SNP enrichment](../../SPI1/SPI1_GM12878_refine_18_09_04/modisco.run1/SNP_enrichment.ipynb)
+
+[STAT1 model training](../../STAT1/STAT1_GM12878_refine_18_09_04/STAT1_GM12878_refine_18_09_04.tsv),
+[STAT1 interpretation](../../STAT1/STAT1_GM12878_refine_18_09_04/modisco.run2/tfmodisco-visualization-STAT1-GM12878.ipynb)
+[STAT1 SNP enrichment](../../STAT1/STAT1_GM12878_refine_18_09_04/modisco.run1/SNP_enrichment.ipynb)
 
 ## bQTL multi-task model, yet single task interpretation: run tfmodisco on only the deeplift scores for that task:
 [interpretation task1](modisco_task1/tfmodisco-visualization-bQTL-GM12878-JUND.ipynb) deeplift+modisco task1 (JUND)
