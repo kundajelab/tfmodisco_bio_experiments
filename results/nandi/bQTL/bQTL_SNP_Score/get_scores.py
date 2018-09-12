@@ -76,7 +76,7 @@ def get_snp_scores(score_file):
     onehot = fasta_to_onehot("interpret.fa")
     snp_onehot = [one_seq[off] for one_seq in onehot]
     print("onehot done ", len(onehot), snp_onehot[0].shape)
-    print("onehot[:5]=\n", snp_onehot[:5])
+    #print("onehot[:5]=\n", snp_onehot[:5])
 
     snp_scores = []
     for i in range(len(hyp_scores)):
@@ -85,6 +85,31 @@ def get_snp_scores(score_file):
     print("snp_scores done ", len(snp_scores))
     print(snp_scores[:5])
     return snp_scores
+
+def get_snp_score_diff(score_file):
+    hyp_scores = np.load(score_file)
+    off = int((1000-1)/2)
+    snp_hyp = hyp_scores[:, off]
+
+    print("snp_hyp shape=", snp_hyp.shape)
+    print("snp_hyp[:5]=\n", snp_hyp[:5])
+
+    onehot = fasta_to_onehot("interpret.fa")
+    snp_onehot = [one_seq[off] for one_seq in onehot]
+    print("onehot done ", len(onehot), snp_onehot[0].shape)
+    print("onehot[:5]=\n", snp_onehot[:5])
+
+    diff_scores = []
+    for i in range(len(hyp_scores)):
+        snp_score = snp_hyp[i] * snp_onehot[i]
+        diff      = snp_hyp[i] - snp_score
+        max_diff  = np.max(np.abs(diff), axis=-1)
+        #print(diff.shape, max_diff.shape)
+
+        diff_scores.append(max_diff)
+    print("diff_scores done ", len(diff_scores))
+    print(diff_scores[:5])
+    return diff_scores
 
 
 from numpy import genfromtxt
@@ -105,7 +130,7 @@ def get_snp_pvals(fname):
     return snp_pvals
 
 
-snp_scores = get_snp_scores("scores/hyp_scores_task_0.npy")
+diff_scores = get_snp_score_diff("scores/hyp_scores_task_0.npy")
 #snp_dir = "/Users/kat/kundajelab/tmp/bQTL/bQTL_all_SNPs/"
 snp_dir  = "/home/ktian/kundajelab/tfnet/results/nandi/bQTL/analysis/bQTL_all_SNPs/"
 snp_file = "SPI1_10k.txt"
@@ -113,7 +138,7 @@ snp_file = "SPI1_10k.txt"
 snp_pvals = get_snp_pvals(snp_dir + snp_file)
 
 print(len(snp_pvals))
-print(len(snp_scores))
+print(len(diff_scores))
 
 #%matplotlib inline
 tf = 'SPI1'
@@ -126,13 +151,13 @@ from scipy.stats import gaussian_kde
 
 #fig=plt.figure(figsize=(10, 8), dpi= 100)
 
-x=snp_scores
+x=diff_scores
 y=snp_pvals
 xy = np.vstack([x,y])
 z = gaussian_kde(xy)(xy)
 
-plt.scatter(snp_scores, snp_pvals, 1, c=z, alpha=1, marker='o', label=".")
-plt.xlabel("deeplift scores")
+plt.scatter(x, y, 1, c=z, alpha=1, marker='o', label=".")
+plt.xlabel("deeplift score diff")
 plt.ylabel("SNP -log10(pval)")
 plt.colorbar(label='density (low to high)')
 
