@@ -1,4 +1,4 @@
-Training data were SPI1 multi-task using union of positives
+Training data were SPI1 multi-task using union of positives, prepared using stride 10, then downsampled by 1/10th.
 
 actual hyper parameter value after consulting space:
 
