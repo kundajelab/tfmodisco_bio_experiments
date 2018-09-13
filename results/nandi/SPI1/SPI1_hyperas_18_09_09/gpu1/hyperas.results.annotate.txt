@@ -1,6 +1,13 @@
 Training data were SPI1 multi-task using union of positives, prepared with stride 10, then downsampled to 1/10th.
 
-actual parameter value after consulting space:
+The best model is very simple:
+- it has one conv layer that has 50 filters of width 19, followed by batchnorm + reLu activation
+- then a max_pooling layer with pool_size 60
+- then output layer with 4 neurons + sigmoid activation
+- loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam, metrics=['accuracy']
+- achieved validation loss 0.4042, testing loss 0.4365
+
+actual parameter value of the best model after consulting search space:
 {'kernel_size1': 2=19, 'n_conv_1(n_dense)': 0=0, 'Dense': 0=50, 'Dropout': 2=0.6, 'n_conv': 0=0, 'lr': 0=0.01, 'filters': 0=50, 'filters_1': 3=500, 'filters_2(pool_size)': 2=60}
 ╒════════════╤═════════════╤═════════╤══════╤════════════╤═══════╤══════╤════════╤══════════╤══════════╕
 │       loss │kernel_size1 │n_conv_1 │Dense │    Dropout │n_conv │   lr │filters │filters_1 │filters_2 │

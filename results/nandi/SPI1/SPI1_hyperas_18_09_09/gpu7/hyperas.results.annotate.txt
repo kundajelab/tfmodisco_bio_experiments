@@ -1,6 +1,20 @@
 Training data were SPI1 multi-task using union of positives, prepared using stride 10, then downsampled to 1/10th.
 
-actual hyper parameter value after consulting space:
+The best model is fairly close to what we are using right now:
+- 3 conv layers
+  conv1d: 1000 filters of width 15, followed by batchnorm + reLu activation
+  conv1d:  250 filters of width 15, followed by batchnorm + reLu activation
+  conv1d:  250 filters of width 13, followed by batchnorm + reLu activation
+- max_pooling layer with pool_size 10
+- then 3 dense layers
+  dense: 50 neurons, followed by batchnorm + reLu activation + dropout (0.6)
+  dense: 50 neorons, followed by batchnorm + reLu activation + dropout (0.6)
+  dense: 50 neorons, followed by batchnorm + reLu activation + dropout (0.6)
+- output layer: 4 neorons, followed by sigmoid activation
+- loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam, metrics=['accuracy'] 
+- achieved validation loss 0.4665, testing loss 0.5096
+
+actual hyper parameter value of the best model after consulting search space:
 
 {'kernel_size1': 1=15, 'n_conv_1(n_dense)': 3=3, 'Dense': 0=50, 'Dropout': 2=0.6, 'n_conv': 2=2, 'lr': 1=0.001, 'filters': 4=1000, 'filters_1': 2=250, 'filters_2(pool_size)': 0=10}
 
