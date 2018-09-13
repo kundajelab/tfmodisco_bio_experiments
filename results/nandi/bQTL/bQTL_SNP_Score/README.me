@@ -1,0 +1,12 @@
+1. use snp_to_bed.py to generate the interpret.tsv, 1k surrounding the SNP, use bedtool to get fasta.
+2. gen_allele.py: take interpret.fa (symlink to .fa0), generate 3 other alleles: .fa1, .fa2, .fa3. If the neocleaotide at SNP position is C, the 3 alleles would be A, G, T
+3. use deeplift to generate scores/hyp_scores_task_0.npy0 - .npy3, which correspond to .fa0 - .fa3
+4. get_scores.py: take the scores and the sequences, calculate various scores and try to correlate to SNP p-values.
+
+---
+deeplift_hyp_score_diff_vs_pval.png: hypothetical score difference between reference and allele, vs pval
+deeplift_score_vs_pval_1k.png: contribution score obtained by hyp_score * onehot, vs pval. Used 1k surrounding SNP
+deeplift_score_vs_pval_41.png: contribution score obtained by hyp_score * onehot, vs pval. Used 41 surrounding SNP
+
+sub_array_sum_vs_pval.png      calcuate the difference between reference (.npy0) and 3 alleles (.npy1 through .npy3), using sub_array_sum to calculate the score, then select the elementwise max among 3 alleles. 
+center_window_sum_21.png       sum up the differences in the window centered at SNP with size 21. Similarly for _11.png and _1.png which used different window sizes.

@@ -6,6 +6,8 @@ def debug_signal_handler(signal, frame):
 import signal
 signal.signal(signal.SIGINT, debug_signal_handler)
 
+seq_size = 1000
+
 def one_hot_encode_along_channel_axis(sequence):
     #theano dim ordering, uses row axis for one-hot
     to_return = np.zeros((len(sequence),4), dtype=np.int8)
@@ -64,40 +66,58 @@ def fasta_to_onehot(input_name):
         onehot.append(onehot_seq)
     return onehot
 
-
-def get_snp_scores(score_file):
-    hyp_scores = np.load("scores/hyp_scores_task_0.npy")
-    off = int((1000-1)/2)
+# could be optimized, don't need onehot
+'''
+def get_snp_scores(score_file, seq_file):
+    hyp_scores = np.load(score_file)
+    hyp_scores = hyp_scpres[:100]
+    off = int((seq_size-1)/2)
     snp_hyp = hyp_scores[:, off]
 
-    print("snp_hyp shape=", snp_hyp.shape)
-    print("snp_hyp[:5]=\n", snp_hyp[:5])
+    #print("snp_hyp shape=", snp_hyp.shape)
+    #print("snp_hyp[:5]=\n", snp_hyp[:5])
 
-    onehot = fasta_to_onehot("interpret.fa")
+    onehot = fasta_to_onehot(seq_file)
     snp_onehot = [one_seq[off] for one_seq in onehot]
-    print("onehot done ", len(onehot), snp_onehot[0].shape)
+    #print("onehot done ", len(onehot), snp_onehot[0].shape)
     #print("onehot[:5]=\n", snp_onehot[:5])
 
     snp_scores = []
     for i in range(len(hyp_scores)):
         snp_score = snp_hyp[i] * snp_onehot[i]
-        snp_scores.append(abs(np.sum(snp_score)))
+        snp_scores.append(np.sum(snp_score))
     print("snp_scores done ", len(snp_scores))
     print(snp_scores[:5])
     return snp_scores
-
-def get_snp_score_diff(score_file):
+'''
+def get_imp_scores(score_file, seq_file):
     hyp_scores = np.load(score_file)
-    off = int((1000-1)/2)
+    onehot = fasta_to_onehot(seq_file)
+    #hyp_scores = hyp_scores[:10]
+    #onehot     = onehot[:10]
+    #print("onehot done ", len(onehot))
+    #print("onehot[:5]=\n", onehot[:5])
+
+    imp_scores = []
+    for i in range(len(hyp_scores)):
+        contrib_score = hyp_scores[i] * onehot[i]
+        imp_scores.append(np.sum(contrib_score, axis=-1))
+    #print("imp_scores shape=", imp_scores[0].shape, len(imp_scores))
+    #print(imp_scores[:2][:5])
+    return imp_scores
+
+def get_snp_hyp_score_diff(score_file, seq_file):
+    hyp_scores = np.load(score_file)
+    off = int((seq_size-1)/2)
     snp_hyp = hyp_scores[:, off]
 
     print("snp_hyp shape=", snp_hyp.shape)
-    print("snp_hyp[:5]=\n", snp_hyp[:5])
+    #print("snp_hyp[:5]=\n", snp_hyp[:5])
 
-    onehot = fasta_to_onehot("interpret.fa")
+    onehot = fasta_to_onehot(seq_file)
     snp_onehot = [one_seq[off] for one_seq in onehot]
     print("onehot done ", len(onehot), snp_onehot[0].shape)
-    print("onehot[:5]=\n", snp_onehot[:5])
+    #print("onehot[:2]=\n", snp_onehot[:2][:5])
 
     diff_scores = []
     for i in range(len(hyp_scores)):
@@ -108,8 +128,59 @@ def get_snp_score_diff(score_file):
 
         diff_scores.append(max_diff)
     print("diff_scores done ", len(diff_scores))
-    print(diff_scores[:5])
+    #print(diff_scores[:5])
     return diff_scores
+
+def max_sub_array_sum(a, size): 
+      
+    max_so_far = 0
+    max_ending_here = 0
+      
+    for i in range(0, size): 
+        max_ending_here = max_ending_here + a[i] 
+        if max_ending_here < 0: 
+            max_ending_here = 0
+          
+        # Do not compare for all elements. Compare only    
+        # when  max_ending_here > 0 
+        elif (max_so_far < max_ending_here): 
+            max_so_far = max_ending_here 
+              
+    return max_so_far 
+
+def center_window_sum(a, size):
+    off = int((seq_size-1)/2)
+    win = 1
+    start = off - int(win/2)
+    end   = off + int(win/2) + 1
+    score = sum(a[start:end])
+    return score
+
+def calc_bis_score(a, size):
+    #return max_sub_array_sum(a, size)
+    return center_window_sum(a, size)
+
+snp_alleles = {}
+snp_diffs   = {}
+def get_diff_scores(score_prefix, seq_prefix):
+    snp_orig = get_imp_scores(score_prefix + "0", seq_prefix + "0") # (10k, 1000)
+    print("snp_orig shape=", snp_orig[0].shape, len(snp_orig))
+    for i in range(3):
+        snp_allele  = get_imp_scores(score_prefix + str(i+1), seq_prefix + str(i+1)) # (10k, 1000)
+        snp_diff    = [o - s for o,s in zip(snp_orig, snp_allele)] # (10k, 1000)
+        snp_alleles[i] = snp_allele
+        snp_diffs  [i] = snp_diff
+        print("snp_diff " + str(i+1) + " shape=", snp_diff[0].shape) #, "\n" , snp_diff[:2][:5])
+    return snp_diffs
+        
+bis_scores  = {}
+def get_bis_scores(snp_diffs):
+    for i in range(3):
+        bis_scores[i] = [calc_bis_score(diff, len(diff)) for diff in snp_diffs[i]]
+    # elementwise max among 3 lists
+    max_bis_score = np.maximum.reduce([bis_scores[0], bis_scores[1], bis_scores[2]])
+    print("len of max_bis_score=", len(max_bis_score), "\n", max_bis_score[:5])
+    return max_bis_score
 
 
 from numpy import genfromtxt
@@ -130,15 +201,19 @@ def get_snp_pvals(fname):
     return snp_pvals
 
 
-diff_scores = get_snp_score_diff("scores/hyp_scores_task_0.npy")
+#diff_scores = get_snp_hyp_score_diff("scores/hyp_scores_task_0.npy")
+snp_diffs  = get_diff_scores("scores/hyp_scores_task_0.npy", "scores/interpret.fa")
+bis_scores = get_bis_scores(snp_diffs)
+
+
+
 #snp_dir = "/Users/kat/kundajelab/tmp/bQTL/bQTL_all_SNPs/"
 snp_dir  = "/home/ktian/kundajelab/tfnet/results/nandi/bQTL/analysis/bQTL_all_SNPs/"
 snp_file = "SPI1_10k.txt"
-
 snp_pvals = get_snp_pvals(snp_dir + snp_file)
 
-print(len(snp_pvals))
-print(len(diff_scores))
+#print(len(snp_pvals))
+#print(len(bis_scores))
 
 #%matplotlib inline
 tf = 'SPI1'
@@ -151,13 +226,13 @@ from scipy.stats import gaussian_kde
 
 #fig=plt.figure(figsize=(10, 8), dpi= 100)
 
-x=diff_scores
+x=bis_scores
 y=snp_pvals
 xy = np.vstack([x,y])
 z = gaussian_kde(xy)(xy)
 
 plt.scatter(x, y, 1, c=z, alpha=1, marker='o', label=".")
-plt.xlabel("deeplift score diff")
+plt.xlabel("BIS score ")
 plt.ylabel("SNP -log10(pval)")
 plt.colorbar(label='density (low to high)')
 
