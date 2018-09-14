@@ -21,20 +21,21 @@ def chrom_to_idx(chrom, loc):
             return -1
     return long(chrnm * MAX_LOC + loc)
 
+chrom_pos = 0
 import sys
 in_fh = sys.stdin
 in_fh.next()
 for line in in_fh:
     f = line.split('\t')
-    chrom = f[2]
+    chrom = f[chrom_pos]
     try:
-        start = int(f[3])
-        end   = int(f[4])
+        start = int(f[chrom_pos+1])
+        end   = int(f[chrom_pos+2])
     except:
         continue
     pos   = int((start + end) / 2)
     idx   = chrom_to_idx(chrom, pos)
     if idx < 0:
         continue
-    print(f[0], idx) # line_no, idx
+    print(f[3], idx) # line_no, idx
 

@@ -1,0 +1,39 @@
+#grep 'JUND$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > JUND.txt &
+#grep 'SPI1$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > SPI1.txt &
+#grep 'RELA$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > RELA.txt &
+#grep 'STAT1$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > STAT1.txt &
+#grep 'CTCF$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > CTCF.txt &
+
+tmpDir = "_tmp_"
+!mkdir {tmpDir}
+DataDir = "/home/ktian/kundajelab/tfnet/ENCODE_data/"
+
+files = [
+    'GM12878-JUND-human-ENCSR000EYV-optimal_idr.narrowPeak.gz',
+    'GM12878-JUND-human-ENCSR000DYS-optimal_idr.narrowPeak.gz',
+    'GM12878-RELA-human-ENCSR000EAG-optimal_idr.narrowPeak.gz',
+    'GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz',
+    'GM12878-STAT1-human-ENCSR332EYT-optimal_idr.narrowPeak.gz'
+]
+unzipped = []
+for i, f in enumerate(files):
+
+    unzip = tmpDir + "/" + f[:-3]
+    !gunzip -c {DataDir}/{f} | bedtools sort > {unzip}
+    unzipped.append(unzip)
+
+u0 = unzipped[0]
+u1 = unzipped[1]
+u_jund = tmpDir + "/_jund"
+!cat {u0} {u1} | bedtools sort > {u_jund}
+ulist = [ u_jund ] + unzipped[2:]
+
+for i, tf in enumerate(['JUND', 'SPI1', 'RELA', 'STAT1']): #, 'CTCF']):
+    print(i, tf)
+    !cat ../data/{tf}.txt | cut -f 3-5 > {tmpDir}/_bed.txt 
+    !cat ../data/{tf}.txt | cut -f 1-2,6- > {tmpDir}/_rest.txt
+    !paste {tmpDir}/_bed.txt {tmpDir}/_rest.txt > {tmpDir}/_bed_reorder.tsv
+    !bedtools intersect -a {tmpDir}/_bed_reorder.tsv -b {ulist[i]} -wa -f 0.5 -F 0.5 -e -u > {tf}_under_peaks.tsv
+    ! cat {tf}_under_peaks.tsv | python ../calc_loc.py > {tf}_loc.txt
+    ! cat {tf}_loc.txt | sort -n -k2 > {tf}_sort.txt&
+
