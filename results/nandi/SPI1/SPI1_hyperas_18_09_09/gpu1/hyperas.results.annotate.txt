@@ -4,7 +4,7 @@ The best model is very simple:
 - it has one conv layer that has 50 filters of width 19, followed by batchnorm + reLu activation
 - then a max_pooling layer with pool_size 60
 - then output layer with 4 neurons + sigmoid activation
-- loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam, metrics=['accuracy']
+- loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam(lr=0.01), metrics=['accuracy']
 - achieved validation loss 0.4042, testing loss 0.4365
 
 actual parameter value of the best model after consulting search space:

@@ -196,10 +196,7 @@ def get_space():
   40:             model.add(Dropout(space['Dropout']))
   41: 
   42:         model.add(Dense(4))
-  43:         model.add(Activation("sWARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
-Instructions for updating:
-`NHWC` for data_format is deprecated, use `NWC` instead
-igmoid"))
+  43:         model.add(Activation("sigmoid"))
   44: 
   45:         adam=keras.optimizers.Adam(lr=space['lr'])
   46: 
@@ -252,6 +249,9 @@ igmoid"))
   93:     return{'loss':loss,'status':STATUS_OK,'model':model}
   94: 
 compiled!
+  WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
 2018-09-10 20:51:01.886406: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
 2018-09-10 20:51:02.293859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
 name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
@@ -3138,3 +3138,46 @@ model 50 done ----------------
 6496/6727 [===========================>..] - ETA: 0s
 6688/6727 [============================>.] - ETA: 0s
 6727/6727 [==============================] - 2s 275us/step
+Evalutation of best performing model:
+[0.4365126928390712, 0.5964025568648436]
+Best performing model chosen hyper-parameters index:
+{'kernel_size1': 2, 'n_conv_1': 0, 'Dense': 0, 'Dropout': 2, 'n_conv': 0, 'lr': 0, 'filters': 0, 'filters_1': 3, 'filters_2': 2}
+Summary of best model:
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv1d_42 (Conv1D)           (None, 982, 50)           3850      
+_________________________________________________________________
+batch_normalization_68 (Batc (None, 982, 50)           200       
+_________________________________________________________________
+activation_85 (Activation)   (None, 982, 50)           0         
+_________________________________________________________________
+max_pooling1d_18 (MaxPooling (None, 16, 50)            0         
+_________________________________________________________________
+flatten_18 (Flatten)         (None, 800)               0         
+_________________________________________________________________
+dense_44 (Dense)             (None, 4)                 3204      
+_________________________________________________________________
+activation_86 (Activation)   (None, 4)                 0         
+=================================================================
+Total params: 7,254
+Trainable params: 7,154
+Non-trainable params: 100
+_________________________________________________________________
+--Return--
+> /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/nandi/SPI1/SPI1_hyperas_18_09_09/hyperas_opt_gpu1.py(206)<module>()->None
+-> pdb.set_trace()
+(Pdb) (Pdb) (Pdb) Traceback (most recent call last):
+  File "../hyperas_opt_gpu1.py", line 206, in <module>
+    pdb.set_trace()
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/bdb.py", line 53, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/bdb.py", line 88, in dispatch_return
+    self.user_return(frame, arg)
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/pdb.py", line 190, in user_return
+    self.interaction(frame, None)
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/pdb.py", line 210, in interaction
+    self.cmdloop()
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/cmd.py", line 130, in cmdloop
+    line = raw_input(self.prompt)
+KeyboardInterrupt

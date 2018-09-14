@@ -196,10 +196,7 @@ def get_space():
   40:             model.add(Dropout(space['Dropout']))
   41: 
   42:         model.add(Dense(4))
-  43:         model.add(Activation("sigmWARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
-Instructions for updating:
-`NHWC` for data_format is deprecated, use `NWC` instead
-oid"))
+  43:         model.add(Activation("sigmoid"))
   44: 
   45:         adam=keras.optimizers.Adam(lr=space['lr'])
   46: 
@@ -252,6 +249,9 @@ oid"))
   93:     return{'loss':loss,'status':STATUS_OK,'model':model}
   94: 
 compiled!
+  WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
 2018-09-10 20:49:51.938623: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
 2018-09-10 20:49:52.268746: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
 name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
