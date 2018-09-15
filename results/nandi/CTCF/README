@@ -1,0 +1,4 @@
+CTCF_18_07_30: retrained, 07 30, but the max-pool was placed after activation, also did not do pre-train, (or pretrain was done on the same dataset/split and included the background)
+               recall_at_fdr were calculated based on this result.
+CTCF_18_08_01: corrected the max-pool. Anshul wants bg to be stride 50 across, must use genomelake or pyfasta.
+CTCF_GM12878_18_08_08: single task training ENCSR000DZN
