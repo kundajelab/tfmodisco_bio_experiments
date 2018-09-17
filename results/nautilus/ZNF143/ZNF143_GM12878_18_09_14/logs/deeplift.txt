@@ -1,0 +1,138 @@
+Using TensorFlow backend.
+2018-09-15 14:27:49 INFO  /root/kundajelab/tfnet/scripts/run_deeplift.py model_files/record_1_ interpret.fa 1
+2018-09-15 14:27:49 DEBUG memory check location 1
+2018-09-15 14:27:49 DEBUG svmem(total=201375543296, available=111843028992, percent=44.5, used=86756511744, free=36904669184, active=126462152704, inactive=25207685120, buffers=4399104, cached=77709963264, shared=1294032896, slab=3232346112)
+2018-09-15 14:27:49 DEBUG memory use: vms=1.697582 G, rss=0.176636 G
+2018-09-15 14:27:49 INFO  loading models from model_files/record_1_Json.json model_files/record_1_Weights.h5
+2018-09-15 14:27:49 INFO  input sequence file is interpret.fa, range of tasks are 0:1
+2018-09-15 14:27:50 DEBUG len of input sequences = 28315
+2018-09-15 14:27:50 DEBUG memory check location 2
+2018-09-15 14:27:50 DEBUG svmem(total=201375543296, available=111748366336, percent=44.5, used=86849003520, free=36789145600, active=126553800704, inactive=25234268160, buffers=4399104, cached=77732995072, shared=1294032896, slab=3231920128)
+2018-09-15 14:27:50 DEBUG memory use: vms=1.726456 G, rss=0.205517 G
+2018-09-15 14:27:51.051943: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-09-15 14:27:52.022384: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3d:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-15 14:27:52.022434: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2018-09-15 14:27:52.502142: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-15 14:27:52.502185: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2018-09-15 14:27:52.502191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2018-09-15 14:27:52.502452: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3d:00.0, compute capability: 6.1)
+start time 2018-09-15 14:27:49.204278
+nonlinear_mxts_mode is set to: DeepLIFT_GenomicsDefault
+2018-09-15 14:27:55 DEBUG memory check location 3
+2018-09-15 14:27:55 DEBUG svmem(total=201375543296, available=111035125760, percent=44.9, used=87557943296, free=36044406784, active=127182069760, inactive=25251172352, buffers=4399104, cached=77768794112, shared=1300324352, slab=3235590144)
+2018-09-15 14:27:55 DEBUG memory use: vms=28.851768 G, rss=1.055893 G
+2018-09-15 14:27:55 DEBUG size of fasta_sequences = 0.027661 (0.000236) G
+2018-09-15 14:27:57 DEBUG size of deeplift_model  = 0.055701 (0.000000) G
+2018-09-15 14:27:58 DEBUG size of keras_model     = 0.055059 (0.000000) G
+2018-09-15 14:27:58 DEBUG On task 0
+2018-09-15 14:32:33 DEBUG task 0 block 0 hyp_total shape= (0, 1000, 4)
+2018-09-15 14:32:34 DEBUG memory check location 4
+2018-09-15 14:32:34 DEBUG svmem(total=201375543296, available=106952044544, percent=46.9, used=89489371136, free=32061935616, active=129361367040, inactive=27013562368, buffers=4399104, cached=79819837440, shared=3452002304, slab=3267035136)
+2018-09-15 14:32:34 DEBUG memory use: vms=32.636032 G, rss=4.880775 G
+2018-09-15 14:32:34 DEBUG size of fasta_sequences = 0.027661 (0.000236) G
+2018-09-15 14:32:35 DEBUG size of deeplift_model  = 0.987173 (0.000000) G
+2018-09-15 14:32:37 DEBUG size of keras_model     = 0.986531 (0.000000) G
+2018-09-15 14:32:37 DEBUG size of hyp_scores_all = 0.298023 G
+2018-09-15 14:32:37 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-15 14:32:37 DEBUG size of contrib_scores = 0.298023 G
+2018-09-15 14:36:41 DEBUG task 0 block 1 hyp_total shape= (10000, 1000, 4)
+2018-09-15 14:36:42 DEBUG memory check location 4
+2018-09-15 14:36:42 DEBUG svmem(total=201375543296, available=106559246336, percent=47.1, used=89881821184, free=31428014080, active=130788204544, inactive=26199756800, buffers=4399104, cached=80061308928, shared=3452084224, slab=3282845696)
+2018-09-15 14:36:42 DEBUG memory use: vms=32.968044 G, rss=5.213516 G
+2018-09-15 14:36:42 DEBUG size of fasta_sequences = 0.027661 (0.000236) G
+2018-09-15 14:36:43 DEBUG size of deeplift_model  = 1.285270 (0.000000) G
+2018-09-15 14:36:45 DEBUG size of keras_model     = 1.284627 (0.000000) G
+2018-09-15 14:36:45 DEBUG size of hyp_scores_all = 0.596047 G
+2018-09-15 14:36:45 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-15 14:36:45 DEBUG size of contrib_scores = 0.298023 G
+2018-09-15 14:40:05 DEBUG task 0 block 2 hyp_total shape= (20000, 1000, 4)
+2018-09-15 14:40:06 DEBUG memory check location 4
+2018-09-15 14:40:06 DEBUG svmem(total=201375543296, available=106522554368, percent=47.1, used=89918189568, free=31352684544, active=131683020800, inactive=25434955776, buffers=4399104, cached=80100270080, shared=3452100608, slab=3205984256)
+2018-09-15 14:40:06 DEBUG memory use: vms=33.099209 G, rss=5.343193 G
+2018-09-15 14:40:06 DEBUG size of fasta_sequences = 0.027661 (0.000236) G
+2018-09-15 14:40:07 DEBUG size of deeplift_model  = 1.426426 (0.000000) G
+2018-09-15 14:40:09 DEBUG size of keras_model     = 1.425783 (0.000000) G
+2018-09-15 14:40:09 DEBUG size of hyp_scores_all = 0.843853 G
+2018-09-15 14:40:09 DEBUG size of hyp_scores     = 0.247806 G
+2018-09-15 14:40:09 DEBUG size of contrib_scores = 0.247806 G
+2018-09-15 14:40:09 INFO  saving hyp_scores_all to scores/hyp_scores_task_0.npy, shape = (28315, 1000, 4)
+2018-09-15 14:40:10 DEBUG start time 2018-09-15 14:27:49.204278
+2018-09-15 14:40:10 DEBUG end time 2018-09-15 14:40:10.116682
+For layer 2 the preceding linear layer is 0 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 5 the preceding linear layer is 3 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 8 the preceding linear layer is 6 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+Heads-up: current implementation assumes maxpool layer is followed by a linear transformation (conv/dense layer)
+For layer 13 the preceding linear layer is 11 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+Heads-up: I assume sigmoid is the output layer, not an intermediate one; if it's an intermediate layer then please bug me and I will implement the grad func
+For layer 16 the preceding linear layer is 15 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
