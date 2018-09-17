@@ -1,0 +1,26 @@
+2018-09-15 13:09:44 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs ZNF143 --cells GM12878 --expr ENCSR936XTK --test-only True --bg-stride=50
+2018-09-15 13:09:44 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz --ambiguous /root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-rep2.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --bg-stride 50  --background /root/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-09-15 13:09:44 DEBUG bin-size=200, stride=10
+2018-09-15 13:09:49 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-09-15 13:09:49 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-09-15 13:10:37 INFO  LABEL_REGIONS sort merge done
+2018-09-15 13:11:09 INFO  LABEL_REGIONS intersect done
+2018-09-15 13:11:19 INFO  LABEL_REGIONS labels done
+2018-09-15 13:11:32 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-15 13:11:56 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz
+1
+Using TensorFlow backend.
+2018-09-15 13:12:40.465920: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-09-15 13:12:41.325179: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3d:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-15 13:12:41.325231: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2018-09-15 13:12:43.099911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-15 13:12:43.099950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2018-09-15 13:12:43.099956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2018-09-15 13:12:43.105125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3d:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/valid.tsv.gz into memory
+Finished reading bed file into memory; got 4863768rows
