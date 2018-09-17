@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/ktian/anaconda3/envs/modisco_dev/bin/momma_dragonn_train", line 6, in <module>
+    exec(compile(open(__file__).read(), __file__, 'exec'))
+  File "/home/ktian/kundajelab/momma_dragonn/scripts/momma_dragonn_train", line 76, in <module>
+    momma_dragonn_train(options)
+  File "/home/ktian/kundajelab/momma_dragonn/scripts/momma_dragonn_train", line 13, in momma_dragonn_train
+    config=options.valid_data_loader_config)
+  File "/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py", line 43, in load_data_loader
+    module_prefix="momma_dragonn.data_loaders.")
+  File "/srv/scratch/ktian/kundajelab/momma_dragonn/momma_dragonn/loaders.py", line 9, in load_class_from_config
+    config = fp.load_yaml_if_string(config)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/file_processing.py", line 430, in load_yaml_if_string
+    yaml_stuff = yaml.load(get_file_handle(yaml_stuff))
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/file_processing.py", line 32, in get_file_handle
+    return open(filename,mode) 
+IOError: [Errno 2] No such file or directory: 'config/valid_data_loader_config.yaml'

@@ -4,8 +4,13 @@
 #grep 'STAT1$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > STAT1.txt &
 #grep 'CTCF$' FIMO-CIS-BP-Homo_sapiens.hg19.fimo.txt.annotated_n > CTCF.txt &
 
+import os
 tmpDir = "_tmp_"
 !mkdir {tmpDir}
+
+#------------------------------
+# using the peaks directly
+"""
 DataDir = "/home/ktian/kundajelab/tfnet/ENCODE_data/"
 
 files = [
@@ -27,13 +32,29 @@ u1 = unzipped[1]
 u_jund = tmpDir + "/_jund"
 !cat {u0} {u1} | bedtools sort > {u_jund}
 ulist = [ u_jund ] + unzipped[2:]
+"""
 
-for i, tf in enumerate(['JUND', 'SPI1', 'RELA', 'STAT1']): #, 'CTCF']):
+#------------------------------
+# use 1k surrounding summit (interpret.tsv)
+DataDir = "/home/ktian/kundajelab/tfnet/results/nandi/"
+files = [
+    "JUND/JUND_GM12878_refine_18_09_04/interpret.tsv",
+    "RELA/RELA_GM12878_refine_18_09_04/interpret.tsv",
+    "SPI1/SPI1_GM12878_refine_18_09_04/interpret.tsv",
+    "STAT1/STAT1_GM12878_refine_18_09_04/interpret.tsv",
+]
+ulist = [ DataDir + file for file in files ]
+caps  = [ 4361, 8917, 10747, 1838 ]
+
+for i, tf in enumerate(['JUND', 'RELA', 'SPI1', 'STAT1']): #, 'CTCF']):
     print(i, tf)
-    !cat ../data/{tf}.txt | cut -f 3-5 > {tmpDir}/_bed.txt 
-    !cat ../data/{tf}.txt | cut -f 1-2,6- > {tmpDir}/_rest.txt
-    !paste {tmpDir}/_bed.txt {tmpDir}/_rest.txt > {tmpDir}/_bed_reorder.tsv
-    !bedtools intersect -a {tmpDir}/_bed_reorder.tsv -b {ulist[i]} -wa -f 0.5 -F 0.5 -e -u > {tf}_under_peaks.tsv
-    ! cat {tf}_under_peaks.tsv | python ../calc_loc.py > {tf}_loc.txt
-    ! cat {tf}_loc.txt | sort -n -k2 > {tf}_sort.txt&
+    ! cat ../data/{tf}.txt | cut -f 3-5 > {tmpDir}/_bed.txt 
+    ! cat ../data/{tf}.txt | cut -f 1-2,6- > {tmpDir}/_rest.txt
+    ! paste {tmpDir}/_bed.txt {tmpDir}/_rest.txt > {tmpDir}/_bed_reorder.tsv
+    #! bedtools intersect -a {tmpDir}/_bed_reorder.tsv -b {ulist[i]} -wa -f 0.5 -F 0.5 -e -u > {tf}_under_peaks.tsv
+    ! bedtools intersect -a {tmpDir}/_bed_reorder.tsv -b {ulist[i]} -wa -f 0.5 -F 0.5 -e -u > {tf}_under_1ksummit.tsv
+    # head may exit early after n lines, while sort has not written all its output yet
+    ! sort -n -k 7 -r < {tf}_under_1ksummit.tsv 2> /dev/null | head -n {caps[i]} > {tf}_under_1ksummit_cap.tsv
+    ! cat {tf}_under_1ksummit_cap.tsv | python ../calc_loc.py > {tf}_loc.txt
+    ! cat {tf}_loc.txt | sort -n -k2 > {tf}_sort.txt
 

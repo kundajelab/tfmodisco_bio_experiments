@@ -24,7 +24,7 @@ def chrom_to_idx(chrom, loc):
 chrom_pos = 0
 import sys
 in_fh = sys.stdin
-in_fh.next()
+#in_fh.next()    # skip header
 for line in in_fh:
     f = line.split('\t')
     chrom = f[chrom_pos]
