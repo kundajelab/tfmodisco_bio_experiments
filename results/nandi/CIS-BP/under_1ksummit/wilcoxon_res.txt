@@ -1,0 +1,11 @@
+top 100k bQTL
+JUND:  len < 50: modisco= 487, cisbp= 286  wilcoxcon=  0.486274, pval=  0.626773
+RELA:  len < 50: modisco= 735, cisbp= 662  wilcoxcon=  0.027826, pval=  0.977801
+SPI1:  len < 50: modisco= 964, cisbp= 856  wilcoxcon=  2.485467, pval=  0.012938
+STAT1: len < 50: modisco= 246, cisbp= 167  wilcoxcon=  0.761014, pval=  0.446648
+
+top 10k bQTL:
+JUND:  len < 50: modisco= 234, cisbp= 130  wilcoxcon= -0.010396, pval=  0.991705
+RELA:  len < 50: modisco= 251, cisbp= 240  wilcoxcon=  0.308608, pval=  0.757620
+SPI1:  len < 50: modisco= 354, cisbp= 275  wilcoxcon= -0.284201, pval=  0.776256
+STAT1: len < 50: modisco=  29, cisbp=  19  wilcoxcon= -0.368939, pval=  0.712173 
