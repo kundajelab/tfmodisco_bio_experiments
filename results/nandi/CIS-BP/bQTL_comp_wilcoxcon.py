@@ -37,7 +37,8 @@ import numpy as np
 modisco_dir = "/home/ktian/kundajelab/tfnet/results/nandi/"
 
 big_str = "_big"
-#big_str = ""
+big_str = ""
+big_str = "_full"
 
 modisco_tsv_fns = [
     "JUND/JUND_GM12878_refine_18_09_04/modisco.run2/JUND_modisco_snp_dist_pval" + big_str + ".tsv",
@@ -77,6 +78,7 @@ for i, tf in enumerate(tf_list):
 
     statistic, pval = scipy.stats.ranksums(m50, c50)
 
-    print("%5s: len < 50: modisco=%4d, cisbp=%4d" % (tf, len(m50), len(c50)), " wilcoxcon= % .6f, pval= % .6f" %(statistic, pval))
+    print("%-5s: len < 50: modisco=%4d, cisbp=%4d" % (tf, len(m50), len(c50)), " wilcoxcon= % .6f, pval= % .6f" %(statistic, pval))
+    print("     : modisco median=%f, cisbp median = %f\n" % (np.median(m50), np.median(c50)))
 
 
