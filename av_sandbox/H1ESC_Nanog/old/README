@@ -1,0 +1,9 @@
+#IDR optimal peaks from: https://www.encodeproject.org/experiments/ENCSR000BMT/
+cp /home/ktian/oak2/H1-hESC-NANOG-human-ENCSR000BMT-optimal_idr.narrowPeak.gz .
+
+#model copied over
+cp /srv/scratch/ktian/kundajelab/tfmodisco_bio_experiments/results/nandi/NANOG/NANOG_18_08_01/model_files/record_1_model_HcVec_* .
+
+#prepare 1kb around the summit
+zcat H1-hESC-NANOG-human-ENCSR000BMT-optimal_idr.narrowPeak.gz | perl -lane 'print $F[0]."\t".($F[1]+$F[9]-500)."\t".($F[1]+$F[9]+500)' | gzip -c > 1kb_around_summit_H1-hESC-NANOG-human-ENCSR000BMT-optimal_idr.bed
+
