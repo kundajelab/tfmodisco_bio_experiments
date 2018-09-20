@@ -36,8 +36,8 @@ import math
 import numpy as np
 modisco_dir = "/home/ktian/kundajelab/tfnet/results/nandi/"
 
-big_str = "_big"
-big_str = ""
+#big_str = "_big"
+#big_str = ""
 big_str = "_full"
 
 modisco_tsv_fns = [
@@ -55,8 +55,8 @@ for i, tf in enumerate(tf_list):
     with open(modisco_dir + modisco_tsv_fns[i]) as fh:
         for row in fh:
             item = row.split('\t')
-            item[0] = float(item[0])
-            item[1] = float(item[1])
+            item[0] = float(item[0]) # distance
+            item[1] = float(item[1]) # p-value
             if item[0] == 0:
                 item[0] = 0.1
             snp_list_m.append(item)
@@ -65,8 +65,8 @@ for i, tf in enumerate(tf_list):
     with open("under_1ksummit/" + tf + "_cisbp" + big_str + ".tsv") as fh:
         for row in fh:
             item = row.split('\t')
-            item[0] = float(item[0])
-            item[1] = float(item[1])
+            item[0] = float(item[0]) # distance
+            item[1] = float(item[1]) # p-value
             if item[0] == 0:
                 item[0] = 0.1
             snp_list_c.append(item)
@@ -78,7 +78,7 @@ for i, tf in enumerate(tf_list):
 
     statistic, pval = scipy.stats.ranksums(m50, c50)
 
-    print("%-5s: len < 50: modisco=%4d, cisbp=%4d" % (tf, len(m50), len(c50)), " wilcoxcon= % .6f, pval= % .6f" %(statistic, pval))
+    print("%-5s: len < 50: modisco=%4d, cisbp=%4d" % (tf, len(m50), len(c50)), " wilcoxon= % .6f, pval= % .6f" %(statistic, pval))
     print("     : modisco median=%f, cisbp median = %f\n" % (np.median(m50), np.median(c50)))
 
 
