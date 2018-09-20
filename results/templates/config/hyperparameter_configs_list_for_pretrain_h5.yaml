@@ -1,17 +1,20 @@
-# ver 18_09_19
 [
 {
-    "message": "model & config _MESSAGE_, pre-train",
+    "message": "model & config for JUND, 15 tasks, pretraining, ver 18_07_31",
     "other_data_loaders":{
         "train": {
-            "class": "pyfasta_data_loader.SingleStreamSeqOnly",
+            "class": "hdf5_data_loader.MultimodalBatchDataLoader",
             "kwargs": {
-               "batch_size": 200,
-               "bed_source": "splits/train.tsv.gz",
-               "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
-               "rc_augment": true,
-               "num_to_load_for_eval": 50000,
-               "labels_dtype": "int"
+                "batch_size": 200,
+                "path_to_hdf5": "train_data.hdf5",
+                "num_to_load_for_eval": 50000, #if my training data is large
+                #and I only want to load a subset when I'm calculating the
+                #performance stats on the training data, specify this number,
+                #and only that many datapoints of the training data will be used
+                #for performance stat calculation
+                "bundle_x_and_y_in_generator": False,
+                "strip_enclosing_dictionary": True,
+                "rc_augment": True
             }
         }
     },
@@ -65,7 +68,7 @@
                 { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
                 { "class": "keras.layers.core.Dropout", "kwargs": {"p": 0.2} },
                     # --- FC dense layer 2
-                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": _OUT_DIM_} },
+                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": 15} },
                 { "class": "keras.layers.core.Activation", "kwargs": {"activation": "sigmoid"} }
             ],
             "optimizer_config": {
