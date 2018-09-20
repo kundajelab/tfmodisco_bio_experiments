@@ -1,6 +1,6 @@
 [
 {
-    "message": "model & config for <TF>, <n> tasks, pretraining, ver 18_07_31",
+    "message": "model & config for JUND, 15 tasks, pretraining, ver 18_07_31",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
@@ -21,6 +21,13 @@
     "model_creator":{
         "class": "flexible_keras.FlexibleKerasSequential",
         "kwargs": {
+            #"pretrained_model_config": {
+            #    "kwargs": {
+            #        "weight_file": "pretrain/model_files/record_1_Weights.h5",
+            #        "json_file":   "pretrain/model_files/record_1_Json.json",
+            #        "last_layer_to_take": -2
+            #    }
+            #}
             "layers_config": [
                 {
                     # --- conv layer 1
@@ -37,83 +44,32 @@
                         }
                     }
                 },
-                {
-                    "class": "keras.layers.normalization.BatchNormalization",
-                    "kwargs": {"axis": -1}
-                },
-                {
-                    "class": "keras.layers.core.Activation",
-                    "kwargs": {"activation": "relu"}
-                },
-                {
+                { "class": "keras.layers.normalization.BatchNormalization", "kwargs": {"axis": -1} }, 
+                { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
                     # --- conv layer 2
-                    "class": "keras.layers.convolutional.Convolution1D",
-                    "kwargs": {
-                        "nb_filter": 50,
-                        "filter_length": 15,
-                        "border_mode": "same"
-                    }
+                { "class": "keras.layers.convolutional.Convolution1D",
+                    "kwargs": { "nb_filter": 50, "filter_length": 15, "border_mode": "same" }
                 },
-                {
-                    "class": "keras.layers.normalization.BatchNormalization",
-                    "kwargs": {"axis": -1}
-                },
-                {
-                    "class": "keras.layers.core.Activation",
-                    "kwargs": {"activation": "relu"}
-                },
-                {
+                { "class": "keras.layers.normalization.BatchNormalization", "kwargs": {"axis": -1} },
+                { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
                     # --- conv layer 3
-                    "class": "keras.layers.convolutional.Convolution1D",
-                    "kwargs": {
-                        "nb_filter": 50,
-                        "filter_length": 13,
-                        "border_mode": "same"
-                    }
+                { "class": "keras.layers.convolutional.Convolution1D",
+                    "kwargs": { "nb_filter": 50, "filter_length": 13, "border_mode": "same" }
                 },
-                {
-                    "class": "keras.layers.normalization.BatchNormalization",
-                    "kwargs": {"axis": -1}
-                },
-                {
-                    "class": "keras.layers.core.Activation",
-                    "kwargs": {"activation": "relu"}
-                },
-                {
-                    "class": "keras.layers.convolutional.MaxPooling1D",
+                { "class": "keras.layers.normalization.BatchNormalization", "kwargs": {"axis": -1} },
+                { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
+                { "class": "keras.layers.convolutional.MaxPooling1D",
                     "kwargs": {"pool_length": 40, "stride": 40}
                 },
-  
-                {
-                    "class": "keras.layers.core.Flatten",
-                    "kwargs": {}
-                },
-                {
+                { "class": "keras.layers.core.Flatten", "kwargs": {} },
                     # --- FC dense layer 1
-                    "class": "keras.layers.core.Dense",
-                    "kwargs": {"output_dim": 50}
-                },
-                {
-                    "class": "keras.layers.normalization.BatchNormalization",
-                    "kwargs": {"axis": -1}
-                },
-                {
-                    "class": "keras.layers.core.Activation",
-                    "kwargs": {"activation": "relu"}
-                },
-                {
-                    "class": "keras.layers.core.Dropout",
-                    "kwargs": {"p": 0.2}
-                },
-                {
+                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": 50} },
+                { "class": "keras.layers.normalization.BatchNormalization", "kwargs": {"axis": -1} },
+                { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
+                { "class": "keras.layers.core.Dropout", "kwargs": {"p": 0.2} },
                     # --- FC dense layer 2
-                    "class": "keras.layers.core.Dense",
-                    "kwargs": {"output_dim": 5}
-                },
-                {
-                    "class": "keras.layers.core.Activation",
-                    "kwargs": {"activation": "sigmoid"}
-                }
+                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": 15} },
+                { "class": "keras.layers.core.Activation", "kwargs": {"activation": "sigmoid"} }
             ],
             "optimizer_config": {
                 "class": "keras.optimizers.Adam",
