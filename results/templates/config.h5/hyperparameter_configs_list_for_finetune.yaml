@@ -1,6 +1,7 @@
+# ver 18_09_19
 [
 {
-    "message": "model & config for ZNF143, 5 tasks, fine-tune, 18_07_30",
+    "message": "model & config for fine_tune, _MESSAGE_",
     "other_data_loaders":{
         "train": {
             "class": "hdf5_data_loader.MultimodalBatchDataLoader",
