@@ -1,7 +1,6 @@
-# ver 18_09_19
 [
 {
-    "message": "model & config _MESSAGE_, pre-train",
+    "message": "model & config for JUND, 15 tasks, pretraining, ver 18_07_31",
     "other_data_loaders":{
         "train": {
             "class": "pyfasta_data_loader.SingleStreamSeqOnly",
@@ -65,7 +64,7 @@
                 { "class": "keras.layers.core.Activation", "kwargs": {"activation": "relu"} },
                 { "class": "keras.layers.core.Dropout", "kwargs": {"p": 0.2} },
                     # --- FC dense layer 2
-                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": _OUT_DIM_} },
+                { "class": "keras.layers.core.Dense", "kwargs": {"output_dim": 15} },
                 { "class": "keras.layers.core.Activation", "kwargs": {"activation": "sigmoid"} }
             ],
             "optimizer_config": {

@@ -1,6 +1,6 @@
 [
 {
-    "message": "model & config for <TF>, <n> tasks, finetune, ver 18_08_23",
+    "message": "model & config _MESSAGE_, fine-tune",
     "other_data_loaders":{
         "train": {
             "class": "pyfasta_data_loader.SingleStreamSeqOnly",
