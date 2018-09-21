@@ -1,7 +1,13 @@
 {
-    "class": "hdf5_data_loader.MultimodalAtOnceDataLoader",
+    "class": "pyfasta_data_loader.SingleStreamSeqOnly",
     "kwargs": {
-       "path_to_hdf5": "valid_data.hdf5",
-       "strip_enclosing_dictionary": True
+       "batch_size": null, 
+       "bed_source": "splits/valid.tsv.gz",
+       "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
+       "rc_augment": false,
+       "num_to_load_for_eval": null,
+       "labels_dtype": "int"
     }
 }
+
+
