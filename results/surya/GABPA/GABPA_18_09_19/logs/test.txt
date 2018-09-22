@@ -1,0 +1,35 @@
+2018-09-20 06:51:36 INFO  /home/ktian/kundajelab/tfnet//scripts/prepare_data_pf.py --tfs GABPA --test-only True --bg-stride=50
+2018-09-20 06:52:08 DEBUG /home/ktian/kundajelab/tfnet//scripts/label_regions  --positives /home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-eGFP-GABPA-human-ENCSR038RXU-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-GABPA-human-ENCSR000BHS-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-GABPA-human-ENCSR000BIW-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR038GMB-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-GABPA-human-ENCSR000BJK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/K562-eGFP-GABPA-human-ENCSR290MUH-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-GABPA-human-ENCSR000BTK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/K562-GABPA-human-ENCSR000BLO-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR350ORK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-GABPA-human-ENCSR331HPA-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_lef_Aj/_tmp_MCF-7-eGFP-GABPA-human-ENCSR038RXU-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_HeLa-S3-GABPA-human-ENCSR000BHS-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_H1-hESC-GABPA-human-ENCSR000BIW-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_liver-GABPA-human-ENCSR038GMB-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_HepG2-GABPA-human-ENCSR000BJK-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_K562-eGFP-GABPA-human-ENCSR290MUH-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_HL-60-GABPA-human-ENCSR000BTK-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_K562-GABPA-human-ENCSR000BLO-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_liver-GABPA-human-ENCSR350ORK-merged.narrowPeak.gz,./_tmp_lef_Aj/_tmp_GM12878-GABPA-human-ENCSR331HPA-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --bg-stride 50  --background /home/ktian/kundajelab/tfnet//genome/hg19.tsv  --test-only True 
+2018-09-20 06:52:08 DEBUG bin-size=200, stride=10
+2018-09-20 06:52:24 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-09-20 06:52:24 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-09-20 06:53:03 INFO  LABEL_REGIONS sort merge done
+2018-09-20 06:55:12 INFO  LABEL_REGIONS intersect done
+2018-09-20 06:56:44 INFO  LABEL_REGIONS labels done
+2018-09-20 06:56:47 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-20 06:57:03 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-eGFP-GABPA-human-ENCSR038RXU-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-GABPA-human-ENCSR000BHS-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-GABPA-human-ENCSR000BIW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR038GMB-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-GABPA-human-ENCSR000BJK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-eGFP-GABPA-human-ENCSR290MUH-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-GABPA-human-ENCSR000BTK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-GABPA-human-ENCSR000BLO-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR350ORK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-GABPA-human-ENCSR331HPA-optimal_idr.narrowPeak.gz
+10
+Using TensorFlow backend.
+2018-09-20 06:57:05.403681: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-20 06:57:05.863150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:81:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 06:57:05.863205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-09-20 06:57:06.226484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-20 06:57:06.226548: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-09-20 06:57:06.226555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-09-20 06:57:06.226946: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:81:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/valid.tsv.gz into memory
+Finished reading bed file into memory; got 4863768rows

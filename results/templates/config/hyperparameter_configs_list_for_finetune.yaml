@@ -1,22 +1,16 @@
 [
 {
-    "message": "model & config for ZNF143, 5 tasks, fine-tune, 18_07_30",
+    "message": "model & config _MESSAGE_, fine-tune",
     "other_data_loaders":{
         "train": {
-            "class": "hdf5_data_loader.MultimodalBatchDataLoader",
-            #"class": "hdf5_data_loader.MultimodalAtOnceDataLoader",
+            "class": "pyfasta_data_loader.SingleStreamSeqOnly",
             "kwargs": {
-                "batch_size": 200,
-                "path_to_hdf5": "train_data.hdf5",
-                "num_to_load_for_eval": 50000, #if my training data is large
-                #and I only want to load a subset when I'm calculating the
-                #performance stats on the training data, specify this number,
-                #and only that many datapoints of the training data will be used
-                #for performance stat calculation
-                "bundle_x_and_y_in_generator": False,
-                "strip_enclosing_dictionary": True,
-                "rc_augment": True
-
+               "batch_size": 200,
+               "bed_source": "splits/train.tsv.gz",
+               "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
+               "rc_augment": true,
+               "num_to_load_for_eval": 50000,
+               "labels_dtype": "int"
             }
         }
     },

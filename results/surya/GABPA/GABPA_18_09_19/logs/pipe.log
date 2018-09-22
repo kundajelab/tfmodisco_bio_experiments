@@ -1,0 +1,27 @@
+2018-09-20 01:40:51 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs GABPA --end-task 10 --start 10
+2018-09-20 01:40:51 DEBUG tf=GABPA, num_tasks=10 start=10 end=100
+rm: cannot remove 'config/hyperparameter_configs_list.yaml': No such file or directory
+2018-09-20 01:40:51 INFO  python $TFNET_ROOT/scripts/prepare_data_pf.py --tfs GABPA --no-bg True --stride 10 --hdf5 True  > logs/pre_prepare.txt 2>&1
+mv: cannot stat '_tmp_*': No such file or directory
+mv: cannot stat '_tmp_*': No such file or directory
+2018-09-20 06:51:34 INFO  /home/ktian/kundajelab/tfnet//scripts/pick_summit.py --tfs GABPA
+/home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-eGFP-GABPA-human-ENCSR038RXU-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-GABPA-human-ENCSR000BHS-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-GABPA-human-ENCSR000BIW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR038GMB-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-GABPA-human-ENCSR000BJK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-eGFP-GABPA-human-ENCSR290MUH-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-GABPA-human-ENCSR000BTK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-GABPA-human-ENCSR000BLO-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-GABPA-human-ENCSR350ORK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-GABPA-human-ENCSR331HPA-optimal_idr.narrowPeak.gz
+mv: cannot stat 'counts.tsv': No such file or directory
+paste: model_files/counts.tsv: No such file or directory
+step 20 prepare for pre_train done
+('momma_dragonn_train returned ', 0)
+step 30 pre_train done
+step 40 prepare_data done
+('momma_dragonn_train returned ', 0)
+step 50 training done
+step 60 testing done
+step 70 deeplift done

@@ -1,8 +1,0 @@
-[
-    {"class":"WriteToDbCallback",
-     "kwargs":{"db_path": "runs.db"}},
-    {"class":"EmailCallback",
-     "kwargs":{"to_emails":["ktian@stanford.edu"],
-               "from_email": "momma-dragonn@stanford.edu",
-               "smtp_server": "smtp.stanford.edu"}},
-]
