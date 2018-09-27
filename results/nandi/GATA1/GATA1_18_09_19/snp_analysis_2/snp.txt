@@ -1,0 +1,3 @@
+chrom	position # hg19, one based
+chr10	90749256
+chr10	90749963
