@@ -1,2 +1,2 @@
-chrom	position
+chrom	position # zero based
 chr19	11200088
