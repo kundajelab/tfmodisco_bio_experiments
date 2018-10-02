@@ -1,0 +1,241 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9980016908482837,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_H9K4H_modelWeights.h5",
+            "json_file": "model_files/record_1_model_H9K4H_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_H9K4H"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for JUND, 15 tasks, pretraining, ver 18_07_31",
+            "best_valid_key_metric": 0.9980016908482837,
+            "best_valid_perf_info": {
+                "epoch": 15,
+                "valid_key_metric": 0.9980016908482837,
+                "train_key_metric": 0.9993791661314013,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9936916103441046,
+                    0.9942773488493528
+                ],
+                [
+                    0.9961310150403927,
+                    0.9961768179727226
+                ],
+                [
+                    0.9972837104804072,
+                    0.9971920729053994
+                ],
+                [
+                    0.997640117325429,
+                    0.9973094376686186
+                ],
+                [
+                    0.9979883228875557,
+                    0.997440727064762
+                ],
+                [
+                    0.9981936815496144,
+                    0.9977106411547499
+                ],
+                [
+                    0.9977083592905076,
+                    0.9969393159524076
+                ],
+                [
+                    0.9985916562039201,
+                    0.9976356719257022
+                ],
+                [
+                    0.9987823344955747,
+                    0.997672348414208
+                ],
+                [
+                    0.9988684725187005,
+                    0.9977369984956422
+                ],
+                [
+                    0.9989992494069233,
+                    0.9979621548369451
+                ],
+                [
+                    0.999054150962716,
+                    0.9978261410117737
+                ],
+                [
+                    0.9991592142126371,
+                    0.9978620715378016
+                ],
+                [
+                    0.9993020033791151,
+                    0.9978175624432757
+                ],
+                [
+                    0.9993791661314013,
+                    0.9980016908482837
+                ],
+                [
+                    0.9991647995816134,
+                    0.997411883182276
+                ],
+                [
+                    0.9994239815051799,
+                    0.9978551092213396
+                ],
+                [
+                    0.9994907728559086,
+                    0.9977450797558216
+                ],
+                [
+                    0.9995189284546488,
+                    0.9977747939278655
+                ],
+                [
+                    0.9995251664812077,
+                    0.9973892556537739
+                ],
+                [
+                    0.9995916362507109,
+                    0.9976701726903138
+                ],
+                [
+                    0.9996228447196785,
+                    0.9974774035532679
+                ],
+                [
+                    0.9996841408046877,
+                    0.9974576355475987
+                ],
+                [
+                    0.9997494085505327,
+                    0.9975303668892123
+                ],
+                [
+                    0.9997923384480882,
+                    0.9975957007695847
+                ],
+                [
+                    0.9997720251515617,
+                    0.9975173125458457
+                ],
+                [
+                    0.9998546036593158,
+                    0.9974616140141486
+                ],
+                [
+                    0.9998679865485242,
+                    0.9972736314696704
+                ],
+                [
+                    0.9999195918003266,
+                    0.9974841172155707
+                ],
+                [
+                    0.9998464879505912,
+                    0.9971133738639611
+                ],
+                [
+                    0.9999090251334576,
+                    0.9972311116084196
+                ],
+                [
+                    0.9998878346810481,
+                    0.9973413275645567
+                ],
+                [
+                    0.9999137718374735,
+                    0.9972124003829275
+                ],
+                [
+                    0.9999350169958976,
+                    0.9973067646364054
+                ],
+                [
+                    0.9999385099205821,
+                    0.9972214762597442
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_H9K4H_modelWeights.h5",
+                "json_file": "model_files/record_1_model_H9K4H_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_H9K4H"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 35
+            }
+        }
+    ]
+}
