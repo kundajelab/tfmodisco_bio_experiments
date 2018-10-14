@@ -1,0 +1,25 @@
+2018-09-07 20:56:17 INFO  /home/ktian/kundajelab/tfnet//scripts/prepare_data_pf.py --tfs SPI1 --no-bg True --stride 10 --hdf5 True
+2018-09-07 20:56:24 DEBUG /home/ktian/kundajelab/tfnet//scripts/label_regions  --positives /home/ktian/kundajelab/tfnet//ENCODE_data/GM12891-SPI1-human-ENCSR000BIJ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-SPI1-human-ENCSR000BUW-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/K562-SPI1-human-ENCSR000BGW-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_fz1FtR/_tmp_GM12891-SPI1-human-ENCSR000BIJ-merged.narrowPeak.gz,./_tmp_fz1FtR/_tmp_HL-60-SPI1-human-ENCSR000BUW-merged.narrowPeak.gz,./_tmp_fz1FtR/_tmp_empty_file,./_tmp_fz1FtR/_tmp_empty_file --genome hg19 --prefix label  --stride 10
+2018-09-07 20:56:24 DEBUG bin-size=200, stride=10
+2018-09-07 20:56:31 DEBUG in: skip_test=0 bin-size=200, stride=10
+2018-09-07 20:56:32 INFO  LABEL_REGIONS sort merge done
+2018-09-07 20:56:38 INFO  LABEL_REGIONS intersect done
+2018-09-07 20:56:42 INFO  LABEL_REGIONS labels done
+2018-09-07 20:56:42 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-07 20:56:51 INFO  split and make hdf5
+Traceback (most recent call last):
+  File "/home/ktian/anaconda2/envs/modisco_dev/bin/make_hdf5", line 6, in <module>
+    exec(compile(open(__file__).read(), __file__, 'exec'))
+  File "/srv/scratch/ktian/kundajelab/avutils/scripts/make_hdf5", line 29, in <module>
+    make_hdf5(options)
+  File "/srv/scratch/ktian/kundajelab/avutils/scripts/make_hdf5", line 14, in make_hdf5
+    for yaml_config in options.yaml_configs],
+  File "/srv/scratch/ktian/kundajelab/avutils/avutils/file_processing.py", line 32, in get_file_handle
+    return open(filename,mode) 
+IOError: [Errno 2] No such file or directory: 'make_hdf5_yaml/*'
+2018-09-07 20:56:52 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12891-SPI1-human-ENCSR000BIJ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-SPI1-human-ENCSR000BUW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-SPI1-human-ENCSR000BGW-optimal_idr.narrowPeak.gz
+4
