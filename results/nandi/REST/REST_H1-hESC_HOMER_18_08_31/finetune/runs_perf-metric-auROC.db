@@ -1,0 +1,213 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9794473010814986,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_ZM8MJ_modelWeights.h5",
+            "json_file": "model_files/record_1_model_ZM8MJ_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_ZM8MJ"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for SPI1, 1 task, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9794473010814986,
+            "best_valid_perf_info": {
+                "epoch": 8,
+                "valid_key_metric": 0.9794473010814986,
+                "train_key_metric": 0.9937353403604657,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9462282959494142,
+                    0.9436220117392264
+                ],
+                [
+                    0.9747395501905237,
+                    0.9705969710450808
+                ],
+                [
+                    0.9826026843097967,
+                    0.9760288204215638
+                ],
+                [
+                    0.986114661964147,
+                    0.977374658583016
+                ],
+                [
+                    0.9892974786366043,
+                    0.979350092079126
+                ],
+                [
+                    0.9888799130554541,
+                    0.978347179688793
+                ],
+                [
+                    0.9916874160068776,
+                    0.9765099079898469
+                ],
+                [
+                    0.9937353403604657,
+                    0.9794473010814986
+                ],
+                [
+                    0.9952560236026453,
+                    0.9785028003089996
+                ],
+                [
+                    0.9944571921885855,
+                    0.9765478432102853
+                ],
+                [
+                    0.9964472116534413,
+                    0.9769500427633394
+                ],
+                [
+                    0.9975193114908205,
+                    0.9767107922253491
+                ],
+                [
+                    0.9979438972395718,
+                    0.9762107370468465
+                ],
+                [
+                    0.99870932538764,
+                    0.9771772230039177
+                ],
+                [
+                    0.9989558216856493,
+                    0.974798081167577
+                ],
+                [
+                    0.9983426958084421,
+                    0.9741587864867848
+                ],
+                [
+                    0.9993427920678486,
+                    0.9759514411935111
+                ],
+                [
+                    0.9993780043090179,
+                    0.9742430630276444
+                ],
+                [
+                    0.9995059817875562,
+                    0.9731185854990896
+                ],
+                [
+                    0.9993129731544335,
+                    0.9729914162942117
+                ],
+                [
+                    0.9997264574895325,
+                    0.973969972548695
+                ],
+                [
+                    0.9996620947539289,
+                    0.9733703374165426
+                ],
+                [
+                    0.9997554859709785,
+                    0.9726456884897644
+                ],
+                [
+                    0.9998032337204913,
+                    0.9720216972217623
+                ],
+                [
+                    0.9998410506737201,
+                    0.9740878734894886
+                ],
+                [
+                    0.9997317924632485,
+                    0.9746066807371849
+                ],
+                [
+                    0.998075006384816,
+                    0.9576246344424212
+                ],
+                [
+                    0.9998585232873389,
+                    0.9715511711637147
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_ZM8MJ_modelWeights.h5",
+                "json_file": "model_files/record_1_model_ZM8MJ_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_ZM8MJ"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 33933,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 28
+            }
+        }
+    ]
+}

@@ -1,0 +1,723 @@
+ratio=1.5
+homer_dir="homer/"
+#SCRIPT_PATH=/srv/scratch/annashch/deeplearning/form_inputs/code/gc_dinuc_balanced/
+SCRIPT_PATH="$TFNET_ROOT/scripts/"
+
+
+orig_positives=label.intervals_file.tsv
+positives=$homer_dir/positives.bed
+combined=$homer_dir/combined.bed
+dinuc0=$homer_dir/dinuc.bed.0
+dinuc=$homer_dir/dinuc.bed.0.shuf
+
+#sample the genome randomly to get candidate negatives
+
+mkdir -p $homer_dir/homer_out/
+
+$TFNET_ROOT/scripts/prepare_data_pf.py --tfs SPI1 --cells GM12878 --no-bg True --stride 20
+2018-09-01 04:00:54 INFO  /home/ktian/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs SPI1 --cells GM12878 --no-bg True --stride 20
+2018-09-01 04:00:54 DEBUG /home/ktian/kundajelab/tfnet/scripts/label_regions  --positives /home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_flI7zJ/_tmp_empty_file --genome hg19 --prefix label  --stride 20
+2018-09-01 04:00:54 DEBUG bin-size=200, stride=20
+2018-09-01 04:00:55 DEBUG in: skip_test=0 bin-size=200, stride=20
+2018-09-01 04:00:55 INFO  LABEL_REGIONS sort merge done
+2018-09-01 04:00:56 INFO  LABEL_REGIONS intersect done
+2018-09-01 04:00:56 INFO  LABEL_REGIONS labels done
+2018-09-01 04:00:56 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-01 04:00:56 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz
+1
+python $TFNET_ROOT/scripts/pick_summit.py --tfs SPI1 --cells GM12878  | grep -v -P 'chr1\t' | bedtools sort > interpret.tsv
+2018-09-01 04:00:56 INFO  /home/ktian/kundajelab/tfnet/scripts/pick_summit.py --tfs SPI1 --cells GM12878
+/home/ktian/kundajelab/tfnet/ENCODE_data/GM12878-SPI1-human-ENCSR000BGQ-optimal_idr.narrowPeak.gz
+bedtools slop -i interpret.tsv -g $TFNET_ROOT/genome/hg19.chrom.sizes -b -300 | bedtools merge > $homer_dir/peaks.bed # 400 surround each peak then merge
+
+
+#get 200000 random samples from hg19
+#python /users/annashch/anna_utils/seq_utils/sample_genome_randomly.py --region_n 200000 --outf $homer_dir/candidate_negatives.bed --main_chroms_only
+python $SCRIPT_PATH/sample_genome_randomly.py --region_n 500000 --outf $homer_dir/candidate_negatives.bed --main_chroms_only
+cur_chrom_size_fraction:0.0191795068084
+cur_chrom_size_fraction:0.0501572157997
+cur_chrom_size_fraction:0.0372034494142
+cur_chrom_size_fraction:0.0432383214353
+cur_chrom_size_fraction:0.0436112998973
+cur_chrom_size_fraction:0.0437819349247
+cur_chrom_size_fraction:0.0262285759121
+cur_chrom_size_fraction:0.0291873929272
+cur_chrom_size_fraction:0.0331208257044
+cur_chrom_size_fraction:0.0346772372289
+cur_chrom_size_fraction:0.0191004988991
+cur_chrom_size_fraction:0.0252213772977
+cur_chrom_size_fraction:0.0165729690701
+cur_chrom_size_fraction:0.0203592014322
+cur_chrom_size_fraction:0.0155474516865
+cur_chrom_size_fraction:0.0514067332672
+cur_chrom_size_fraction:0.0552754839172
+cur_chrom_size_fraction:0.0584412507901
+cur_chrom_size_fraction:0.0617487711281
+cur_chrom_size_fraction:0.063967398293
+cur_chrom_size_fraction:0.0785609547226
+cur_chrom_size_fraction:0.0805156958648
+cur_chrom_size_fraction:0.0456163263177
+cur_chrom_size_fraction:0.0472801272615
+[0.019179506808379296, 0.06933672260809842, 0.10654017202229081, 0.1497784934575735, 0.19338979335486395, 0.23717172827954852, 0.26340030419164356, 0.29258769711887533, 0.32570852282330764, 0.36038576005218464, 0.3794862589513251, 0.4047076362490188, 0.4212806053190919, 0.44163980675128556, 0.45718725843776636, 0.5085939917049729, 0.5638694756222229, 0.6223107264123424, 0.6840594975404369, 0.7480268958334216, 0.8265878505560516, 0.9071035464208118, 0.9527198727384715, 1.0000000000000002]
+['chrY', 'chrX', 'chr13', 'chr12', 'chr11', 'chr10', 'chr17', 'chr16', 'chr15', 'chr14', 'chr19', 'chr18', 'chr22', 'chr20', 'chr21', 'chr7', 'chr6', 'chr5', 'chr4', 'chr3', 'chr2', 'chr1', 'chr9', 'chr8']
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000
+11000
+12000
+13000
+14000
+15000
+16000
+17000
+18000
+19000
+20000
+21000
+22000
+23000
+24000
+25000
+26000
+27000
+28000
+29000
+30000
+31000
+32000
+33000
+34000
+35000
+36000
+37000
+38000
+39000
+40000
+41000
+42000
+43000
+44000
+45000
+46000
+47000
+48000
+49000
+50000
+51000
+52000
+53000
+54000
+55000
+56000
+57000
+58000
+59000
+60000
+61000
+62000
+63000
+64000
+65000
+66000
+67000
+68000
+69000
+70000
+71000
+72000
+73000
+74000
+75000
+76000
+77000
+78000
+79000
+80000
+81000
+82000
+83000
+84000
+85000
+86000
+87000
+88000
+89000
+90000
+91000
+92000
+93000
+94000
+95000
+96000
+97000
+98000
+99000
+100000
+101000
+102000
+103000
+104000
+105000
+106000
+107000
+108000
+109000
+110000
+111000
+112000
+113000
+114000
+115000
+116000
+117000
+118000
+119000
+120000
+121000
+122000
+123000
+124000
+125000
+126000
+127000
+128000
+129000
+130000
+131000
+132000
+133000
+134000
+135000
+136000
+137000
+138000
+139000
+140000
+141000
+142000
+143000
+144000
+145000
+146000
+147000
+148000
+149000
+150000
+151000
+152000
+153000
+154000
+155000
+156000
+157000
+158000
+159000
+160000
+161000
+162000
+163000
+164000
+165000
+166000
+167000
+168000
+169000
+170000
+171000
+172000
+173000
+174000
+175000
+176000
+177000
+178000
+179000
+180000
+181000
+182000
+183000
+184000
+185000
+186000
+187000
+188000
+189000
+190000
+191000
+192000
+193000
+194000
+195000
+196000
+197000
+198000
+199000
+200000
+201000
+202000
+203000
+204000
+205000
+206000
+207000
+208000
+209000
+210000
+211000
+212000
+213000
+214000
+215000
+216000
+217000
+218000
+219000
+220000
+221000
+222000
+223000
+224000
+225000
+226000
+227000
+228000
+229000
+230000
+231000
+232000
+233000
+234000
+235000
+236000
+237000
+238000
+239000
+240000
+241000
+242000
+243000
+244000
+245000
+246000
+247000
+248000
+249000
+250000
+251000
+252000
+253000
+254000
+255000
+256000
+257000
+258000
+259000
+260000
+261000
+262000
+263000
+264000
+265000
+266000
+267000
+268000
+269000
+270000
+271000
+272000
+273000
+274000
+275000
+276000
+277000
+278000
+279000
+280000
+281000
+282000
+283000
+284000
+285000
+286000
+287000
+288000
+289000
+290000
+291000
+292000
+293000
+294000
+295000
+296000
+297000
+298000
+299000
+300000
+301000
+302000
+303000
+304000
+305000
+306000
+307000
+308000
+309000
+310000
+311000
+312000
+313000
+314000
+315000
+316000
+317000
+318000
+319000
+320000
+321000
+322000
+323000
+324000
+325000
+326000
+327000
+328000
+329000
+330000
+331000
+332000
+333000
+334000
+335000
+336000
+337000
+338000
+339000
+340000
+341000
+342000
+343000
+344000
+345000
+346000
+347000
+348000
+349000
+350000
+351000
+352000
+353000
+354000
+355000
+356000
+357000
+358000
+359000
+360000
+361000
+362000
+363000
+364000
+365000
+366000
+367000
+368000
+369000
+370000
+371000
+372000
+373000
+374000
+375000
+376000
+377000
+378000
+379000
+380000
+381000
+382000
+383000
+384000
+385000
+386000
+387000
+388000
+389000
+390000
+391000
+392000
+393000
+394000
+395000
+396000
+397000
+398000
+399000
+400000
+401000
+402000
+403000
+404000
+405000
+406000
+407000
+408000
+409000
+410000
+411000
+412000
+413000
+414000
+415000
+416000
+417000
+418000
+419000
+420000
+421000
+422000
+423000
+424000
+425000
+426000
+427000
+428000
+429000
+430000
+431000
+432000
+433000
+434000
+435000
+436000
+437000
+438000
+439000
+440000
+441000
+442000
+443000
+444000
+445000
+446000
+447000
+448000
+449000
+450000
+451000
+452000
+453000
+454000
+455000
+456000
+457000
+458000
+459000
+460000
+461000
+462000
+463000
+464000
+465000
+466000
+467000
+468000
+469000
+470000
+471000
+472000
+473000
+474000
+475000
+476000
+477000
+478000
+479000
+480000
+481000
+482000
+483000
+484000
+485000
+486000
+487000
+488000
+489000
+490000
+491000
+492000
+493000
+494000
+495000
+496000
+497000
+498000
+499000
+500000
+
+#select candidate negatives so that they don't overlap the positives.
+bedtools intersect -v -a $homer_dir/candidate_negatives.bed -b $orig_positives > $homer_dir/confirmed_negatives.bed
+
+#assign positive and negative labels
+python /users/annashch/anna_utils/seq_utils/add_fixed_labels_to_bed.py --bed $homer_dir/peaks.bed --labels 1 --outf $homer_dir/positives.bed
+python /users/annashch/anna_utils/seq_utils/add_fixed_labels_to_bed.py --bed $homer_dir/confirmed_negatives.bed --labels 0 --outf $homer_dir/negatives.bed
+#concatenative positives and negatives into a single file 
+
+#cat $orig_positives | grep -v '\-1' > $positives
+cat $positives $homer_dir/negatives.bed > $homer_dir/combined.bed
+
+#run the dinucleotide matching code on "combined.bed" -- it has labels of "1" for positives and "0" for negatives.
+#in the first pass, generate the matrix of dinucleotide frequencies. 
+
+python $SCRIPT_PATH/gen_dinucleotide_freqs.py --bed_path $combined --ratio_neg_to_pos $ratio --outf $homer_dir/combined.freqs --ref_fasta /users/jocelins/hg19.fa
+/home/ktian/kundajelab/tfnet/scripts//gen_dinucleotide_freqs.py:61: FutureWarning: from_csv is deprecated. Please use read_csv(...) instead. Note that some of the default arguments are different, so please refer to the documentation for from_csv when changing your function calls
+  data=pd.DataFrame.from_csv(args.bed_path,header=None,sep='\t',index_col=[0,1,2])
+got the bed entries
+10000
+20000
+30000
+40000
+50000
+60000
+70000
+80000
+90000
+100000
+110000
+120000
+130000
+140000
+150000
+160000
+170000
+180000
+190000
+200000
+210000
+220000
+230000
+240000
+250000
+260000
+270000
+280000
+290000
+300000
+310000
+320000
+330000
+340000
+350000
+360000
+370000
+380000
+390000
+400000
+410000
+420000
+430000
+440000
+450000
+460000
+470000
+480000
+490000
+500000
+510000
+520000
+got dinuc counts
+
+#now that the frequency matrix has been generated,  subselect negatives 
+python $SCRIPT_PATH/gen_dinucleotide_freqs.py --bed_path $combined --ratio_neg_to_pos $ratio --outf $homer_dir/dinuc.bed --ref_fasta /users/jocelins/hg19.fa --dinuc_freqs $homer_dir/combined.freqs #--seed $(($i+42)) &
+bed file:(528551, 1)
+frequencies:(528551, 16)
+(0, 0.13948893547058105)
+(1, 0.23321890830993652)
+(2, 0.32837891578674316)
+(3, 0.4230489730834961)
+(4, 0.516247034072876)
+(5, 0.6126878261566162)
+(6, 0.7111380100250244)
+(7, 0.8044829368591309)
+(8, 0.8974959850311279)
+(9, 1.006894826889038)
+(10, 1.1045958995819092)
+(11, 1.1976158618927002)
+(12, 1.2926888465881348)
+(13, 1.3871619701385498)
+(14, 1.4800410270690918)
+(15, 1.5742738246917725)
+(0, 1.5747640132904053, 'homer//dinuc.bed.0')
+homer//dinuc.bed.0 done. Time = 199.107461929
+generated negatives for task:0
+
+cat $dinuc0 | bedtools sort | uniq -u | shuf > $dinuc
+
+cat $dinuc | grep '1$' | bedtools sort | bedtools merge > $homer_dir/pos.bed
+cat $dinuc | grep '0$' | bedtools sort | bedtools merge > $homer_dir/neg.bed
+
+findMotifs.pl $homer_dir/pos.fa human $homer_dir/homer_out -fasta neg.fa -p 8 &> logs/homer.txt &
+
+bedtools getfasta -fi $TFNET_ROOT/genome/hg19.fa -bed $homer_dir/pos.bed -fo $homer_dir/pos.fa
+prepare_homer.sh: 50: prepare_homer.sh: findMotifs.pl: not found
+bedtools getfasta -fi $TFNET_ROOT/genome/hg19.fa -bed $homer_dir/neg.bed -fo $homer_dir/neg.fa
+
+cat $dinuc | grep -P 'chr1\t' | pigz -c > splits/test.tsv.gz
+cat $dinuc | grep -P 'chr2\t' | pigz -c > splits/valid.tsv.gz
+cat $dinuc | grep -v -P 'chr1\t' | grep -v -P 'chr2\t' | pigz -c > splits/train.tsv.gz
+
+
+bedtools getfasta -fi $TFNET_ROOT/genome/hg19.fa -bed $dinuc -fo inputs.fa
+cat headers.txt $dinuc > labels.txt
+cat labels.txt | sed -e 's/\t/:/; s/\t/-/' | pigz -c > labels.txt.gz
+pigz -c -d splits/test.tsv.gz | sed -e 's/\t/:/; s/\t/-/' | pigz -c > splits/test.txt.gz
+pigz -c -d splits/valid.tsv.gz | sed -e 's/\t/:/; s/\t/-/' | pigz -c > splits/valid.txt.gz
+pigz -c -d splits/train.tsv.gz | sed -e 's/\t/:/; s/\t/-/' | pigz -c > splits/train.txt.gz
+
+make_hdf5 --yaml_configs make_hdf5_yaml/* --output_dir .
+Reading in labels
+on file inputs.fa
+Warning - your feature lengths are not consistent.The first feature had length 400, but chr2:201062268-201063268has length 1000. This could cause an error later.This is the only time such a warning will be printed
+Processed 5000 lines
+Processed 10000 lines
+Traceback (most recent call last):
+  File "/home/ktian/anaconda3/envs/modisco_dev/bin/make_hdf5", line 6, in <module>
+    exec(compile(open(__file__).read(), __file__, 'exec'))
+  File "/srv/scratch/ktian/ktianwork/avutils/scripts/make_hdf5", line 29, in <module>
+    make_hdf5(options)
+  File "/srv/scratch/ktian/ktianwork/avutils/scripts/make_hdf5", line 15, in make_hdf5
+    split_compiler_factory=(lambda **kwargs:
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 246, in process_series_of_yamls
+    return process_combined_yamls(combined_yaml, split_compiler_factory)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 343, in process_combined_yamls
+    features_action=features_action)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 381, in process_features_with_features_action
+    the_id=the_id, features=features)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 333, in features_action
+    the_id=the_id, input_mode=input_mode, features=features)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 192, in add_features
+    shape=[x for x in features.shape])
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/yaml_data_import/import_data.py", line 225, in extend_dataset
+    mode_to_buffer[mode].write(vals)
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/file_processing.py", line 375, in write
+    self.flush()
+  File "/srv/scratch/ktian/ktianwork/avutils/avutils/file_processing.py", line 385, in flush
+    self.the_buffer
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/h5py/_hl/dataset.py", line 631, in __setitem__
+    for fspace in selection.broadcast(mshape):
+  File "/home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/h5py/_hl/selections.py", line 299, in broadcast
+    raise TypeError("Can't broadcast %s -> %s" % (target_shape, count))
+TypeError: Can't broadcast (10000,) -> (10000, 400, 4)
+
+
+rm $homer_dir/peaks.bed
+
