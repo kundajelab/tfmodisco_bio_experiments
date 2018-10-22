@@ -1,0 +1,58 @@
+INFO:hyperopt.mongoexp:PROTOCOL mongo
+INFO:hyperopt.mongoexp:USERNAME None
+INFO:hyperopt.mongoexp:HOSTNAME localhost
+INFO:hyperopt.mongoexp:PORT 1234
+INFO:hyperopt.mongoexp:PATH /foo_db/jobs
+INFO:hyperopt.mongoexp:AUTH DB None
+INFO:hyperopt.mongoexp:DB foo_db
+INFO:hyperopt.mongoexp:COLLECTION jobs
+Using TensorFlow backend.
+compiled!
+2018-10-16 23:47:04.610841: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-16 23:47:05.798151: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:03:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-16 23:47:05.798196: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-10-16 23:47:06.186042: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-16 23:47:06.186083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-10-16 23:47:06.186090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-10-16 23:47:06.186437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:03:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 2191s - loss: 0.3824 - acc: 0.6187 - val_loss: 0.4256 - val_acc: 0.6653
+Epoch 2/20
+ - 2185s - loss: 0.2452 - acc: 0.6919 - val_loss: 0.4555 - val_acc: 0.6173
+Epoch 3/20
+ - 2189s - loss: 0.1367 - acc: 0.7042 - val_loss: 0.6402 - val_acc: 0.6118
+Epoch 4/20
+ - 2188s - loss: 0.0806 - acc: 0.6814 - val_loss: 0.9277 - val_acc: 0.6146
+Epoch 5/20
+ - 2192s - loss: 0.0535 - acc: 0.6917 - val_loss: 1.1900 - val_acc: 0.6388
+Epoch 6/20
+ - 2187s - loss: 0.0408 - acc: 0.7112 - val_loss: 1.0196 - val_acc: 0.6049
+Epoch 7/20
+ - 2185s - loss: 0.0336 - acc: 0.7265 - val_loss: 1.3861 - val_acc: 0.6660
+Epoch 8/20
+ - 2185s - loss: 0.0285 - acc: 0.7407 - val_loss: 1.1086 - val_acc: 0.6053
+Epoch 9/20
+ - 2194s - loss: 0.0249 - acc: 0.7538 - val_loss: 1.2738 - val_acc: 0.6362
+Epoch 10/20
+ - 2179s - loss: 0.0226 - acc: 0.7662 - val_loss: 1.2306 - val_acc: 0.6244
+Epoch 11/20
+ - 2171s - loss: 0.0206 - acc: 0.7723 - val_loss: 1.3352 - val_acc: 0.6190
+Epoch 12/20
+ - 2183s - loss: 0.0191 - acc: 0.7767 - val_loss: 1.1541 - val_acc: 0.6008
+Epoch 13/20
+ - 2167s - loss: 0.0180 - acc: 0.7851 - val_loss: 1.6752 - val_acc: 0.6398
+Epoch 14/20
+ - 2167s - loss: 0.0167 - acc: 0.7905 - val_loss: 1.1040 - val_acc: 0.5924
+Epoch 15/20
+ - 2182s - loss: 0.0155 - acc: 0.7984 - val_loss: 1.4427 - val_acc: 0.6288
+Epoch 16/20
+ - 2175s - loss: 0.0145 - acc: 0.8047 - val_loss: 1.5976 - val_acc: 0.6464
+INFO:hyperopt.mongoexp:Caught signal 15, shutting down.
+INFO:hyperopt.mongoexp:Caught signal 15, shutting down.
+Epoch 17/20
+failed to run model
+INFO:hyperopt.mongoexp:job finished: 5bc6da538793a34147a96771

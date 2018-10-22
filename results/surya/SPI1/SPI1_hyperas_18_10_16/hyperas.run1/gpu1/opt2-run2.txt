@@ -1,0 +1,257 @@
+Using TensorFlow backend.
+channels_last
+seed=1234
+>>> Imports:
+#coding=utf-8
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import pandas as pd
+except:
+    pass
+
+try:
+    import pysam
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+try:
+    import hyperas
+except:
+    pass
+
+try:
+    from hyperas.distributions import uniform, choice
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, STATUS_FAIL, tpe, mongoexp
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    import keras
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.layers.core import Dropout, Dense, Activation, Flatten
+except:
+    pass
+
+try:
+    from keras.layers.convolutional import Conv1D, MaxPooling1D
+except:
+    pass
+
+try:
+    from keras.optimizers import Adadelta, SGD, RMSprop, Adam
+except:
+    pass
+
+try:
+    import keras.losses
+except:
+    pass
+
+try:
+    from keras.layers.normalization import BatchNormalization
+except:
+    pass
+
+try:
+    from keras import backend as K
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import sys
+except:
+    pass
+
+try:
+    import keras_genomics
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'kernel_size1': hp.choice('kernel_size1', [13, 15, 19, 25, 39]),
+        'filters': hp.choice('filters', [50,100,250,500]),
+        'n_conv': hp.choice('n_conv', [0,1,2,3]),
+        'filters_1': hp.choice('filters_1', [50,100,250,500]),
+        'filters_2': hp.choice('filters_2', [20,40,60]),
+        'n_conv_1': hp.choice('n_conv_1', [0,1,2,3]),
+        'Dense': hp.choice('Dense', [50,100,200]),
+        'Dropout': hp.choice('Dropout', [0.2,0.4,0.6]),
+        'lr': hp.choice('lr', [0.001, 0.0001]),
+    }
+
+>>> Data
+  1: 
+  2: np.random.seed(1234)  # for reproducibility
+  3: data=np.load('../data_big.npz')
+  4: x_train=data['arr_0']
+  5: y_train=data['arr_1']
+  6: x_validate=data['arr_2']
+  7: y_validate=data['arr_3']
+  8: x_test=data['arr_4']
+  9: y_test=data['arr_5']
+ 10: 
+ 11: 
+ 12: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     start = int(time.time())
+   4:     np.random.seed(1234)
+   5:     parameters = space
+   6:     try:
+   7:         '''
+   8:         b) with and without a hidden fully-connected layer, 
+   9:         c) number of units in the hidden fc layer < 200, 
+  10:         c) different learning rates for adam (explore on a log scale - 0.001, 0.0001, etc), 
+  11:         d) maxpooling widths in the 10-60 range, 
+  12:         e) conv widths in the 10-40 range.
+  13:         '''
+  14:         model=Sequential()
+  15:         kernel_size1 = space['kernel_size1']
+  16:         kernel_size2 = kernel_size1 - 2
+  17:         model.add(Conv1D(filters=space['filters'],kernel_size=(kernel_size1),input_shape=(1000,4)))
+  18:         model.add(BatchNormalization(axis=-1))
+  19:         model.add(Activation('relu'))
+  20: 
+  21:         ## a) number of layers between 1 and 4, 
+  22: 
+  23:         #decide on how many conv layers in model 
+  24:         n_conv = space['n_conv']
+  25: 
+  26:         filter_dim=[kernel_size1,kernel_size2,kernel_size2]
+  27: 
+  28:         for i in range(n_conv):
+  29:             model.add(Conv1D(filters=space['filters_1'],kernel_size=(filter_dim[i])))
+  30:             model.add(BatchNormalization(axis=-1))
+  31:             model.add(Activation('relu'))
+  32: 
+  33:         model.add(MaxPooling1D(pool_size=(space['filters_2'])))
+  34: 
+  35:         model.add(Flatten())
+  36:         n_dense = space['n_conv_1']
+  37:         for i in range(n_dense):
+  38:             model.add(Dense(space['Dense']))
+  39:             model.add(BatchNormalization(axis=-1))
+  40:             model.add(Activation('relu'))
+  41:             model.add(Dropout(space['Dropout']))
+  42: 
+  43:         model.add(Dense(4))
+No handlers could be found for logger "hyperopt.mongoexp"
+  44:         model.add(Activation("sigmoid"))
+  45: 
+  46:         adam=keras.optimizers.Adam(lr=space['lr'])
+  47: 
+  48:         model.compile(loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam, metrics=['accuracy'])
+  49:         print("compiled!")
+  50:         sys.stdout.flush()
+  51: 
+  52: 
+  53:         # added to collect optimization results
+  54:         if 'results' not in globals():
+  55:             global results
+  56:             results = []
+  57: 
+  58:         result = model.fit(x_train,y_train,
+  59:                            batch_size=200,
+  60:                            epochs=20,
+  61:                            verbose=2,
+  62:                            validation_data=(x_validate,y_validate))
+  63:         print("trained!")
+  64:         sys.stdout.flush()
+  65: 
+  66:         loss,acc = model.evaluate(x_validate,y_validate,verbose=2)
+  67:         print("Validation loss:",loss,"Validation acc:",acc)
+  68:         sys.stdout.flush()
+  69: 
+  70:         # added to collect results
+  71:         valLoss = result.history['val_loss'][-1]
+  72:         parameters["loss"] = valLoss
+  73:         parameters["time"] = int(time.time() - start)
+  74:         results.append(parameters)
+  75:         print(parameters)
+  76:         if len(results) % 10 == 0 :
+  77:             tab = tabulate.tabulate(results, headers="keys", tablefmt="fancy_grid", floatfmt=".8f")
+  78:             print(tab.encode('utf-8'))
+  79:         else:
+  80:             tab = tabulate.tabulate(results[-1:], headers="keys", tablefmt="fancy_grid", floatfmt=".8f")
+  81:             print(tab.encode('utf-8'))
+  82:         print("model %d done ----------------" % len(results))
+  83:         sys.stdout.flush()
+  84:         status=STATUS_OK
+  85: 
+  86:     except:
+  87:         loss=1000
+  88:         status=STATUS_FAIL
+  89:         acc=0
+  90:         print("failed to run model")
+  91:         sys.stdout.flush()
+  92: 
+  93:         model=None
+  94: 
+  95:     return{'loss':loss,'status':status,'model_param':parameters}
+  96: 
+Traceback (most recent call last):
+  File "../hyperas_opt_gpu1.py", line 203, in <module>
+    best_eval = best_model.evaluate(x_test, y_test)
+AttributeError: 'NoneType' object has no attribute 'evaluate'
