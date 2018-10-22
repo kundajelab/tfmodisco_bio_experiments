@@ -1,5 +1,6 @@
 hyperas_opt_gpu1.py   100 trials, distributed using mongodb localhost:12345, running in ~/mongodb, ipynb screen
                       mongod --dbpath . --port 12345 &   
+hyperas.run1          db1.xlsx, db1.csv (exported from mongodb)
 
 master: surya:gpu1,   
                       $TFNET_ROOT/scripts/run_pipeline.py --tfs SPI1 --end-task 4 --start 40 --end 50
