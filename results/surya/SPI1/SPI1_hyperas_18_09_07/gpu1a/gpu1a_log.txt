@@ -1,0 +1,720 @@
+Using TensorFlow backend.
+channels_last
+seed=1234567
+>>> Imports:
+#coding=utf-8
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import pandas as pd
+except:
+    pass
+
+try:
+    import pysam
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+try:
+    import hyperas
+except:
+    pass
+
+try:
+    from hyperas.distributions import uniform, choice
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    import keras
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.layers.core import Dropout, Dense, Activation, Flatten
+except:
+    pass
+
+try:
+    from keras.layers.convolutional import Conv1D, MaxPooling1D
+except:
+    pass
+
+try:
+    from keras.optimizers import Adadelta, SGD, RMSprop, Adam
+except:
+    pass
+
+try:
+    import keras.losses
+except:
+    pass
+
+try:
+    from keras.layers.normalization import BatchNormalization
+except:
+    pass
+
+try:
+    from keras import backend as K
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import sys
+except:
+    pass
+
+try:
+    import keras_genomics
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'kernel_size1': hp.choice('kernel_size1', [13, 15, 19, 25, 39]),
+        'filters': hp.choice('filters', [50,100,250,500,1000]),
+        'n_conv': hp.choice('n_conv', [0,1,2,3]),
+        'filters_1': hp.choice('filters_1', [50,100,250,500,1000]),
+        'filters_2': hp.choice('filters_2', [10,30,60]),
+        'n_conv_1': hp.choice('n_conv_1', [0,1,2,3]),
+        'Dense': hp.choice('Dense', [50,100,200]),
+        'Dropout': hp.choice('Dropout', [0.2,0.4,0.6]),
+        'lr': hp.choice('lr', [0.01, 0.001, 0.0001]),
+    }
+
+>>> Data
+  1: 
+  2: np.random.seed(1234567)  # for reproducibility
+  3: data=np.load('../data_big.npz')
+  4: x_train=data['arr_0']
+  5: y_train=data['arr_1']
+  6: x_validate=data['arr_2']
+  7: y_validate=data['arr_3']
+  8: x_test=data['arr_4']
+  9: y_test=data['arr_5']
+ 10: 
+ 11: 
+ 12: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     start = int(time.time())
+   4:     np.random.seed(1234567)
+   5:     try:
+   6:         '''
+   7:         b) with and without a hidden fully-connected layer, 
+   8:         c) number of units in the hidden fc layer < 200, 
+   9:         c) different learning rates for adam (explore on a log scale - 0.001, 0.0001, etc), 
+  10:         d) maxpooling widths in the 10-60 range, 
+  11:         e) conv widths in the 10-40 range.
+  12:         '''
+  13:         model=Sequential()
+  14:         kernel_size1 = space['kernel_size1']
+  15:         kernel_size2 = kernel_size1 - 2
+  16:         model.add(Conv1D(filters=space['filters'],kernel_size=(kernel_size1),input_shape=(1000,4)))
+  17:         model.add(BatchNormalization(axis=-1))
+  18:         model.add(Activation('relu'))
+  19: 
+  20:         ## a) number of layers between 1 and 4, 
+  21: 
+  22:         #decide on how many conv layers in model 
+  23:         n_conv = space['n_conv']
+  24: 
+  25:         filter_dim=[kernel_size1,kernel_size2,kernel_size2]
+  26: 
+  27:         for i in range(n_conv):
+  28:             model.add(Conv1D(filters=space['filters_1'],kernel_size=(filter_dim[i])))
+  29:             model.add(BatchNormalization(axis=-1))
+  30:             model.add(Activation('relu'))
+  31: 
+  32:         model.add(MaxPooling1D(pool_size=(space['filters_2'])))
+  33: 
+  34:         model.add(Flatten())
+  35:         n_dense = space['n_conv_1']
+  36:         for i in range(n_dense):
+  37:             model.add(Dense(space['Dense']))
+  38:             model.add(BatchNormalization(axis=-1))
+  39:             model.add(Activation('relu'))
+  40:             model.add(Dropout(space['Dropout']))
+  41: 
+  42:         model.add(Dense(4))
+  43:         model.add(Activation("sigmoid"))
+  44: 
+  45:         adam=keras.optimizers.Adam(lr=space['lr'])
+  46: 
+  47:         model.compile(loss=keras_genomics.losses.ambig_binary_crossentropy, optimizer=adam, metrics=['accuracy'])
+  48:         print("compiled!")
+  49:         sys.stdout.flush()
+  50: 
+  51: 
+  52:         # added to collect optimization results
+  53:         if 'results' not in globals():
+  54:             global results
+  55:             results = []
+  56: 
+  57:         result = model.fit(x_train,y_train,
+  58:                            batch_size=200,
+  59:                            epochs=20,
+  60:                            verbose=2,
+  61:                            validation_data=(x_validate,y_validate))
+  62:         print("trained!")
+  63:         sys.stdout.flush()
+  64: 
+  65:         loss,acc = model.evaluate(x_validate,y_validate,verbose=2)
+  66:         print("Validation loss:",loss,"Validation acc:",acc)
+  67:         sys.stdout.flush()
+  68: 
+  69:         # added to collect results
+  70:         valLoss = result.history['val_loss'][-1]
+  71:         parameters = space
+  72:         parameters["loss"] = valLoss
+  73:         parameters["time"] = int(time.time() - start)
+  74:         results.append(parameters)
+  75:         print(parameters)
+  76:         if len(results) % 10 == 0 :
+  77:             tab = tabulate.tabulate(results, headers="keys", tablefmt="fancy_grid", floatfmt=".8f")
+  78:             print(tab.encode('utf-8'))
+  79:         else:
+  80:             tab = tabulate.tabulate(results[-1:], headers="keys", tablefmt="fancy_grid", floatfmt=".8f")
+  81:             print(tab.encode('utf-8'))
+  82:         print("model %d done ----------------" % len(results))
+  83:         sys.stdout.flush()
+  84: 
+  85:     except:
+  86:         loss=1000
+  87:         acc=0
+  88:         print("failed to run model")
+  89:         sys.stdout.flush()
+  90: 
+  91:         model=None
+  92: 
+  93:     return{'loss':loss,'status':STATUS_OK,'model':model}
+  94: 
+compiled!
+2018-09-17 13:38:46.045166: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-17 13:38:46.355576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:03:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-17 13:38:46.355617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-09-17 13:38:46.637462: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-17 13:38:46.637517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-09-17 13:38:46.637524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-09-17 13:38:46.637829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:03:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 1635s - loss: 0.3681 - acc: 0.6273 - val_loss: 0.6188 - val_acc: 0.6508
+Epoch 2/20
+ - 1625s - loss: 0.2337 - acc: 0.7178 - val_loss: 0.7144 - val_acc: 0.6773
+Epoch 3/20
+ - 1626s - loss: 0.1365 - acc: 0.7041 - val_loss: 0.8240 - val_acc: 0.6392
+Epoch 4/20
+ - 1618s - loss: 0.0869 - acc: 0.6867 - val_loss: 0.8709 - val_acc: 0.6407
+Epoch 5/20
+ - 1616s - loss: 0.0618 - acc: 0.6919 - val_loss: 0.9338 - val_acc: 0.6564
+Epoch 6/20
+ - 1619s - loss: 0.0481 - acc: 0.7096 - val_loss: 1.2100 - val_acc: 0.6407
+Epoch 7/20
+ - 1620s - loss: 0.0397 - acc: 0.7124 - val_loss: 1.1443 - val_acc: 0.5814
+Epoch 8/20
+ - 1622s - loss: 0.0338 - acc: 0.7208 - val_loss: 1.3897 - val_acc: 0.6468
+Epoch 9/20
+ - 1622s - loss: 0.0297 - acc: 0.7329 - val_loss: 1.3507 - val_acc: 0.6311
+Epoch 10/20
+ - 1629s - loss: 0.0261 - acc: 0.7382 - val_loss: 1.3071 - val_acc: 0.6412
+Epoch 11/20
+ - 1624s - loss: 0.0238 - acc: 0.7482 - val_loss: 1.2191 - val_acc: 0.5788
+Epoch 12/20
+ - 1621s - loss: 0.0215 - acc: 0.7582 - val_loss: 1.3485 - val_acc: 0.6668
+Epoch 13/20
+ - 1623s - loss: 0.0200 - acc: 0.7545 - val_loss: 1.4385 - val_acc: 0.6771
+Epoch 14/20
+ - 1620s - loss: 0.0182 - acc: 0.7661 - val_loss: 1.5332 - val_acc: 0.6488
+Epoch 15/20
+ - 1620s - loss: 0.0174 - acc: 0.7776 - val_loss: 1.2584 - val_acc: 0.5991
+Epoch 16/20
+ - 1620s - loss: 0.0161 - acc: 0.7708 - val_loss: 1.2520 - val_acc: 0.6103
+Epoch 17/20
+ - 1619s - loss: 0.0153 - acc: 0.7768 - val_loss: 1.3343 - val_acc: 0.6230
+Epoch 18/20
+ - 1621s - loss: 0.0145 - acc: 0.7831 - val_loss: 1.3815 - val_acc: 0.6405
+Epoch 19/20
+ - 1623s - loss: 0.0137 - acc: 0.7870 - val_loss: 1.3659 - val_acc: 0.6289
+Epoch 20/20
+ - 1621s - loss: 0.0132 - acc: 0.7867 - val_loss: 1.5818 - val_acc: 0.6028
+trained!
+('Validation loss:', 1.5817726938650223, 'Validation acc:', 0.6027995334091116)
+{'loss': 1.5817727025420125, 'kernel_size1': 13, 'n_conv_1': 1, 'Dense': 100, 'Dropout': 0.4, 'n_conv': 2, 'lr': 0.01, 'filters': 1000, 'time': 32499, 'filters_1': 250, 'filters_2': 60}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.58177270 │             13 │          1 │     100 │ 0.40000000 │        2 │ 0.01000000 │      1000 │  32499 │         250 │          60 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 1 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 831s - loss: 0.4031 - acc: 0.5966 - val_loss: 0.3936 - val_acc: 0.6626
+Epoch 2/20
+ - 825s - loss: 0.3020 - acc: 0.6898 - val_loss: 0.4923 - val_acc: 0.6120
+Epoch 3/20
+ - 824s - loss: 0.2230 - acc: 0.7442 - val_loss: 0.5876 - val_acc: 0.6333
+Epoch 4/20
+ - 825s - loss: 0.1670 - acc: 0.7366 - val_loss: 0.6796 - val_acc: 0.5979
+Epoch 5/20
+ - 825s - loss: 0.1308 - acc: 0.6475 - val_loss: 0.6594 - val_acc: 0.5048
+Epoch 6/20
+ - 825s - loss: 0.1080 - acc: 0.5625 - val_loss: 0.7109 - val_acc: 0.4955
+Epoch 7/20
+ - 825s - loss: 0.0927 - acc: 0.5225 - val_loss: 0.8324 - val_acc: 0.5193
+Epoch 8/20
+ - 824s - loss: 0.0819 - acc: 0.5017 - val_loss: 0.8750 - val_acc: 0.4937
+Epoch 9/20
+ - 823s - loss: 0.0732 - acc: 0.4927 - val_loss: 0.9540 - val_acc: 0.3691
+Epoch 10/20
+ - 824s - loss: 0.0664 - acc: 0.4893 - val_loss: 0.8798 - val_acc: 0.4129
+Epoch 11/20
+ - 827s - loss: 0.0605 - acc: 0.4992 - val_loss: 1.3602 - val_acc: 0.5133
+Epoch 12/20
+ - 826s - loss: 0.0548 - acc: 0.4983 - val_loss: 1.0356 - val_acc: 0.3718
+Epoch 13/20
+ - 825s - loss: 0.0507 - acc: 0.5075 - val_loss: 0.9103 - val_acc: 0.4399
+Epoch 14/20
+ - 828s - loss: 0.0469 - acc: 0.5185 - val_loss: 0.9856 - val_acc: 0.5291
+Epoch 15/20
+ - 829s - loss: 0.0433 - acc: 0.5342 - val_loss: 1.1595 - val_acc: 0.4936
+Epoch 16/20
+ - 830s - loss: 0.0405 - acc: 0.5419 - val_loss: 1.1829 - val_acc: 0.4871
+Epoch 17/20
+ - 829s - loss: 0.0378 - acc: 0.5446 - val_loss: 1.0909 - val_acc: 0.5384
+Epoch 18/20
+ - 830s - loss: 0.0354 - acc: 0.5528 - val_loss: 1.1900 - val_acc: 0.4740
+Epoch 19/20
+ - 826s - loss: 0.0341 - acc: 0.5696 - val_loss: 1.1320 - val_acc: 0.5097
+Epoch 20/20
+ - 826s - loss: 0.0320 - acc: 0.5821 - val_loss: 1.0219 - val_acc: 0.4839
+trained!
+('Validation loss:', 1.021899525609896, 'Validation acc:', 0.48385269121912355)
+{'loss': 1.0218995293762818, 'kernel_size1': 15, 'n_conv_1': 3, 'Dense': 50, 'Dropout': 0.2, 'n_conv': 1, 'lr': 0.01, 'filters': 1000, 'time': 16558, 'filters_1': 50, 'filters_2': 60}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.02189953 │             15 │          3 │      50 │ 0.20000000 │        1 │ 0.01000000 │      1000 │  16558 │          50 │          60 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 2 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 78s - loss: 0.5331 - acc: 0.4622 - val_loss: 0.4964 - val_acc: 0.5534
+Epoch 2/20
+ - 77s - loss: 0.4850 - acc: 0.5499 - val_loss: 0.4649 - val_acc: 0.5764
+Epoch 3/20
+ - 76s - loss: 0.4580 - acc: 0.5776 - val_loss: 0.4509 - val_acc: 0.5924
+Epoch 4/20
+ - 76s - loss: 0.4434 - acc: 0.5878 - val_loss: 0.4448 - val_acc: 0.5941
+Epoch 5/20
+ - 76s - loss: 0.4330 - acc: 0.5949 - val_loss: 0.4410 - val_acc: 0.5902
+Epoch 6/20
+ - 75s - loss: 0.4236 - acc: 0.6008 - val_loss: 0.4378 - val_acc: 0.5995
+Epoch 7/20
+ - 76s - loss: 0.4149 - acc: 0.6057 - val_loss: 0.4347 - val_acc: 0.6065
+Epoch 8/20
+ - 75s - loss: 0.4070 - acc: 0.6108 - val_loss: 0.4333 - val_acc: 0.6115
+Epoch 9/20
+ - 76s - loss: 0.3995 - acc: 0.6158 - val_loss: 0.4502 - val_acc: 0.5908
+Epoch 10/20
+ - 75s - loss: 0.3926 - acc: 0.6211 - val_loss: 0.4529 - val_acc: 0.6279
+Epoch 11/20
+ - 75s - loss: 0.3859 - acc: 0.6261 - val_loss: 0.4465 - val_acc: 0.5752
+Epoch 12/20
+ - 76s - loss: 0.3798 - acc: 0.6300 - val_loss: 0.4524 - val_acc: 0.5805
+Epoch 13/20
+ - 76s - loss: 0.3740 - acc: 0.6347 - val_loss: 0.4455 - val_acc: 0.6066
+Epoch 14/20
+ - 76s - loss: 0.3682 - acc: 0.6394 - val_loss: 0.4471 - val_acc: 0.6167
+Epoch 15/20
+ - 76s - loss: 0.3638 - acc: 0.6438 - val_loss: 0.4785 - val_acc: 0.6264
+Epoch 16/20
+ - 77s - loss: 0.3587 - acc: 0.6474 - val_loss: 0.4690 - val_acc: 0.6101
+Epoch 17/20
+ - 76s - loss: 0.3545 - acc: 0.6496 - val_loss: 0.4539 - val_acc: 0.6179
+Epoch 18/20
+ - 78s - loss: 0.3505 - acc: 0.6527 - val_loss: 0.4633 - val_acc: 0.6242
+Epoch 19/20
+ - 77s - loss: 0.3466 - acc: 0.6565 - val_loss: 0.4902 - val_acc: 0.5668
+Epoch 20/20
+ - 77s - loss: 0.3429 - acc: 0.6580 - val_loss: 0.4696 - val_acc: 0.6180
+trained!
+('Validation loss:', 0.4696211912099212, 'Validation acc:', 0.6179803366085784)
+{'loss': 0.46962119078481224, 'kernel_size1': 15, 'n_conv_1': 2, 'Dense': 200, 'Dropout': 0.2, 'n_conv': 0, 'lr': 0.0001, 'filters': 50, 'time': 1532, 'filters_1': 500, 'filters_2': 30}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.46962119 │             15 │          2 │     200 │ 0.20000000 │        0 │ 0.00010000 │        50 │   1532 │         500 │          30 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 3 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 172s - loss: 0.5601 - acc: 0.4330 - val_loss: 0.5030 - val_acc: 0.4646
+Epoch 2/20
+ - 169s - loss: 0.4831 - acc: 0.5485 - val_loss: 0.4414 - val_acc: 0.6259
+Epoch 3/20
+ - 169s - loss: 0.4089 - acc: 0.6249 - val_loss: 0.4256 - val_acc: 0.6271
+Epoch 4/20
+ - 169s - loss: 0.3593 - acc: 0.6556 - val_loss: 0.4459 - val_acc: 0.6105
+Epoch 5/20
+ - 168s - loss: 0.3218 - acc: 0.6856 - val_loss: 0.4875 - val_acc: 0.6243
+Epoch 6/20
+ - 168s - loss: 0.2929 - acc: 0.7108 - val_loss: 0.5088 - val_acc: 0.6298
+Epoch 7/20
+ - 168s - loss: 0.2707 - acc: 0.7321 - val_loss: 0.6261 - val_acc: 0.6018
+Epoch 8/20
+ - 169s - loss: 0.2533 - acc: 0.7455 - val_loss: 0.5821 - val_acc: 0.6170
+Epoch 9/20
+ - 169s - loss: 0.2391 - acc: 0.7510 - val_loss: 0.5868 - val_acc: 0.6259
+Epoch 10/20
+ - 169s - loss: 0.2273 - acc: 0.7521 - val_loss: 0.6254 - val_acc: 0.6187
+Epoch 11/20
+ - 178s - loss: 0.2169 - acc: 0.7512 - val_loss: 0.6553 - val_acc: 0.6140
+Epoch 12/20
+ - 172s - loss: 0.2079 - acc: 0.7431 - val_loss: 0.6651 - val_acc: 0.6083
+Epoch 13/20
+ - 174s - loss: 0.2006 - acc: 0.7365 - val_loss: 0.7265 - val_acc: 0.6095
+Epoch 14/20
+ - 170s - loss: 0.1932 - acc: 0.7279 - val_loss: 0.6870 - val_acc: 0.6042
+Epoch 15/20
+ - 171s - loss: 0.1870 - acc: 0.7196 - val_loss: 0.7925 - val_acc: 0.6009
+Epoch 16/20
+ - 170s - loss: 0.1807 - acc: 0.7151 - val_loss: 0.7694 - val_acc: 0.6004
+Epoch 17/20
+ - 170s - loss: 0.1757 - acc: 0.7124 - val_loss: 0.7983 - val_acc: 0.6044
+Epoch 18/20
+ - 169s - loss: 0.1704 - acc: 0.7063 - val_loss: 0.7442 - val_acc: 0.5956
+Epoch 19/20
+ - 169s - loss: 0.1658 - acc: 0.7035 - val_loss: 0.7697 - val_acc: 0.5977
+Epoch 20/20
+ - 170s - loss: 0.1616 - acc: 0.6987 - val_loss: 0.7721 - val_acc: 0.5886
+trained!
+('Validation loss:', 0.772082524614679, 'Validation acc:', 0.5885685719086555)
+{'loss': 0.7720825196881828, 'kernel_size1': 19, 'n_conv_1': 2, 'Dense': 200, 'Dropout': 0.4, 'n_conv': 2, 'lr': 0.0001, 'filters': 50, 'time': 3413, 'filters_1': 50, 'filters_2': 30}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.77208252 │             19 │          2 │     200 │ 0.40000000 │        2 │ 0.00010000 │        50 │   3413 │          50 │          30 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 4 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 1372s - loss: 0.4079 - acc: 0.5956 - val_loss: 0.4330 - val_acc: 0.6722
+Epoch 2/20
+ - 1362s - loss: 0.2411 - acc: 0.7212 - val_loss: 0.5033 - val_acc: 0.6665
+Epoch 3/20
+ - 1359s - loss: 0.1315 - acc: 0.6764 - val_loss: 0.6489 - val_acc: 0.5648
+Epoch 4/20
+ - 1357s - loss: 0.0852 - acc: 0.5220 - val_loss: 0.7699 - val_acc: 0.4382
+Epoch 5/20
+ - 1357s - loss: 0.0624 - acc: 0.5137 - val_loss: 1.2664 - val_acc: 0.3325
+Epoch 6/20
+ - 1357s - loss: 0.0469 - acc: 0.5429 - val_loss: 1.0302 - val_acc: 0.4175
+Epoch 7/20
+ - 1364s - loss: 0.0363 - acc: 0.5776 - val_loss: 0.9642 - val_acc: 0.4713
+Epoch 8/20
+ - 1359s - loss: 0.0295 - acc: 0.6108 - val_loss: 1.1104 - val_acc: 0.5866
+Epoch 9/20
+ - 1357s - loss: 0.0250 - acc: 0.6337 - val_loss: 0.9145 - val_acc: 0.6035
+Epoch 10/20
+ - 1357s - loss: 0.0220 - acc: 0.6660 - val_loss: 1.5314 - val_acc: 0.5626
+Epoch 11/20
+ - 1358s - loss: 0.0195 - acc: 0.6891 - val_loss: 1.2005 - val_acc: 0.6043
+Epoch 12/20
+ - 1357s - loss: 0.0177 - acc: 0.6841 - val_loss: 1.4139 - val_acc: 0.5890
+Epoch 13/20
+ - 1357s - loss: 0.0163 - acc: 0.6845 - val_loss: 1.1000 - val_acc: 0.6190
+Epoch 14/20
+ - 1357s - loss: 0.0151 - acc: 0.7091 - val_loss: 1.1516 - val_acc: 0.5893
+Epoch 15/20
+ - 1358s - loss: 0.0139 - acc: 0.6974 - val_loss: 1.3212 - val_acc: 0.6636
+Epoch 16/20
+ - 1357s - loss: 0.0127 - acc: 0.7296 - val_loss: 1.2170 - val_acc: 0.6015
+Epoch 17/20
+ - 1357s - loss: 0.0121 - acc: 0.7169 - val_loss: 1.4163 - val_acc: 0.5418
+Epoch 18/20
+ - 1357s - loss: 0.0112 - acc: 0.7507 - val_loss: 1.1204 - val_acc: 0.6423
+Epoch 19/20
+ - 1359s - loss: 0.0108 - acc: 0.7261 - val_loss: 1.2822 - val_acc: 0.6202
+Epoch 20/20
+ - 1358s - loss: 0.0102 - acc: 0.7418 - val_loss: 1.3871 - val_acc: 0.5777
+trained!
+('Validation loss:', 1.3871070956075375, 'Validation acc:', 0.5776870521579737)
+{'loss': 1.3871066821473694, 'kernel_size1': 13, 'n_conv_1': 3, 'Dense': 100, 'Dropout': 0.2, 'n_conv': 1, 'lr': 0.01, 'filters': 1000, 'time': 27223, 'filters_1': 250, 'filters_2': 10}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.38710668 │             13 │          3 │     100 │ 0.20000000 │        1 │ 0.01000000 │      1000 │  27223 │         250 │          10 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 5 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 180s - loss: 0.5363 - acc: 0.4660 - val_loss: 0.4852 - val_acc: 0.5360
+Epoch 2/20
+ - 177s - loss: 0.4805 - acc: 0.5612 - val_loss: 0.4878 - val_acc: 0.5007
+Epoch 3/20
+ - 178s - loss: 0.4407 - acc: 0.6077 - val_loss: 0.4785 - val_acc: 0.5632
+Epoch 4/20
+ - 178s - loss: 0.4071 - acc: 0.6409 - val_loss: 0.5016 - val_acc: 0.5782
+Epoch 5/20
+ - 179s - loss: 0.3812 - acc: 0.6611 - val_loss: 0.5741 - val_acc: 0.5178
+Epoch 6/20
+ - 178s - loss: 0.3604 - acc: 0.6768 - val_loss: 0.5477 - val_acc: 0.5241
+Epoch 7/20
+ - 178s - loss: 0.3424 - acc: 0.6876 - val_loss: 0.5841 - val_acc: 0.5915
+Epoch 8/20
+ - 182s - loss: 0.3273 - acc: 0.6962 - val_loss: 0.5804 - val_acc: 0.5809
+Epoch 9/20
+ - 183s - loss: 0.3137 - acc: 0.7031 - val_loss: 0.5800 - val_acc: 0.5834
+Epoch 10/20
+ - 183s - loss: 0.3012 - acc: 0.7078 - val_loss: 0.6275 - val_acc: 0.5834
+Epoch 11/20
+ - 185s - loss: 0.2904 - acc: 0.7111 - val_loss: 0.6440 - val_acc: 0.5644
+Epoch 12/20
+ - 184s - loss: 0.2809 - acc: 0.7138 - val_loss: 0.6820 - val_acc: 0.5333
+Epoch 13/20
+ - 184s - loss: 0.2723 - acc: 0.7153 - val_loss: 0.6683 - val_acc: 0.5558
+Epoch 14/20
+ - 183s - loss: 0.2642 - acc: 0.7162 - val_loss: 0.6568 - val_acc: 0.5751
+Epoch 15/20
+ - 183s - loss: 0.2571 - acc: 0.7173 - val_loss: 0.7309 - val_acc: 0.5688
+Epoch 16/20
+ - 183s - loss: 0.2505 - acc: 0.7174 - val_loss: 0.6716 - val_acc: 0.5634
+Epoch 17/20
+ - 184s - loss: 0.2447 - acc: 0.7186 - val_loss: 0.7867 - val_acc: 0.5514
+Epoch 18/20
+ - 184s - loss: 0.2400 - acc: 0.7167 - val_loss: 0.8053 - val_acc: 0.5783
+Epoch 19/20
+ - 183s - loss: 0.2354 - acc: 0.7180 - val_loss: 0.8855 - val_acc: 0.5371
+Epoch 20/20
+ - 183s - loss: 0.2301 - acc: 0.7178 - val_loss: 0.7666 - val_acc: 0.5754
+trained!
+('Validation loss:', 0.7666429704555848, 'Validation acc:', 0.5753541076507117)
+{'loss': 0.766642960682052, 'kernel_size1': 39, 'n_conv_1': 2, 'Dense': 50, 'Dropout': 0.2, 'n_conv': 0, 'lr': 0.0001, 'filters': 250, 'time': 3644, 'filters_1': 250, 'filters_2': 10}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.76664296 │             39 │          2 │      50 │ 0.20000000 │        0 │ 0.00010000 │       250 │   3644 │         250 │          10 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 6 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 370s - loss: 0.4539 - acc: 0.5389 - val_loss: 0.7751 - val_acc: 0.5441
+Epoch 2/20
+ - 364s - loss: 0.3351 - acc: 0.6730 - val_loss: 0.4422 - val_acc: 0.6474
+Epoch 3/20
+ - 361s - loss: 0.2624 - acc: 0.7258 - val_loss: 0.5785 - val_acc: 0.6055
+Epoch 4/20
+ - 362s - loss: 0.2141 - acc: 0.7439 - val_loss: 0.5727 - val_acc: 0.6482
+Epoch 5/20
+ - 362s - loss: 0.1785 - acc: 0.7472 - val_loss: 0.6010 - val_acc: 0.6508
+Epoch 6/20
+ - 361s - loss: 0.1528 - acc: 0.7326 - val_loss: 0.7805 - val_acc: 0.6386
+Epoch 7/20
+ - 362s - loss: 0.1349 - acc: 0.6736 - val_loss: 0.7488 - val_acc: 0.5403
+Epoch 8/20
+ - 362s - loss: 0.1219 - acc: 0.6272 - val_loss: 0.8319 - val_acc: 0.4555
+Epoch 9/20
+ - 362s - loss: 0.1108 - acc: 0.5866 - val_loss: 0.8545 - val_acc: 0.4986
+Epoch 10/20
+ - 362s - loss: 0.1020 - acc: 0.5557 - val_loss: 1.6767 - val_acc: 0.3843
+Epoch 11/20
+ - 362s - loss: 0.0948 - acc: 0.5289 - val_loss: 1.1395 - val_acc: 0.3175
+Epoch 12/20
+ - 362s - loss: 0.0886 - acc: 0.5126 - val_loss: 1.0329 - val_acc: 0.3207
+Epoch 13/20
+ - 363s - loss: 0.0843 - acc: 0.5025 - val_loss: 1.8669 - val_acc: 0.1617
+Epoch 14/20
+ - 363s - loss: 0.0796 - acc: 0.4924 - val_loss: 0.8895 - val_acc: 0.4492
+Epoch 15/20
+ - 363s - loss: 0.0763 - acc: 0.4867 - val_loss: 1.4758 - val_acc: 0.4601
+Epoch 16/20
+ - 363s - loss: 0.0730 - acc: 0.4823 - val_loss: 1.1057 - val_acc: 0.3976
+Epoch 17/20
+ - 362s - loss: 0.0703 - acc: 0.4784 - val_loss: 1.1728 - val_acc: 0.4694
+Epoch 18/20
+ - 363s - loss: 0.0681 - acc: 0.4758 - val_loss: 1.4200 - val_acc: 0.4154
+Epoch 19/20
+ - 363s - loss: 0.0661 - acc: 0.4742 - val_loss: 1.2286 - val_acc: 0.3773
+Epoch 20/20
+ - 363s - loss: 0.0632 - acc: 0.4712 - val_loss: 1.4659 - val_acc: 0.4467
+trained!
+('Validation loss:', 1.4658729287827537, 'Validation acc:', 0.44674220963570105)
+{'loss': 1.4658729667326666, 'kernel_size1': 19, 'n_conv_1': 3, 'Dense': 100, 'Dropout': 0.6, 'n_conv': 3, 'lr': 0.01, 'filters': 50, 'time': 7275, 'filters_1': 100, 'filters_2': 10}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.46587297 │             19 │          3 │     100 │ 0.60000000 │        3 │ 0.01000000 │        50 │   7275 │         100 │          10 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 7 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 3312s - loss: 0.5031 - acc: 0.5469 - val_loss: 0.4804 - val_acc: 0.5826
+Epoch 2/20
+ - 3286s - loss: 0.3155 - acc: 0.7008 - val_loss: 0.9854 - val_acc: 0.5537
+Epoch 3/20
+ - 3287s - loss: 0.1769 - acc: 0.7267 - val_loss: 0.8235 - val_acc: 0.5880
+Epoch 4/20
+ - 3287s - loss: 0.1074 - acc: 0.7143 - val_loss: 0.8253 - val_acc: 0.5508
+Epoch 5/20
+ - 3279s - loss: 0.0723 - acc: 0.6671 - val_loss: 0.9776 - val_acc: 0.6285
+Epoch 6/20
+ - 3281s - loss: 0.0539 - acc: 0.6356 - val_loss: 1.6666 - val_acc: 0.5111
+Epoch 7/20
+ - 3274s - loss: 0.0421 - acc: 0.6191 - val_loss: 2.7246 - val_acc: 0.2050
+Epoch 8/20
+ - 3229s - loss: 0.0342 - acc: 0.6207 - val_loss: 1.0930 - val_acc: 0.6277
+Epoch 9/20
+ - 3226s - loss: 0.0290 - acc: 0.6278 - val_loss: 1.3211 - val_acc: 0.5526
+Epoch 10/20
+ - 3226s - loss: 0.0251 - acc: 0.6337 - val_loss: 1.4267 - val_acc: 0.5645
+Epoch 11/20
+ - 3252s - loss: 0.0223 - acc: 0.6344 - val_loss: 2.4196 - val_acc: 0.1989
+Epoch 12/20
+ - 3275s - loss: 0.0199 - acc: 0.6359 - val_loss: 1.4386 - val_acc: 0.6106
+Epoch 13/20
+ - 3266s - loss: 0.0180 - acc: 0.6392 - val_loss: 2.4431 - val_acc: 0.1215
+Epoch 14/20
+ - 3269s - loss: 0.0170 - acc: 0.6407 - val_loss: 1.3612 - val_acc: 0.6187
+Epoch 15/20
+ - 3273s - loss: 0.0157 - acc: 0.6405 - val_loss: 1.7325 - val_acc: 0.6137
+Epoch 16/20
+ - 3273s - loss: 0.0142 - acc: 0.6421 - val_loss: 1.3946 - val_acc: 0.5405
+Epoch 17/20
+ - 3261s - loss: 0.0134 - acc: 0.6418 - val_loss: 1.5606 - val_acc: 0.5567
+Epoch 18/20
+ - 3271s - loss: 0.0127 - acc: 0.6466 - val_loss: 2.1526 - val_acc: 0.2573
+Epoch 19/20
+ - 3265s - loss: 0.0119 - acc: 0.6494 - val_loss: 2.6661 - val_acc: 0.3866
+Epoch 20/20
+ - 3264s - loss: 0.0116 - acc: 0.6605 - val_loss: 1.3850 - val_acc: 0.2832
+trained!
+('Validation loss:', 1.3849972517346167, 'Validation acc:', 0.2832194634237561)
+{'loss': 1.3849972851712233, 'kernel_size1': 25, 'n_conv_1': 2, 'Dense': 100, 'Dropout': 0.4, 'n_conv': 3, 'lr': 0.0001, 'filters': 50, 'time': 65433, 'filters_1': 500, 'filters_2': 10}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.38499729 │             25 │          2 │     100 │ 0.40000000 │        3 │ 0.00010000 │        50 │  65433 │         500 │          10 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 8 done ----------------
+compiled!
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 769s - loss: 0.4429 - acc: 0.5417 - val_loss: 0.4904 - val_acc: 0.5177
+Epoch 2/20
+ - 758s - loss: 0.2859 - acc: 0.7135 - val_loss: 0.9088 - val_acc: 0.5764
+Epoch 3/20
+ - 757s - loss: 0.2069 - acc: 0.7348 - val_loss: 0.6286 - val_acc: 0.6326
+Epoch 4/20
+ - 758s - loss: 0.1620 - acc: 0.6971 - val_loss: 0.7170 - val_acc: 0.6015
+Epoch 5/20
+ - 757s - loss: 0.1326 - acc: 0.5884 - val_loss: 0.8904 - val_acc: 0.5191
+Epoch 6/20
+ - 758s - loss: 0.1128 - acc: 0.5283 - val_loss: 0.9103 - val_acc: 0.4295
+Epoch 7/20
+ - 757s - loss: 0.1023 - acc: 0.5008 - val_loss: 1.3828 - val_acc: 0.4263
+Epoch 8/20
+ - 758s - loss: 0.0935 - acc: 0.4836 - val_loss: 1.1407 - val_acc: 0.3958
+Epoch 9/20
+ - 756s - loss: 0.0859 - acc: 0.4769 - val_loss: 1.2377 - val_acc: 0.3754
+Epoch 10/20
+ - 757s - loss: 0.0822 - acc: 0.4742 - val_loss: 1.6658 - val_acc: 0.5466
+Epoch 11/20
+ - 757s - loss: 0.0788 - acc: 0.4707 - val_loss: 1.3620 - val_acc: 0.3122
+Epoch 12/20
+ - 756s - loss: 0.0747 - acc: 0.4683 - val_loss: 1.3713 - val_acc: 0.4716
+Epoch 13/20
+ - 756s - loss: 0.0718 - acc: 0.4641 - val_loss: 1.4297 - val_acc: 0.4222
+Epoch 14/20
+ - 757s - loss: 0.0699 - acc: 0.4629 - val_loss: 1.4002 - val_acc: 0.4541
+Epoch 15/20
+ - 758s - loss: 0.0671 - acc: 0.4616 - val_loss: 2.6874 - val_acc: 0.4885
+Epoch 16/20
+ - 758s - loss: 0.0660 - acc: 0.4600 - val_loss: 1.8210 - val_acc: 0.3341
+Epoch 17/20
+ - 757s - loss: 0.0645 - acc: 0.4599 - val_loss: 1.4046 - val_acc: 0.4627
+Epoch 18/20
+ - 757s - loss: 0.0624 - acc: 0.4589 - val_loss: 1.8540 - val_acc: 0.4734
+Epoch 19/20
+ - 757s - loss: 0.0615 - acc: 0.4588 - val_loss: 1.5734 - val_acc: 0.4945
+Epoch 20/20
+ - 759s - loss: 0.0605 - acc: 0.4580 - val_loss: 1.8628 - val_acc: 0.4161
+trained!
+('Validation loss:', 1.8627880047091125, 'Validation acc:', 0.4161306448925179)
+{'loss': 1.8627880039145164, 'kernel_size1': 39, 'n_conv_1': 2, 'Dense': 50, 'Dropout': 0.6, 'n_conv': 1, 'lr': 0.01, 'filters': 250, 'time': 15181, 'filters_1': 250, 'filters_2': 60}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.86278800 │             39 │          2 │      50 │ 0.60000000 │        1 │ 0.01000000 │       250 │  15181 │         250 │          60 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 9 done ----------------
+compiled!
