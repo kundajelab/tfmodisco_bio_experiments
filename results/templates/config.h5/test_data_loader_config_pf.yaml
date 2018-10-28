@@ -1,0 +1,13 @@
+{
+    "class": "pyfasta_data_loader.SingleStreamSeqOnly",
+    "kwargs": {
+       "batch_size": null, 
+       "bed_source": "splits/test.tsv.gz",
+       "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
+       "rc_augment": false,
+       "num_to_load_for_eval": null,
+       "labels_dtype": "int"
+    }
+}
+
+
