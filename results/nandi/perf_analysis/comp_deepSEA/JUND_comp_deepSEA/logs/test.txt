@@ -1,0 +1,46 @@
+2018-10-29 01:22:30 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs JUND --test-chroms chr8,chr9,chr7 --test-only True --bg-stride=50
+2018-10-29 01:23:38 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/K562-JUND-human-ENCSR000EGN-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/SK-N-SH-JUND-human-ENCSR000EIB-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/liver-JUND-human-ENCSR837GTK-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/H1-hESC-JUND-human-ENCSR000EBZ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HepG2-JUND-human-ENCSR000BGK-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HCT116-JUND-human-ENCSR000BSA-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/A549-JUND-human-ENCSR000BRF-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/liver-JUND-human-ENCSR196HGZ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/T47D-JUND-human-ENCSR000BVO-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/SK-N-SH-JUND-human-ENCSR000BSK-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-JUND-human-ENCSR000DYS-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-JUND-human-ENCSR000EDH-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-JUND-human-ENCSR000EYV-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/H1-hESC-JUND-human-ENCSR000BKP-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HepG2-JUND-human-ENCSR000EEI-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_Z13FoW/_tmp_K562-JUND-human-ENCSR000EGN-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_SK-N-SH-JUND-human-ENCSR000EIB-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_liver-JUND-human-ENCSR837GTK-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_H1-hESC-JUND-human-ENCSR000EBZ-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_HepG2-JUND-human-ENCSR000BGK-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_HCT116-JUND-human-ENCSR000BSA-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_A549-JUND-human-ENCSR000BRF-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_liver-JUND-human-ENCSR196HGZ-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_T47D-JUND-human-ENCSR000BVO-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_SK-N-SH-JUND-human-ENCSR000BSK-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_GM12878-JUND-human-ENCSR000DYS-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_empty_file,./_tmp_Z13FoW/_tmp_empty_file,./_tmp_Z13FoW/_tmp_H1-hESC-JUND-human-ENCSR000BKP-merged.narrowPeak.gz,./_tmp_Z13FoW/_tmp_HepG2-JUND-human-ENCSR000EEI-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7 --bg-stride 50  --background /root/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-10-29 01:23:38 DEBUG bin-size=200, stride=10
+2018-10-29 01:24:21 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-10-29 01:24:21 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-10-29 01:25:23 INFO  LABEL_REGIONS sort merge done
+2018-10-29 01:31:50 INFO  LABEL_REGIONS intersect done
+2018-10-29 01:35:43 INFO  LABEL_REGIONS labels done
+2018-10-29 01:35:49 INFO  LABEL_REGIONS ALL DONE *****
+2018-10-29 01:45:14 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/K562-JUND-human-ENCSR000EGN-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/SK-N-SH-JUND-human-ENCSR000EIB-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/liver-JUND-human-ENCSR837GTK-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-JUND-human-ENCSR000EBZ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HepG2-JUND-human-ENCSR000BGK-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HCT116-JUND-human-ENCSR000BSA-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/A549-JUND-human-ENCSR000BRF-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/liver-JUND-human-ENCSR196HGZ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/T47D-JUND-human-ENCSR000BVO-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/SK-N-SH-JUND-human-ENCSR000BSK-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-JUND-human-ENCSR000DYS-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-JUND-human-ENCSR000EDH-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-JUND-human-ENCSR000EYV-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-JUND-human-ENCSR000BKP-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HepG2-JUND-human-ENCSR000EEI-optimal_idr.narrowPeak.gz
+15
+Using TensorFlow backend.
+2018-10-29 01:45:17.324183: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-29 01:45:17.827219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:05:00.0
+totalMemory: 7.93GiB freeMemory: 7.81GiB
+2018-10-29 01:45:18.217302: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:85:00.0
+totalMemory: 7.93GiB freeMemory: 7.81GiB
+2018-10-29 01:45:18.217432: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-29 01:45:19.060128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-29 01:45:19.060182: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-29 01:45:19.060191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N N 
+2018-10-29 01:45:19.060196: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   N N 
+2018-10-29 01:45:19.060855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7543 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:05:00.0, compute capability: 6.1)
+2018-10-29 01:45:19.238111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 7543 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080, pci bus id: 0000:85:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows
