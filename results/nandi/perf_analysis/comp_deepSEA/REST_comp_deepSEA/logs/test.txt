@@ -1,0 +1,49 @@
+2018-10-28 22:02:32 INFO  /home/ktian/kundajelab/tfnet//scripts/prepare_data_pf.py --tfs REST --test-chroms chr8,chr9,chr7 --test-only True --bg-stride=50
+2018-10-28 22:03:27 DEBUG /home/ktian/kundajelab/tfnet//scripts/label_regions  --positives /home/ktian/kundajelab/tfnet//ENCODE_data/Panc1-REST-human-ENCSR000BJO-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/PFSK-1-REST-human-ENCSR000BOX-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-REST-human-ENCSR000BOT-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-REST-human-ENCSR000BJL-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/SK-N-SH-REST-human-ENCSR000BJJ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-REST-human-ENCSR000BMN-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-REST-human-ENCSR000BGF-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/K562-REST-human-ENCSR137ZMQ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/A549-REST-human-ENCSR000BQP-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/K562-REST-human-ENCSR000BMW-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-REST-human-ENCSR000BHM-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/SK-N-SH-REST-human-ENCSR000BOZ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-REST-human-ENCSR663WAR-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/liver-REST-human-ENCSR867WPH-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-REST-human-ENCSR000BTF-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/A549-REST-human-ENCSR892DRK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-REST-human-ENCSR000BQS-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/liver-REST-human-ENCSR893QWP-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_g32E3z/_tmp_Panc1-REST-human-ENCSR000BJO-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_PFSK-1-REST-human-ENCSR000BOX-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_HepG2-REST-human-ENCSR000BOT-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_HepG2-REST-human-ENCSR000BJL-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_SK-N-SH-REST-human-ENCSR000BJJ-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_HeLa-S3-REST-human-ENCSR000BMN-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_GM12878-REST-human-ENCSR000BGF-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_K562-REST-human-ENCSR137ZMQ-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_A549-REST-human-ENCSR000BQP-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_K562-REST-human-ENCSR000BMW-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_H1-hESC-REST-human-ENCSR000BHM-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_SK-N-SH-REST-human-ENCSR000BOZ-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_H1-hESC-REST-human-ENCSR663WAR-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_liver-REST-human-ENCSR867WPH-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_HL-60-REST-human-ENCSR000BTF-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_A549-REST-human-ENCSR892DRK-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_GM12878-REST-human-ENCSR000BQS-merged.narrowPeak.gz,./_tmp_g32E3z/_tmp_liver-REST-human-ENCSR893QWP-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7 --bg-stride 50  --background /home/ktian/kundajelab/tfnet//genome/hg19.tsv  --test-only True 
+2018-10-28 22:03:27 DEBUG bin-size=200, stride=10
+2018-10-28 22:03:57 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-10-28 22:03:57 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-10-28 22:04:35 INFO  LABEL_REGIONS sort merge done
+2018-10-28 22:08:09 INFO  LABEL_REGIONS intersect done
+2018-10-28 22:10:54 INFO  LABEL_REGIONS labels done
+2018-10-28 22:10:59 INFO  LABEL_REGIONS ALL DONE *****
+2018-10-28 22:11:16 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet//ENCODE_data/Panc1-REST-human-ENCSR000BJO-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/PFSK-1-REST-human-ENCSR000BOX-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-REST-human-ENCSR000BOT-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-REST-human-ENCSR000BJL-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/SK-N-SH-REST-human-ENCSR000BJJ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-REST-human-ENCSR000BMN-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-REST-human-ENCSR000BGF-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-REST-human-ENCSR137ZMQ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/A549-REST-human-ENCSR000BQP-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-REST-human-ENCSR000BMW-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-REST-human-ENCSR000BHM-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/SK-N-SH-REST-human-ENCSR000BOZ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/H1-hESC-REST-human-ENCSR663WAR-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-REST-human-ENCSR867WPH-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HL-60-REST-human-ENCSR000BTF-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/A549-REST-human-ENCSR892DRK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-REST-human-ENCSR000BQS-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/liver-REST-human-ENCSR893QWP-optimal_idr.narrowPeak.gz
+18
+Using TensorFlow backend.
+2018-10-28 22:11:18.272416: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-28 22:11:20.537188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-28 22:11:20.749173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:81:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-28 22:11:20.749251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1
+2018-10-28 22:11:21.419127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-28 22:11:21.419168: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 
+2018-10-28 22:11:21.419175: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N N 
+2018-10-28 22:11:21.419178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   N N 
+2018-10-28 22:11:21.419799: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-10-28 22:11:21.606780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11366 MB memory) -> physical GPU (device: 1, name: TITAN X (Pascal), pci bus id: 0000:81:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows
