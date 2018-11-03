@@ -1,0 +1,61 @@
+2018-10-28 18:49:18 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs SIX5 --no-bg True --stride 10 --test-chroms chr8,chr9,chr7 --hdf5 True
+2018-10-28 18:49:29 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_yTQxsh/_tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak.gz,./_tmp_yTQxsh/_tmp_K562-SIX5-human-ENCSR000BNW-merged.narrowPeak.gz,./_tmp_yTQxsh/_tmp_H1-hESC-SIX5-human-ENCSR000BIQ-merged.narrowPeak.gz,./_tmp_yTQxsh/_tmp_A549-SIX5-human-ENCSR000BRL-merged.narrowPeak.gz,./_tmp_yTQxsh/_tmp_empty_file --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7
+2018-10-28 18:49:30 DEBUG bin-size=200, stride=10
+2018-10-28 18:49:34 DEBUG in: skip_test=0 bin-size=200, stride=10
+2018-10-28 18:49:34 INFO  LABEL_REGIONS sort merge done
+2018-10-28 18:49:37 INFO  LABEL_REGIONS intersect done
+2018-10-28 18:49:38 INFO  LABEL_REGIONS labels done
+2018-10-28 18:49:38 INFO  LABEL_REGIONS ALL DONE *****
+Warning: the index file is older than the FASTA file.
+2018-10-28 18:49:39 INFO  split and make hdf5
+Reading in labels
+on file inputs.fa
+Processed 5000 lines
+Processed 10000 lines
+Processed 15000 lines
+Processed 20000 lines
+Processed 25000 lines
+Processed 30000 lines
+Processed 35000 lines
+Processed 40000 lines
+Processed 45000 lines
+Processed 50000 lines
+Processed 55000 lines
+Processed 60000 lines
+Processed 65000 lines
+Processed 70000 lines
+Processed 75000 lines
+Processed 80000 lines
+Processed 85000 lines
+Processed 90000 lines
+Processed 95000 lines
+Processed 100000 lines
+Processed 105000 lines
+Processed 110000 lines
+Processed 115000 lines
+Processed 120000 lines
+Processed 125000 lines
+Processed 130000 lines
+Processed 135000 lines
+Processed 140000 lines
+Processed 145000 lines
+Processed 150000 lines
+Processed 155000 lines
+Processed 160000 lines
+Processed 165000 lines
+Processed 170000 lines
+Processed 175000 lines
+Processed 180000 lines
+Processed 185000 lines
+Processed 190000 lines
+Processed 195000 lines
+Processed 200000 lines
+Processed 205000 lines
+2018-10-28 18:51:25 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz
+5
+cat labels.txt | grep -v -P 'chr8:|chr9:' | grep -v -P 'chr7:' | grep -v -P '^id' | pigz -c > splits/train.txt.gz

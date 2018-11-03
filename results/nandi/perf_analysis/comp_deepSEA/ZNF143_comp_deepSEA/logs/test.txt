@@ -1,0 +1,36 @@
+2018-10-30 00:54:49 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs ZNF143 --test-chroms chr8,chr9,chr7 --test-only True --bg-stride=50
+2018-10-30 00:54:55 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/H1-hESC-ZNF143-human-ENCSR000EBW-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-ZNF143-human-ENCSR000EGP-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-ZNF143-human-ENCSR000ECO-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_R9E8Ox/_tmp_H1-hESC-ZNF143-human-ENCSR000EBW-merged.narrowPeak.gz,./_tmp_R9E8Ox/_tmp_K562-ZNF143-human-ENCSR000EGP-merged.narrowPeak.gz,./_tmp_R9E8Ox/_tmp_GM12878-ZNF143-human-ENCSR000DZL-merged.narrowPeak.gz,./_tmp_R9E8Ox/_tmp_empty_file,/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-rep2.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7 --bg-stride 50  --background /root/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-10-30 00:54:55 DEBUG bin-size=200, stride=10
+2018-10-30 00:55:02 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-10-30 00:55:02 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-10-30 00:55:27 INFO  LABEL_REGIONS sort merge done
+2018-10-30 00:56:26 INFO  LABEL_REGIONS intersect done
+2018-10-30 00:56:59 INFO  LABEL_REGIONS labels done
+2018-10-30 00:57:01 INFO  LABEL_REGIONS ALL DONE *****
+2018-10-30 00:57:05 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-ZNF143-human-ENCSR000EBW-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-ZNF143-human-ENCSR000EGP-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-ZNF143-human-ENCSR000ECO-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-ZNF143-human-ENCSR936XTK-optimal_idr.narrowPeak.gz
+5
+Using TensorFlow backend.
+2018-10-30 00:57:07.152335: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-10-30 00:57:07.650059: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3e:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-30 00:57:08.080864: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:61:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-30 00:57:08.081847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-30 00:57:08.618201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-30 00:57:08.618243: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-30 00:57:08.618248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-10-30 00:57:08.618251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-10-30 00:57:08.618600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3e:00.0, compute capability: 6.1)
+2018-10-30 00:57:08.708781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10413 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:61:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows
