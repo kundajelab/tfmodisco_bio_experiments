@@ -1,0 +1,388 @@
+Using cuDNN version 7001 on context None
+Mapped name None to device cuda0: GeForce GTX TITAN X (0000:88:00.0)
+2018-10-01 06:12:35 INFO  /home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py --scores scores/hyp_scores_task_ --fasta interpret.fa --tsv interpret.tsv --start-task 0 --end-task 1 --fdr 0.95 --min-seqlets 3000
+2018-10-01 06:12:35 DEBUG Theano version:1.0.2
+2018-10-01 06:12:35 DEBUG 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+2018-10-01 06:12:35 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is interpret.fa, input tsv is interpret.tsv, start_task is 0 end_task is 1, fdr is 0.950000
+2018-10-01 06:12:35 DEBUG lenth of sequences = 9043
+2018-10-01 06:12:36 DEBUG merged overlaps based on in_tsv interpret.tsv, 9043 seqs merged into 7839 seqs, max len 1164
+2018-10-01 06:12:38 DEBUG shape of hyp_score (400, 4)
+2018-10-01 06:12:38 DEBUG shape of score (400, 4)
+On task task0
+Computing windowed sums
+Computing threshold
+2018-10-01 06:12:57 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-10-01 06:12:57 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-10-01 06:12:57 DEBUG backend agg version v2.2
+2018-10-01 06:12:58 DEBUG findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/ktian/anaconda3/envs/tfenv/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+peak(mu)= 0.45234307634102877
+Manually adjusting thresholds to get desired num seqlets
+Mu: 4.523431e-01 +/- 3.487917e-06
+Lablace_b: 0.3530543688849808 and 0.44126503931017835
+Thresholds: -0.8803762181397761 and 1.7850623708218336
+#fdrs pass: 0 and 4829
+CDFs: 0.9770589493678451 and 0.951209715468582
+Est. FDRs: 1.0 and 0.9499056453725383
+saving plot to figures/laplace_0.png
+Got 2621 coords
+After resolving overlaps, got 2621 seqlets
+Across all tasks, the weakest laplace threshold used was: 0.951209715468582
+2621 identified in total
+Reducing weak_threshold_for_counting_sign to match laplace_threshold_cdf, from 0.99 to 0.951209715468582
+2 activity patterns with support >= 100 out of 3 possible patterns
+Metacluster sizes:  [2512, 109]
+Idx to activities:  {0: '1', 1: '-1'}
+On metacluster 1
+Metacluster size 109
+Relevant tasks:  ('task0',)
+Relevant signs:  (-1,)
+TfModiscoSeqletsToPatternsFactory: seed=1234
+(Round 1) num seqlets: 109
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 0.12 s
+Starting affinity matrix computations
+Normalization computed in 0.02 s
+Cosine similarity mat computed in 0.04 s
+Normalization computed in 0.01 s
+Cosine similarity mat computed in 0.02 s
+Finished affinity matrix computations in 0.06 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.0 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 1.12 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 1.04 s
+(Round 1) Computed affinity matrix on nearest neighbors in 2.22 s
+Filtered down to 102 of 109
+(Round 1) Retained 102 rows out of 109 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 102 samples in 0.000s...
+[t-SNE] Computed neighbors for 102 samples in 0.001s...
+[t-SNE] Computed conditional probabilities for sample 102 / 102
+[t-SNE] Mean sigma: 0.259892
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.0085608959198 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Done  76 tasks      | elapsed:    3.3s
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:    8.3s finished
+Louvain completed 200 runs in 8.72743296623 seconds
+Wrote graph to binary file in 0.0040340423584 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.672662
+Louvain completed 51 runs in 4.60900902748 seconds
+Preproc + Louvain took 13.358314991 s
+Got 8 clusters after round 1
+Counts:
+{0: 18, 1: 18, 2: 17, 3: 14, 4: 13, 5: 11, 6: 6, 7: 5}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 18 seqlets
+Trimmed 0 out of 18
+Dropping cluster 0 with 18 seqlets due to sign disagreement
+Aggregating for cluster 1 with 18 seqlets
+Trimmed 4 out of 18
+Dropping cluster 1 with 14 seqlets due to sign disagreement
+Aggregating for cluster 2 with 17 seqlets
+Trimmed 0 out of 17
+Aggregating for cluster 3 with 14 seqlets
+Trimmed 0 out of 14
+Dropping cluster 3 with 14 seqlets due to sign disagreement
+Aggregating for cluster 4 with 13 seqlets
+Trimmed 0 out of 13
+Dropping cluster 4 with 13 seqlets due to sign disagreement
+Aggregating for cluster 5 with 11 seqlets
+Trimmed 0 out of 11
+Dropping cluster 5 with 11 seqlets due to sign disagreement
+Aggregating for cluster 6 with 6 seqlets
+Trimmed 0 out of 6
+Aggregating for cluster 7 with 5 seqlets
+Trimmed 0 out of 5
+Dropping cluster 7 with 5 seqlets due to sign disagreement
+(Round 2) num seqlets: 23
+(Round 2) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 0.03 s
+Starting affinity matrix computations
+Normalization computed in 0.0 s
+Cosine similarity mat computed in 0.03 s
+Normalization computed in 0.0 s
+Cosine similarity mat computed in 0.01 s
+Finished affinity matrix computations in 0.04 s
+(Round 2) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.0 s
+(Round 2) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 0.6 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 0.52 s
+(Round 2) Computed affinity matrix on nearest neighbors in 1.12 s
+Not applying filtering for rounds above first round
+(Round 2) Computing density adapted affmat
+[t-SNE] Computing 22 nearest neighbors...
+[t-SNE] Indexed 23 samples in 0.000s...
+[t-SNE] Computed neighbors for 23 samples in 0.000s...
+[t-SNE] Computed conditional probabilities for sample 23 / 23
+[t-SNE] Mean sigma: 0.306419
+(Round 2) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.00171804428101 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Done  76 tasks      | elapsed:    2.8s
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:    6.7s finished
+Louvain completed 200 runs in 7.21250796318 seconds
+Wrote graph to binary file in 0.000531911849976 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.728944
+Louvain completed 51 runs in 3.64658808708 seconds
+Preproc + Louvain took 10.8721380234 s
+Got 5 clusters after round 2
+Counts:
+{0: 6, 1: 6, 2: 5, 3: 3, 4: 3}
+(Round 2) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 6 seqlets
+Trimmed 0 out of 6
+Aggregating for cluster 1 with 6 seqlets
+Trimmed 0 out of 6
+Dropping cluster 1 with 6 seqlets due to sign disagreement
+Aggregating for cluster 2 with 5 seqlets
+Trimmed 0 out of 5
+Aggregating for cluster 3 with 3 seqlets
+Trimmed 0 out of 3
+Aggregating for cluster 4 with 3 seqlets
+Trimmed 0 out of 3
+Dropping cluster 4 with 3 seqlets due to sign disagreement
+Got 3 clusters
+Splitting into subclusters...
+Merging on 3 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 3 patterns after merging
+Performing seqlet reassignment
+Got 0 patterns after reassignment
+Total time taken is 30.31s
+On metacluster 0
+Metacluster size 2512
+Relevant tasks:  ('task0',)
+Relevant signs:  (1,)
+TfModiscoSeqletsToPatternsFactory: seed=1234
+(Round 1) num seqlets: 2512
+(Round 1) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 2.61 s
+Starting affinity matrix computations
+Normalization computed in 0.78 s
+Cosine similarity mat computed in 11.0 s
+Normalization computed in 0.76 s
+Cosine similarity mat computed in 12.98 s
+Finished affinity matrix computations in 24.12 s
+(Round 1) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.18 s
+(Round 1) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 94.8 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 128.3 s
+(Round 1) Computed affinity matrix on nearest neighbors in 227.89 s
+Filtered down to 2089 of 2512
+(Round 1) Retained 2089 rows out of 2512 after filtering
+(Round 1) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 2089 samples in 0.003s...
+[t-SNE] Computed neighbors for 2089 samples in 0.077s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 2089
+[t-SNE] Computed conditional probabilities for sample 2000 / 2089
+[t-SNE] Computed conditional probabilities for sample 2089 / 2089
+[t-SNE] Mean sigma: 0.180058
+(Round 1) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.196547985077 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=4)]: Done 192 tasks      | elapsed:   11.4s
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:   11.8s finished
+Louvain completed 200 runs in 14.9306330681 seconds
+Wrote graph to binary file in 2.03712511063 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.646763
+After 4 runs, maximum modularity is Q = 0.651324
+After 17 runs, maximum modularity is Q = 0.653331
+After 52 runs, maximum modularity is Q = 0.655308
+Louvain completed 102 runs in 27.6960549355 seconds
+Preproc + Louvain took 45.2567601204 s
+Got 7 clusters after round 1
+Counts:
+{0: 412, 1: 400, 2: 339, 3: 337, 4: 236, 5: 206, 6: 159}
+(Round 1) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 412 seqlets
+Trimmed 13 out of 412
+Skipped 6 seqlets
+Aggregating for cluster 1 with 400 seqlets
+Trimmed 22 out of 400
+Skipped 7 seqlets
+Aggregating for cluster 2 with 339 seqlets
+Trimmed 11 out of 339
+Skipped 5 seqlets
+Aggregating for cluster 3 with 337 seqlets
+Trimmed 24 out of 337
+Skipped 4 seqlets
+Aggregating for cluster 4 with 236 seqlets
+Trimmed 15 out of 236
+Skipped 3 seqlets
+Aggregating for cluster 5 with 206 seqlets
+Trimmed 1 out of 206
+Skipped 4 seqlets
+Aggregating for cluster 6 with 159 seqlets
+Trimmed 15 out of 159
+Skipped 1 seqlets
+(Round 2) num seqlets: 1958
+(Round 2) Computing coarse affmat
+Beginning embedding computation
+Computing embeddings
+Finished embedding computation in 2.23 s
+Starting affinity matrix computations
+Normalization computed in 0.62 s
+Cosine similarity mat computed in 1.42 s
+Normalization computed in 0.68 s
+Cosine similarity mat computed in 1.37 s
+Finished affinity matrix computations in 2.9 s
+(Round 2) Compute nearest neighbors from coarse affmat
+Computed nearest neighbors in 0.2 s
+(Round 2) Computing affinity matrix on nearest neighbors
+Launching nearest neighbors affmat calculation job
+Job completed in: 154.21 s
+Launching nearest neighbors affmat calculation job
+Job completed in: 144.55 s
+(Round 2) Computed affinity matrix on nearest neighbors in 304.68 s
+Not applying filtering for rounds above first round
+(Round 2) Computing density adapted affmat
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 1958 samples in 0.003s...
+[t-SNE] Computed neighbors for 1958 samples in 0.055s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 1958
+[t-SNE] Computed conditional probabilities for sample 1958 / 1958
+[t-SNE] Mean sigma: 0.178206
+(Round 2) Computing clustering
+Beginning preprocessing + Louvain
+Wrote graph to binary file in 0.14359998703 seconds
+Running Louvain modularity optimization
+[Parallel(n_jobs=4)]: Done  42 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=4)]: Done 192 tasks      | elapsed:   11.3s
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed:   11.7s finished
+Louvain completed 200 runs in 14.5650389194 seconds
+Wrote graph to binary file in 1.95247507095 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.574646
+After 3 runs, maximum modularity is Q = 0.612697
+Louvain completed 53 runs in 14.2235028744 seconds
+Preproc + Louvain took 31.1587879658 s
+Got 8 clusters after round 2
+Counts:
+{0: 448, 1: 362, 2: 309, 3: 250, 4: 193, 5: 181, 6: 142, 7: 73}
+(Round 2) Aggregating seqlets in each cluster
+Aggregating for cluster 0 with 448 seqlets
+Trimmed 4 out of 448
+Aggregating for cluster 1 with 362 seqlets
+Trimmed 2 out of 362
+Skipped 1 seqlets
+Aggregating for cluster 2 with 309 seqlets
+Trimmed 1 out of 309
+Aggregating for cluster 3 with 250 seqlets
+Trimmed 3 out of 250
+Aggregating for cluster 4 with 193 seqlets
+Trimmed 8 out of 193
+Aggregating for cluster 5 with 181 seqlets
+Trimmed 20 out of 181
+Aggregating for cluster 6 with 142 seqlets
+Trimmed 25 out of 142
+Aggregating for cluster 7 with 73 seqlets
+Trimmed 0 out of 73
+Got 8 clusters
+Splitting into subclusters...
+Inspecting for spurious merging
+Wrote graph to binary file in 0.281851053238 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00388238
+Louvain completed 21 runs in 2.52997517586 seconds
+Similarity is 0.9540125676024853; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.323500871658 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00367593
+Louvain completed 21 runs in 3.00155806541 seconds
+Similarity is 0.9526914497126295; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.172492027283 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00384319
+Louvain completed 21 runs in 2.99908709526 seconds
+Similarity is 0.9553473427300917; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0967609882355 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00336372
+Louvain completed 21 runs in 2.39967608452 seconds
+Similarity is 0.9562513049405564; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.0429320335388 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00287484
+After 3 runs, maximum modularity is Q = 0.00306681
+Louvain completed 23 runs in 2.78866291046 seconds
+Similarity is 0.9528601389309882; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.039402961731 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00447593
+Louvain completed 21 runs in 2.44712591171 seconds
+Similarity is 0.9410175006584967; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.028153181076 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00417771
+Louvain completed 21 runs in 2.52210783958 seconds
+Similarity is 0.8533200842781433; is_dissimilar is False
+Inspecting for spurious merging
+Wrote graph to binary file in 0.00851392745972 seconds
+Running Louvain modularity optimization
+After 1 runs, maximum modularity is Q = 0.00715437
+Louvain completed 21 runs in 2.51795005798 seconds
+Similarity is 0.9020988173887755; is_dissimilar is False
+Merging on 8 clusters
+On merging iteration 1
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Collapsing 3 & 4 with prob 7.717655292351563e-05 and sim 0.9848376732016844
+Collapsing 2 & 5 with prob 6.266596131822139e-06 and sim 0.9811094890480381
+Collapsing 2 & 3 with prob 0.0004406185228999918 and sim 0.979332859927704
+Collapsing 0 & 3 with prob 2.316439492358793e-05 and sim 0.9778596709308585
+Collapsing 0 & 4 with prob 5.491785409964351e-05 and sim 0.9766871640880507
+Collapsing 0 & 1 with prob 8.93097903813621e-05 and sim 0.9763273206076369
+Collapsing 0 & 5 with prob 2.12454503268194e-05 and sim 0.9725508896167822
+Collapsing 0 & 2 with prob 1.1808043940352453e-05 and sim 0.9683512920671501
+Collapsing 2 & 4 with prob 4.574626965658152e-06 and sim 0.9668762709031118
+Collapsing 1 & 5 with prob 1.0904011282299113e-06 and sim 0.9642731553487314
+Collapsing 1 & 4 with prob 3.055975338695054e-06 and sim 0.958103531328037
+Collapsing 1 & 3 with prob 0.00020947756616432084 and sim 0.952847147094718
+Collapsing 1 & 2 with prob 0.001162642007474488 and sim 0.9527124615198527
+Trimmed 8 out of 432
+Trimmed 2 out of 469
+Trimmed 7 out of 891
+Trimmed 0 out of 1328
+Trimmed 2 out of 1687
+On merging iteration 2
+Computing pattern to seqlet distances
+Computing pattern to pattern distances
+Got 3 patterns after merging
+Performing seqlet reassignment
+Got 3 patterns after reassignment
+Total time taken is 704.02s
+2018-10-01 06:25:17 DEBUG **************** workflow done *********************
+2018-10-01 06:25:18 DEBUG **************** result saved *********************

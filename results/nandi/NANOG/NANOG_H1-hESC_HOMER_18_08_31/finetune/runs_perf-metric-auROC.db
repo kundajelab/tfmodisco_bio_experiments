@@ -1,0 +1,189 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9756994047619048,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_AiIml_modelWeights.h5",
+            "json_file": "model_files/record_1_model_AiIml_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_AiIml"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for SPI1, 1 task, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9756994047619048,
+            "best_valid_perf_info": {
+                "epoch": 2,
+                "valid_key_metric": 0.9756994047619048,
+                "train_key_metric": 0.9823645571942351,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9667336455121074,
+                    0.9633375850340137
+                ],
+                [
+                    0.9823645571942351,
+                    0.9756994047619048
+                ],
+                [
+                    0.9820014054685063,
+                    0.971048044217687
+                ],
+                [
+                    0.989502375782481,
+                    0.972091836734694
+                ],
+                [
+                    0.9911302466731858,
+                    0.9733227040816326
+                ],
+                [
+                    0.9948562231476233,
+                    0.9747406462585034
+                ],
+                [
+                    0.9962372650623412,
+                    0.9719451530612246
+                ],
+                [
+                    0.9955054706444175,
+                    0.9691624149659863
+                ],
+                [
+                    0.9989485164065335,
+                    0.9713095238095238
+                ],
+                [
+                    0.9990651492773048,
+                    0.9683078231292517
+                ],
+                [
+                    0.998207682872716,
+                    0.9687457482993197
+                ],
+                [
+                    0.9980553222350869,
+                    0.9674213435374149
+                ],
+                [
+                    0.9996026255065279,
+                    0.9697619047619048
+                ],
+                [
+                    0.9999654488688134,
+                    0.9684715136054423
+                ],
+                [
+                    0.9999830163130229,
+                    0.9674553571428571
+                ],
+                [
+                    0.9999997263637974,
+                    0.9691836734693876
+                ],
+                [
+                    0.9999985041220922,
+                    0.9680229591836734
+                ],
+                [
+                    0.9999995074548352,
+                    0.967108843537415
+                ],
+                [
+                    1.0,
+                    0.9667431972789116
+                ],
+                [
+                    1.0,
+                    0.9661755952380953
+                ],
+                [
+                    1.0,
+                    0.9664870323129252
+                ],
+                [
+                    1.0,
+                    0.9661968537414966
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_AiIml_modelWeights.h5",
+                "json_file": "model_files/record_1_model_AiIml_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_AiIml"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 14841,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 22
+            }
+        }
+    ]
+}

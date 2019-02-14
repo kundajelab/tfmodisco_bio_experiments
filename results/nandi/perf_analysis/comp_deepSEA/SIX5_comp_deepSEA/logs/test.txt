@@ -1,0 +1,36 @@
+2018-10-28 20:40:00 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs SIX5 --test-chroms chr8,chr9,chr7 --test-only True --bg-stride=50
+2018-10-28 20:40:08 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_99HJgM/_tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak.gz,./_tmp_99HJgM/_tmp_K562-SIX5-human-ENCSR000BNW-merged.narrowPeak.gz,./_tmp_99HJgM/_tmp_H1-hESC-SIX5-human-ENCSR000BIQ-merged.narrowPeak.gz,./_tmp_99HJgM/_tmp_A549-SIX5-human-ENCSR000BRL-merged.narrowPeak.gz,./_tmp_99HJgM/_tmp_empty_file --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7 --bg-stride 50  --background /root/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-10-28 20:40:08 DEBUG bin-size=200, stride=10
+2018-10-28 20:40:13 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-10-28 20:40:13 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-10-28 20:40:38 INFO  LABEL_REGIONS sort merge done
+2018-10-28 20:41:36 INFO  LABEL_REGIONS intersect done
+2018-10-28 20:42:07 INFO  LABEL_REGIONS labels done
+2018-10-28 20:42:11 INFO  LABEL_REGIONS ALL DONE *****
+2018-10-28 20:42:14 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BNW-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-SIX5-human-ENCSR000BIQ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/A549-SIX5-human-ENCSR000BRL-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-SIX5-human-ENCSR000BGX-optimal_idr.narrowPeak.gz
+5
+Using TensorFlow backend.
+2018-10-28 20:42:16.681929: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-10-28 20:42:17.166805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3e:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 20:42:17.648918: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:61:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 20:42:17.649859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-28 20:42:18.196562: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-28 20:42:18.196593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-28 20:42:18.196597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-10-28 20:42:18.196600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-10-28 20:42:18.196967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3e:00.0, compute capability: 6.1)
+2018-10-28 20:42:18.353123: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10413 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:61:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows

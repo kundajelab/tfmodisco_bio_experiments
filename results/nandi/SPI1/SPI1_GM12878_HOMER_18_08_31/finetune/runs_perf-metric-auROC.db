@@ -1,0 +1,225 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.99609549287506,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_eERim_modelWeights.h5",
+            "json_file": "model_files/record_1_model_eERim_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_eERim"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for SPI1, 1 task, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.99609549287506,
+            "best_valid_perf_info": {
+                "epoch": 11,
+                "valid_key_metric": 0.99609549287506,
+                "train_key_metric": 0.9985328366666874,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9776872215069685,
+                    0.9825797886534664
+                ],
+                [
+                    0.9929354897224498,
+                    0.9928171532262369
+                ],
+                [
+                    0.9953051162486926,
+                    0.9942661578694563
+                ],
+                [
+                    0.996119985384304,
+                    0.9945930511821529
+                ],
+                [
+                    0.996867714024049,
+                    0.9951946683033569
+                ],
+                [
+                    0.9970276092037865,
+                    0.995629102844639
+                ],
+                [
+                    0.9976786792870521,
+                    0.9959283770080589
+                ],
+                [
+                    0.9979545269865061,
+                    0.9954579842023805
+                ],
+                [
+                    0.9981752585944511,
+                    0.9956269680311682
+                ],
+                [
+                    0.9982879608207521,
+                    0.9959213054384374
+                ],
+                [
+                    0.9985328366666874,
+                    0.99609549287506
+                ],
+                [
+                    0.9987387343428231,
+                    0.9955395741047125
+                ],
+                [
+                    0.998466339918207,
+                    0.9951399637081709
+                ],
+                [
+                    0.9989180858964438,
+                    0.9957267705609222
+                ],
+                [
+                    0.999050147734117,
+                    0.9958787425948658
+                ],
+                [
+                    0.9992438686740206,
+                    0.9955681939478038
+                ],
+                [
+                    0.9992612324823932,
+                    0.9949250146768427
+                ],
+                [
+                    0.9994297087479969,
+                    0.9954847360836847
+                ],
+                [
+                    0.9994398930823936,
+                    0.995465189197844
+                ],
+                [
+                    0.9993913688970465,
+                    0.9951204835352512
+                ],
+                [
+                    0.9996089181445804,
+                    0.9949729812670117
+                ],
+                [
+                    0.9996456572942203,
+                    0.9948623045311417
+                ],
+                [
+                    0.9996744161201072,
+                    0.9951111437263169
+                ],
+                [
+                    0.9996552214562752,
+                    0.9949652425681805
+                ],
+                [
+                    0.9998329024418142,
+                    0.9947686395901157
+                ],
+                [
+                    0.9997947406594577,
+                    0.9947100656455143
+                ],
+                [
+                    0.9997764437105187,
+                    0.9949833217697603
+                ],
+                [
+                    0.9996541994937537,
+                    0.9936958958211028
+                ],
+                [
+                    0.9997590495152823,
+                    0.9936137055024816
+                ],
+                [
+                    0.9998600856815231,
+                    0.9947762448631051
+                ],
+                [
+                    0.9998720094615572,
+                    0.9945252041415381
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_eERim_modelWeights.h5",
+                "json_file": "model_files/record_1_model_eERim_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_eERim"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 31
+            }
+        }
+    ]
+}

@@ -11,3 +11,5 @@ multi_tf_pre_18_07_06   results include many improvements:
 
 multi_tf_nb_18_07_09    ipython notebooks to investigate coenrichment of CTCF with SIX5 in the presence of ZNF143
                         based on data from multi_tf_pre_18_07_06
+
+imulti_tf_18_11_06      re-run multi-tf model (surya)

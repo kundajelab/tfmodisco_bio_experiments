@@ -1,0 +1,32 @@
+2018-09-20 06:06:08 INFO  /home/ktian/kundajelab/tfnet//scripts/prepare_data_pf.py --tfs TCF7L2 --test-only True --bg-stride=50
+2018-09-20 06:06:15 DEBUG /home/ktian/kundajelab/tfnet//scripts/label_regions  --positives /home/ktian/kundajelab/tfnet//ENCODE_data/K562-TCF7L2-human-ENCSR888XZK-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVF-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-TCF7L2-human-ENCSR000EVQ-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HEK293-TCF7L2-human-ENCSR000EUY-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/Panc1-TCF7L2-human-ENCSR000EXL-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-TCF7L2-human-ENCSR000EWT-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVE-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_PfQZzB/_tmp_K562-TCF7L2-human-ENCSR888XZK-merged.narrowPeak.gz,./_tmp_PfQZzB/_tmp_empty_file,./_tmp_PfQZzB/_tmp_empty_file,./_tmp_PfQZzB/_tmp_empty_file,./_tmp_PfQZzB/_tmp_Panc1-TCF7L2-human-ENCSR000EXL-merged.narrowPeak.gz,./_tmp_PfQZzB/_tmp_empty_file,./_tmp_PfQZzB/_tmp_empty_file --genome hg19 --prefix label  --stride 10 --bg-stride 50  --background /home/ktian/kundajelab/tfnet//genome/hg19.tsv  --test-only True 
+2018-09-20 06:06:15 DEBUG bin-size=200, stride=10
+2018-09-20 06:06:19 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-09-20 06:06:19 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-09-20 06:06:58 INFO  LABEL_REGIONS sort merge done
+2018-09-20 06:08:19 INFO  LABEL_REGIONS intersect done
+2018-09-20 06:09:18 INFO  LABEL_REGIONS labels done
+2018-09-20 06:09:21 INFO  LABEL_REGIONS ALL DONE *****
+2018-09-20 06:09:38 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-TCF7L2-human-ENCSR888XZK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVF-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-TCF7L2-human-ENCSR000EVQ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HEK293-TCF7L2-human-ENCSR000EUY-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/Panc1-TCF7L2-human-ENCSR000EXL-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-TCF7L2-human-ENCSR000EWT-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVE-optimal_idr.narrowPeak.gz
+7
+Using TensorFlow backend.
+2018-09-20 06:09:39.791846: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-20 06:09:41.460835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:03:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 06:09:41.460880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-09-20 06:09:41.792252: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-20 06:09:41.792293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-09-20 06:09:41.792300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-09-20 06:09:41.792629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:03:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/valid.tsv.gz into memory
+Finished reading bed file into memory; got 4863768rows

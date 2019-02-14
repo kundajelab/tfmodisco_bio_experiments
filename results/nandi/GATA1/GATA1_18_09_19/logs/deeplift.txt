@@ -1,0 +1,765 @@
+Using TensorFlow backend.
+2018-09-20 04:23:29 INFO  /home/ktian/kundajelab/tfnet/scripts/run_deeplift.py model_files/record_1_ interpret.fa 4
+2018-09-20 04:23:29 DEBUG memory check location 1
+2018-09-20 04:23:29 DEBUG svmem(total=270370021376, available=235565277184, percent=12.9, used=22507962368, free=113052086272, active=93962817536, inactive=57441828864, buffers=3311915008, cached=131498057728, shared=11388895232, slab=3370430464)
+2018-09-20 04:23:29 DEBUG memory use: vms=3.633972 G, rss=0.200081 G
+2018-09-20 04:23:29 INFO  loading models from model_files/record_1_Json.json model_files/record_1_Weights.h5
+2018-09-20 04:23:29 INFO  input sequence file is interpret.fa, range of tasks are 0:4
+2018-09-20 04:23:29 DEBUG len of input sequences = 51431
+2018-09-20 04:23:29 DEBUG memory check location 2
+2018-09-20 04:23:29 DEBUG svmem(total=270370021376, available=235510312960, percent=12.9, used=22562926592, free=112997122048, active=94019149824, inactive=57441828864, buffers=3311915008, cached=131498057728, shared=11388895232, slab=3370430464)
+2018-09-20 04:23:29 DEBUG memory use: vms=3.686115 G, rss=0.252373 G
+WARNING:tensorflow:From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-09-20 04:23:29 WARNING From /home/ktian/anaconda3/envs/modisco_dev/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2018-09-20 04:23:30.074363: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-20 04:23:30.368022: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:88:00.0
+totalMemory: 11.93GiB freeMemory: 11.79GiB
+2018-09-20 04:23:30.368079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-09-20 04:23:30.713793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-20 04:23:30.713835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-09-20 04:23:30.713841: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-09-20 04:23:30.714195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11420 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:88:00.0, compute capability: 5.2)
+start time 2018-09-20 04:23:29.410721
+nonlinear_mxts_mode is set to: DeepLIFT_GenomicsDefault
+2018-09-20 04:23:32 DEBUG memory check location 3
+2018-09-20 04:23:32 DEBUG svmem(total=270370021376, available=234719338496, percent=13.2, used=23350755328, free=112206127104, active=94723547136, inactive=57444970496, buffers=3311915008, cached=131501223936, shared=11392040960, slab=3374632960)
+2018-09-20 04:23:32 DEBUG memory use: vms=283.456097 G, rss=1.118256 G
+2018-09-20 04:23:32 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:23:33 DEBUG size of deeplift_model  = 0.076754 (0.000000) G
+2018-09-20 04:23:35 DEBUG size of keras_model     = 0.076708 (0.000000) G
+2018-09-20 04:23:35 DEBUG On task 0
+2018-09-20 04:27:14 DEBUG task 0 block 0 hyp_total shape= (0, 1000, 4)
+2018-09-20 04:27:14 DEBUG memory check location 4
+2018-09-20 04:27:14 DEBUG svmem(total=270370021376, available=228284243968, percent=15.6, used=27636269056, free=105766268928, active=98991267840, inactive=59565940736, buffers=3311939584, cached=133655543808, shared=13541621760, slab=3393863680)
+2018-09-20 04:27:14 DEBUG memory use: vms=286.711586 G, rss=4.923840 G
+2018-09-20 04:27:14 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:27:15 DEBUG size of deeplift_model  = 1.008236 (0.000000) G
+2018-09-20 04:27:16 DEBUG size of keras_model     = 1.008190 (0.000000) G
+2018-09-20 04:27:16 DEBUG size of hyp_scores_all = 0.298023 G
+2018-09-20 04:27:16 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:27:16 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:30:59 DEBUG task 0 block 1 hyp_total shape= (10000, 1000, 4)
+2018-09-20 04:30:59 DEBUG memory check location 4
+2018-09-20 04:30:59 DEBUG svmem(total=270370021376, available=225271664640, percent=16.7, used=30648848384, free=102753636352, active=102015385600, inactive=59548082176, buffers=3311964160, cached=133655572480, shared=13541621760, slab=3393855488)
+2018-09-20 04:30:59 DEBUG memory use: vms=287.267868 G, rss=5.479877 G
+2018-09-20 04:30:59 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:31:00 DEBUG size of deeplift_model  = 1.306342 (0.000000) G
+2018-09-20 04:31:01 DEBUG size of keras_model     = 1.306296 (0.000000) G
+2018-09-20 04:31:01 DEBUG size of hyp_scores_all = 0.596047 G
+2018-09-20 04:31:01 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:31:01 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:34:39 DEBUG task 0 block 2 hyp_total shape= (20000, 1000, 4)
+2018-09-20 04:34:39 DEBUG memory check location 4
+2018-09-20 04:34:39 DEBUG svmem(total=270370021376, available=241955000320, percent=10.5, used=13970247680, free=118038757376, active=86444994560, inactive=59917029376, buffers=3312140288, cached=135048876032, shared=13536378880, slab=3425882112)
+2018-09-20 04:34:39 DEBUG memory use: vms=287.267017 G, rss=5.479088 G
+2018-09-20 04:34:40 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:34:41 DEBUG size of deeplift_model  = 1.604448 (0.000000) G
+2018-09-20 04:34:42 DEBUG size of keras_model     = 1.604403 (0.000000) G
+2018-09-20 04:34:42 DEBUG size of hyp_scores_all = 0.894070 G
+2018-09-20 04:34:42 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:34:42 DEBUG size of contrib_scores = 0.298023 G
+0.001
+At the time of writing (April 8th 2017), the batch norm implementation of version 5 (this version) of deeplift has not been thoroughly unit-tested; adding in these unit tests is a top priority, but if you see this message, do ping me so that I can prioritise it accordingly
+0.001
+At the time of writing (April 8th 2017), the batch norm implementation of version 5 (this version) of deeplift has not been thoroughly unit-tested; adding in these unit tests is a top priority, but if you see this message, do ping me so that I can prioritise it accordingly
+0.001
+At the time of writing (April 8th 2017), the batch norm implementation of version 5 (this version) of deeplift has not been thoroughly unit-tested; adding in these unit tests is a top priority, but if you see this message, do ping me so that I can prioritise it accordingly
+0.001
+At the time of writing (April 8th 2017), the batch norm implementation of version 5 (this version) of deeplift has not been thoroughly unit-tested; adding in these unit tests is a top priority, but if you see this message, do ping me so that I can prioritise it accordingly
+For layer 2 the preceding linear layer is 0 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 5 the preceding linear layer is 3 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+For layer 8 the preceding linear layer is 6 of type Conv1D;
+In accordance with nonlinear_mxts_mode=DeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to Rescale
+Heads-up: current implementation assumes maxpool layer is followed by a linear transformation (conv/dense layer)
+For layer 13 the preceding linear layer is 11 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+Heads-up: I assume sigmoid is the output layer, not an intermediate one; if it's an intermediate layer then please bug me and I will implement the grad func
+For layer 16 the preceding linear layer is 15 of type Dense;
+In accordance with nonlinear_mxts_modeDeepLIFT_GenomicsDefault we are setting the NonlinearMxtsMode to RevealCancel
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Don2018-09-20 04:38:19 DEBUG task 0 block 3 hyp_total shape= (30000, 1000, 4)
+2018-09-20 04:38:20 DEBUG memory check location 4
+2018-09-20 04:38:20 DEBUG svmem(total=270370021376, available=239596990464, percent=11.4, used=16328765440, free=113844027392, active=91830124544, inactive=58670534656, buffers=3312996352, cached=136884232192, shared=13536378880, slab=3476688896)
+2018-09-20 04:38:20 DEBUG memory use: vms=287.900566 G, rss=6.112934 G
+2018-09-20 04:38:20 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:38:21 DEBUG size of deeplift_model  = 1.902555 (0.000000) G
+2018-09-20 04:38:22 DEBUG size of keras_model     = 1.902509 (0.000000) G
+2018-09-20 04:38:22 DEBUG size of hyp_scores_all = 1.192093 G
+2018-09-20 04:38:22 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:38:22 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:42:03 DEBUG task 0 block 4 hyp_total shape= (40000, 1000, 4)
+2018-09-20 04:42:04 DEBUG memory check location 4
+2018-09-20 04:42:04 DEBUG svmem(total=270370021376, available=239510290432, percent=11.4, used=16415174656, free=113451122688, active=92129767424, inactive=58746585088, buffers=3313074176, cached=137190649856, shared=13536378880, slab=3484811264)
+2018-09-20 04:42:04 DEBUG memory use: vms=287.863552 G, rss=6.075798 G
+2018-09-20 04:42:04 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:42:05 DEBUG size of deeplift_model  = 2.200661 (0.000000) G
+2018-09-20 04:42:06 DEBUG size of keras_model     = 2.200615 (0.000000) G
+2018-09-20 04:42:06 DEBUG size of hyp_scores_all = 1.490116 G
+2018-09-20 04:42:06 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:42:06 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:42:37 DEBUG task 0 block 5 hyp_total shape= (50000, 1000, 4)
+2018-09-20 04:42:38 DEBUG memory check location 4
+2018-09-20 04:42:38 DEBUG svmem(total=270370021376, available=239701008384, percent=11.3, used=16224444416, free=113595990016, active=91967631360, inactive=58763857920, buffers=3313094656, cached=137236492288, shared=13536378880, slab=3485954048)
+2018-09-20 04:42:38 DEBUG memory use: vms=287.693222 G, rss=5.904961 G
+2018-09-20 04:42:38 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:42:39 DEBUG size of deeplift_model  = 1.700653 (0.000000) G
+2018-09-20 04:42:40 DEBUG size of keras_model     = 1.700607 (0.000000) G
+2018-09-20 04:42:40 DEBUG size of hyp_scores_all = 1.532763 G
+2018-09-20 04:42:40 DEBUG size of hyp_scores     = 0.042647 G
+2018-09-20 04:42:40 DEBUG size of contrib_scores = 0.042647 G
+2018-09-20 04:42:40 INFO  saving hyp_scores_all to scores/hyp_scores_task_0.npy, shape = (51431, 1000, 4)
+2018-09-20 04:42:41 DEBUG On task 1
+2018-09-20 04:46:13 DEBUG task 1 block 0 hyp_total shape= (0, 1000, 4)
+2018-09-20 04:46:13 DEBUG memory check location 4
+2018-09-20 04:46:13 DEBUG svmem(total=270370021376, available=240788234240, percent=10.9, used=15137505280, free=113549144064, active=91104915456, inactive=59657498624, buffers=3313233920, cached=138370138112, shared=13536378880, slab=3516362752)
+2018-09-20 04:46:13 DEBUG memory use: vms=286.692226 G, rss=4.904293 G
+2018-09-20 04:46:13 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:46:14 DEBUG size of deeplift_model  = 1.008734 (0.000000) G
+2018-09-20 04:46:15 DEBUG size of keras_model     = 1.008689 (0.000000) G
+2018-09-20 04:46:15 DEBUG size of hyp_scores_all = 0.298023 G
+2018-09-20 04:46:15 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:46:15 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:49:47 DEBUG task 1 block 1 hyp_total shape= (10000, 1000, 4)
+2018-09-20 04:49:48 DEBUG memory check location 4
+2018-09-20 04:49:48 DEBUG svmem(total=270370021376, available=240166678528, percent=11.2, used=15759077376, free=112636006400, active=91920568320, inactive=59748327424, buffers=3313324032, cached=138661613568, shared=13536378880, slab=3524485120)
+2018-09-20 04:49:48 DEBUG memory use: vms=287.305252 G, rss=5.518448 G
+2018-09-20 04:49:48 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:49:49 DEBUG size of deeplift_model  = 1.306841 (0.000000) G
+2018-09-20 04:49:50 DEBUG size of keras_model     = 1.306795 (0.000000) G
+2018-09-20 04:49:50 DEBUG size of hyp_scores_all = 0.596047 G
+2018-09-20 04:49:50 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:49:50 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:53:23 DEBUG task 1 block 2 hyp_total shape= (20000, 1000, 4)
+2018-09-20 04:53:24 DEBUG memory check location 4
+2018-09-20 04:53:24 DEBUG svmem(total=270370021376, available=240159186944, percent=11.2, used=15766294528, free=112329216000, active=92127932416, inactive=59834904576, buffers=3313397760, cached=138961113088, shared=13536378880, slab=3532476416)
+2018-09-20 04:53:24 DEBUG memory use: vms=287.268238 G, rss=5.481579 G
+2018-09-20 04:53:24 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:53:25 DEBUG size of deeplift_model  = 1.604947 (0.000000) G
+2018-09-20 04:53:26 DEBUG size of keras_model     = 1.604901 (0.000000) G
+2018-09-20 04:53:26 DEBUG size of hyp_scores_all = 0.894070 G
+2018-09-20 04:53:26 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:53:26 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 04:57:03 DEBUG task 1 block 3 hyp_total shape= (30000, 1000, 4)
+2018-09-20 04:57:03 DEBUG memory check location 4
+2018-09-20 04:57:03 DEBUG svmem(total=270370021376, available=239517335552, percent=11.4, used=16408420352, free=111394193408, active=92968775680, inactive=59919224832, buffers=3313422336, cached=139253985280, shared=13536378880, slab=3540283392)
+2018-09-20 04:57:03 DEBUG memory use: vms=287.901787 G, rss=6.114113 G
+2018-09-20 04:57:03 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 04:57:04 DEBUG size of deeplift_model  = 1.903053 (0.000000) G
+2018-09-20 04:57:06 DEBUG size of keras_model     = 1.903008 (0.000000) G
+2018-09-20 04:57:06 DEBUG size of hyp_scores_all = 1.192093 G
+2018-09-20 04:57:06 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 04:57:06 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:00:42 DEBUG task 1 block 4 hyp_total shape= (40000, 1000, 4)
+2018-09-20 05:00:43 DEBUG memory check location 4
+2018-09-20 05:00:43 DEBUG svmem(total=270370021376, available=239509983232, percent=11.4, used=16415211520, free=111087464448, active=93165527040, inactive=60014272512, buffers=3313463296, cached=139553882112, shared=13536378880, slab=3549753344)
+2018-09-20 05:00:43 DEBUG memory use: vms=287.864773 G, rss=6.078484 G
+2018-09-20 05:00:43 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:00:44 DEBUG size of deeplift_model  = 2.201160 (0.000000) G
+2018-09-20 05:00:45 DEBUG size of keras_model     = 2.201114 (0.000000) G
+2018-09-20 05:00:45 DEBUG size of hyp_scores_all = 1.490116 G
+2018-09-20 05:00:45 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:00:45 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:01:16 DEBUG task 1 block 5 hyp_total shape= (50000, 1000, 4)
+2018-09-20 05:01:16 DEBUG memory check location 4
+2018-09-20 05:01:16 DEBUG svmem(total=270370021376, available=239692996608, percent=11.3, used=16232464384, free=111225032704, active=93005070336, inactive=60036153344, buffers=3313475584, cached=139599048704, shared=13536378880, slab=3550076928)
+2018-09-20 05:01:16 DEBUG memory use: vms=287.694443 G, rss=5.907051 G
+2018-09-20 05:01:17 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:01:18 DEBUG size of deeplift_model  = 1.701152 (0.000000) G
+2018-09-20 05:01:19 DEBUG size of keras_model     = 1.701106 (0.000000) G
+2018-09-20 05:01:19 DEBUG size of hyp_scores_all = 1.532763 G
+2018-09-20 05:01:19 DEBUG size of hyp_scores     = 0.042647 G
+2018-09-20 05:01:19 DEBUG size of contrib_scores = 0.042647 G
+2018-09-20 05:01:19 INFO  saving hyp_scores_all to scores/hyp_scores_task_1.npy, shape = (51431, 1000, 4)
+2018-09-20 05:01:20 DEBUG On task 2
+2018-09-20 05:04:54 DEBUG task 2 block 0 hyp_total shape= (0, 1000, 4)
+2018-09-20 05:04:54 DEBUG memory check location 4
+2018-09-20 05:04:54 DEBUG svmem(total=270370021376, available=240839106560, percent=10.9, used=15086874624, free=111232675840, active=92067086336, inactive=60942635008, buffers=3313610752, cached=140736860160, shared=13536378880, slab=3581222912)
+2018-09-20 05:04:54 DEBUG memory use: vms=286.672924 G, rss=4.885654 G
+2018-09-20 05:04:54 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:04:56 DEBUG size of deeplift_model  = 1.009233 (0.000000) G
+2018-09-20 05:04:57 DEBUG size of keras_model     = 1.009187 (0.000000) G
+2018-09-20 05:04:57 DEBUG size of hyp_scores_all = 0.298023 G
+2018-09-20 05:04:57 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:04:57 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:08:31 DEBUG task 2 block 1 hyp_total shape= (10000, 1000, 4)
+2018-09-20 05:08:31 DEBUG memory check location 4
+2018-09-20 05:08:31 DEBUG svmem(total=270370021376, available=240155922432, percent=11.2, used=15769833472, free=110257471488, active=92942761984, inactive=61032280064, buffers=3313700864, cached=141029015552, shared=13536378880, slab=3588407296)
+2018-09-20 05:08:31 DEBUG memory use: vms=287.306473 G, rss=5.520966 G
+2018-09-20 05:08:32 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:08:33 DEBUG size of deeplift_model  = 1.307339 (0.000000) G
+2018-09-20 05:08:34 DEBUG size of keras_model     = 1.307293 (0.000000) G
+2018-09-20 05:08:34 DEBUG size of hyp_scores_all = 0.596047 G
+2018-09-20 05:08:34 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:08:34 DEBUG size of contrib_scores = 0.298023 G
+e 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generate2018-09-20 05:12:08 DEBUG task 2 block 2 hyp_total shape= (20000, 1000, 4)
+2018-09-20 05:12:08 DEBUG memory check location 4
+2018-09-20 05:12:08 DEBUG svmem(total=270370021376, available=240148578304, percent=11.2, used=15777161216, free=109947158528, active=93138661376, inactive=61130211328, buffers=3313725440, cached=141331976192, shared=13536378880, slab=3597029376)
+2018-09-20 05:12:08 DEBUG memory use: vms=287.269459 G, rss=5.482597 G
+2018-09-20 05:12:09 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:12:10 DEBUG size of deeplift_model  = 1.605445 (0.000000) G
+2018-09-20 05:12:11 DEBUG size of keras_model     = 1.605400 (0.000000) G
+2018-09-20 05:12:11 DEBUG size of hyp_scores_all = 0.894070 G
+2018-09-20 05:12:11 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:12:11 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:15:46 DEBUG task 2 block 3 hyp_total shape= (30000, 1000, 4)
+2018-09-20 05:15:46 DEBUG memory check location 4
+2018-09-20 05:15:46 DEBUG svmem(total=270370021376, available=239503527936, percent=11.4, used=16422223872, free=109007753216, active=93973843968, inactive=61227810816, buffers=3313782784, cached=141626261504, shared=13536378880, slab=3606298624)
+2018-09-20 05:15:46 DEBUG memory use: vms=287.903008 G, rss=6.116169 G
+2018-09-20 05:15:46 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:15:47 DEBUG size of deeplift_model  = 1.903552 (0.000000) G
+2018-09-20 05:15:48 DEBUG size of keras_model     = 1.903506 (0.000000) G
+2018-09-20 05:15:48 DEBUG size of hyp_scores_all = 1.192093 G
+2018-09-20 05:15:48 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:15:48 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:19:24 DEBUG task 2 block 4 hyp_total shape= (40000, 1000, 4)
+2018-09-20 05:19:25 DEBUG memory check location 4
+2018-09-20 05:19:25 DEBUG svmem(total=270370021376, available=239552028672, percent=11.4, used=16373727232, free=108751216640, active=94110904320, inactive=61342453760, buffers=3313844224, cached=141931233280, shared=13536378880, slab=3613577216)
+2018-09-20 05:19:25 DEBUG memory use: vms=287.867947 G, rss=6.078964 G
+2018-09-20 05:19:25 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:19:26 DEBUG size of deeplift_model  = 2.201658 (0.000000) G
+2018-09-20 05:19:27 DEBUG size of keras_model     = 2.201612 (0.000000) G
+2018-09-20 05:19:27 DEBUG size of hyp_scores_all = 1.490116 G
+2018-09-20 05:19:27 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:19:27 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:19:59 DEBUG task 2 block 5 hyp_total shape= (50000, 1000, 4)
+2018-09-20 05:20:00 DEBUG memory check location 4
+2018-09-20 05:20:00 DEBUG svmem(total=270370021376, available=239688196096, percent=11.3, used=16237543424, free=108842311680, active=93997211648, inactive=61360742400, buffers=3313864704, cached=141976301568, shared=13536378880, slab=3614806016)
+2018-09-20 05:20:00 DEBUG memory use: vms=287.697617 G, rss=5.908947 G
+2018-09-20 05:20:00 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:20:01 DEBUG size of deeplift_model  = 1.701650 (0.000000) G
+2018-09-20 05:20:02 DEBUG size of keras_model     = 1.701605 (0.000000) G
+2018-09-20 05:20:02 DEBUG size of hyp_scores_all = 1.532763 G
+2018-09-20 05:20:02 DEBUG size of hyp_scores     = 0.042647 G
+2018-09-20 05:20:02 DEBUG size of contrib_scores = 0.042647 G
+2018-09-20 05:20:02 INFO  saving hyp_scores_all to scores/hyp_scores_task_2.npy, shape = (51431, 1000, 4)
+2018-09-20 05:20:04 DEBUG On task 3
+2018-09-20 05:23:39 DEBUG task 3 block 0 hyp_total shape= (0, 1000, 4)
+2018-09-20 05:23:39 DEBUG memory check location 4
+2018-09-20 05:23:39 DEBUG svmem(total=270370021376, available=240831975424, percent=10.9, used=15093780480, free=108844838912, active=93036654592, inactive=62290284544, buffers=3313987584, cached=143117414400, shared=13536378880, slab=3645419520)
+2018-09-20 05:23:39 DEBUG memory use: vms=286.676098 G, rss=4.887352 G
+2018-09-20 05:23:39 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:23:40 DEBUG size of deeplift_model  = 1.009731 (0.000000) G
+2018-09-20 05:23:41 DEBUG size of keras_model     = 1.009686 (0.000000) G
+2018-09-20 05:23:41 DEBUG size of hyp_scores_all = 0.298023 G
+2018-09-20 05:23:41 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:23:41 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:27:17 DEBUG task 3 block 1 hyp_total shape= (10000, 1000, 4)
+2018-09-20 05:27:17 DEBUG memory check location 4
+2018-09-20 05:27:17 DEBUG svmem(total=270370021376, available=240149622784, percent=11.2, used=15776133120, free=107868033024, active=93895688192, inactive=62395838464, buffers=3314008064, cached=143411847168, shared=13536378880, slab=3653746688)
+2018-09-20 05:27:17 DEBUG memory use: vms=287.309647 G, rss=5.521019 G
+2018-09-20 05:27:17 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:27:19 DEBUG size of deeplift_model  = 1.307837 (0.000000) G
+2018-09-20 05:27:20 DEBUG size of keras_model     = 1.307792 (0.000000) G
+2018-09-20 05:27:20 DEBUG size of hyp_scores_all = 0.596047 G
+2018-09-20 05:27:20 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:27:20 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:30:54 DEBUG task 3 block 2 hyp_total shape= (20000, 1000, 4)
+2018-09-20 05:30:54 DEBUG memory check location 4
+2018-09-20 05:30:54 DEBUG svmem(total=270370021376, available=240191430656, percent=11.2, used=15734325248, free=107605708800, active=94035501056, inactive=62514147328, buffers=3314049024, cached=143715938304, shared=13536378880, slab=3661733888)
+2018-09-20 05:30:54 DEBUG memory use: vms=287.272633 G, rss=5.484100 G
+2018-09-20 05:30:54 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:30:56 DEBUG size of deeplift_model  = 1.605944 (0.000000) G
+2018-09-20 05:30:57 DEBUG size of keras_model     = 1.605898 (0.000000) G
+2018-09-20 05:30:57 DEBUG size of hyp_scores_all = 0.894070 G
+2018-09-20 05:30:57 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:30:57 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:34:43 DEBUG task 3 block 3 hyp_total shape= (30000, 1000, 4)
+2018-09-20 05:34:43 DEBUG memory check location 4
+2018-09-20 05:34:43 DEBUG svmem(total=270370021376, available=239472517120, percent=11.4, used=16453242880, free=106572132352, active=94933065728, inactive=62643130368, buffers=3314073600, cached=144030572544, shared=13536378880, slab=3670474752)
+2018-09-20 05:34:43 DEBUG memory use: vms=287.906181 G, rss=6.117840 G
+2018-09-20 05:34:43 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:34:44 DEBUG size of deeplift_model  = 1.904050 (0.000000) G
+2018-09-20 05:34:45 DEBUG size of keras_model     = 1.904005 (0.000000) G
+2018-09-20 05:34:45 DEBUG size of hyp_scores_all = 1.192093 G
+2018-09-20 05:34:45 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:34:45 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:38:20 DEBUG task 3 block 4 hyp_total shape= (40000, 1000, 4)
+2018-09-20 05:38:21 DEBUG memory check location 4
+2018-09-20 05:38:21 DEBUG svmem(total=270370021376, available=239514910720, percent=11.4, used=16410546176, free=106323427328, active=95074197504, inactive=62742228992, buffers=3314126848, cached=144321921024, shared=13536378880, slab=3678531584)
+2018-09-20 05:38:21 DEBUG memory use: vms=287.869167 G, rss=6.081219 G
+2018-09-20 05:38:21 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:38:22 DEBUG size of deeplift_model  = 2.202157 (0.000000) G
+2018-09-20 05:38:23 DEBUG size of keras_model     = 2.202111 (0.000000) G
+2018-09-20 05:38:23 DEBUG size of hyp_scores_all = 1.490116 G
+2018-09-20 05:38:23 DEBUG size of hyp_scores     = 0.298023 G
+2018-09-20 05:38:23 DEBUG size of contrib_scores = 0.298023 G
+2018-09-20 05:38:55 DEBUG task 3 block 5 hyp_total shape= (50000, 1000, 4)
+2018-09-20 05:38:55 DEBUG memory check location 4
+2018-09-20 05:38:55 DEBUG svmem(total=270370021376, available=239694835712, percent=11.3, used=16230879232, free=106454851584, active=94931148800, inactive=62753783808, buffers=3314126848, cached=144370163712, shared=13536378880, slab=3680055296)
+2018-09-20 05:38:55 DEBUG memory use: vms=287.698837 G, rss=5.910267 G
+2018-09-20 05:38:55 DEBUG size of fasta_sequences = 0.050241 (0.000426) G
+2018-09-20 05:38:57 DEBUG size of deeplift_model  = 1.702149 (0.000000) G
+2018-09-20 05:38:58 DEBUG size of keras_model     = 1.702103 (0.000000) G
+2018-09-20 05:38:58 DEBUG size of hyp_scores_all = 1.532763 G
+2018-09-20 05:38:58 DEBUG size of hyp_scores     = 0.042647 G
+2018-09-20 05:38:58 DEBUG size of contrib_scores = 0.042647 G
+2018-09-20 05:38:58 INFO  saving hyp_scores_all to scores/hyp_scores_task_3.npy, shape = (51431, 1000, 4)
+2018-09-20 05:39:00 DEBUG start time 2018-09-20 04:23:29.410721
+2018-09-20 05:39:00 DEBUG end time 2018-09-20 05:39:00.264308
+d
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+20000 reference seqs generated
+30000 reference seqs generated
+40000 reference seqs generated
+50000 reference seqs generated
+60000 reference seqs generated
+70000 reference seqs generated
+80000 reference seqs generated
+90000 reference seqs generated
+100000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000
+Done 20000
+Done 30000
+Done 40000
+Done 50000
+Done 60000
+Done 70000
+Done 80000
+Done 90000
+10000 reference seqs generated
+One hot encoding sequences...
+One hot encoding done...
+Done 0
+Done 10000

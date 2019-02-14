@@ -1,0 +1,21 @@
+2018-09-19 23:08:04 INFO  /home/ktian/kundajelab/tfnet/scripts/run_pipeline.py --tfs GATA1 --end-task 4 --start 10
+2018-09-19 23:08:04 DEBUG tf=GATA1, num_tasks=4 start=10 end=100
+rm: cannot remove 'config/hyperparameter_configs_list.yaml': No such file or directory
+2018-09-19 23:08:04 INFO  python $TFNET_ROOT/scripts/prepare_data_pf.py --tfs GATA1 --no-bg True --stride 10 --hdf5 True  > logs/pre_prepare.txt 2>&1
+mv: cannot stat '_tmp_*': No such file or directory
+mv: cannot stat '_tmp_*': No such file or directory
+2018-09-20 03:07:24 INFO  /home/ktian/kundajelab/tfnet/scripts/pick_summit.py --tfs GATA1
+/home/ktian/kundajelab/tfnet/ENCODE_data/erythroblast-GATA1-human-ENCSR000EXP-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/K562-GATA1-human-ENCSR000EWM-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/K562-GATA1-human-ENCSR000EFT-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet/ENCODE_data/erythroblast-GATA1-human-ENCSR000EXR-optimal_idr.narrowPeak.gz
+mv: cannot stat 'counts.tsv': No such file or directory
+paste: model_files/counts.tsv: No such file or directory
+step 20 prepare for pre_train done
+('momma_dragonn_train returned ', 0)
+step 30 pre_train done
+step 40 prepare_data done
+('momma_dragonn_train returned ', 0)
+step 50 training done
+step 60 testing done
+step 70 deeplift done

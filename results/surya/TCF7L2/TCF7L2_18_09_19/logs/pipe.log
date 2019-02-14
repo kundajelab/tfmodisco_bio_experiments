@@ -1,0 +1,66 @@
+2018-09-20 01:28:50 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 30
+2018-09-20 01:28:50 DEBUG tf=SP1, num_tasks=7 start=30 end=100
+('momma_dragonn_train returned ', 256)
+2018-09-20 01:34:09 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 10 --end 20
+2018-09-20 01:34:09 DEBUG tf=SP1, num_tasks=7 start=10 end=20
+cp: cannot stat '/home/ktian/kundajelab/tfnet//results//templates//config.h5': No such file or directory
+mv: cannot stat 'config.h5': No such file or directory
+ln: failed to create symbolic link './make_hdf5_yaml': File exists
+rm: cannot remove 'config/hyperparameter_configs_list.yaml': No such file or directory
+sh: 1: cannot create config/hyperparameter_configs_list.yaml: Directory nonexistent
+cat: config/hyperparameter_configs_list_for_pretrain.yaml: No such file or directory
+2018-09-20 01:39:29 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 10 --end 20
+2018-09-20 01:39:29 DEBUG tf=SP1, num_tasks=7 start=10 end=20
+ln: failed to create symbolic link './make_hdf5_yaml': File exists
+rm: cannot remove 'config/hyperparameter_configs_list.yaml': No such file or directory
+2018-09-20 01:41:25 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 10 --end 30
+2018-09-20 01:41:25 DEBUG tf=SP1, num_tasks=7 start=10 end=30
+ln: failed to create symbolic link './make_hdf5_yaml': File exists
+2018-09-20 01:41:25 INFO  python $TFNET_ROOT/scripts/prepare_data_pf.py --tfs SP1 --no-bg True --stride 10 --hdf5 True  > logs/pre_prepare.txt 2>&1
+2018-09-20 01:45:40 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 20
+2018-09-20 01:45:40 DEBUG tf=SP1, num_tasks=7 start=20 end=100
+2018-09-20 01:45:40 INFO  python $TFNET_ROOT/scripts/prepare_data_pf.py --tfs SP1 --no-bg True --stride 10 --hdf5 True  > logs/pre_prepare.txt 2>&1
+step 20 prepare for pre_train done
+('momma_dragonn_train returned ', 0)
+Traceback (most recent call last):
+  File "/home/ktian/kundajelab/tfnet//scripts/run_pipeline.py", line 138, in <module>
+    os.chdir("model_files")
+OSError: [Errno 2] No such file or directory: 'model_files'
+2018-09-20 02:42:35 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs SP1 --end-task 7 --start 30
+2018-09-20 02:42:35 DEBUG tf=SP1, num_tasks=7 start=30 end=100
+('momma_dragonn_train returned ', 0)
+Traceback (most recent call last):
+  File "/home/ktian/kundajelab/tfnet//scripts/run_pipeline.py", line 138, in <module>
+    os.chdir("model_files")
+OSError: [Errno 2] No such file or directory: 'model_files'
+2018-09-20 02:54:49 INFO  /home/ktian/kundajelab/tfnet//scripts/run_pipeline.py --tfs TCF7L2 --end-task 7 --start 20
+2018-09-20 02:54:49 DEBUG tf=TCF7L2, num_tasks=7 start=20 end=100
+2018-09-20 02:54:49 INFO  python $TFNET_ROOT/scripts/prepare_data_pf.py --tfs TCF7L2 --no-bg True --stride 10 --hdf5 True  > logs/pre_prepare.txt 2>&1
+mv: cannot stat '_tmp_*': No such file or directory
+2018-09-20 06:06:07 INFO  /home/ktian/kundajelab/tfnet//scripts/pick_summit.py --tfs TCF7L2
+/home/ktian/kundajelab/tfnet//ENCODE_data/K562-TCF7L2-human-ENCSR888XZK-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVF-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HepG2-TCF7L2-human-ENCSR000EVQ-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HEK293-TCF7L2-human-ENCSR000EUY-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/Panc1-TCF7L2-human-ENCSR000EXL-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/MCF-7-TCF7L2-human-ENCSR000EWT-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/HeLa-S3-TCF7L2-human-ENCSR000EVE-optimal_idr.narrowPeak.gz
+/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/pandas_ml/confusion_matrix/abstract.py:66: FutureWarning: 
+Passing list-likes to .loc or [] with any missing label will raise
+KeyError in the future, you can use .reindex() as an alternative.
+
+See the documentation here:
+https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex-listlike
+  df = df.loc[idx, idx.copy()].fillna(0)  # if some columns or rows are missing
+/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+mv: cannot stat 'counts.tsv': No such file or directory
+paste: model_files/counts.tsv: No such file or directory
+step 20 prepare for pre_train done
+('momma_dragonn_train returned ', 0)
+step 30 pre_train done
+step 40 prepare_data done
+('momma_dragonn_train returned ', 0)
+step 50 training done
+step 60 testing done
+step 70 deeplift done
