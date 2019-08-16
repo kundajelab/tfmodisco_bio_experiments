@@ -1,0 +1,189 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9373804987214405,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_SKDku_modelWeights.h5",
+            "json_file": "model_files/record_1_model_SKDku_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_SKDku"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for STAT1, 1 tasks, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9373804987214405,
+            "best_valid_perf_info": {
+                "epoch": 2,
+                "valid_key_metric": 0.9373804987214405,
+                "train_key_metric": 0.9634631491519984,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9393398688912021,
+                    0.9255891516947151
+                ],
+                [
+                    0.9634631491519984,
+                    0.9373804987214405
+                ],
+                [
+                    0.9766202345149757,
+                    0.9324641122073362
+                ],
+                [
+                    0.9818074833052637,
+                    0.9336595406495549
+                ],
+                [
+                    0.9860782800807693,
+                    0.9340286437290717
+                ],
+                [
+                    0.9894291383603931,
+                    0.9113786831333193
+                ],
+                [
+                    0.9944516476785646,
+                    0.9239365009693112
+                ],
+                [
+                    0.9961076549153073,
+                    0.9205605378929202
+                ],
+                [
+                    0.9963364017736831,
+                    0.9210917470546574
+                ],
+                [
+                    0.9978850798283634,
+                    0.9110486517761838
+                ],
+                [
+                    0.9989279070622861,
+                    0.9197799347585368
+                ],
+                [
+                    0.9993448461345904,
+                    0.9189369831309917
+                ],
+                [
+                    0.9993474577551898,
+                    0.9122806580010574
+                ],
+                [
+                    0.9992429929312049,
+                    0.9184049426560125
+                ],
+                [
+                    0.9996287610479652,
+                    0.9233429433144127
+                ],
+                [
+                    0.9999534574214727,
+                    0.9175029677882746
+                ],
+                [
+                    0.9996432383691055,
+                    0.9182619567783619
+                ],
+                [
+                    0.9992496677927871,
+                    0.9213893571953486
+                ],
+                [
+                    0.9998783166253122,
+                    0.9210102783569261
+                ],
+                [
+                    0.999931683115729,
+                    0.9204774065687047
+                ],
+                [
+                    0.9995887248393684,
+                    0.9140912582424707
+                ],
+                [
+                    0.9995050557734586,
+                    0.9084757372917144
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_SKDku_modelWeights.h5",
+                "json_file": "model_files/record_1_model_SKDku_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_SKDku"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 17591,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 22
+            }
+        }
+    ]
+}

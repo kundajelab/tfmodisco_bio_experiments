@@ -1,0 +1,218 @@
+Using cuDNN version 7001 on context None
+Mapped name None to device cuda0: GeForce GTX TITAN X (0000:05:00.0)
+2018-09-05 23:30:24 INFO  /home/ktian/kundajelab/tfnet/scripts/run_tfmodisco.py --scores scores/hyp_scores_task_ --fasta interpret.fa --tsv interpret.tsv --start-task 0 --end-task 15 --fdr 0.01
+2018-09-05 23:30:24 DEBUG Theano version:1.0.2
+2018-09-05 23:30:24 DEBUG 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) 
+[GCC 7.2.0]
+2018-09-05 23:30:24 DEBUG method file prefix is scores/hyp_scores_task_, input seq file is interpret.fa, input tsv is interpret.tsv, start_task is 0 end_task is 15, fdr is 0.010000
+2018-09-05 23:30:26 DEBUG lenth of sequences = 332064
+2018-09-05 23:30:41 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:31:04 DEBUG shape of hyp_score (400, 4)
+2018-09-05 23:31:04 DEBUG shape of score (400, 4)
+2018-09-05 23:31:28 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:32:18 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:33:03 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:33:51 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:34:38 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:35:26 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:36:12 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:37:00 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:37:58 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:38:45 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:39:51 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:40:44 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:41:32 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+2018-09-05 23:42:34 DEBUG merged overlaps based on in_tsv interpret.tsv, 332064 seqs merged into 141387 seqs, max len 2506
+On task task0
+Computing windowed sums
+Computing threshold
+2018-09-05 23:47:40 DEBUG CACHEDIR=/home/ktian/.cache/matplotlib
+2018-09-05 23:47:40 DEBUG Using fontManager instance from /home/ktian/.cache/matplotlib/fontList.json
+2018-09-05 23:47:41 DEBUG backend agg version v2.2
+2018-09-05 23:47:42 DEBUG findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/ktian/anaconda3/envs/tfenv/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+peak(mu)= 0.16288483398637618
+Mu: 1.628848e-01 +/- 7.504465e-06
+Lablace_b: 0.24866394597656588 and 0.6205986416904149
+Thresholds: -2.747731713578105 and 6.019704924154212
+#fdrs pass: 0 and 367207
+CDFs: 0.9999917477143573 and 0.9999203104224389
+Est. FDRs: 1.0 and 0.009999950011548579
+saving plot to figures/laplace_0.png
+Got 31627 coords
+On task task1
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.2845536531177495
+Mu: 2.845537e-01 +/- 1.300744e-05
+Lablace_b: 0.3768458925123748 and 0.83862118916802
+Thresholds: -4.425487034878461 and 7.666524874046445
+#fdrs pass: 0 and 671944
+CDFs: 0.9999962680725404 and 0.9998496447577052
+Est. FDRs: 1.0 and 0.009999894354542658
+saving plot to figures/laplace_1.png
+Got 47510 coords
+On task task2
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.24814978401622648
+Manually adjusting thresholds to get desired num seqlets
+Mu: 2.481498e-01 +/- 6.658997e-06
+Lablace_b: 0.3157478666641419 and 0.5650452400427005
+Thresholds: -5.761860446837192 and 6.258160014869645
+#fdrs pass: 0 and 0
+CDFs: 0.9999999945856172 and 0.9999759730535503
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_2.png
+Got 1116 coords
+On task task3
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.24138156345042316
+Manually adjusting thresholds to get desired num seqlets
+Mu: 2.413816e-01 +/- 8.200617e-06
+Lablace_b: 0.3673584708663484 and 0.6899361187671496
+Thresholds: -8.188963967964956 and 8.671727094865801
+#fdrs pass: 0 and 0
+CDFs: 0.9999999998919636 and 0.9999950643359259
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_3.png
+Got 813 coords
+On task task4
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.2772761423695522
+Manually adjusting thresholds to get desired num seqlets
+Mu: 2.772761e-01 +/- 3.714753e-06
+Lablace_b: 0.26246281146054046 and 0.39438782801496164
+Thresholds: -2.3738756927483404 and 2.928427977487445
+#fdrs pass: 0 and 0
+CDFs: 0.9999589638454536 and 0.9987961070790556
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_4.png
+Got 930 coords
+On task task5
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.5822098508785711
+Manually adjusting thresholds to get desired num seqlets
+Mu: 5.822099e-01 +/- 6.989001e-06
+Lablace_b: 0.48732693579164876 and 0.8108619701535332
+Thresholds: -5.010723109388492 and 6.1751428111456335
+#fdrs pass: 0 and 0
+CDFs: 0.9999896316979355 and 0.9989897075562336
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_5.png
+Got 676 coords
+On task task6
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.2573164666511584
+Mu: 2.573165e-01 +/- 8.823408e-06
+Lablace_b: 0.38240177671173353 and 0.5844760804404591
+Thresholds: -4.595856171101332 and 5.511907540843822
+#fdrs pass: 0 and 486993
+CDFs: 0.9999969221894486 and 0.9998753821297571
+Est. FDRs: 1.0 and 0.009999960094344496
+saving plot to figures/laplace_6.png
+Got 38277 coords
+On task task7
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.48084038104450627
+Manually adjusting thresholds to get desired num seqlets
+Mu: 4.808404e-01 +/- 1.641533e-05
+Lablace_b: 0.39086912881498903 and 1.6460266232050367
+Thresholds: -20.79411441870857 and 21.75579518079758
+#fdrs pass: 0 and 0
+CDFs: 1.0 and 0.9999975637165925
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_7.png
+Got 663 coords
+On task task8
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.6493752862419205
+Manually adjusting thresholds to get desired num seqlets
+Mu: 6.493753e-01 +/- 5.951060e-06
+Lablace_b: 0.487901344994472 and 0.7221297722379038
+Thresholds: -4.201725646276172 and 5.500476218760014
+#fdrs pass: 0 and 0
+CDFs: 0.9999519270376805 and 0.9987907668848516
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_8.png
+Got 677 coords
+On task task9
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.26354730993742126
+Mu: 2.635473e-01 +/- 7.625574e-06
+Lablace_b: 0.36983483201676554 and 0.5396658761360117
+Thresholds: -3.878719847649336 and 5.014771578134969
+#fdrs pass: 0 and 575292
+CDFs: 0.9999863301306252 and 0.9998498702928016
+Est. FDRs: 1.0 and 0.009999959336068112
+saving plot to figures/laplace_9.png
+Got 44934 coords
+On task task10
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.05977223204367328
+Manually adjusting thresholds to get desired num seqlets
+Mu: 5.977223e-02 +/- 6.222785e-06
+Lablace_b: 0.30000525443047193 and 0.5351464156229603
+Thresholds: -6.604374667705736 and 6.723919131793082
+#fdrs pass: 0 and 0
+CDFs: 0.9999999997746652 and 0.9999960937834953
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_10.png
+Got 789 coords
+On task task11
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.5098127343295165
+Mu: 5.098127e-01 +/- 9.640188e-06
+Lablace_b: 0.386850672193456 and 0.8244379330431443
+Thresholds: -3.771990296701552 and 8.818095059308689
+#fdrs pass: 0 and 157011
+CDFs: 0.9999844018986116 and 0.9999579861395296
+Est. FDRs: 1.0 and 0.009999984883744269
+saving plot to figures/laplace_11.png
+Got 17742 coords
+On task task12
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.3952327773543948
+Mu: 3.952328e-01 +/- 5.605865e-06
+Lablace_b: 0.2894668151044215 and 0.42528224373942164
+Thresholds: -2.6064028344990215 and 4.160811805923003
+#fdrs pass: 0 and 549128
+CDFs: 0.9999686260530494 and 0.9998572343066092
+Est. FDRs: 1.0 and 0.009999984814047751
+saving plot to figures/laplace_12.png
+Got 42847 coords
+On task task13
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.3162292822837298
+Manually adjusting thresholds to get desired num seqlets
+Mu: 3.162293e-01 +/- 6.179242e-06
+Lablace_b: 0.35743982653994294 and 0.8387891170440592
+Thresholds: -5.93734498266309 and 6.569803547230549
+#fdrs pass: 0 and 0
+CDFs: 0.9999999747757554 and 0.9994217351312719
+Est. FDRs: 1.0 and 1.0
+saving plot to figures/laplace_13.png
+Got 1105 coords
+On task task14
+Computing windowed sums
+Computing threshold
+peak(mu)= 0.10550703348117532
+Mu: 1.055070e-01 +/- 6.426905e-06
+Lablace_b: 0.3583797749081918 and 0.4989589854602829
+Thresholds: -3.2849268370773643 and 5.58113870723173
+#fdrs pass: 0 and 63337
+CDFs: 0.9999221284436427 and 0.9999828602763379
+Est. FDRs: 1.0 and 0.009999729045799865
+saving plot to figures/laplace_14.png
+Got 7554 coords
+Terminated

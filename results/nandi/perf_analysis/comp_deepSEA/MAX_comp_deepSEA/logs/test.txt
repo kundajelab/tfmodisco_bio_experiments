@@ -1,0 +1,61 @@
+2018-10-28 15:55:12 INFO  /root/kundajelab/tfnet/scripts/prepare_data_pf.py --tfs MAX --test-chroms chr8,chr9,chr7 --test-only True --bg-stride=50
+2018-10-28 15:55:26 DEBUG /root/kundajelab/tfnet/scripts/label_regions  --positives /root/kundajelab/tfnet/ENCODE_data/H1-hESC-MAX-human-ENCSR000EUP-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-MAX-human-ENCSR000ECN-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/liver-MAX-human-ENCSR521IID-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/HepG2-MAX-human-ENCSR000EDS-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-MAX-human-ENCSR000BLP-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/GM12878-MAX-human-ENCSR000DZF-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/K562-MAX-human-ENCSR000EFV-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/endothelial_cell_of_umbilical_vein-MAX-human-ENCSR000EEZ-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/liver-MAX-human-ENCSR847DIT-optimal_idr.narrowPeak.gz,/root/kundajelab/tfnet/ENCODE_data/NB4-MAX-human-ENCSR000EHS-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_A8MfjA/_tmp_H1-hESC-MAX-human-ENCSR000EUP-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_empty_file,./_tmp_A8MfjA/_tmp_liver-MAX-human-ENCSR521IID-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_HepG2-MAX-human-ENCSR000EDS-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_K562-MAX-human-ENCSR000BLP-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_GM12878-MAX-human-ENCSR000DZF-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_K562-MAX-human-ENCSR000EFV-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_empty_file,./_tmp_A8MfjA/_tmp_liver-MAX-human-ENCSR847DIT-merged.narrowPeak.gz,./_tmp_A8MfjA/_tmp_empty_file --genome hg19 --prefix label  --stride 10 --test-chroms chr8,chr9,chr7 --bg-stride 50  --background /root/kundajelab/tfnet/genome/hg19.tsv  --test-only True 
+2018-10-28 15:55:26 DEBUG bin-size=200, stride=10
+2018-10-28 15:55:35 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-10-28 15:55:35 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-10-28 15:55:59 INFO  LABEL_REGIONS sort merge done
+2018-10-28 15:57:50 INFO  LABEL_REGIONS intersect done
+2018-10-28 15:58:54 INFO  LABEL_REGIONS labels done
+2018-10-28 15:58:57 INFO  LABEL_REGIONS ALL DONE *****
+2018-10-28 15:59:01 INFO  prepare_data done
+/root/kundajelab/tfnet/ENCODE_data/H1-hESC-MAX-human-ENCSR000EUP-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HeLa-S3-MAX-human-ENCSR000ECN-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/liver-MAX-human-ENCSR521IID-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/HepG2-MAX-human-ENCSR000EDS-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-MAX-human-ENCSR000BLP-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/GM12878-MAX-human-ENCSR000DZF-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/K562-MAX-human-ENCSR000EFV-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/endothelial_cell_of_umbilical_vein-MAX-human-ENCSR000EEZ-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/liver-MAX-human-ENCSR847DIT-optimal_idr.narrowPeak.gz
+/root/kundajelab/tfnet/ENCODE_data/NB4-MAX-human-ENCSR000EHS-optimal_idr.narrowPeak.gz
+10
+Using TensorFlow backend.
+2018-10-28 15:59:03.288661: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-10-28 15:59:04.081522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3e:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 15:59:04.622221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:61:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 15:59:04.623119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-28 15:59:05.232034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-28 15:59:05.232079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-28 15:59:05.232084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-10-28 15:59:05.232086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-10-28 15:59:05.232470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3e:00.0, compute capability: 6.1)
+2018-10-28 15:59:05.320260: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10413 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:61:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows
+Using TensorFlow backend.
+2018-10-28 17:43:11.808165: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-10-28 17:43:12.318348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3e:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 17:43:12.757089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:61:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-28 17:43:12.758069: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-28 17:43:13.308762: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-28 17:43:13.308794: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-28 17:43:13.308798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-10-28 17:43:13.308801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-10-28 17:43:13.309176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10413 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:3e:00.0, compute capability: 6.1)
+2018-10-28 17:43:13.397550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10413 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:61:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 5751110rows

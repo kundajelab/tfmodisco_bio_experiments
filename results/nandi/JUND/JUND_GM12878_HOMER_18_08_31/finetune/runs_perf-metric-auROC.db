@@ -1,0 +1,197 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9674873213167945,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_q2o2k_modelWeights.h5",
+            "json_file": "model_files/record_1_model_q2o2k_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_q2o2k"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for SPI1, 1 task, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9674873213167945,
+            "best_valid_perf_info": {
+                "epoch": 4,
+                "valid_key_metric": 0.9674873213167945,
+                "train_key_metric": 0.9874146716338783,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.8108958360945161,
+                    0.8015482684176236
+                ],
+                [
+                    0.9754159982520151,
+                    0.9592765166515502
+                ],
+                [
+                    0.9842658681534124,
+                    0.9664573779077937
+                ],
+                [
+                    0.9874146716338783,
+                    0.9674873213167945
+                ],
+                [
+                    0.9896529411911805,
+                    0.9654386121792006
+                ],
+                [
+                    0.9923502990829954,
+                    0.9638881082254953
+                ],
+                [
+                    0.9940370171472582,
+                    0.96233760427179
+                ],
+                [
+                    0.9927151659585534,
+                    0.9594218264968511
+                ],
+                [
+                    0.9960299139261146,
+                    0.9614002759290249
+                ],
+                [
+                    0.9927819032281457,
+                    0.9581619422337476
+                ],
+                [
+                    0.9965134856172588,
+                    0.9645156551398169
+                ],
+                [
+                    0.9965069681836709,
+                    0.9633340146395677
+                ],
+                [
+                    0.9967405798859184,
+                    0.9616573625784034
+                ],
+                [
+                    0.9984950667560248,
+                    0.957076110422708
+                ],
+                [
+                    0.9990281521872318,
+                    0.9612214330425007
+                ],
+                [
+                    0.9991166611234616,
+                    0.961363549264828
+                ],
+                [
+                    0.9960584374663968,
+                    0.9500852697333964
+                ],
+                [
+                    0.9995809774712482,
+                    0.9607871003180849
+                ],
+                [
+                    0.999779954562391,
+                    0.9590433821744739
+                ],
+                [
+                    0.9994087734346282,
+                    0.9572996640308632
+                ],
+                [
+                    0.9997065279365024,
+                    0.957345971563981
+                ],
+                [
+                    0.9999752900179799,
+                    0.9600701319605013
+                ],
+                [
+                    0.9999996092665715,
+                    0.9585962749581635
+                ],
+                [
+                    0.9999996248959085,
+                    0.9568765089868552
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_q2o2k_modelWeights.h5",
+                "json_file": "model_files/record_1_model_q2o2k_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_q2o2k"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 16001,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 24
+            }
+        }
+    ]
+}

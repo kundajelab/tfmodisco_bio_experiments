@@ -1,0 +1,341 @@
+INFO:hyperopt.mongoexp:PROTOCOL mongo
+INFO:hyperopt.mongoexp:USERNAME None
+INFO:hyperopt.mongoexp:HOSTNAME localhost
+INFO:hyperopt.mongoexp:PORT 1234
+INFO:hyperopt.mongoexp:PATH /foo_db/jobs
+INFO:hyperopt.mongoexp:AUTH DB None
+INFO:hyperopt.mongoexp:DB foo_db
+INFO:hyperopt.mongoexp:COLLECTION jobs
+Using TensorFlow backend.
+compiled!
+2018-10-16 23:45:13.705724: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-16 23:45:15.574841: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-16 23:45:15.574888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-10-16 23:45:15.964469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-16 23:45:15.964510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-10-16 23:45:15.964517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-10-16 23:45:15.964849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 125s - loss: 0.4867 - acc: 0.5281 - val_loss: 0.4869 - val_acc: 0.5329
+Epoch 2/20
+ - 118s - loss: 0.4238 - acc: 0.6047 - val_loss: 0.4451 - val_acc: 0.5998
+Epoch 3/20
+ - 118s - loss: 0.4001 - acc: 0.6220 - val_loss: 0.4941 - val_acc: 0.5992
+Epoch 4/20
+ - 117s - loss: 0.3848 - acc: 0.6338 - val_loss: 0.5164 - val_acc: 0.5370
+Epoch 5/20
+ - 115s - loss: 0.3731 - acc: 0.6441 - val_loss: 0.4500 - val_acc: 0.5931
+Epoch 6/20
+ - 114s - loss: 0.3641 - acc: 0.6508 - val_loss: 0.4481 - val_acc: 0.6061
+Epoch 7/20
+ - 117s - loss: 0.3568 - acc: 0.6569 - val_loss: 0.4515 - val_acc: 0.5956
+Epoch 8/20
+ - 117s - loss: 0.3501 - acc: 0.6632 - val_loss: 0.4724 - val_acc: 0.6224
+Epoch 9/20
+ - 116s - loss: 0.3450 - acc: 0.6673 - val_loss: 0.4671 - val_acc: 0.5911
+Epoch 10/20
+ - 116s - loss: 0.3401 - acc: 0.6724 - val_loss: 0.4827 - val_acc: 0.5943
+Epoch 11/20
+ - 116s - loss: 0.3363 - acc: 0.6753 - val_loss: 0.4641 - val_acc: 0.6073
+Epoch 12/20
+ - 114s - loss: 0.3328 - acc: 0.6771 - val_loss: 0.4703 - val_acc: 0.6115
+Epoch 13/20
+ - 115s - loss: 0.3293 - acc: 0.6815 - val_loss: 0.4928 - val_acc: 0.5863
+Epoch 14/20
+ - 117s - loss: 0.3265 - acc: 0.6827 - val_loss: 0.4684 - val_acc: 0.6099
+Epoch 15/20
+ - 117s - loss: 0.3240 - acc: 0.6851 - val_loss: 0.4875 - val_acc: 0.5993
+Epoch 16/20
+ - 117s - loss: 0.3211 - acc: 0.6864 - val_loss: 0.4819 - val_acc: 0.6097
+Epoch 17/20
+ - 115s - loss: 0.3190 - acc: 0.6884 - val_loss: 0.4733 - val_acc: 0.6145
+Epoch 18/20
+ - 117s - loss: 0.3174 - acc: 0.6891 - val_loss: 0.4777 - val_acc: 0.6191
+Epoch 19/20
+ - 117s - loss: 0.3150 - acc: 0.6911 - val_loss: 0.4858 - val_acc: 0.5995
+Epoch 20/20
+ - 118s - loss: 0.3129 - acc: 0.6901 - val_loss: 0.4884 - val_acc: 0.6054
+trained!
+('Validation loss:', 0.4884459207106026, 'Validation acc:', 0.605365772373258)
+{'loss': 0.4884459184340846, 'kernel_size1': 39, 'n_conv_1': 2, 'Dense': 200, 'Dropout': 0.6, 'n_conv': 0, 'lr': 0.001, 'filters': 100, 'time': 2345, 'filters_1': 250, 'filters_2': 40}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.48844592 │             39 │          2 │     200 │ 0.60000000 │        0 │ 0.00100000 │       100 │   2345 │         250 │          40 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 1 done ----------------
+INFO:hyperopt.mongoexp:job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>, {'status': 'ok', 'loss': 0.4884459207106026, 'model': <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>})
+Traceback (most recent call last):
+  File "/home/ktian/anaconda2/envs/modisco_dev/bin/hyperopt-mongo-worker", line 6, in <module>
+    sys.exit(hyperopt.mongoexp.main_worker())
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1313, in main_worker
+    return main_worker_helper(options, args)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1260, in main_worker_helper
+    mworker.run_one(reserve_timeout=float(options.reserve_timeout))
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1086, in run_one
+    result = SONify(result)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 139, in SONify
+    [(SONify(k, memo), SONify(v, memo)) for k, v in list(arg.items())])
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 152, in SONify
+    raise TypeError('SONify', arg)
+TypeError: ('SONify', <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>, {'status': 'ok', 'loss': 0.4884459207106026, 'model': <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>})
+INFO:hyperopt.mongoexp:PROTOCOL mongo
+INFO:hyperopt.mongoexp:USERNAME None
+INFO:hyperopt.mongoexp:HOSTNAME localhost
+INFO:hyperopt.mongoexp:PORT 1234
+INFO:hyperopt.mongoexp:PATH /foo_db/jobs
+INFO:hyperopt.mongoexp:AUTH DB None
+INFO:hyperopt.mongoexp:DB foo_db
+INFO:hyperopt.mongoexp:COLLECTION jobs
+Using TensorFlow backend.
+compiled!
+2018-10-17 00:24:58.442023: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-17 00:24:59.616220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-17 00:24:59.616266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-10-17 00:25:00.016711: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-17 00:25:00.016771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-10-17 00:25:00.016779: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-10-17 00:25:00.017080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 101s - loss: 0.4855 - acc: 0.5423 - val_loss: 0.4508 - val_acc: 0.5673
+Epoch 2/20
+ - 101s - loss: 0.4420 - acc: 0.5943 - val_loss: 0.4312 - val_acc: 0.6306
+Epoch 3/20
+ - 101s - loss: 0.4283 - acc: 0.6068 - val_loss: 0.4374 - val_acc: 0.6457
+Epoch 4/20
+ - 100s - loss: 0.4218 - acc: 0.6136 - val_loss: 0.4294 - val_acc: 0.6015
+Epoch 5/20
+ - 101s - loss: 0.4162 - acc: 0.6179 - val_loss: 0.4300 - val_acc: 0.5884
+Epoch 6/20
+ - 100s - loss: 0.4114 - acc: 0.6205 - val_loss: 0.4301 - val_acc: 0.6348
+Epoch 7/20
+ - 99s - loss: 0.4090 - acc: 0.6236 - val_loss: 0.4250 - val_acc: 0.6129
+Epoch 8/20
+ - 100s - loss: 0.4068 - acc: 0.6254 - val_loss: 0.4256 - val_acc: 0.6300
+Epoch 9/20
+ - 98s - loss: 0.4047 - acc: 0.6264 - val_loss: 0.4369 - val_acc: 0.6387
+Epoch 10/20
+ - 98s - loss: 0.4032 - acc: 0.6278 - val_loss: 0.4293 - val_acc: 0.6095
+Epoch 11/20
+ - 100s - loss: 0.4023 - acc: 0.6287 - val_loss: 0.4316 - val_acc: 0.6010
+Epoch 12/20
+ - 99s - loss: 0.4013 - acc: 0.6294 - val_loss: 0.4385 - val_acc: 0.6244
+Epoch 13/20
+ - 100s - loss: 0.4000 - acc: 0.6296 - val_loss: 0.4242 - val_acc: 0.6210
+Epoch 14/20
+ - 100s - loss: 0.3987 - acc: 0.6312 - val_loss: 0.4429 - val_acc: 0.6390
+Epoch 15/20
+ - 100s - loss: 0.3980 - acc: 0.6309 - val_loss: 0.4315 - val_acc: 0.6388
+Epoch 16/20
+ - 99s - loss: 0.3973 - acc: 0.6319 - val_loss: 0.4280 - val_acc: 0.6263
+Epoch 17/20
+ - 100s - loss: 0.3969 - acc: 0.6325 - val_loss: 0.4356 - val_acc: 0.6152
+Epoch 18/20
+ - 98s - loss: 0.3961 - acc: 0.6330 - val_loss: 0.4392 - val_acc: 0.6280
+Epoch 19/20
+ - 98s - loss: 0.3950 - acc: 0.6335 - val_loss: 0.4362 - val_acc: 0.6206
+Epoch 20/20
+ - 98s - loss: 0.3952 - acc: 0.6333 - val_loss: 0.4381 - val_acc: 0.6340
+trained!
+('Validation loss:', 0.43807376250786056, 'Validation acc:', 0.6339610064969303)
+{'loss': 0.4380737614073449, 'kernel_size1': 19, 'n_conv_1': 0, 'Dense': 200, 'Dropout': 0.2, 'n_conv': 0, 'lr': 0.001, 'filters': 100, 'time': 2000, 'filters_1': 500, 'filters_2': 60}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.43807376 │             19 │          0 │     200 │ 0.20000000 │        0 │ 0.00100000 │       100 │   2000 │         500 │          60 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 1 done ----------------
+INFO:hyperopt.mongoexp:job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7fdce213cf90>, {'status': 'ok', 'loss': 0.43807376250786056, 'model': <keras.engine.sequential.Sequential object at 0x7fdce213cf90>})
+Traceback (most recent call last):
+  File "/home/ktian/anaconda2/envs/modisco_dev/bin/hyperopt-mongo-worker", line 6, in <module>
+    sys.exit(hyperopt.mongoexp.main_worker())
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1313, in main_worker
+    return main_worker_helper(options, args)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1260, in main_worker_helper
+    mworker.run_one(reserve_timeout=float(options.reserve_timeout))
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1086, in run_one
+    result = SONify(result)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 139, in SONify
+    [(SONify(k, memo), SONify(v, memo)) for k, v in list(arg.items())])
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 152, in SONify
+    raise TypeError('SONify', arg)
+TypeError: ('SONify', <keras.engine.sequential.Sequential object at 0x7fdce213cf90>, {'status': 'ok', 'loss': 0.43807376250786056, 'model': <keras.engine.sequential.Sequential object at 0x7fdce213cf90>})
+INFO:hyperopt.mongoexp:PROTOCOL mongo
+INFO:hyperopt.mongoexp:USERNAME None
+INFO:hyperopt.mongoexp:HOSTNAME localhost
+INFO:hyperopt.mongoexp:PORT 1234
+INFO:hyperopt.mongoexp:PATH /foo_db/jobs
+INFO:hyperopt.mongoexp:AUTH DB None
+INFO:hyperopt.mongoexp:DB foo_db
+INFO:hyperopt.mongoexp:COLLECTION jobs
+Using TensorFlow backend.
+compiled!
+2018-10-17 00:58:58.752793: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-17 00:58:59.866466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-17 00:58:59.866536: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-10-17 00:59:00.239004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-17 00:59:00.239054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-10-17 00:59:00.239061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-10-17 00:59:00.239412: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 750s - loss: 0.3887 - acc: 0.6098 - val_loss: 0.5913 - val_acc: 0.6353
+Epoch 2/20
+ - 746s - loss: 0.1968 - acc: 0.7107 - val_loss: 0.6715 - val_acc: 0.5728
+Epoch 3/20
+ - 746s - loss: 0.0929 - acc: 0.7014 - val_loss: 0.8784 - val_acc: 0.6413
+Epoch 4/20
+ - 746s - loss: 0.0556 - acc: 0.7172 - val_loss: 0.9082 - val_acc: 0.6058
+Epoch 5/20
+ - 746s - loss: 0.0406 - acc: 0.7303 - val_loss: 1.1631 - val_acc: 0.6362
+Epoch 6/20
+ - 746s - loss: 0.0317 - acc: 0.7407 - val_loss: 1.3190 - val_acc: 0.6411
+Epoch 7/20
+ - 748s - loss: 0.0266 - acc: 0.7498 - val_loss: 1.2901 - val_acc: 0.5426
+Epoch 8/20
+ - 749s - loss: 0.0227 - acc: 0.7592 - val_loss: 1.1918 - val_acc: 0.6193
+Epoch 9/20
+ - 749s - loss: 0.0201 - acc: 0.7685 - val_loss: 1.3437 - val_acc: 0.6241
+Epoch 10/20
+ - 750s - loss: 0.0177 - acc: 0.7662 - val_loss: 1.4001 - val_acc: 0.5895
+Epoch 11/20
+ - 751s - loss: 0.0158 - acc: 0.7793 - val_loss: 1.2936 - val_acc: 0.5637
+Epoch 12/20
+ - 752s - loss: 0.0147 - acc: 0.7819 - val_loss: 1.5588 - val_acc: 0.4773
+Epoch 13/20
+ - 755s - loss: 0.0133 - acc: 0.7854 - val_loss: 1.3475 - val_acc: 0.6155
+Epoch 14/20
+ - 756s - loss: 0.0123 - acc: 0.7918 - val_loss: 1.4294 - val_acc: 0.6189
+Epoch 15/20
+ - 757s - loss: 0.0114 - acc: 0.7919 - val_loss: 1.5422 - val_acc: 0.6555
+Epoch 16/20
+ - 759s - loss: 0.0109 - acc: 0.7946 - val_loss: 1.4550 - val_acc: 0.6281
+Epoch 17/20
+ - 756s - loss: 0.0103 - acc: 0.8012 - val_loss: 1.8806 - val_acc: 0.6097
+Epoch 18/20
+ - 756s - loss: 0.0095 - acc: 0.8072 - val_loss: 1.5094 - val_acc: 0.5815
+Epoch 19/20
+ - 756s - loss: 0.0092 - acc: 0.8100 - val_loss: 1.6794 - val_acc: 0.6132
+Epoch 20/20
+ - 757s - loss: 0.0086 - acc: 0.8093 - val_loss: 1.4866 - val_acc: 0.6103
+trained!
+('Validation loss:', 1.4865798670636516, 'Validation acc:', 0.6102816197320314)
+{'loss': 1.4865798699400898, 'kernel_size1': 39, 'n_conv_1': 1, 'Dense': 200, 'Dropout': 0.2, 'n_conv': 3, 'lr': 0.001, 'filters': 250, 'time': 15055, 'filters_1': 100, 'filters_2': 40}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 1.48657987 │             39 │          1 │     200 │ 0.20000000 │        3 │ 0.00100000 │       250 │  15055 │         100 │          40 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 1 done ----------------
+INFO:hyperopt.mongoexp:job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>, {'status': 'ok', 'loss': 1.4865798670636516, 'model': <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>})
+Traceback (most recent call last):
+  File "/home/ktian/anaconda2/envs/modisco_dev/bin/hyperopt-mongo-worker", line 6, in <module>
+    sys.exit(hyperopt.mongoexp.main_worker())
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1313, in main_worker
+    return main_worker_helper(options, args)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1260, in main_worker_helper
+    mworker.run_one(reserve_timeout=float(options.reserve_timeout))
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1086, in run_one
+    result = SONify(result)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 139, in SONify
+    [(SONify(k, memo), SONify(v, memo)) for k, v in list(arg.items())])
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 152, in SONify
+    raise TypeError('SONify', arg)
+TypeError: ('SONify', <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>, {'status': 'ok', 'loss': 1.4865798670636516, 'model': <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>})
+INFO:hyperopt.mongoexp:PROTOCOL mongo
+INFO:hyperopt.mongoexp:USERNAME None
+INFO:hyperopt.mongoexp:HOSTNAME localhost
+INFO:hyperopt.mongoexp:PORT 1234
+INFO:hyperopt.mongoexp:PATH /foo_db/jobs
+INFO:hyperopt.mongoexp:AUTH DB None
+INFO:hyperopt.mongoexp:DB foo_db
+INFO:hyperopt.mongoexp:COLLECTION jobs
+Using TensorFlow backend.
+compiled!
+2018-10-17 05:10:33.926592: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-17 05:10:35.093266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-10-17 05:10:35.093319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2018-10-17 05:10:35.476078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-17 05:10:35.476124: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2018-10-17 05:10:35.476131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2018-10-17 05:10:35.476478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+Train on 571744 samples, validate on 60010 samples
+Epoch 1/20
+ - 123s - loss: 0.4859 - acc: 0.5265 - val_loss: 0.4767 - val_acc: 0.5559
+Epoch 2/20
+ - 120s - loss: 0.4221 - acc: 0.5996 - val_loss: 0.4612 - val_acc: 0.5967
+Epoch 3/20
+ - 124s - loss: 0.3991 - acc: 0.6192 - val_loss: 0.4677 - val_acc: 0.6139
+Epoch 4/20
+ - 120s - loss: 0.3841 - acc: 0.6308 - val_loss: 0.4796 - val_acc: 0.5653
+Epoch 5/20
+ - 118s - loss: 0.3728 - acc: 0.6412 - val_loss: 0.4581 - val_acc: 0.5574
+Epoch 6/20
+ - 119s - loss: 0.3637 - acc: 0.6493 - val_loss: 0.4543 - val_acc: 0.6042
+Epoch 7/20
+ - 119s - loss: 0.3564 - acc: 0.6560 - val_loss: 0.4627 - val_acc: 0.5932
+Epoch 8/20
+ - 120s - loss: 0.3502 - acc: 0.6605 - val_loss: 0.4659 - val_acc: 0.6141
+Epoch 9/20
+ - 117s - loss: 0.3453 - acc: 0.6650 - val_loss: 0.4699 - val_acc: 0.5854
+Epoch 10/20
+ - 117s - loss: 0.3399 - acc: 0.6696 - val_loss: 0.4886 - val_acc: 0.5917
+Epoch 11/20
+ - 119s - loss: 0.3369 - acc: 0.6732 - val_loss: 0.4627 - val_acc: 0.6041
+Epoch 12/20
+ - 119s - loss: 0.3330 - acc: 0.6755 - val_loss: 0.4914 - val_acc: 0.5813
+Epoch 13/20
+ - 120s - loss: 0.3297 - acc: 0.6783 - val_loss: 0.4789 - val_acc: 0.5877
+Epoch 14/20
+ - 119s - loss: 0.3268 - acc: 0.6796 - val_loss: 0.4770 - val_acc: 0.6100
+Epoch 15/20
+ - 120s - loss: 0.3245 - acc: 0.6823 - val_loss: 0.4764 - val_acc: 0.6072
+Epoch 16/20
+ - 119s - loss: 0.3217 - acc: 0.6822 - val_loss: 0.4923 - val_acc: 0.6190
+Epoch 17/20
+ - 119s - loss: 0.3202 - acc: 0.6849 - val_loss: 0.4812 - val_acc: 0.6196
+Epoch 18/20
+ - 119s - loss: 0.3175 - acc: 0.6853 - val_loss: 0.4762 - val_acc: 0.6193
+Epoch 19/20
+ - 119s - loss: 0.3154 - acc: 0.6874 - val_loss: 0.5019 - val_acc: 0.6198
+Epoch 20/20
+ - 118s - loss: 0.3136 - acc: 0.6883 - val_loss: 0.4899 - val_acc: 0.6155
+trained!
+('Validation loss:', 0.48993335402303884, 'Validation acc:', 0.6154640893204334)
+{'loss': 0.489933353367497, 'kernel_size1': 39, 'n_conv_1': 2, 'Dense': 200, 'Dropout': 0.6, 'n_conv': 0, 'lr': 0.001, 'filters': 100, 'time': 2399, 'filters_1': 250, 'filters_2': 40}
+╒════════════╤════════════════╤════════════╤═════════╤════════════╤══════════╤════════════╤═══════════╤════════╤═════════════╤═════════════╕
+│       loss │   kernel_size1 │   n_conv_1 │   Dense │    Dropout │   n_conv │         lr │   filters │   time │   filters_1 │   filters_2 │
+╞════════════╪════════════════╪════════════╪═════════╪════════════╪══════════╪════════════╪═══════════╪════════╪═════════════╪═════════════╡
+│ 0.48993335 │             39 │          2 │     200 │ 0.60000000 │        0 │ 0.00100000 │       100 │   2399 │         250 │          40 │
+╘════════════╧════════════════╧════════════╧═════════╧════════════╧══════════╧════════════╧═══════════╧════════╧═════════════╧═════════════╛
+model 1 done ----------------
+INFO:hyperopt.mongoexp:job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7fbc24844f90>, {'status': 'ok', 'loss': 0.48993335402303884, 'model': <keras.engine.sequential.Sequential object at 0x7fbc24844f90>})
+Traceback (most recent call last):
+  File "/home/ktian/anaconda2/envs/modisco_dev/bin/hyperopt-mongo-worker", line 6, in <module>
+    sys.exit(hyperopt.mongoexp.main_worker())
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1313, in main_worker
+    return main_worker_helper(options, args)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1260, in main_worker_helper
+    mworker.run_one(reserve_timeout=float(options.reserve_timeout))
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/mongoexp.py", line 1086, in run_one
+    result = SONify(result)
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 139, in SONify
+    [(SONify(k, memo), SONify(v, memo)) for k, v in list(arg.items())])
+  File "/home/ktian/anaconda2/envs/modisco_dev/lib/python2.7/site-packages/hyperopt/base.py", line 152, in SONify
+    raise TypeError('SONify', arg)
+TypeError: ('SONify', <keras.engine.sequential.Sequential object at 0x7fbc24844f90>, {'status': 'ok', 'loss': 0.48993335402303884, 'model': <keras.engine.sequential.Sequential object at 0x7fbc24844f90>})
+INFO:hyperopt.mongoexp:exiting with N=9223372036854775803 after 4 consecutive exceptions

@@ -1,0 +1,249 @@
+{
+    "metadata": {
+        "total_records": 1,
+        "best_valid_key_metric": 0.9828791054713321,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_1_model_GPv22_modelWeights.h5",
+            "json_file": "model_files/record_1_model_GPv22_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_GPv22"
+        }
+    },
+    "records": [
+        {
+            "record_number": 1,
+            "message": "model & config for SPI1, 1 task, refine, ver 18_07_31",
+            "best_valid_key_metric": 0.9828791054713321,
+            "best_valid_perf_info": {
+                "epoch": 17,
+                "valid_key_metric": 0.9828791054713321,
+                "train_key_metric": 0.989538319443857,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.9514324398823524,
+                    0.949755942706587
+                ],
+                [
+                    0.9741554121831834,
+                    0.9710535200561219
+                ],
+                [
+                    0.9795282671097881,
+                    0.9760580357002229
+                ],
+                [
+                    0.9805040588481213,
+                    0.9774691245273549
+                ],
+                [
+                    0.9808276421427639,
+                    0.9761492465863268
+                ],
+                [
+                    0.9833394870145429,
+                    0.9802157475970986
+                ],
+                [
+                    0.9834313140021778,
+                    0.9803444771878987
+                ],
+                [
+                    0.9845777255696896,
+                    0.9811820187987518
+                ],
+                [
+                    0.9852923351634396,
+                    0.9818769376142457
+                ],
+                [
+                    0.9862709167175865,
+                    0.9810277360550661
+                ],
+                [
+                    0.9875350407650293,
+                    0.9816766027762618
+                ],
+                [
+                    0.9875448995171391,
+                    0.9817174831192864
+                ],
+                [
+                    0.9874212977347201,
+                    0.9824077708665943
+                ],
+                [
+                    0.9887513513014441,
+                    0.9827560412989729
+                ],
+                [
+                    0.9879530512453649,
+                    0.981497871753827
+                ],
+                [
+                    0.9892272007184248,
+                    0.9825913445288583
+                ],
+                [
+                    0.989538319443857,
+                    0.9828791054713321
+                ],
+                [
+                    0.9881974819821456,
+                    0.9805356909372723
+                ],
+                [
+                    0.9905248772923483,
+                    0.9828166213127587
+                ],
+                [
+                    0.9908865912168381,
+                    0.982457701774348
+                ],
+                [
+                    0.9911781228165457,
+                    0.9827372819466247
+                ],
+                [
+                    0.9915616054147606,
+                    0.9824493564484288
+                ],
+                [
+                    0.9910941347163399,
+                    0.9814027350383469
+                ],
+                [
+                    0.9913350202294468,
+                    0.9822081412674204
+                ],
+                [
+                    0.9907864181904639,
+                    0.9812455373075797
+                ],
+                [
+                    0.9919197926444967,
+                    0.9816018474623934
+                ],
+                [
+                    0.9909152778231116,
+                    0.9798181339559746
+                ],
+                [
+                    0.9934781263463576,
+                    0.981783634519672
+                ],
+                [
+                    0.9931930145057654,
+                    0.981683185005156
+                ],
+                [
+                    0.9935955068358213,
+                    0.9812477705638116
+                ],
+                [
+                    0.9929450887319694,
+                    0.9794925957212409
+                ],
+                [
+                    0.9931994273983484,
+                    0.9812802585649961
+                ],
+                [
+                    0.9937112556875898,
+                    0.9803515295759996
+                ],
+                [
+                    0.9939047528594562,
+                    0.9810476237895106
+                ],
+                [
+                    0.9946153709219131,
+                    0.9820425041788926
+                ],
+                [
+                    0.9949545909393259,
+                    0.9816352287660703
+                ],
+                [
+                    0.9949361281637563,
+                    0.9813945542681499
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_GPv22_modelWeights.h5",
+                "json_file": "model_files/record_1_model_GPv22_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_GPv22"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": {
+                    "weight_file": "pretrain/model_files/record_1_Weights.h5",
+                    "json_file": "pretrain/model_files/record_1_Json.json",
+                    "last_layer_to_take": -2
+                },
+                "layers_config": [
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 1,
+                            "name": "dense_2"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid",
+                            "name": "activation_5"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "num_to_load_for_eval": 50000,
+                    "bundle_x_and_y_in_generator": false,
+                    "strip_enclosing_dictionary": true,
+                    "rc_augment": true,
+                    "path_to_hdf5": "train_data.hdf5"
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 37
+            }
+        }
+    ]
+}

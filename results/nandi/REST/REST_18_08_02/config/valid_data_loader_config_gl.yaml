@@ -1,0 +1,11 @@
+{
+    "class": "genomelake_data_loader.SingleStreamSeqOnly",
+    "kwargs": {
+       "batch_size": null, 
+       "bed_source": "splits/valid.tsv",
+       "genomelake_data_source": "/srv/scratch/genomelake_data/hg19.genome.fa",
+        "rc_augment": false,
+       "num_to_load_for_eval": null,
+       "labels_dtype": "int"
+    }
+}

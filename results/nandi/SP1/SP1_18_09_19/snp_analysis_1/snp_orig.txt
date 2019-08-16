@@ -1,0 +1,2 @@
+chrom	position # one based
+chr19	11200089

@@ -1,0 +1,872 @@
+{
+    "metadata": {
+        "total_records": 2,
+        "best_valid_key_metric": 0.8468929746558871,
+        "best_saved_files_config": {
+            "weights_file": "model_files/record_2_model_9Z173_modelWeights.h5",
+            "json_file": "model_files/record_2_model_9Z173_modelJson.json",
+            "directory": "model_files",
+            "prefix": "model_9Z173"
+        }
+    },
+    "records": [
+        {
+            "record_number": 2,
+            "message": "model & config for SPI1, 4 tasks, pretraining, ver 18_07_31",
+            "best_valid_key_metric": 0.8468929746558871,
+            "best_valid_perf_info": {
+                "epoch": 92,
+                "valid_key_metric": 0.8468929746558871,
+                "train_key_metric": 0.9128304064563444,
+                "valid_all_stats": null
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.6067671878026606,
+                    0.5436126166756938
+                ],
+                [
+                    0.6192307422215668,
+                    0.5670423638343502
+                ],
+                [
+                    0.6551766420089062,
+                    0.6148150595415474
+                ],
+                [
+                    0.6931678058633981,
+                    0.675948204565112
+                ],
+                [
+                    0.745106972303109,
+                    0.7150449099321305
+                ],
+                [
+                    0.7561738205779851,
+                    0.7207428853517932
+                ],
+                [
+                    0.7576411503203307,
+                    0.7294033631324032
+                ],
+                [
+                    0.7745905993434461,
+                    0.7425505100294902
+                ],
+                [
+                    0.7838509363257183,
+                    0.7521486376358514
+                ],
+                [
+                    0.8082710517108287,
+                    0.780151444174131
+                ],
+                [
+                    0.8097449681091283,
+                    0.7836188748317952
+                ],
+                [
+                    0.8154233263085422,
+                    0.7893690227092232
+                ],
+                [
+                    0.8328726243725038,
+                    0.8023024915316281
+                ],
+                [
+                    0.8331224958906814,
+                    0.803860298073515
+                ],
+                [
+                    0.8329791206764509,
+                    0.8066735885290186
+                ],
+                [
+                    0.8389331473840966,
+                    0.8049442819899549
+                ],
+                [
+                    0.8371504511944114,
+                    0.803607811980658
+                ],
+                [
+                    0.8464932523454778,
+                    0.8142820456819473
+                ],
+                [
+                    0.8465924509008868,
+                    0.8145440061502859
+                ],
+                [
+                    0.8458143804321724,
+                    0.811436077679544
+                ],
+                [
+                    0.8513373340639562,
+                    0.8178944342182187
+                ],
+                [
+                    0.8555856760716556,
+                    0.8201104082328716
+                ],
+                [
+                    0.8569906973352452,
+                    0.8214538357103889
+                ],
+                [
+                    0.8619149508327636,
+                    0.8263021443874226
+                ],
+                [
+                    0.8621267662286104,
+                    0.829557450414171
+                ],
+                [
+                    0.8589559370713626,
+                    0.8242818463509061
+                ],
+                [
+                    0.858890508676431,
+                    0.8245552383060347
+                ],
+                [
+                    0.858109841295242,
+                    0.8210441798514556
+                ],
+                [
+                    0.8737393186458244,
+                    0.8350425241016985
+                ],
+                [
+                    0.8721582625787322,
+                    0.8309111933272224
+                ],
+                [
+                    0.8715666790450818,
+                    0.8297071992037406
+                ],
+                [
+                    0.8720968185005897,
+                    0.8315080625872233
+                ],
+                [
+                    0.8733663092740922,
+                    0.8352531884569772
+                ],
+                [
+                    0.8745666587101587,
+                    0.8364039970355404
+                ],
+                [
+                    0.8761599477247349,
+                    0.8384711088629837
+                ],
+                [
+                    0.8744588497402818,
+                    0.8332859498081249
+                ],
+                [
+                    0.876927503609005,
+                    0.8335288579341701
+                ],
+                [
+                    0.8752983127110521,
+                    0.8347316033932031
+                ],
+                [
+                    0.8811402455234822,
+                    0.8382085809970183
+                ],
+                [
+                    0.8807262937950644,
+                    0.8379603280821553
+                ],
+                [
+                    0.8831698141314409,
+                    0.8395774324204157
+                ],
+                [
+                    0.8795108880548947,
+                    0.8376031571109228
+                ],
+                [
+                    0.871146398837223,
+                    0.8348131561322747
+                ],
+                [
+                    0.8829313598209889,
+                    0.8404970087146141
+                ],
+                [
+                    0.8867642342216333,
+                    0.8420917398555177
+                ],
+                [
+                    0.8852040956820869,
+                    0.8438414290846368
+                ],
+                [
+                    0.8903880083299466,
+                    0.8413354833799288
+                ],
+                [
+                    0.8850579172633205,
+                    0.8345362393721424
+                ],
+                [
+                    0.8823037305058341,
+                    0.8328546317071711
+                ],
+                [
+                    0.8945478688914388,
+                    0.8382948874813814
+                ],
+                [
+                    0.8988983019576334,
+                    0.8420158431379681
+                ],
+                [
+                    0.8902665611390126,
+                    0.8393417518417032
+                ],
+                [
+                    0.8955558918242887,
+                    0.8409144055784815
+                ],
+                [
+                    0.8966385572793594,
+                    0.8429291249756286
+                ],
+                [
+                    0.9004473499194572,
+                    0.8420803677512616
+                ],
+                [
+                    0.8998982953230026,
+                    0.841586753652643
+                ],
+                [
+                    0.8978030779610382,
+                    0.8433881703947541
+                ],
+                [
+                    0.8988764148372513,
+                    0.8414574286971171
+                ],
+                [
+                    0.898344512500999,
+                    0.8450203102273264
+                ],
+                [
+                    0.893162412843056,
+                    0.8415126906052834
+                ],
+                [
+                    0.8882897381493673,
+                    0.8357533036133161
+                ],
+                [
+                    0.8984773673667314,
+                    0.8386689537604366
+                ],
+                [
+                    0.9017848780912643,
+                    0.8431857133014453
+                ],
+                [
+                    0.9021418075460292,
+                    0.8413768231729788
+                ],
+                [
+                    0.9001169232621218,
+                    0.8404147987219435
+                ],
+                [
+                    0.9031103462537167,
+                    0.844826826383881
+                ],
+                [
+                    0.8997292479788962,
+                    0.8418770956757382
+                ],
+                [
+                    0.8941354288858524,
+                    0.8384001363656353
+                ],
+                [
+                    0.900595774284851,
+                    0.8400205050496697
+                ],
+                [
+                    0.9048735178757737,
+                    0.8446057477723198
+                ],
+                [
+                    0.9070305362068859,
+                    0.8456422599891469
+                ],
+                [
+                    0.9077405771085081,
+                    0.8438170744773883
+                ],
+                [
+                    0.898922516460747,
+                    0.8361287972279207
+                ],
+                [
+                    0.8990466506953674,
+                    0.8366267846712836
+                ],
+                [
+                    0.9078132842506013,
+                    0.8442835219936753
+                ],
+                [
+                    0.9074230108023204,
+                    0.8449226188350045
+                ],
+                [
+                    0.9024357319398186,
+                    0.8415749680116116
+                ],
+                [
+                    0.9069180662668191,
+                    0.8437526663870777
+                ],
+                [
+                    0.9054617454328452,
+                    0.8436625105438827
+                ],
+                [
+                    0.9077338593393917,
+                    0.844991376576099
+                ],
+                [
+                    0.906527788358964,
+                    0.845412645229389
+                ],
+                [
+                    0.9065354330707212,
+                    0.8404809201365152
+                ],
+                [
+                    0.9104190868238159,
+                    0.8448686040121147
+                ],
+                [
+                    0.9125882798179097,
+                    0.843611719325293
+                ],
+                [
+                    0.9069296050673861,
+                    0.8402448866450608
+                ],
+                [
+                    0.9130894731988515,
+                    0.8441964517504319
+                ],
+                [
+                    0.9066139066098429,
+                    0.8420717017144468
+                ],
+                [
+                    0.9132012786481791,
+                    0.8460075264480131
+                ],
+                [
+                    0.9140629219155947,
+                    0.8444648489904835
+                ],
+                [
+                    0.9087162075268238,
+                    0.8400601580054416
+                ],
+                [
+                    0.9111486721701441,
+                    0.843144547580218
+                ],
+                [
+                    0.9128304064563444,
+                    0.8468929746558871
+                ],
+                [
+                    0.9114661843667836,
+                    0.8445914232034751
+                ],
+                [
+                    0.9171166066978089,
+                    0.8428712295539504
+                ],
+                [
+                    0.9185176027139649,
+                    0.8428730984384772
+                ],
+                [
+                    0.9158312870375518,
+                    0.8450051049298941
+                ],
+                [
+                    0.9217478989012295,
+                    0.8452105575539701
+                ],
+                [
+                    0.9151692339241929,
+                    0.836114238445002
+                ],
+                [
+                    0.9198916942796987,
+                    0.8433874331002362
+                ],
+                [
+                    0.9159810849976292,
+                    0.8414975888166062
+                ],
+                [
+                    0.9201969598109352,
+                    0.8416386774939973
+                ],
+                [
+                    0.9222995402196834,
+                    0.8438463037317973
+                ],
+                [
+                    0.9134239734781757,
+                    0.8367451801989099
+                ],
+                [
+                    0.9127052434756607,
+                    0.8391207397272444
+                ],
+                [
+                    0.917518842790592,
+                    0.8374097804718144
+                ],
+                [
+                    0.9216994764366107,
+                    0.844200854068601
+                ],
+                [
+                    0.9216825157254235,
+                    0.8401115240172011
+                ],
+                [
+                    0.9223953775082092,
+                    0.8396006295078218
+                ],
+                [
+                    0.9173536445169,
+                    0.8364411829325699
+                ],
+                [
+                    0.9263916026905883,
+                    0.8416476535884803
+                ],
+                [
+                    0.9138603205626586,
+                    0.8349930539987978
+                ],
+                [
+                    0.9223941438137738,
+                    0.843281489102011
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_2_model_9Z173_modelWeights.h5",
+                "json_file": "model_files/record_2_model_9Z173_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_9Z173"
+            },
+            "model_creator_info": {
+                "pretrained_model_config": null,
+                "layers_config": [
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 4
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "rc_augment": true,
+                    "num_to_load_for_eval": 50000,
+                    "wrap_in_keys": null,
+                    "bed_source": "splits/train.tsv.gz",
+                    "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
+                    "labels_dtype": "int",
+                    "randomize_after_pass": true,
+                    "random_seed": 1
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "training_metadata": {
+                "termination_condition": "normal",
+                "total_epochs_trained_for": 112
+            }
+        },
+        {
+            "record_number": 1,
+            "message": "model & config for JUND, 15 tasks, pretraining, ver 18_07_31",
+            "best_valid_key_metric": 0.7360175474817365,
+            "best_valid_perf_info": {
+                "epoch": 7,
+                "valid_key_metric": 0.7360175474817365,
+                "train_key_metric": 0.7511439776429707,
+                "valid_all_stats": null
+            },
+            "training_metadata": {
+                "termination_condition": "KeyboardInterrupt",
+                "total_epochs_trained_for": 8
+            },
+            "other_data_loaders_info": {
+                "train": {
+                    "batch_size": 200,
+                    "rc_augment": true,
+                    "num_to_load_for_eval": 50000,
+                    "wrap_in_keys": null,
+                    "bed_source": "splits/train.tsv.gz",
+                    "fasta_data_source": "/srv/scratch/ktian/kundajelab/ENCODE/genome/hg19.fa",
+                    "labels_dtype": "int",
+                    "randomize_after_pass": true,
+                    "random_seed": 1
+                }
+            },
+            "model_trainer_info": {
+                "seed": 1234,
+                "samples_per_epoch": 60,
+                "stopping_criterion_config": {
+                    "class": "EarlyStopping",
+                    "kwargs": {
+                        "max_epochs": 1000,
+                        "epochs_to_wait": 20
+                    }
+                },
+                "class_weight": null,
+                "report_all_valid_metrics_every_epoch": false,
+                "reparameterizer": null
+            },
+            "model_creator_info": {
+                "pretrained_model_config": null,
+                "layers_config": [
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "input_shape": [
+                                1000,
+                                4
+                            ],
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same",
+                            "W_constraint": {
+                                "autoload": true,
+                                "class": "keras.constraints.maxnorm",
+                                "kwargs": {
+                                    "max_value": 7,
+                                    "axis": 1
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 15,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.Convolution1D",
+                        "kwargs": {
+                            "nb_filter": 50,
+                            "filter_length": 13,
+                            "border_mode": "same"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.convolutional.MaxPooling1D",
+                        "kwargs": {
+                            "pool_length": 40,
+                            "stride": 40
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Flatten",
+                        "kwargs": {}
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 50
+                        }
+                    },
+                    {
+                        "class": "keras.layers.normalization.BatchNormalization",
+                        "kwargs": {
+                            "axis": -1
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "relu"
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dropout",
+                        "kwargs": {
+                            "p": 0.2
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Dense",
+                        "kwargs": {
+                            "output_dim": 15
+                        }
+                    },
+                    {
+                        "class": "keras.layers.core.Activation",
+                        "kwargs": {
+                            "activation": "sigmoid"
+                        }
+                    }
+                ],
+                "optimizer_config": {
+                    "class": "keras.optimizers.Adam",
+                    "kwargs": {
+                        "lr": 0.001
+                    }
+                },
+                "loss": {
+                    "modules_to_load": [
+                        "keras_genomics"
+                    ],
+                    "func": "keras_genomics.losses.ambig_binary_crossentropy"
+                }
+            },
+            "key_metric_history": [
+                [
+                    "train",
+                    "valid"
+                ],
+                [
+                    0.6400761330979434,
+                    0.6143437757530962
+                ],
+                [
+                    0.6422921416595088,
+                    0.6247129742082227
+                ],
+                [
+                    0.672432243212991,
+                    0.6525228502962522
+                ],
+                [
+                    0.6514739310068868,
+                    0.6440347202495782
+                ],
+                [
+                    0.7264394574872411,
+                    0.7114281582880807
+                ],
+                [
+                    0.7523665715206496,
+                    0.7341533209971811
+                ],
+                [
+                    0.7511439776429707,
+                    0.7360175474817365
+                ]
+            ],
+            "all_valid_metrics_history": {},
+            "saved_files_config": {
+                "weights_file": "model_files/record_1_model_4EztS_modelWeights.h5",
+                "json_file": "model_files/record_1_model_4EztS_modelJson.json",
+                "directory": "model_files",
+                "prefix": "model_4EztS"
+            }
+        }
+    ]
+}

@@ -1,0 +1,199 @@
+Using TensorFlow backend.
+channels_last
+seed=1234
+>>> Imports:
+#coding=utf-8
+
+try:
+    import numpy as np
+except:
+    pass
+
+try:
+    import pandas as pd
+except:
+    pass
+
+try:
+    import pysam
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+try:
+    import hyperas
+except:
+    pass
+
+try:
+    from hyperas.distributions import uniform, choice
+except:
+    pass
+
+try:
+    from hyperopt import Trials, STATUS_OK, tpe, mongoexp
+except:
+    pass
+
+try:
+    from hyperas import optim
+except:
+    pass
+
+try:
+    from hyperas.distributions import choice, uniform
+except:
+    pass
+
+try:
+    import keras
+except:
+    pass
+
+try:
+    from keras.models import Sequential
+except:
+    pass
+
+try:
+    from keras.layers.core import Dropout, Dense, Activation, Flatten
+except:
+    pass
+
+try:
+    from keras.layers.convolutional import Conv1D, MaxPooling1D
+except:
+    pass
+
+try:
+    from keras.optimizers import Adadelta, SGD, RMSprop, Adam
+except:
+    pass
+
+try:
+    import keras.losses
+except:
+    pass
+
+try:
+    from keras.layers.normalization import BatchNormalization
+except:
+    pass
+
+try:
+    from keras import backend as K
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import sys
+except:
+    pass
+
+try:
+    import keras_genomics
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import time
+except:
+    pass
+
+try:
+    import tabulate
+except:
+    pass
+
+try:
+    import pdb
+except:
+    pass
+
+>>> Hyperas search space:
+
+def get_space():
+    return {
+        'kernel_size1': hp.choice('kernel_size1', [13, 15, 19, 25, 39]),
+        'filters': hp.choice('filters', [50,100,250,500]),
+        'n_conv': hp.choice('n_conv', [0,1,2,3]),
+        'filters_1': hp.choice('filters_1', [50,100,250,500]),
+        'filters_2': hp.choice('filters_2', [20,40,60]),
+        'n_conv_1': hp.choice('n_conv_1', [0,1,2,3]),
+        'Dense': hp.choice('Dense', [50,100,200]),
+        'Dropout': hp.choice('Dropout', [0.2,0.4,0.6]),
+        'lr': hp.choice('lr', [0.001, 0.0001]),
+    }
+
+>>> Data
+  1: 
+  2: np.random.seed(1234)  # for reproducibility
+  3: data=np.load('../data_big.npz')
+  4: x_train=data['arr_0']
+  5: y_train=data['arr_1']
+  6: x_validate=data['arr_2']
+  7: y_validate=data['arr_3']
+  8: x_test=data['arr_4']
+  9: y_test=data['arr_5']
+ 10: 
+ 11: 
+ 12: 
+>>> Resulting replaced keras model:
+
+   1: def keras_fmin_fnct(space):
+   2: 
+   3:     start = int(time.time())
+   4:     np.random.seed(1234)
+   5:     try:
+   6:         '''
+   7:         b) with and without a hidden fully-connected layer, 
+   8:         c) number of units in the hidden fc layer < 200, 
+   9:         c) different learning rates for adam (explore on a log scale - 0.001, 0.0001, etc), 
+  10:         d) maxpooling widths in the 10-60 range, 
+  11:         e) conv widths in the 10-40 range.
+  12:         '''
+  13:         model=Sequential()
+  14:         kernel_size1 = space['kernel_size1']
+  15:         kernel_size2 = kernel_size1 - 2
+  16:         model.add(Conv1D(filters=space['filters'],kernel_size=(kernel_size1),input_shape=(1000,4)))
+  17:         model.add(BatchNormalization(axis=-1))
+  18:         model.add(Activation('relu'))
+  19: 
+  20:         ## a) number of layers between 1 and 4, 
+  21: 
+  22:         #decide on how many conv layers in model 
+  23:         n_conv = space['n_conv']
+  24: 
+  25:         filter_dim=[kernel_size1,kernel_size2,kernel_size2]
+  26: 
+  27:         for i in range(n_conv):
+  28:             model.add(Conv1D(filters=space['filters_1'],kernel_size=(filter_dim[i])))
+  29:             model.add(BatchNormalization(axis=-1))
+  30:             model.add(Activation('relu'))
+  31: 
+  32:         model.add(MaxPooling1D(pool_size=(space['filters_2'])))
+  33: 
+  34:         model.add(Flatten())
+  35:         n_dense = space['n_conv_1']
+  36:         for i in range(n_dense):
+  37:             model.add(Dense(space['Dense']))
+  38:             model.add(BatchNormalization(axis=-1))
+  39:             model.add(Activation('relu'))
+  40:             model.add(Dropout(space['Dropout']))
+  41: 
+  42:         model.add(Dense(4))
+  43:         model.add(Activation("sigmoiNo handlers could be found for logger "hyperopt.mongoexp"

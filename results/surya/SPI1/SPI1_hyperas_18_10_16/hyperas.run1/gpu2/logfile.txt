@@ -1,0 +1,6 @@
+INFO (hyperopt.mongoexp): job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>, {'status': 'ok', 'loss': 0.4884459207106026, 'model': <keras.engine.sequential.Sequential object at 0x7ffa9e7dcf90>})
+INFO (hyperopt.mongoexp): job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7fdce213cf90>, {'status': 'ok', 'loss': 0.43807376250786056, 'model': <keras.engine.sequential.Sequential object at 0x7fdce213cf90>})
+INFO (hyperopt.mongoexp): job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>, {'status': 'ok', 'loss': 1.4865798670636516, 'model': <keras.engine.sequential.Sequential object at 0x7f2b32ea5f90>})
+INFO (hyperopt.mongoexp): job exception: ('SONify', <keras.engine.sequential.Sequential object at 0x7fbc24844f90>, {'status': 'ok', 'loss': 0.48993335402303884, 'model': <keras.engine.sequential.Sequential object at 0x7fbc24844f90>})
+INFO (hyperopt.mongoexp): Caught signal 15, shutting down.
+INFO (hyperopt.mongoexp): job exception: local variable 'parameters' referenced before assignment

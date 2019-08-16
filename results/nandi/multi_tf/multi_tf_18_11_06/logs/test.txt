@@ -1,0 +1,34 @@
+2018-11-07 04:17:20 INFO  /home/ktian/kundajelab/tfnet//scripts/prepare_data_pf.py --tfs CTCF,SIX5,ZNF143 --cells GM12878 --expr ENCSR000AKB,ENCSR000BJE,ENCSR000DZL --test-only True --bg-stride=50
+2018-11-07 04:17:28 DEBUG /home/ktian/kundajelab/tfnet//scripts/label_regions  --positives /home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-CTCF-human-ENCSR000AKB-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz,/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz --ambiguous ./_tmp_7L9UBa/_tmp_GM12878-CTCF-human-ENCSR000AKB-merged.narrowPeak.gz,./_tmp_7L9UBa/_tmp_GM12878-SIX5-human-ENCSR000BJE-merged.narrowPeak.gz,./_tmp_7L9UBa/_tmp_GM12878-ZNF143-human-ENCSR000DZL-merged.narrowPeak.gz --genome hg19 --prefix label  --stride 10 --test-chroms chr1,chr2 --bg-stride 50  --background /home/ktian/kundajelab/tfnet//genome/hg19.tsv  --test-only True 
+2018-11-07 04:17:28 DEBUG bin-size=200, stride=10
+2018-11-07 04:17:34 DEBUG in: skip_test=1 bin-size=200, stride=10
+2018-11-07 04:17:34 DEBUG in: skip_test=0 bin-size=200, stride=50
+2018-11-07 04:18:14 INFO  LABEL_REGIONS sort merge done
+2018-11-07 04:19:04 INFO  LABEL_REGIONS intersect done
+2018-11-07 04:19:30 INFO  LABEL_REGIONS labels done
+2018-11-07 04:19:33 INFO  LABEL_REGIONS ALL DONE *****
+2018-11-07 04:19:49 INFO  prepare_data done
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-CTCF-human-ENCSR000AKB-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-SIX5-human-ENCSR000BJE-optimal_idr.narrowPeak.gz
+/home/ktian/kundajelab/tfnet//ENCODE_data/GM12878-ZNF143-human-ENCSR000DZL-optimal_idr.narrowPeak.gz
+3
+Using TensorFlow backend.
+2018-11-07 04:19:51.546484: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-11-07 04:19:53.977771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-11-07 04:19:54.241360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:81:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-11-07 04:19:54.241487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1
+2018-11-07 04:19:54.996134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-11-07 04:19:54.996178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 
+2018-11-07 04:19:54.996185: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N N 
+2018-11-07 04:19:54.996189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   N N 
+2018-11-07 04:19:54.996806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11366 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-11-07 04:19:55.276223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11366 MB memory) -> physical GPU (device: 1, name: TITAN X (Pascal), pci bus id: 0000:81:00.0, compute capability: 6.1)
+Loading momma_dragonn.data_loaders.pyfasta_data_loader.SingleStreamSeqOnly
+Reading bed file splits/test.tsv.gz into memory
+Finished reading bed file into memory; got 4984793rows

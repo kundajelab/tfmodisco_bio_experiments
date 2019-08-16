@@ -1,0 +1,1 @@
+cmd = homer//pos.fa human homer//homer_out -fasta homer//neg.fa -p 8
