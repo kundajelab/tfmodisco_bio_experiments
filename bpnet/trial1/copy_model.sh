@@ -1,0 +1,1 @@
+cp /oak/stanford/groups/akundaje/avsec/basepair/data/processed/comparison/output/nexus,peaks,OSNK,0,10,1,FALSE,same,0.5,64,25,0.004,9,FALSE,[1,50],TRUE,FALSE,1/model.h5 /users/avanti/tfmodisco_bio_experiments/bpnet/trial1/
